@@ -47,4 +47,12 @@ reutilizar el hardware con un propósito diferente, lo cual es acorde con las le
 de defensa del consumidor en la Argentina, siempre que el producto haya sido adquirido legalmente.  
 
 
-
+## de Alexander
+Introducción
+A diferencia de lo que ocurre con las computadoras personales, que pueden modificarse
+para adaptarse a las necesidades del usuario, las soluciones dedicadas que nos rodean son 
+percibidas como ``cajas negras'' que sólo puede ser utilizadas para el propósito 
+indicado por su fabricante. Sin embargo, el constante desarrollo y extensa portabilidad de
+sistemas abiertos como GNU/Linux ha inducido a los fabricantes, en gran medida por la reducción
+de costos, al desarrollo de sistemas embebidos basados en hardware mas estándard, susceptible 
+de ser reutilizado con mayor facilidad. 
