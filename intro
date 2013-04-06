@@ -33,3 +33,18 @@ el aspecto ecológico de la investigación, dado que se pretende desarrollar un 
 de reutilización de hardware.     
 
 TRADUCCIÓN:
+
+# de christoph, fede heinz y otras yerbas - ingeniería inversa... no se siqueira si habria 
+# que mencionarlo 
+
+Cuando reutilizamos sistemas embebidos no triviales, necesitamos o bien la especificación 
+detallada de cómo operar con él, o bien descubrir su fucionamiento mediante
+diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
+denominamos ingeniería inversa. Esto plantea la inquietud acerca de la legalidad 
+del proceso, dadas las posibles restricciones en las licencias de uso de cada producto
+específico. En este caso en particular, sólo se usa ingeniería inversa para poder
+reutilizar el hardware con un propósito diferente, lo cual es acorde con las leyes 
+de defensa del consumidor en la Argentina, siempre que el producto haya sido adquirido legalmente.  
+
+
+
