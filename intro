@@ -12,23 +12,24 @@ en el país al momento en que fue escrito el artículo, que fue creado
 con un propósito dedicado es convertido en un sistema de propósito general, 
 para luego dar solución a un problema específico distinto del original para el que 
 fue construido. El lector
-podría preguntarse por qué no utilizar hardware de prósito general desde un principio. 
+podría preguntarse por qué no utilizar hardware de propósito general desde un principio. 
 En este sentido cabe aclarar que nos referimos a problemas en los que el uso del 
 hardware de propósito general y bajo costo (como una computadora personal ) es inviable; y por lo tanto
 el uso de sistemas embebidos es una necesidad. De ahí la elección de hardware de 
 propósito específico cuyas características físicas (tamaño, peso, consumo energético, 
 etc.) es clave en la resolución del problema.  
 
-El proceso por el que sistemas embebidos son re utilizados para dar una solución distinta 
+El proceso por el que sistemas embebidos son reutilizados para dar una solución distinta 
 por la cual fue desarrollado es complejo y poco conocido. Es la intención de este artículo
 develar algunos de los aspectos necesarios en tal proceso a través del estudio de un caso 
-de implementación específico. Si bien los sistemas emebebidos son enormemente hetrogéneos entre 
+de implementación específico. Si bien los sistemas embebidas son enormemente heterogéneos entre 
 sí, la generalización de ciertos aspectos es posible. En este proceso interviene de manera clave 
 el uso de un sistema operativo de propósito general, como es GNU/LINUX, cuya portabilidad
-hace posible la re utilización del hardware. Este proceso es de especial intrés en nuestro
-país, en el que los costos o las políticas de importación de productos tecnolgógicos 
-pueden tornar inalcansables soluciones dedicadas, y por lo que se hace necesario implementar soluciones
+hace posible la reutilización del hardware. Este proceso es de especial interés en nuestro
+país, en el que los costos o las políticas de importación de productos tecnológicos 
+pueden tornar inalcanzables soluciones dedicadas, y por lo que se hace necesario implementar soluciones
 a través de procesos menos convencionales o directos. También es importante destacar 
 el aspecto ecológico de la investigación, dado que se pretende desarrollar un proceso 
-de re utilización de hardware.     
+de reutilización de hardware.     
 
+TRADUCCIÓN:
