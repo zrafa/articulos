@@ -34,11 +34,11 @@ de reutilización de hardware.
 
 TRADUCCIÓN:
 
-# de christoph, fede heinz y otras yerbas - ingeniería inversa... no se siqueira si habria 
+# de christoph, fede heinz y otras yerbas - ingeniería inversa... no se siquiera si habría 
 # que mencionarlo 
 
 Cuando reutilizamos sistemas embebidos no triviales, necesitamos o bien la especificación 
-detallada de cómo operar con él, o bien descubrir su fucionamiento mediante
+detallada de cómo operar con él, o bien descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
 denominamos ingeniería inversa. Esto plantea la inquietud acerca de la legalidad 
 del proceso, dadas las posibles restricciones en las licencias de uso de cada producto
@@ -47,12 +47,12 @@ reutilizar el hardware con un propósito diferente, lo cual es acorde con las le
 de defensa del consumidor en la Argentina, siempre que el producto haya sido adquirido legalmente.  
 
 
-## de Alexander
+## de Alexandre
 Introducción
 A diferencia de lo que ocurre con las computadoras personales, que pueden modificarse
 para adaptarse a las necesidades del usuario, las soluciones dedicadas que nos rodean son 
 percibidas como ``cajas negras'' que sólo puede ser utilizadas para el propósito 
 indicado por su fabricante. Sin embargo, el constante desarrollo y extensa portabilidad de
 sistemas abiertos como GNU/Linux ha inducido a los fabricantes, en gran medida por la reducción
-de costos, al desarrollo de sistemas embebidos basados en hardware mas estándard, susceptible 
+de costos, al desarrollo de sistemas embebidos basados en hardware mas estándar, susceptible 
 de ser reutilizado con mayor facilidad. 
