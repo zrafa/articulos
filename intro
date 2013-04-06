@@ -29,7 +29,7 @@ hace posible la reutilización del hardware. Este proceso es de especial interé
 país, en el que los costos o las políticas de importación de productos tecnológicos 
 pueden tornar inalcanzables soluciones dedicadas, y por lo que se hace necesario implementar soluciones
 a través de procesos menos convencionales o directos. También es importante destacar 
-el aspecto ecológico de la investigación, dado que se pretende desarrollar un proceso 
+el aspecto ecológico de la investigación, ya que se pretende desarrollar un proceso 
 de reutilización de hardware.     
 
 TRADUCCIÓN:
@@ -41,7 +41,7 @@ Cuando reutilizamos sistemas embebidos no triviales, necesitamos o bien la espec
 detallada de cómo operar con él, o bien descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
 denominamos ingeniería inversa. Esto plantea la inquietud acerca de la legalidad 
-del proceso, dadas las posibles restricciones en las licencias de uso de cada producto
+del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
 específico. En este caso en particular, sólo se usa ingeniería inversa para poder
 reutilizar el hardware con un propósito diferente, lo cual es acorde con las leyes 
 de defensa del consumidor en la Argentina, siempre que el producto haya sido adquirido legalmente.  
