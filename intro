@@ -1,0 +1,21 @@
+Existe una gran variedad de problemas en la actualidad que pueden ser resueltos
+mediante el uso de la tecnología existente. Por ejemplo podemos implementar una 
+solución automatizada (sin intervención humana) para la recolección y 
+procesamiento de factores atmosféricos en toda la extensión de un 
+campo de siembra. Sin embargo, el enfoque habitual seguido para desarrollar tales
+soluciones implica la construcción de hardware y software de propósito 
+dedicado, que en muchos casos es costoso, e incluso inaccesible dentro 
+de un contexto social y económico como el de nuestro país.
+
+En este artículo se desarrolla un proceso mediante el cual, hardware y software existente 
+en el país al momento en que fue escrito el artículo, que fue creado 
+con un propósito dedicado es convertido en un sistema de propósito general, 
+para luego dar solución a un problema específico distinto del original para el que 
+fue construido. El lector
+podría preguntarse por qué no utilizar hardware de prósito general desde un principio. 
+En este sentido cabe aclarar que nos referimos a problemas en los que el uso del 
+hardware de propósito general y bajo costo (como una computadora personal ) es inviable; y por lo tanto
+el uso de sistemas embebidos es una necesidad. De ahí la elección de hardware de 
+propósito específico cuyas características físicas (tamaño, peso, consumo energético, 
+etc.) es clave en la resolución del problema.  
+
