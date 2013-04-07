@@ -18,7 +18,7 @@ otros fines de interés, que un sistema de hardware y software Linux embebido
 genérico puede otorgar.
 
 
-- Detalles para el articulo -
+- Detalles generales para el articulo -
 
 El paper deberia explicar un procedimiento, por el cual, una placa que venga
 en un dispositivo embebido especifico, con una cpu
