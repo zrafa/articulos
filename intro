@@ -1,9 +1,8 @@
 Existe una gran variedad de problemas en la actualidad que pueden ser resueltos
-mediante el uso de la tecnología existente. Por ejemplo podemos implementar una 
-solución automatizada (sin intervención humana) para la recolección y 
-procesamiento de factores atmosféricos en toda la extensión de un 
-campo de siembra. Sin embargo, el enfoque habitual seguido para desarrollar tales
-soluciones implica la construcción de hardware y software de propósito 
+mediante el uso de sistemas embebidos. Por ejemplo podemos implementar una 
+un robot que recolecte y procese datos atmosféricos (humedad, temperatura, etc.) 
+en la extensión de un campo de siembra. El enfoque habitual seguido para desarrollar tales
+soluciones no triviales, implica la construcción de hardware y software de propósito 
 dedicado, que en muchos casos es costoso, e incluso inaccesible dentro 
 de un contexto social, político y económico como el de nuestro país.
 
@@ -83,4 +82,9 @@ de páginas web y software de conexión P2P
 NAS\footnote{Network Attached Storage} o un disco con conexión USB), entre otras 
 posibles funciones. 
 
-..
+servidor de impresión 
+servidor dns 
+fuente disco rigido ram -- durabilidad
+robot 
+
+
