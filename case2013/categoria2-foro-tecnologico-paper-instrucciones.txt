@@ -1,0 +1,29 @@
+
+Foro tecnológico (Technical Forum)
+- Deberá enviarse un artículo completo, escrito en inglés o castellano, con un máximo de 6 páginas. (ver formato y templates en: http://www.ieee.org/conferences_events/conferences/publishing/templates.html).
+- El artículo se deberá ingresar en: http://www.easychair.org/conferences/?conf=case2013, completando información de los autores, el resumen básico (abstract) en texto sin formato (plain text), la categoría elegida (indicar preferentemente una sola o a lo sumo dos categorías), palabras clave, el tópico y subiendo el artículo en formato PDF (upload paper).
+- Los trabajos aceptados como “Foro tecnológico” estarán incluidos en el libro de memorias. Estas obras NO se publicarán en IEEExplore.
+- Durante el evento serán expuestos en la modalidad póster. Los autores presentarán un póster de tamaño A1 (594mm x 841mm).
+- Para la aceptación se aplican criterios de exigencia intermedios entre la modalidad póster y la modalidad artículo completo.
+- Con el fin de ser aceptados los trabajos deben entrar en el ámbito de la conferencia, deberán ser trabajos originales, el trabajo no debe haber sido presentado en otros lugares, el texto debe ser claro, coherente y  escrito en Castellano o Inglés.
+
+
+Todos los casos (artículo completo, artículo breve y poster)
+
+Ignorar la recomendación de EasyCharir de no adjuntar un archivo. Adjuntar el PDF.
+Luego de subir el trabajo a EasyChair, ante cualquier modificación, corregir el trabajo ya ingresado en vez de dar de alta un nuevo trabajo. Cada PDF subido queda registrado en EasyChair con la fecha en que fue subido.
+En caso de que el trabajo sea aceptado, los autores deberán enviar por email , antes del 13 de Agosto del 2013 con subject “CASE2013 Poster N” donde N es el número de trabajo. En tamaño A1 (594mm x 841mm) como archivo pdf de una única página y de tamaño inferior a 2 MB para su publicación posterior en la web del sase. Las imágenes del pdf deben tener una resolución mínima de 72 dpi.
+Se pide a los autores que los posters tengan el encabezado y línea lateral derecha indicativos del congreso y de área (Ver imágenes suministradas más abajo). Se puede agregar un fondo a elección en el cuerpo del póster. En caso de que complique el diseño, se puede recortar prolijamente la línea lateral y dejar solo el encabezado.
+Cada autor deberá imprimir su propio póster. No se aceptan posters divididos en varias hojas.
+
+
+Fechas importantes
+
+Fecha límite de recepción de Trabajos:     10 de Abril, 2013
+CASE2013:                                                     14 al 16 de Agosto, 2013
+Novedades, consultas e información
+
+Las novedades sobre el CASE 2013 serán anunciadas a través de la lista de correos: https://groups.google.com/group/embebidos32/subscribe; se sugiere a los autores que se suscriban a esa lista.
+Consultas sobre Easychair: escribir a case2013 (arroba) easychair.org
+Consultas sobre el CASE 2013: escribir a info (arroba) sase.com.ar, con el asunto: “Consulta CASE2013”
+

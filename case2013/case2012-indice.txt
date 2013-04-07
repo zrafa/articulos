@@ -1,0 +1,34 @@
+
+Implementación de Sistemas Embebidos (Artículos)	
+109
+(NO EXPUESTO) Metodología Para la Transferencia Tecnológica en la Industria Electrónica Basada en Software Libre y Hardware Copyleft	Carlos Camargo	111
+Balanceadora de Muela para Máquinas Rectificadoras con Microcontrolador	Paulo Andrés Biasutto and Hector Riso	117
+Sistema embebido de bajo costo como instrumento auxiliar de laboratorio para operación remota	Alfredo Taddei, Héctor Riso and Pedro E. Colla	122
+Embedded speaker verification in low cost microcontroller	Maximiliano Lizondo, Pablo Daniel Agüero, Alejandro Jose Uriz, Juan Carlos Tulli and Esteban Lucio Gonzalez	128
+Codificador de señales para Cohetería	Rago Sergio, Lara Sergio, Acosta Alejandro and Garayzar Javier	134
+Quadpector: un UAV de bajo costo para observación remota	Fernando Chouza, Michael Erusalimsky, Enzo Lanzelotti and Alberto Rodriguez	140
+Diseño e implementación de un nodo compatible 802.15.4 para redes inalámbricas de sensores	Pablo Ridolfi, Sergio Scaglia, Ariel Lutenberg, Pedro Martos and Fabian Vargas	146
+Recarga Fácil por Radio Frecuencia, RF2	Edgardo Vaz, Melina Rabinovich and Daniel Aicardi	152
+Diseño e Implementación de Sistema Embebido para Telemetrizar Estaciones Limnimétricas	Orlando Micolini, Melisa Alasia, Pablo Martínez and Martín Pereyra	158
+Sistema georeferenciador con parcelamiento virtual y adquisidor de sonidos masticatorios en rumiantes en pastoreo extensivo	Gonzalo Aranda, Federico De La Cruz Arbizu, Esteban L. González, Juan C. Tulli, Alejandro J. Uriz and Pablo D. Agüero	164
+Diseño e Implementación de un Sistema Embebido de Control Moderno: una Experiencia Práctica	Mariano Scasso, Ricardo J. Garro, Leo Ordinez and Omar Alimenti	170
+Procesamiento de señales de Speckle dinámico. implementación del algoritmo de Fujii en FPGA	Maximiliano Antonelli, Noelia Echeverría, Adriana Scandurra, Isabel Passoni and Claudio Gonzalez	176
+Generación de imágenes de alto rango dinámico con mapeo de tonos en un sistema embebido con arquitectura híbrida	Bayron Pérez	182
+Agile Embedded Systems Design Capstone Course: The MAVRK Experience	Antonio Mondragon-Torres, Alan Lee, Troy Hawley and Ryan Massicci	188
+Implementación de Sistemas Embebidos (Foro y Póster)	
+195
+Control difuso basado en microcontrolador para la producción de biogás en digestión anaerobia tipo batch de fracción orgánica de residuos sólidos	Ilber Adonayt Ruge Ruge and Mauricio Hernandez Sarabia	197
+Osciloscopio digital basado en FPGA con conexión Ethernet e interfaz virtual para monitoreo de sistemas eólicos	Leonardo Flaviani, Esteban Rivas and Rodrigo González	203
+Diseño y fabricación del sistema de interfaz y control de contadores de muones	Daniel A. Almela, Damián E. Alonso, Alan E. Fuster, Matias Rolf Hampel, Adrián P. J. Sedoski Crose, Federico Suarez and Oscar Isaac Wainberg	207
+Computación híbrida y colaborativa en acción: un caso de estudio utilizando FPGA y PC	Eduardo Sanchez, Pablo Alejandro Ferreyra and Carlos Marques	211
+Medición de vibraciones en pequeños motores eléctricos	Ivan Cascallares, Ariel Castellini, Juan Manuel Panasiuk, Hugo Tantignone and Ignacio Zaradnik	215
+Desarrollo de un dispositivo inalámbrico para monitoreo de variables utilizando The Contiki OS	Juan Sebastian Morant, Sergio Marin and Juan Pablo Velasquez	219
+Embedding a bridge Internet to X-10 and a web server in microcontrollers	Martin Perez, Pablo D.l Agüero, Alejandro J. Uriz, Juan C. Bonadero, Juan C. Tulli and Esteban L. Gonzalez	225
+Diseño de HMI WVGA táctil con comunicación MODBUS TCP	Gustavo Muro and Aldo Gentile	226
+Diseño de un TAG RFID integrado en un proceso CMOS de 0,5 µm	Fabricio Alcalde Bessia, Guillermo Makar and Diego Fanego	228
+Desarrollo de un s istema de adquisición y procesamiento de señales ECG para la monitorización de pacientes de alto riesgo	Gabriel E. Cañadas, Carlos Dell’Aquila, Marcelo Segura, Cristian Sisterna and Eric Laciar	229
+Automedida de consumo en sistemas embebidos	Julian Oreggioni, Sebastián Fernández and Leonardo Steinfeld	230
+Medición remota del contenido de agua en el suelo mediante sensores capacitivos	Javier Askenazi, Carlos De Marziani and Fabían Scholz	231
+Diseño de un sistema de gestión y comunicación para mediciones de variables en procesos remotos y locales usando un sistema de desarrollo.	Luis Fernando Melo Sevilla and Raul Emilio Melo Sevilla	232
+Aplicaciones de control de acceso biométrico con sistemas embebidos de baja gama	Frank Román Muñoz, Mauricio Caamaño Bedoya, Carmen Chan Zheng and Johan Carvajal Godínez	233
+Control inalámbrico de un sistema móvil mediante una pantalla táctil y la red GSM celular	Mauricio Caamaño Bedoya, Juan José Carazo Céspedes, Miguel Rodríguez Escudé and Johan Carvajal Godínez	234

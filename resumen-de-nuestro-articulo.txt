@@ -1,0 +1,101 @@
+
+Lo que nosotros hicimos con Rodo fue :
+
+- Desarmar el cliente delgado encore entc-1000. El ciente delgado encore entc-1000
+  viene con un firmware cerrado, que se sabe es un kernel linux 2.4, y varios programas linux de esa epoca.
+  Solo funciona como cliente vnc o rdp.
+
+- Descubrimos que el SOC interno del dispositivo encore es un ep9307 de Cirrus. 
+  Este soc tiene una CPU arm920t.
+http://www.cirrus.com/en/products/ep9307.html
+
+- Bajamos el manual del usuario del SOC cirrus ep9307
+http://www.cirrus.com/en/pubs/manual/EP93xx_Users_Guide_UM1.pdf
+
+- Paralelamente, con la board desnuda, trabajamos en descubrir si tiene un puerto serial y donde
+- (RODO) Descubrimos cuales son los pines del puerto serial (tx, rx, gnd, Vcc)
+- (RODO) Armamos un cable serial que permita conectar esos pines descubiertos con el puerto serial comun de una PC
+- Conectamos la board a la pc con minicom
+
+Afortunadamente, en este punto, tuvimos la documentación correcta.
+
+El manual dice (http://www.cirrus.com/en/pubs/manual/EP93xx_Users_Guide_UM1.pdf - pagina 119).
+Traduccion :
+
+EL Cirrus ep9307 tiene una boot rom. 
+Cuando se le hace un reset a la board (por ejemplo, apagamos y encendemos)
+la CPU (ARM920t) hace un reset y comienza a ejecutar codigo en la dirección cero.
+
+El sistema utiliza los controles de la "configuracion del hardware" para seleccionar
+el dispositivo de boot que aparezca en la dirección cero.
+Si el Boot Interno está seleecionado, la boot rom es "mapeada" a la dirección
+cero del ARM920t, y por lo tanto, la CPU ejecutará el codigo del boot rom.
+
+En la página 120, el manual indica cuales son los pasos que el boot rom ejecuta.
+El punto 7. de esos pasos fue el mas interesante para nosotros, porque permite
+iniciar un "serial download", lo cual significa que :
+
+ - se inicializa el UART1 a 9600 baudions, 8 bits, sin paridad, 1 bit de stop
+ - se envía por esa conexión serial el caracter "<"
+ - Se leen 2048 caracteres desde esa conexion serial, y se almacenan en un buffer de boot interno (alias ethernet mac buffer)
+ - Se envia otro caracter ">" por la conexion serial, para indicar que se leyeron los 2048 caracteres.
+ - Se enciende el led verde
+ - La cpu salta a la dirección del buffer de boot interno.
+
+
+- El tema fue como hacer esa "configuracion del hardware" que el manual menciona
+en la pagina 119. La suerte estuvo con nosotros. La board tiene un "switch" que
+permite seleccionar el "boot rom" o el boot normal desde otro lugar.
+
+- Colocamos el switch de la placa en "boot rom", conectamos la placa con el serial
+a la pc. Configuramos minicom a 9600 baudios etc, y finalmente, al hacer un 
+reset de la placa, obtuvimos el caracter ">" especificado en el manual.
+
+- Aqui ya sabiamos que el codigo del boot rom se ejecutaba. 
+
+- Lo proximo fue investigar como enviar 2048 bytes con codigo que fuese util.
+- Buscando entre todos los archivos de desarrollo que cirrus publica,
+  encontramos, para ese soc de cirrus, un programa llamado "download", y un codigo fuente en assembler
+  que inicializa el hardware de un soc ep9307. Aqui :
+
+http://arm.cirrus.com/files/download/Download_1-0-5.tar.gz
+
+Resumiendo los pasos posteriores:
+
+- compilamos un bootloader de uboot para ese hardware, con opciones tftp y varias cosas mas.
+- modificando el codigo en assembler encontrado en cirrus, e hicimos varias pruebas para detectar
+  en que direcciones reales está la RAM y la FLASH (disco con el firmware del encore).
+- tuvimos que modificar levemente el codigo de uboot para que viera la cantidad de RAM correcta.
+- compilamos un kernel linux actual para esa board. El codigo fuente de linux ya viene con 
+  muchos archivos de configuracion para distintas "placas". Hay un archivo de configuracion
+  para las placas ep93XX que cirrus publica. Esas placas de cirrus son placas "modelo"
+  que otros fabricantes de hardware, que compren y utilicen el SOC de cirrus ep9307
+  puedan hacer placas embebidas similares. Toman como modelos las que el fabricante
+  del soc publica.
+  Afortunadamente (nuevamente) encore que hizo este cliente delgado con ese SOC
+  parece utilizar casi el mismo diseño que Cirrus publica, porque nuestro kernel linux
+  actual compilado para esa placa de cirrus, funciona perfectamente en el encore,
+  con todos los perifericos funcionales.
+
+- Luego, utilizando el progama "download" de cirrus, enviamos un codigo de 2048
+  bytes (como lo quiere el boot rom del cirrus) que luego de inicializar al menos la RAM, al ejecutarse,
+  se trae por el serial otro codigo que pone en ram, y luego salta a esa direccion ram.
+  Nosotros hicimos que ese codigo de 2048 bytes, al ejecutarse, lleve a la RAM nuestro
+  uboot compilado. COmo nuestro uboot compilado usa el serial, pudimos hacer el resto
+  de las tareas. Algunas de ejemplo fueron :
+
+  - configurar la ethernet, traer el kernel linux por tftp, colocarlo en ram y hacer boot de esa direccion ram.
+  - traer por tftp nuestro uboot y colocarlo en la direccion FLASH de la que la board hace boot.
+    (supimos esa direccion cuando jugabamos con el codigo assembler, porque encontramos una secuencia de bytes que indican
+    el inicio del firmware del encore).
+  - flasheamos en otra parte de la flash nuestro kernel linux, que ya estaba compilado con soporte usb, usbstorage y ext2.
+  - Modificamos los argumentos del kernel en nuestro uboot que ya instalamos en la flash, para que 
+    ejecute el kernel que pusimos en la flash, y ademas, para que l pase los argumentos "root=/dev/sda1 rootdelay"
+  - Eso posibilitó que en un pendrive pongamos un filesystem root de linux, y tuvimos el encore
+    como un sistema embebido linux con OpenEmbedded y con Debian funcional.
+
+- Finalmente estamos utilizando uno de esos encores como servidor de impresion.
+
+- Tenemos pensado utilzar otro como servidor DNS, y como clientes delgados con software mas actual (kernel actual, debian actual u openembedded actual).
+
+
