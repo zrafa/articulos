@@ -55,4 +55,13 @@ percibidas como ``cajas negras'' que sólo puede ser utilizadas para el propósi
 indicado por su fabricante. Sin embargo, el constante desarrollo y extensa portabilidad de
 sistemas abiertos como GNU/Linux ha inducido a los fabricantes, en gran medida por la reducción
 de costos, al desarrollo de sistemas embebidos basados en hardware mas estándar, susceptible 
-de ser reutilizado con mayor facilidad. 
+de ser reutilizado con mayor facilidad. Listamos a continuación una serie de características
+de los sistemas embebidos que motivan su investigación y utilización para implementar
+soluciones:
+
+\begin{itemize}
+\item Bajo consumo energético
+\item Baja disipación de temperaturas altas, derivado del inciso anterior. 
+\item Arranque del sistema operativo veloz.
+\item Menor peso y dimensiones físicas. 
+\end{itemiz}
