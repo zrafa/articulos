@@ -1,0 +1,48 @@
+
+El paper deberia explicar un procedimiento, por el cual, una placa que venga
+en un dispositivo embebido especifico, con una cpu
+que soporta linux (supongamos un iptv, un celular, un router hogareño,
+un cliente delgado, una tablet, una consola de juegos, etc) pueda
+ser "liberada" para que uno instale un Linux mas moderno, y lo utilice
+para otro fin del que fue diseñado. Esto es :
+ - convertir la placa  y su software para que deje de ser un dispositivo 
+linux embebido específico, y se convierta en un dispositivo linux embebido
+genérico.
+
+El procedimiento a explicar fue "probado" en una placa que viene
+en los clientes delgados encore entc-1000.
+
+EL procedimiento debería servir de guía para convertir cualquier
+placa con una CPU que soporte linux, en un dispositivo linux genérico.
+Ya que la mayoría de los SOC actuales tienen las mismas características.
+Y si utilizan Linux funcionan, en su mayoría, muy parecido a bajo nivel
+(boot).
+
+La motivacion para el cual detallar este procedimiento es :
+
+- la ingenieria inversa en la argentina tiene un vacío legal, y los
+derechos del consumidor en la argentina permiten hacer ingenieria inversa.
+
+- comprar una placa embebida linux genérica, para desarrollo, puede costar
+alrededor de 500 euros (estas placas permiten tener un ambiente
+de desarrollo de software actual: kernel linux, bootloader, gcc, programas de aplicacion). Ademas, hay que importarlas.
+
+- existen placas embebidas con linux para desarrollos mas baratas.
+  Pero, las placas mas baratas suelen venir con un ambiente de desarrollo
+  "estancado". Generalmente te entregan el codigo fuente de un kernel linux,
+   bootloader, gcc, programas que no se pueden actualizar con versiones nuevas.
+  Esto se debe a que el kernel linux que utilizan es una version modificada
+  por el fabricante de la placa, que no envia sus drivers al kernel linux 
+  oficial, ni tampoco actualiza sus drivers con versiones del kernel mas nuevas.
+
+- desarrollar una placa embebida con linux, en argentina es muy dificil en
+  cuanto a esfuerzo. Se necesitan ingeniero electronicos, y un trabajo 
+  grande en hardware, que puede ser mucho mas costoso que la compra
+  de placas ya existentes (que si se fabrican de a miles o millones son
+  muy baratas).
+
+- utilizar un hardware embebido con linux cerrado (como el encore o el
+  tplink que utilizamos nosotros) es muy facil de conseguir en argentina.
+  Y es usualmente barato (porque en china fabrican millones).
+
+
