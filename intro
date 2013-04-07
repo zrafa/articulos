@@ -60,8 +60,26 @@ de los sistemas embebidos que motivan su investigación y utilización para impl
 soluciones:
 
 \begin{itemize}
-\item Bajo consumo energético
-\item Baja disipación de temperaturas altas, derivado del inciso anterior. 
-\item Arranque del sistema operativo veloz.
+\item Consumo energético significativamente menor al utilizado por una computadora persoal. 
+\item Baja disipación de tempertaura (derivado del inciso anterior), por lo que usualmente 
+no requiren mecanismos de enfriamiento, y por ende suelen generar menor ruido. 
+\item Arranque veloz del sistema opertaivo. 
 \item Menor peso y dimensiones físicas. 
-\end{itemiz}
+\end{itemize}
+
+Un ejemplo cercano hoy en día, en el que el uso de sistemas embebidos, que ejecuta
+sistema opeativo de propósito general, como GNU/Linux, es preferible como solución
+frente al uso de una computadora personal es el de un \textit{gateway} residencial.
+Este es el dispositivo encargado de gestionar el tráfico 
+de nuestra red doméstica hacia Internet y desde ella. Es deseable que tal dispositivo
+permaneza encendido sin interrupción. En este punto el sistema embebido consume 
+menos energía y disipa menos calor por lo que ya representa una ventaja. Sin embargo, 
+la sola función de gatway no es alentadora en sí misma. Aprovechando las capacidades
+de un sistema operativo como GNU/Linux, podemos agregar funcionalidad al sistema 
+embebido y explotar mejor su capacidad. Por ejemplo, podríamos agregar un servidor 
+de páginas web y software de conexión P2P
+\footnote{del inglés \textit{peer to peer} } 
+(asumiendo que agregamos para esto algún tipo de almacenamiento externo como un 
+NAS\footnote{Network Attached Storage} o un disco con conexión USB), entre otras 
+posibles funciones. 
+
