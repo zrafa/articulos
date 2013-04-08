@@ -1,0 +1,24 @@
+
+
+Definiciones Preliminares
+
+Se puede comprar hardware embebido linux para desarrollo.
+Se puede reutilizar hardware embebido linux comercial, utilizando dispositivos
+existentes que sean soportados por alguna distribucion linux para embebidos.
+
+La ultima opcion tiene al menos dos complicaciones.
+Generalmente, el hardware linux embebido comercial
+tiene un tiempo de vida acotado. Esto se debe a que se desarrollan nuevos
+productos, o versiones mejoradas del producto anterior. Una
+vez que los nuevos desarrollos son fabricados en maza, son puestos en
+el mercado. Y, como consecuencia, los productos anteriores 
+dejan de fabricarse, y el stock se vuelve limitado.
+
+
+
+por las empresas,
+en la constante carrera por la puesta en el mercado de productos
+de ultima generacion.
+
+
+La solución es reutilizar hardware linux embebido 
