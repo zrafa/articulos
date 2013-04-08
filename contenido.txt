@@ -6,14 +6,31 @@ Se puede comprar hardware embebido linux para desarrollo.
 Se puede reutilizar hardware embebido linux comercial, utilizando dispositivos
 existentes que sean soportados por alguna distribucion linux para embebidos.
 
-La ultima opcion tiene al menos dos complicaciones.
-Generalmente, el hardware linux embebido comercial
-tiene un tiempo de vida acotado. Esto se debe a que se desarrollan nuevos
-productos, o versiones mejoradas del producto anterior. Una
-vez que los nuevos desarrollos son fabricados en maza, son puestos en
-el mercado. Y, como consecuencia, los productos anteriores 
-dejan de fabricarse, y el stock se vuelve limitado.
+La ultima opcion tiene al menos dos inconvenientes.
+Primeramente, el hardware linux embebido comercial
+tiene, usualmente, un tiempo de vida acotado. Esto se debe, principalmente,
+a que se diseñan nuevos productos, o versiones mejoradas del producto que acaba
+de salir al mercado. Una vez que los nuevos desarrollos son fabricados en maza
+los productos anteriores dejan de fabricarse, y el stock se vuelve limitado.
 
+Ademas, para que sea posible la utilización de una distribución linux
+para embebidos, en un dispositivo comercial nuevo, se necesita
+un tiempo de desarrollo y testing previo. En ese tiempo, los
+programadores y colaboradores realizan las modificaciones necesarias 
+al sistema de desarrollo que utilicen, que permita a sus distribuciones
+dar soporte al nuevo hardware disponible.
+
+Usualmente, este tiempo de desarrollo no puede comenzar antes de que el hardware
+embebido esté públicamente disponible (en el mercado o como prototipos
+de laboratorio), ya que es un poco habitual que los fabricantes
+publiquen documentacion relativa al diseño del hardware en desarrollo.
+
+debe por su naturaleza de desarrollo distribuido y colaborativo,
+necesita un tiempo de desarrollo previo.hasta que
+que sea factible su instalacion y utilización de manera estandarizada
+y comprobada.
+
+ov de manera estandarizada.
 
 
 por las empresas,
