@@ -9,7 +9,7 @@ o actualizado a nivel de software.
 
 El resultado final, luego de aplicar el procedimiento, es una placa electrónica
 de desarrollo Linux embebido genérica, capaz de ser reutilizada para 
-otros fines de interés, diferente al que fue construido.
+otros fines de interés, diferentes al que fue construido.
 
 Para la experimentación práctica de esta experiencia se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano

@@ -1,3 +1,41 @@
+== introduccion ==
+
+1 pagina y media
+
+== Definiciones ==
+
+Definicione Preliminares- Fundamentos o Simil Por ejemplo podria ser como
+es la placa que estarian adaptando
+
+1 pagina y media
+
+== Metodologia ==
+  ingenieria inversa
+
+	- conociendo que hardware 
+	- obteniendo el hardware
+		comprar placa de desarrollo 
+			usando esto viene listo para desarrollo, pero no se aprende y es costoso
+		comprar un dispositivo linux
+	- obteniendo acceso
+		conseguir acceso a un shell
+		conseguir acceso al momento de un reset boot
+		serial
+	- modificando la manera en que el dispositivo inicia el firmware en flash
+
+	- instalando linux
+	
+== Testeos evaluacion Conclusiones ==
+Testeos o Evaluacion (si los hubiera sino se pone en trabajos futuros.
+"Entre nuestros trabajos futuros se encuentra testear el comportamiento del
+.plin plin plin en un robot plum plum que se desenvuelva en tiempo real en
+un ambiente dinámico bajo condiciones de .....")
+
+
+Conclusion(un resumen de todo lo que presentaste particularmente si tienen
+pruebas y testeos y los trabajos futuros)
+
+
 
 Toasters, ovens, and dishwashers are a few
 of the appliances found in our everyday
@@ -56,7 +94,17 @@ que puedan adaptarse cuando y donde sea posible.
 
 Para poder ejecutar Linux en un desarrollo o investigación de sistemas
 embebidos, es necesario hardware sofisticado que no se diseña y construye
-facilmente (referencia carlos camargo). Una posibilidad es
+facilmente (referencia carlos camargo). 
+
+Existen al menos tres posibilidades para adquirir este tipo de
+hardware embebido:
+
+1- adquirir hardware y software especializado para desarrollo
+2- adquirir un dispositivo embebido hogareño que tenga soporte
+   por alguna distribución linux embebida
+3- adaptar o adoptar un hardware embebido hogareño realizando ingenieria inversa
+
+Una posibilidad es
 adquirir hardware especializo embebido, que provea
 las herramientas de desarrollo Linux necesarias para el hardware.
 Esta posibilidad, tiene la ventaja de proveer un sistema
