@@ -38,25 +38,44 @@ realizar miles de funciones diferentes, realizan una única función.
 Esta única tarea define qué es un sistema embebido (referencia).
 
 Pero, estos artículos del hogar ya no son tan simples. Algunos
-años atrás, la mayoría de estos dispositivos fueron mecánicos
+años atrás, la mayoría de estos dispositivos fueron únicamente mecánicos
 y eléctricos. En cambio, hoy en día, la mayoría incluye placas
-de circuitos electrónicos, procesadores, sensore, microcontroladores, y
+de circuitos electrónicos, procesadores, sensores, microcontroladores, y
 sofisticadas funcionalidades.
 
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
+dentro del dispositivo, y
 que pueda administrar todas las funcionalidades al mismo tiempo.
-Y en muchos casos, los fabricantes han optado por Linux, debido a su
+Y, en muchos casos, los fabricantes han optado por Linux, debido a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 
 Si fuese necesario construir un sofisticado dispositivo robótico 
 en nuestra realidad, reutilizamos la mayor cantidad de partes de otros
-trabajos previos
+trabajos previos, como así también componente hardware y software
+que puedan adaptarse cuando y donde sea posible.
 
-sofisticada, procesadores
+Para poder ejecutar Linux en un desarrollo o investigación de sistemas
+embebidos, es necesario hardware sofisticado que no se diseña y construye
+facilmente (referencia carlos camargo). Una posibilidad es
+adquirir hardware especializo embebido, que provea
+las herramientas de desarrollo Linux necesarias para el hardware.
+Esta posibilidad, tiene la ventaja de proveer un sistema
+embebido genérico fácilmente adaptable a necesidades específicas.
+Aunque, su desventaja principal es su costo (referencia a gta04
+Alrededor de 500 euros cuesta un gta04). Tambien aparecieron
+nuevos dispositivos economicos para este fin (por ej raspi). Pero 
+son muy pocas las posibilidades de este tipo, y su adquisición
+en la Argentina (el stock es muy limitado, la importacion importacion es compleja, los costos aduaneros
+son elevados) por lo que, finalmente, la ventaja económica se pierde.
+
+Otra posibilidad es la adopción o adaptación de hardware embebido
+existente.
 
 Definiciones Preliminares
 
 Se puede comprar hardware embebido linux para desarrollo.
+
+
 Se puede reutilizar hardware embebido linux comercial, utilizando dispositivos
 existentes que sean soportados por alguna distribucion linux para embebidos.
 
