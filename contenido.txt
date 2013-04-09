@@ -98,6 +98,37 @@ en nuestra realidad, reutilizariamos en lo posible, la mayor cantidad de partes 
 trabajos previos, como así también componentes de hardware y software
 preexistentes, que puedan adaptarse cuando y donde se necesite.
 
+Existen decenas de dispositivos embebidos en el mercado regional,
+que pueden adquirirse para su estudio. Y,
+aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
+gran parte de estos sistemas contienen el hardware necesario
+para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositos
+capaces de ejecutar un sistema Linux son el router TP-Link mr3020,
+y los teléfonos móviles con androird.
+
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
+que funciona como una terminal de escritorio remoto, soportando
+los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
+comercial y su documentacion proveen especificaciones mínimas, 
+se publicita como un sistema con Linux embebido kernel 2.4
+No existe información adicional de la arquitectura o funcionamiento
+interno del software. Tampoco provee, Encore Electronic Inc.,
+el codigo fuente del software instalado, ni las instrucciones 
+para su compilación e instalación (como es requerido por la licencia GPL de LInux - referencia).
+
+Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento,
+ya que se trata de un sistema embebido moderno, y disponible
+para su adquisición en el país. Conociendo su funcionamiento interno 
+nos permite obtener mayor conocimiento del tema,
+posibilita la experimentación académica con Linux embebido, y
+así tambien, su reuso para necesidades específicas en el marco
+de los sitemas embebidos.
+
+
+
+
+
+aunque mucho de ellos
 Para poder hacer uso de Linux en un desarrollo o investigación de sistemas
 embebidos, es necesario contar con hardware embebido que no se diseña y construye
 facilmente (referencia carlos camargo). Linux es un sistema operativo que
@@ -161,24 +192,17 @@ y comprobada.
 ov de manera estandarizada.
 
 
-por las empresas,
-en la constante carrera por la puesta en el mercado de productos
-de ultima generacion.
-
-
-La solución es reutilizar hardware linux embebido 
-
-
 
 El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
-comercial y su documentacion proveen especificaciones mínimas, no
-existe información adicional de la arquitectura o funcionamiento
-del software en el producto. La documentación tambien indica
-que el firmware contiene una versión de Linux (version 2.4 y obsoleta- referencia),
-aunque la empresa fabricante no provee el codigo fuente del software instalado, ni las instrucciones 
-para su compilación e instalación (como requerido por la licencia GPL de LInux - referencia).
+comercial y su documentacion proveen especificaciones mínimas, 
+se publicita como un sistema con Linux embebido kernel 2.4
+No existe información adicional de la arquitectura o funcionamiento
+interno del software. Tampoco provee, Encore Electronic Inc.,
+el codigo fuente del software instalado, ni las instrucciones 
+para su compilación e instalación (como es requerido por la licencia GPL de LInux - referencia).
+
 Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento,
 ya que se trata de un sistema embebido moderno, y disponible
 para su adquisición en el país. Conociendo su funcionamiento interno 
