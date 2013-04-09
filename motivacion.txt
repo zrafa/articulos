@@ -44,6 +44,7 @@ La motivacion para el cual detallar este procedimiento es :
 - la ingenieria inversa en la argentina tiene un vacío legal, y los
 derechos del consumidor en la argentina permiten hacer ingenieria inversa.
 
+- 
 - comprar una placa embebida linux genérica, para desarrollo, puede costar
 alrededor de 500 euros (estas placas permiten tener un ambiente
 de desarrollo de software actual: kernel linux, bootloader, gcc, programas de aplicacion). Ademas, hay que importarlas.
@@ -67,3 +68,6 @@ de desarrollo de software actual: kernel linux, bootloader, gcc, programas de ap
   Y es usualmente barato (porque en china fabrican millones).
 
 
+Además, la metodología tambien posibilita la actualizacion del firmware
+original, que en muchos casos, no tiene soporte ni nuevas versiones
+del fabricante original.
