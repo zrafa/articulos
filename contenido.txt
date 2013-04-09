@@ -18,6 +18,7 @@ paper de hellwig
 paper 133 del cacic
 
 	- conociendo que hardware 
+
 	- obteniendo el hardware
 		comprar placa de desarrollo 
 			usando esto viene listo para desarrollo, pero no se aprende y es costoso
@@ -83,8 +84,8 @@ Esta única tarea define que nos encontramos ante sistemas embebidos (referencia
 Pero, estos artículos del hogar ya no son tan simples como antes. Algunos
 años atrás, la mayor parte de estos dispositivos fueron únicamente mecánicos
 y eléctricos. En cambio, hoy en día, la mayoría incluye placas
-de circuitos electrónicos, procesadores, sensores, microcontroladores, y
-sofisticadas funcionalidades.
+de circuitos electrónicos, sensores, microcontroladores, microprocesadores y
+funcionalidades sofisticadas.
 
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
 dentro del dispositivo, ya
@@ -93,13 +94,14 @@ Y, en muchos casos, los fabricantes han optado por Linux, debido a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 
 Si fuese necesario construir un sofisticado dispositivo robótico 
-en nuestra realidad, reutilizamos la mayor cantidad de partes de otros
+en nuestra realidad, reutilizariamos en lo posible, la mayor cantidad de partes de otros
 trabajos previos, como así también componentes de hardware y software
-preexistentes, que puedan adaptarse cuando y donde sea posible.
+preexistentes, que puedan adaptarse cuando y donde se necesite.
 
-Para poder ejecutar Linux en un desarrollo o investigación de sistemas
-embebidos, es necesario hardware sofisticado que no se diseña y construye
-facilmente (referencia carlos camargo). 
+Para poder hacer uso de Linux en un desarrollo o investigación de sistemas
+embebidos, es necesario contar con hardware embebido que no se diseña y construye
+facilmente (referencia carlos camargo). Linux es un sistema operativo que
+necesita de, al menos, un microprocesador con arquitectura de 32bits soportada por el kernel (referencia kernel).
 
 Existen al menos tres posibilidades para adquirir este tipo de
 hardware embebido:
@@ -135,8 +137,8 @@ existentes que sean soportados por alguna distribucion linux para embebidos.
 La ultima opcion tiene al menos dos inconvenientes.
 Primeramente, el hardware linux embebido comercial
 tiene, usualmente, un tiempo de vida acotado. Esto se debe, principalmente,
-a que se diseñan nuevos productos, o versiones mejoradas del producto que acaba
-de salir al mercado. Una vez que los nuevos desarrollos son fabricados en maza
+a que se diseñan nuevos productos, o versiones mejoradas del producto que
+se encuentre actualmente en el mercado. Una vez que los nuevos desarrollos son fabricados en maza
 los productos anteriores dejan de fabricarse, y el stock se vuelve limitado.
 
 Ademas, para que sea posible la utilización de una distribución linux
@@ -165,3 +167,26 @@ de ultima generacion.
 
 
 La solución es reutilizar hardware linux embebido 
+
+
+
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE,
+que funciona como una terminal de escritorio remoto, soportando
+los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
+comercial y su documentacion proveen especificaciones mínimas, no
+existe información adicional de la arquitectura o funcionamiento
+del software en el producto. Aunque la documentación indica
+que el firmware contiene una versión de Linux antigua (version 2.4 - referencia),
+la empresa fabricante no 
+provee el codigo fuente del software instalado, ni las instrucciones 
+para su compilación e instalación. Es de interés para nuestra
+facultad el entendimiento de la arquitectura y funcionamiento,
+ya que se trata de un sistema embebido moderno, y puede
+ser reutilizado para la experimentación con Linux embebido, como
+así tambien, para suplir necesidades específicas en el marco
+de los sitemas embebidos.
+
+
+como del sistema operativo utilizado
+
+	- conociendo que hardware 
