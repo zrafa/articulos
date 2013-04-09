@@ -195,25 +195,38 @@ que contiene la CPU y gran parte de los componentes de un sistema embebido, en u
 único chip (referencia).
 
 Además, es de interés conocer que otros componentes conforman
-el sistema. Los mas importantes, luego de conocer la CPU, son los ser módulos de memoria (de
+el sistema. Los mas importantes, luego de conocer la CPU, son los módulos de memoria (de
 tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
 Ya que en conjunto con el microprocesador suelen dar una visión
 global de como inicia o funciona el sistema.
 
-La arquitectura de un sistema embebido particular puede conocerse desmontando
+En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
 la placa del circuito impreso de la caja exterior. Esto posibilita
-conocer y listar todos los componentes principales con los
+inspeccionar visualmente y listar todos los componentes principales con los
 que está compuesto el sistema. A partir de este listado, puede
 obtenerse, en la mayoría de los casos, la documentación pública
-de cada uno de los componentes o chips que conforman el sistema.
+de cada uno de los componentes o chips listados.
 A este tipo de documentación se conoce como hoja de datos, o 
 en algunos casos (como el de las memorias o cpu) manuales de programación
 del chip.
 
 En nuestro caso de estudio, al desmontar el ENTC-1000 nos encontramos
 con que el dispositivo utiliza un SOC (system on chip) Cirrus 3907A,
-un modulo de memoria SDRAM de 64MB (colocar marca), y un modulo
-de memoria FLASH de 16MB (colocar marca). Afortunadamente,
+que contiene un procesador central de arquitectura ARM, modelo ARM920T,
+el cual trabaja a una velocidad de 200Mhz.
+Ademas, la placa presenta un modulo de memoria SDRAM de 64MB (colocar marca), y un modulo
+de memoria FLASH de 16MB (colocar marca). 
+
+Afortunadamente,
+la empresa Cirrus, publica documentacion detallada del soc 3907A, software
+para su programación, y codigo fuente completo
+Linux para experimentación. Además, publica documentación
+de placas de laboratorios experimentales, que las empresas que utilicen
+este SOC en particular pueden hacer uso como diseño base para sus circuitos.
+
+
+Comunicación a nivel de software
+Con toda esta documentación disponible, lo siguiente es 
 Gkkkk
 como del sistema operativo utilizado
 
