@@ -170,20 +170,20 @@ La solución es reutilizar hardware linux embebido
 
 
 
-El sistema embebido ENTC-1000 es un producto propietario de ENCORE,
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
 comercial y su documentacion proveen especificaciones mínimas, no
 existe información adicional de la arquitectura o funcionamiento
-del software en el producto. Aunque la documentación indica
-que el firmware contiene una versión de Linux antigua (version 2.4 - referencia),
-la empresa fabricante no 
-provee el codigo fuente del software instalado, ni las instrucciones 
-para su compilación e instalación. Es de interés para nuestra
-facultad el entendimiento de la arquitectura y funcionamiento,
-ya que se trata de un sistema embebido moderno, y puede
-ser reutilizado para la experimentación con Linux embebido, como
-así tambien, para suplir necesidades específicas en el marco
+del software en el producto. La documentación tambien indica
+que el firmware contiene una versión de Linux (version 2.4 y obsoleta- referencia),
+aunque la empresa fabricante no provee el codigo fuente del software instalado, ni las instrucciones 
+para su compilación e instalación (como requerido por la licencia GPL de LInux - referencia).
+Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento,
+ya que se trata de un sistema embebido moderno, y disponible
+para su adquisición en el país. Conociendo su funcionamiento interno 
+posibilita la experimentación académica con Linux embebido, como
+así tambien, su reuso para necesidades específicas en el marco
 de los sitemas embebidos.
 
 
