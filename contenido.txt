@@ -187,6 +187,20 @@ así tambien, su reuso para necesidades específicas en el marco
 de los sitemas embebidos.
 
 
+Para entender el funcionamiento, es necesario, en primer lugar, conocer
+la arquitectura. La arquitectura de un sistema embebido moderno
+contiene como componente central, un microcontrolador o microprocesador.
+Mas aún, actualmente, muchos sistemas contienen un SOC (system on chip),
+que contiene gran parte de los componentes de un sistema embebido, en un
+único chip (referencia).
+
+La arquitectura del sistema embebido puede conocerse desmontando
+la placa del circuito impreso de la caja o . Esto posibilita
+conocer y listar todos los componentes principales con los
+que está compuesto el sistema.
+
+EN nuestro caso, al desmontar el ENTC-1000 nos encontramos
+con que el dispositivo utiliza un SOC (system on chip) Cirrus 3907A.
 como del sistema operativo utilizado
 
 	- conociendo que hardware 
