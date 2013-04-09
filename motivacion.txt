@@ -1,21 +1,19 @@
 - Resumen -
 
-Este trabajo presenta un procedimiento por el cual, un sistema 
+Este trabajo presenta una metodología por el cual, un sistema 
 Linux embebido de caja cerrada (usualmente un dispositivo de hardware y
 software Linux embebido comercial) pueda ser estudiado
 y modificado, con el fin de determinar de que está hecho,
-qué lo hace funcionar con Linux, y como puede ser reutilizado
-instalando un otro sistema Linux embebido, del cual se tenga control
-sobre su desarrollo.
+qué lo hace funcionar con Linux, y como puede ser a nivel
+de software actualizada.
+
+El resultado final, luego de aplicar el proceso, es una placa electrónica
+de desarrollo Linux embebido genérica, capaz de ser reutilizada para 
+otros fines de interés, diferente al que fue construido.
 
 Para la experimentación práctica de este procedimiento se utilizó
 un dispositivo Encore ENTC1000, que que se comercializa como cliente liviano
 de escritorios remoto.
-
-El resultado final, luego de aplicar el proceso, es una placa electrónica
-de desarrollo Linux embebido genérica, capaz de ser utilizada para 
-otros fines de interés, que un sistema de hardware y software Linux embebido
-genérico puede otorgar.
 
 
 - Detalles generales para el articulo con motivaciones -
