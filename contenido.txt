@@ -30,18 +30,27 @@ components wherever possible. The same reuse mentality applies to Linux
 appliances, and that’s where this book can help.
 
 
-Existen decenas de dispositivos embebidos que utilizamos
-a diario. Tostadoras, teléfonos móviles, heladeras, aspiradoras,
+Existen decenas de dispositivos embebidos que utilizamos en la vida diaria.
+Tostadoras, teléfonos móviles, heladeras, aspiradoras,
 decodificadores de televisión, relojes, routers hogareños, consola de juegos, etc.
 Y la mayoría de estos sistemas, a diferencia de una PC que puede
 realizar miles de funciones diferentes, realizan una única función.
-Esta única tarea define a un sistema embebido.
+Esta única tarea define qué es un sistema embebido (referencia).
 
 Pero, estos artículos del hogar ya no son tan simples. Algunos
 años atrás, la mayoría de estos dispositivos fueron mecánicos
 y eléctricos. En cambio, hoy en día, la mayoría incluye placas
-de circuitos electrónicos, procesadores, microcontroladores, y
+de circuitos electrónicos, procesadores, sensore, microcontroladores, y
 sofisticadas funcionalidades.
+
+Esta complejidad trajo la necesidad de ejecutar un sistema operativo
+que pueda administrar todas las funcionalidades al mismo tiempo.
+Y en muchos casos, los fabricantes han optado por Linux, debido a su
+bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
+
+Si fuese necesario construir un sofisticado dispositivo robótico 
+en nuestra realidad, reutilizamos la mayor cantidad de partes de otros
+trabajos previos
 
 sofisticada, procesadores
 
