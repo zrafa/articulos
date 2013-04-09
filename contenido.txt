@@ -9,8 +9,13 @@ es la placa que estarian adaptando
 
 1 pagina y media
 
+Poner como pone hellwig de que veritas file system no da documentacion.
+
 == Metodologia ==
   ingenieria inversa
+
+paper de hellwig
+paper 133 del cacic
 
 	- conociendo que hardware 
 	- obteniendo el hardware
@@ -73,24 +78,24 @@ Tostadoras, teléfonos móviles, heladeras, aspiradoras,
 decodificadores de televisión, relojes, routers hogareños, consola de juegos, etc.
 Y la mayoría de estos sistemas, a diferencia de una PC que puede
 realizar miles de funciones diferentes, realizan una única función.
-Esta única tarea define qué es un sistema embebido (referencia).
+Esta única tarea define que nos encontramos ante sistemas embebidos (referencia).
 
-Pero, estos artículos del hogar ya no son tan simples. Algunos
-años atrás, la mayoría de estos dispositivos fueron únicamente mecánicos
+Pero, estos artículos del hogar ya no son tan simples como antes. Algunos
+años atrás, la mayor parte de estos dispositivos fueron únicamente mecánicos
 y eléctricos. En cambio, hoy en día, la mayoría incluye placas
 de circuitos electrónicos, procesadores, sensores, microcontroladores, y
 sofisticadas funcionalidades.
 
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
-dentro del dispositivo, y
-que pueda administrar todas las funcionalidades al mismo tiempo.
+dentro del dispositivo, ya
+que se necesita administrar varias funcionalidades al mismo tiempo.
 Y, en muchos casos, los fabricantes han optado por Linux, debido a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 
 Si fuese necesario construir un sofisticado dispositivo robótico 
 en nuestra realidad, reutilizamos la mayor cantidad de partes de otros
-trabajos previos, como así también componente hardware y software
-que puedan adaptarse cuando y donde sea posible.
+trabajos previos, como así también componentes de hardware y software
+preexistentes, que puedan adaptarse cuando y donde sea posible.
 
 Para poder ejecutar Linux en un desarrollo o investigación de sistemas
 embebidos, es necesario hardware sofisticado que no se diseña y construye
