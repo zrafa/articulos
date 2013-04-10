@@ -724,19 +724,75 @@ estos componentes (CPU y BootROM) trabajan de la siguiente manera :
 \item Se envía por esa conexión serie el caracter "<"
 \item Se leen, desde el sistema embebido, 2048 bytes provenientes
 de la conexión serie, y se almacenan en una buffer de inicio interno.
+\item Decisión:
+\begin{itemize}
 \item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna FLASH.
 \itme Si el extremo de la conexión serie envió los 2048 bytes, se envia desde el sistema otro caracter ">" a través de la conexión serie, para indicar que 
 se leyeron correctamente.
+\end{itemize}
 \item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
 para continuar leyendo instrucciones desde
 los 2048 bytes leidos.
+\end{enumerate} 
 
 
-- El tema fue como hacer esa "configuracion del hardware" que el manual menciona
-en la pagina 119. La suerte estuvo con nosotros. La board tiene un "switch" que
-permite seleccionar el "boot rom" o el boot normal desde otro lugar.
 
-- Colocamos el switch de la placa en "boot rom", conectamos la placa con el serial
+En nuestras pruebas logramos obtener desde el programa de comunicación minicom
+el caracter ">", por lo que estuvimos seguros de varias cuestiones. En principio
+toda la conexión física entre la placa ENTC-1000 y nuestra PC funcionaba.
+Tambien a nivel de software.
+
+Posteriormente, preparamos un pequeño programa en assembler que no supere
+los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
+ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
+para realizar las pruebas necesarias para encontrar la información que
+nos faltaba por conocer.
+
+En particular, hicimos que nuestro pequeño programa encontrara
+la dirección física de la memoria FLASH interna.
+El interés por encontrar esta dirección
+base es porque en esta memoria residen los componentes de software
+gestor de arranque, el kernel Linux, y el sistemas de archivos raiz.
+
+Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
+que el sistema lee desde el arranque via ``download en serie''.
+Nuestro programa leyó "bytes"
+de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
+tomamos como referencia del manual de Cirrus).
+Encontramos la dirección base de la memoria FLASH en 
+la dirección 0x60001000, ya que el programa leyó la palabra ``CRUS''
+en cuatro bytes consecutivos. Esos cuatro bytes ``CRUS'' indican el inicio
+del software de arranque, ya que está especificado en el manual
+de la programación del SOC.
+
+De una manera similar, tuvimos acceso al conocimiento de
+las direcciones físicas de la memoria RAM.
+
+\subsection{Iniciando un Sistema Linux Embebido Alternativo}
+
+Conociendo como ejecutar pequeños programas al momento de un reset
+del hardware, y conociendo las direcciones de la memoria RAM y FLASH,
+preparamos otro pequeño programa para enviar a la memoria RAM un gestor
+de arranque. En nuestro caso, utilizamos u-boot configurado para 
+este dispositivo.
+
+Nuestras pruebas lograron
+Finalmente, preparamos otro pequeño programautilizamos un programa
+
+con el fin de encontrar la dirección de inicio
+de la memoria FLASH interna. El interés por encontrar esta dirección
+base es porque en esta memoria residen los componentes
+gestor de arranque, el kernel Linux, y el sistemas de archivos raiz.
+
+Al enviar los 2048 bytes y ejecutar nuestro programa encontramos 
+encontramos la palabra "CRUS" en cuatro bytes consecutivos.
+
+
+Se encontró que :w
+
+
+para envia.
+Cuando se colocó - Colocamos el switch de la placa en "boot rom", conectamos la placa con el serial
 a la pc. Configuramos minicom a 9600 baudios etc, y finalmente, al hacer un 
 reset de la placa, obtuvimos el caracter ">" especificado en el manual.
 
