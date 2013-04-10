@@ -537,8 +537,8 @@ Esto plantea la inquietud acerca de la legalidad
 del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
 específico. En este caso en particular, sólo se usa ingeniería inversa para poder
 reutilizar el hardware con un propósito diferente, lo cual es acorde con las Ley
-Argentina N° 24.240 de Defensa del Consumidor (referencia :
- http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
+Argentina N° 24.240 de Defensa del Consumidor (referencia :),
+http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
 siempre que el producto haya sido adquirido legalmente.  
 
 
@@ -573,22 +573,23 @@ A este tipo de documentación se conoce como hoja de datos, o
 en algunos casos (como el de las memorias o cpu) manuales de programación
 del chip (referencia).
 
-En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} ), identificamos
+En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
+, identificamos
 un SOC Cirrus 3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Ademas, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno (colocar marca), y un modulo
 de memoria FLASH embebida INTEL de 16MB.
 
-\begin{figure}[here]
+\begin{figure}
 \begin{center}
- \includegraphics[scale=0.40]{placa-encore.png}
- % redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
+\includegraphics[scale=0.40]{placa-encore.png}
+% redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
 \caption{Placa del Encorte ENTC-1000}
 \label{fig:placa-encore}
 \end{center}
-
 \end{figure}
+
 Afortunadamente para nuestra investigación,
 la empresa Cirrus publica documentacion detallada del SOC Cirrus 3907A.
 Junto con esta documentación Cirrus tambien publica software
@@ -666,4 +667,27 @@ está presente.
 En etapas de producción
 Además, comunmente, el gestor de arranque, 
 la interfaz RS-232.
+
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+\bibitem{IEEEhowto:kopka}
+H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
 
