@@ -345,6 +345,7 @@
 
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{graphicx}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -553,13 +554,22 @@ A este tipo de documentación se conoce como hoja de datos, o
 en algunos casos (como el de las memorias o cpu) manuales de programación
 del chip (referencia).
 
-En nuestro caso de estudio, al desmontar el ENTC-1000, identificamos
+En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} ), identificamos
 un SOC Cirrus 3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
-Ademas, la placa presenta un modulo de memoria SDRAM de 64MB (colocar marca), y un modulo
-de memoria FLASH de 16MB (colocar marca).
+Ademas, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno (colocar marca), y un modulo
+de memoria FLASH embebida INTEL de 16MB.
 
+\begin{figure}[here]
+\begin{center}
+ \includegraphics[scale=0.40]{placa-encore.png}
+ % redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
+\caption{Placa del Encorte ENTC-1000}
+\label{fig:placa-encore}
+\end{center}
+
+\end{figure}
 Afortunadamente para nuestra investigación,
 la empresa Cirrus publica documentacion detallada del SOC Cirrus 3907A.
 Junto con esta documentación Cirrus tambien publica software
@@ -574,23 +584,27 @@ ya que lo pueden tomar como diseño de referencia para sus circuitos particulare
 
 Tambien es imprescindible, para entender y modificar un sistema
 Linux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
- 1. permite obtener los conocimientos necesarios para entender y acceder
+\begin{enumerate}
+ \item Permite obtener los conocimientos necesarios para entender y acceder
     al sistema del firmware original (via conexiones de software)
- 2. permite preparar todo un ambiente de desarrollo de Linux embebido,
+ \item Permite preparar todo un ambiente de desarrollo de Linux embebido,
 específico para la plataforma en la que se quiera instalar.
+\end{enumerate}
 
 
 Tipicamente, la arquitectura de software consiste de tres componentes esenciales :
 
-- un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
+\begin{itemize}
+\item Un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
 que generalmente es Das U-Boot (referencia). SI no se utiliza U-Boot entonces
 es posible encontrar un gestor de arranque de código cerrado.
-- un kernel Linux (o uClinux en caso de ser un sistema sin una
+\item Un kernel Linux (o uClinux en caso de ser un sistema sin una
 unidad de manejo de memoria (nota al pie: MMU, del inglés ``Memory Management U
-- un sistema de archivos mínimo que provee una biblioteca de C,
+\item Un sistema de archivos mínimo que provee una biblioteca de C,
 (generalmente uClibc o eglibc), y busybox,  el cual es pequeño programa ejecuta
 optimizado para sistemas embebidos, que puede realizar las operaciones
 de muchas de las utilidades UNIX básicas.
+\end{itemize}
 
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
 y controladores de hardware (del inglés ``drivers'') del fabricante.
