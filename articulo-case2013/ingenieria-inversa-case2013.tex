@@ -488,8 +488,8 @@ casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 
 En el marco regional, adquirir sistemas Linux embebidos para investigacion
-o desarrollo es complejo.
-Si fuese necesario construir un sofisticado dispositivo robótico
+o desarrollo es complejo y costoso.
+Si fuese necesario, por ejemplo, construir un sofisticado dispositivo robótico
 en nuestra realidad, reutilizariamos en lo posible, la mayor cantidad de partes de otros
 trabajos previos, como así también componentes de hardware y software
 preexistentes, que puedan adaptarse cuando y donde se necesite.
@@ -502,24 +502,24 @@ para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivo
 capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
 y los teléfonos móviles con sisteam Android.
 
-
 El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
 que funciona como una terminal de escritorio remoto, soportando
-los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
+los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Aunque el folleto
 comercial y su documentacion proveen especificaciones mínimas,
-se publicita como un sistema con Linux embebido kernel 2.4
+se publicita como un sistema con Linux embebido kernel 2.4 (nota al pie: año del software)
 No existe información adicional de la arquitectura o funcionamiento
 interno del software. Tampoco provee, Encore Electronic Inc.,
 el codigo fuente del software instalado, ni las instrucciones
 para su compilación e instalación (como es requerido por la licencia GPL de LInux - referencia).
 
-Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento,
+Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
+de los dispositivos ENTC-1000,
 ya que se trata de un sistema embebido moderno, y disponible
 para su adquisición en el país. Conociendo su funcionamiento interno
 nos permite obtener mayor conocimiento del tema,
 posibilita la experimentación académica con Linux embebido, y
-así tambien, su reuso para necesidades específicas en el marco
-de los sitemas embebidos.
+por ultimo, pero no menos importante, permite su reuso para necesidades
+específicas en el marco de los sitemas embebidos.
 
 
 
@@ -573,7 +573,7 @@ ya que lo pueden tomar como diseño de referencia para sus circuitos particulare
 Arquitectura de Software
 
 Tambien es imprescindible, para entender y modificar un sistema
-LInux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
+Linux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
  1. permite obtener los conocimientos necesarios para entender y acceder
     al sistema del firmware original (via conexiones de software)
  2. permite preparar todo un ambiente de desarrollo de Linux embebido,
@@ -585,21 +585,24 @@ Tipicamente, la arquitectura de software consiste de tres componentes esenciales
 - un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
 que generalmente es Das U-Boot (referencia). SI no se utiliza U-Boot entonces
 es posible encontrar un gestor de arranque de código cerrado.
-- un kernel Linux. O uClinux en caso de ser un sistema sin una
-unidad de manejo de memoria (MMU, del inglés ``Memory Management Unit'')
+- un kernel Linux (o uClinux en caso de ser un sistema sin una
+unidad de manejo de memoria (nota al pie: MMU, del inglés ``Memory Management U
 - un sistema de archivos mínimo que provee una biblioteca de C,
-(generalmente uClibc o eglibc), y busybox (referencia: pequeño programa ejecutable
-optimizado para sistemas embebidos, el cual puede operar como lo hacen
-muchas de las utilidades UNIX básicas).
+(generalmente uClibc o eglibc), y busybox,  el cual es pequeño programa ejecuta
+optimizado para sistemas embebidos, que puede realizar las operaciones
+de muchas de las utilidades UNIX básicas.
 
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
 y controladores de hardware (del inglés ``drivers'') del fabricante.
-Las aplicaciones muchas veces no son de interés, pero si
-existiesen drivers del fabricante, comunmente de codigo cerrado,
-encontes las chances de contar con las mismas características en una versión preparada
-es dificultosa.
-No encontramos drivers de código cerrado en nuestra experienica aquí expuesta, por lo
-que este punto está fuera del alcance de este artículo.
+Las aplicaciones muchas veces no son de interés, pero si los controladores.
+Si existiesen controladores de codigo cerrado
+encontes el trabajo de preparar un Linux embebido con soporte
+para todo el hardware será dificil (debido a que no se tiene acceso
+al código fuente).
+
+En nuestra experiencia con el ENTC-1000 no encontramos drivers
+de código cerrado, por lo que este punto está fuera del alcance de este artícul
+
 
 
 
