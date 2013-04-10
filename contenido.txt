@@ -248,8 +248,8 @@ de memoria FLASH de 16MB (colocar marca).
 
 Afortunadamente para nuestra investigación,
 la empresa Cirrus publica documentacion detallada del SOC Cirrus 3907A. 
-Tambien hemos encontrado en los repositorios del sitio web de Cirrus software
-para su programación, y codigo fuente completo
+Junto con esta documentación Cirrus tambien publica software
+para su programación, y codigo fuente de
 Linux para experimentación. Completando la búsqueda, hemos encontrado
 documentación de placas de laboratorios experimentales, que la fabrica Cirrus publica.
 Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
@@ -258,14 +258,15 @@ ya que lo pueden tomar como diseño de referencia para sus circuitos particulare
 
 Arquitectura de Software
 
-Conocer la arquitectura de software de un sistema Linux embebido es importante 
-por, al menos, dos razones :
+Tambien es imprescindible, para entender y modificar un sistema
+LInux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
  1. permite obtener los conocimientos necesarios para entender y acceder
-    al sistema (via conexiones de software) del firmware original
+    al sistema del firmware original (via conexiones de software)
  2. permite preparar todo un ambiente de desarrollo de Linux embebido,
 específico para la plataforma en la que se quiera instalar.
 
-La arquitectura de software consiste, tipicamente de cuatro componentes :
+
+Tipicamente, la arquitectura de software consiste de tres componentes esenciales :
 
 - un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
 que generalmente es Das U-Boot (referencia). SI no se utiliza U-Boot entonces
@@ -276,8 +277,23 @@ unidad de manejo de memoria (MMU, del inglés ``Memory Management Unit'')
 (generalmente uClibc o eglibc), y busybox (referencia: pequeño programa ejecutable
 optimizado para sistemas embebidos, el cual puede operar como lo hacen
 muchas de las utilidades UNIX básicas).
-- aplicaciones y controladores (del inglés ``drivers'') del fabricante (en caso de ser un Linux embebido comercial)
 
+Algunas veces existe un cuarto componente de software, que son las aplicaciones
+y controladores de hardware (del inglés ``drivers'') del fabricante.
+Las aplicaciones muchas veces no son de interés, pero si
+existiesen drivers del fabricante, comunmente de codigo cerrado,
+encontes las chances de contar con las mismas características en una versión preparada
+es dificultosa. 
+No encontramos drivers de código cerrado en nuestra experienica aquí expuesta, por lo 
+que este punto está fuera del alcance de este artículo.
+
+
+
+
+los drivers  (en caso de ser un Linux embebido comercial)
+
+Conocer y saber utilizar estos componentes de la 
+arquitectura de software es importante por, al menos, dos motivos :
 
 Una vez conocida la arquitectura con profundidad
 Comunicación a nivel de software
