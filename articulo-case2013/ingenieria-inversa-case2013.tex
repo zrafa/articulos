@@ -721,13 +721,13 @@ estos componentes (CPU y BootROM) trabajan de la siguiente manera :
 
 \begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudions, 8 bits, sin paridad, 1 bit de stop.
-\item Se envía por esa conexión serie el caracter "<"
+\item Se envía por esa conexión serie el caracter ``<''
 \item Se leen, desde el sistema embebido, 2048 bytes provenientes
 de la conexión serie, y se almacenan en una buffer de inicio interno.
 \item Decisión:
 \begin{itemize}
 \item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna FLASH.
-\itme Si el extremo de la conexión serie envió los 2048 bytes, se envia desde el sistema otro caracter ">" a través de la conexión serie, para indicar que 
+\item Si el extremo de la conexión serie envió los 2048 bytes, se envia desde el sistema otro caracter ``\textgreater'' a través de la conexión serie, para indicar que 
 se leyeron correctamente.
 \end{itemize}
 \item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
@@ -737,15 +737,16 @@ los 2048 bytes leidos.
 
 
 
-En nuestras pruebas logramos obtener desde el programa de comunicación minicom
-el caracter ">", por lo que estuvimos seguros de varias cuestiones. En principio
-toda la conexión física entre la placa ENTC-1000 y nuestra PC funcionaba.
-Tambien a nivel de software.
+En nuestras pruebas logramos obtener 
+el caracter ``\textgreater'' desde el programa de comunicación minicom,
+por lo que pudimos confirmar varias cuestiones. En principio
+toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
+Tambien a nivel de comunicación vía software.
 
-Posteriormente, preparamos un pequeño programa en assembler que no supere
+Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
 los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
 ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
-para realizar las pruebas necesarias para encontrar la información que
+para realizar las pruebas con respecto a la informaciónn que
 nos faltaba por conocer.
 
 En particular, hicimos que nuestro pequeño programa encontrara
@@ -756,7 +757,7 @@ gestor de arranque, el kernel Linux, y el sistemas de archivos raiz.
 
 Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
 que el sistema lee desde el arranque via ``download en serie''.
-Nuestro programa leyó "bytes"
+Nuestro programa leyó bytes
 de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
 tomamos como referencia del manual de Cirrus).
 Encontramos la dirección base de la memoria FLASH en 
@@ -773,47 +774,88 @@ las direcciones físicas de la memoria RAM.
 Conociendo como ejecutar pequeños programas al momento de un reset
 del hardware, y conociendo las direcciones de la memoria RAM y FLASH,
 preparamos otro pequeño programa para enviar a la memoria RAM un gestor
-de arranque. En nuestro caso, utilizamos u-boot configurado para 
-este dispositivo.
+de arranque (a través de la comunicación serie). En nuestro caso, utilizamos
+u-boot configurado para este dispositivo.
+
+Una vez que nuestro gestor de arranque estuvo en ejecución, y
+que pudimos utilizarlo a través de la comunicación serie, tuvimos
+varias posibilidades, en lo que a software se refiere, para modificar
+el sistema.
+
+En particular, modificamos la memoria FLASH interna, colocando nuestro
+gestor de arranque en la dirección posterior a los cuatros bytes ``CRUS''.
+También, escribimos en la memoria FLASH un kernel Linux actual, versión 3.X.,
+y que está preparado para iniciarlizar el hardware y leer, como sistema
+de archivos raíz, un sistema de archivos contenido en una memoria flash
+via usb (pendrive, o similar).
+
+Esto modificó el inicio del firmware interno del Encore ENTC-1000, 
+ofreciendo al menos dos interesantes funcionalidades :
+\begin{itemize}
+\item Un gestor de arranque moderno y accesible para ser operado a través de una comunicación serie.
+\item Un kernel Linux actualizado, y preparado para iniciar diferentes
+sistemas operativos LInux, ya que lee el sistema de archivos raíz desde 
+memorias conectadas al puerto USB. 
+\end{itemize}
+
+Con estas funcionalidades minimas se pueden realizar pruebas
+de programación para sistemas Linux embebidos, sin necesidad
+de acceder continuamente al gestor de arranque.
+
+\section{Conclusiones y Trabajo Futuro}
+
+Se utilizó ingeniería inversa para entender la arquitectura, funcionamiento
+y la programación de un sistema Linux embebido moderno.
+
+La experiencia y documentación del proceso
+nos permite obtener mayor conocimiento del tema,
+posibilita la experimentación académica con Linux embebido, y
+permite el reuso de sistemas comerciales para necesidades
+específicas.
+
+Se seleccionó el hardware Encore ENTC-1000 porque cubre
+las expectativas de prestaciones, aún cuando no se conocía,
+en un primer momento, si sería posible estudiarlo y reutilizarlo.
+
+Afortunadamente, y luego de esta experiencia, no sólo
+se ha logrado entender el funcionamiento interno, sino que
+tambien, se está reutilizando de manera productiva para
+cumplir disintos roles :
+
+\begin{itemize}
+\item Como servidor de impresión para impresoras USB sin conexiones de red.
+\item Como servidor DHCP en pequeñas redes internas de la Universidad.
+\item Como cerebro de un robot experimental, que se comunica con 
+un microcontrolador y sensores.
+\item Como sistema Linux embebido para aprendizaje y experimentación.
+\item Y como un servidor DNS experimental.
+\end{itemize}
+
+Como trabajo futuro, se espera repetir la experiencia
+en futuros sistemas Linux embebidos comerciales, para estandarizar
+las tareas necesarias en una metodología, y hasta que la
+posibilidad de adquirir hardware especializado para desarrollos
+de sistemas Linux embebidos sea mucho mas accesible para
+las instituciones publicas. En cuyo caso, la experiencia
+de ingeniería inversa se puede mantener sobre productos comerciales,
+como una manera de incentivar el aprendizaje del funcionamiento
+y la arquitectura de los sistemas embebidos.
+
+
+
+Además, posibilita que sean modificados y adaptados
+para su reutilización en necesidades especifícas.
+
 
 Nuestras pruebas lograron
-Finalmente, preparamos otro pequeño programautilizamos un programa
-
-con el fin de encontrar la dirección de inicio
-de la memoria FLASH interna. El interés por encontrar esta dirección
-base es porque en esta memoria residen los componentes
-gestor de arranque, el kernel Linux, y el sistemas de archivos raiz.
-
-Al enviar los 2048 bytes y ejecutar nuestro programa encontramos 
-encontramos la palabra "CRUS" en cuatro bytes consecutivos.
-
-
-Se encontró que :w
-
-
-para envia.
-Cuando se colocó - Colocamos el switch de la placa en "boot rom", conectamos la placa con el serial
-a la pc. Configuramos minicom a 9600 baudios etc, y finalmente, al hacer un 
-reset de la placa, obtuvimos el caracter ">" especificado en el manual.
-
-- Aqui ya sabiamos que el codigo del boot rom se ejecutaba. 
-
-- Lo proximo fue investigar como enviar 2048 bytes con codigo que fuese util.
-- Buscando entre todos los archivos de desarrollo que cirrus publica,
-  encontramos, para ese soc de cirrus, un programa llamado "download", y un codigo fuente en assembler
-  que inicializa el hardware de un soc ep9307. Aqui :
-
-http://arm.cirrus.com/files/download/Download_1-0-5.tar.gz
-
-Resumiendo los pasos posteriores:
 
 - compilamos un bootloader de uboot para ese hardware, con opciones tftp y varias cosas mas.
 - modificando el codigo en assembler encontrado en cirrus, e hicimos varias pruebas para detectar
   en que direcciones reales está la RAM y la FLASH (disco con el firmware del encore).
 - tuvimos que modificar levemente el codigo de uboot para que viera la cantidad de RAM correcta.
 - compilamos un kernel linux actual para esa board. El codigo fuente de linux ya viene con 
-  muchos archivos de configuracion para distintas "placas". Hay un archivo de configuracion
-  para las placas ep93XX que cirrus publica. Esas placas de cirrus son placas "modelo"
+%  muchos archivos de configuracion para distintas "placas". Hay un archivo de configuracion
+%  para las placas ep93XX que cirrus publica. Esas placas de cirrus son placas "modelo"
   que otros fabricantes de hardware, que compren y utilicen el SOC de cirrus ep9307
   puedan hacer placas embebidas similares. Toman como modelos las que el fabricante
   del soc publica.
@@ -822,7 +864,7 @@ Resumiendo los pasos posteriores:
   actual compilado para esa placa de cirrus, funciona perfectamente en el encore,
   con todos los perifericos funcionales.
 
-- Luego, utilizando el progama "download" de cirrus, enviamos un codigo de 2048
+% - Luego, utilizando el progama "download" de cirrus, enviamos un codigo de 2048
   bytes (como lo quiere el boot rom del cirrus) que luego de inicializar al menos la RAM, al ejecutarse,
   se trae por el serial otro codigo que pone en ram, y luego salta a esa direccion ram.
   Nosotros hicimos que ese codigo de 2048 bytes, al ejecutarse, lleve a la RAM nuestro
@@ -835,21 +877,10 @@ Resumiendo los pasos posteriores:
     el inicio del firmware del encore).
   - flasheamos en otra parte de la flash nuestro kernel linux, que ya estaba compilado con soporte usb, usbstorage y ext2.
   - Modificamos los argumentos del kernel en nuestro uboot que ya instalamos en la flash, para que 
-    ejecute el kernel que pusimos en la flash, y ademas, para que l pase los argumentos "root=/dev/sda1 rootdelay"
+%    ejecute el kernel que pusimos en la flash, y ademas, para que l pase los argumentos "root=/dev/sda1 rootdelay"
   - Eso posibilitó que en un pendrive pongamos un filesystem root de linux, y tuvimos el encore
     como un sistema embebido linux con OpenEmbedded y con Debian funcional.
 
-:
-descubrió
-de 
-\
-bUna vez localizado los conectores
-
-
-
-En etapas de producción
-Además, comunmente, el gestor de arranque, 
-la interfaz RS-232.
 
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
 %\bibliographystyle{IEEEtran}
