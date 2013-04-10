@@ -523,6 +523,25 @@ por ultimo, pero no menos importante, permite su reuso para necesidades
 específicas en el marco de los sitemas embebidos.
 
 
+\section{Marco Jurídico}
+
+
+Cuando reutilizamos un sistema embebido de hardware y software cerrado, necesitamos la
+documentación completa de las especificaciones del dispositivo.
+Si esa documentación no existe, o si no existe
+completamente, es necesario descubrir su funcionamiento mediante
+diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
+se denomina ingeniería inversa.
+
+Esto plantea la inquietud acerca de la legalidad 
+del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
+específico. En este caso en particular, sólo se usa ingeniería inversa para poder
+reutilizar el hardware con un propósito diferente, lo cual es acorde con las Ley
+Argentina N° 24.240 de Defensa del Consumidor (referencia :
+ http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
+siempre que el producto haya sido adquirido legalmente.  
+
+
 
 
 
@@ -582,26 +601,17 @@ ya que lo pueden tomar como diseño de referencia para sus circuitos particulare
 
 \subsection{Arquitectura de Software}
 
-Tambien es imprescindible, para entender y modificar un sistema
-Linux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
-\begin{enumerate}
- \item Permite obtener los conocimientos necesarios para entender y acceder
-    al sistema del firmware original (via conexiones de software)
- \item Permite preparar todo un ambiente de desarrollo de Linux embebido,
-específico para la plataforma en la que se quiera instalar.
-\end{enumerate}
 
-
-Tipicamente, la arquitectura de software consiste de tres componentes esenciales :
+En el lado software, la arquitectura consiste típicamente de tres componentes esenciales :
 
 \begin{itemize}
 \item Un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
 que generalmente es Das U-Boot (referencia). SI no se utiliza U-Boot entonces
 es posible encontrar un gestor de arranque de código cerrado.
 \item Un kernel Linux (o uClinux en caso de ser un sistema sin una
-unidad de manejo de memoria (nota al pie: MMU, del inglés ``Memory Management U
-\item Un sistema de archivos mínimo que provee una biblioteca de C,
-(generalmente uClibc o eglibc), y busybox,  el cual es pequeño programa ejecuta
+unidad de manejo de memoria (nota al pie: MMU, del inglés ``Memory Management Unit'')
+\item Un sistema de archivos mínimo que contiene, al menos, una biblioteca de C
+(generalmente uClibc o eglibc), y busybox, el cual es pequeño programa ejecuta
 optimizado para sistemas embebidos, que puede realizar las operaciones
 de muchas de las utilidades UNIX básicas.
 \end{itemize}
@@ -610,7 +620,7 @@ Algunas veces existe un cuarto componente de software, que son las aplicaciones
 y controladores de hardware (del inglés ``drivers'') del fabricante.
 Las aplicaciones muchas veces no son de interés, pero si los controladores.
 Si existiesen controladores de codigo cerrado
-encontes el trabajo de preparar un Linux embebido con soporte
+entonces el trabajo de preparar un Linux embebido con soporte
 para todo el hardware será dificil (debido a que no se tiene acceso
 al código fuente).
 
@@ -618,8 +628,33 @@ En nuestra experiencia con el ENTC-1000 no encontramos drivers
 de código cerrado, por lo que este punto está fuera del alcance de este artícul
 
 
+El trabajo realizado en este punto fue la preparación
+de dos sistemas Linux embebidos completos de reemplazo: Amstrong y Debian.
+La documentación para preparar sistemas Linux embebidos es amplia y públicamente
+disponible (referencias). Como un extra, tambien existen decenas de distribuciones Linux para embebidos,
+o entornos de desarrollo de distribuciones Linux para embebidos (nota al pie:
+no confundir distribucion con entorno de desarrollo). Estas herramientas
+facilitan la preparación de un sistema para un dispositivo específico.
+Algunas de estos proyectos son Openwrt, Buildroot, u OpenEmbedded (referencias).
+
+Una vez que se tiene el estudio completo en como construir (compilar y configurar)
+y operar los componentes de software para la arquitectura destino, se
+debe realizar un análisis de si es posible o no modificar el firmware original.
+Además, conocer como preparar un sistema operativo completo de reemplazo permitirá
+reusar el hardware en el futuro con propósitos específicos.
 
 
+Conocer los componentes de software de un sistema Linux embebido posibilita,
+en el proceso, estudiar algun método de acceso al sistema original, y tambien
+
+, para entender y modificar un sistema
+Linux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
+\begin{enumerate}
+ \item Permite obtener los conocimientos necesarios para entender y acceder
+    al sistema del firmware original (via conexiones de software)
+ \item Permite preparar todo un ambiente de desarrollo de Linux embebido,
+específico para la plataforma en la que se quiera instalar.
+\end{enumerate}
 
 
 
