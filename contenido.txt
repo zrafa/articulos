@@ -212,14 +212,15 @@ de los sitemas embebidos.
 
 
 Para entender el funcionamiento, es necesario, en primer lugar, conocer
-la arquitectura. La arquitectura de un sistema embebido moderno
+la arquitectura. En un sistema embebido moderno la arquitectura
 contiene como componente central, un microcontrolador o microprocesador (CPU).
 Mas aún, actualmente, muchos sistemas contienen un SOC (del inglés ``system on chip''),
 que contiene la CPU y gran parte de los componentes de un sistema embebido, en un
 único chip (referencia).
 
 Además, es de interés conocer que otros componentes conforman
-el sistema. Los mas importantes, luego de conocer la CPU, son los módulos de memoria (de
+el sistema. Los mas importantes, luego de conocer la CPU, 
+son los módulos de memoria (de
 tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
 Ya que en conjunto con el microprocesador suelen dar una visión
 global de como inicia o funciona el sistema.
@@ -232,21 +233,23 @@ obtenerse, en la mayoría de los casos, la documentación pública
 de cada uno de los componentes o chips listados.
 A este tipo de documentación se conoce como hoja de datos, o 
 en algunos casos (como el de las memorias o cpu) manuales de programación
-del chip.
+del chip (referencia).
 
-En nuestro caso de estudio, al desmontar el ENTC-1000 nos encontramos
-con que el dispositivo utiliza un SOC (system on chip) Cirrus 3907A,
-que contiene un procesador central de arquitectura ARM, modelo ARM920T,
-el cual trabaja a una velocidad de 200Mhz.
+En nuestro caso de estudio, al desmontar el ENTC-1000, identificamos
+un SOC Cirrus 3907A como el componente principal,
+que contiene un procesador central de arquitectura ARM, modelo ARM920T
+a una velocidad de 200Mhz.
 Ademas, la placa presenta un modulo de memoria SDRAM de 64MB (colocar marca), y un modulo
 de memoria FLASH de 16MB (colocar marca). 
 
-Afortunadamente,
-la empresa Cirrus, publica documentacion detallada del soc 3907A, software
+Afortunadamente para nuestra investigación,
+la empresa Cirrus publica documentacion detallada del SOC Cirrus 3907A. 
+Tambien hemos encontrado en los repositorios del sitio web de Cirrus software
 para su programación, y codigo fuente completo
-Linux para experimentación. Además, publica documentación
-de placas de laboratorios experimentales, que las empresas que utilicen
-este SOC en particular pueden hacer uso como diseño base para sus circuitos.
+Linux para experimentación. Completando la búsqueda, hemos encontrado
+documentación de placas de laboratorios experimentales, que la fabrica Cirrus publica.
+Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
+ya que lo pueden tomar como diseño base base para sus circuitos particulares.
 
 
 Comunicación a nivel de software
