@@ -419,7 +419,8 @@ Fax: (888) 555--1212}}
 
 \begin{abstract}
 %\boldmath
-Este trabajo expone el proceso, por el cual, un sistema 
+
+Este trabajo expone el proceso, por el cual, un sistema
 Linux embebido de caja cerrada (dispositivo de hardware y
 software) ha sido estudiado,
 con el fin de determinar de que está hecho,
@@ -427,12 +428,15 @@ qué lo hace funcionar con Linux, y como puede ser modificado
 o actualizado a nivel de software.
 
 El resultado final, luego de aplicar el procedimiento, es una placa electrónica
-de desarrollo Linux embebido genérica, capaz de ser reutilizada para 
-otros fines de interés, diferentes al que fue construido.
+de desarrollo Linux embebido genérica, capaz de ser reutilizada para
+otros fines de interés.
 
-Para la experimentación práctica de esta experiencia se utilizó
+Para la experimentación práctica se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
+
+
+
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -479,18 +483,135 @@ funcionalidades sofisticadas.
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
 dentro del dispositivo, ya
 que se necesita administrar varias funcionalidades al mismo tiempo.
-Y, en muchos casos, los fabricantes han optado por Linux, debido a su
+Actualmente, los fabricantes han optado por Linux en muchos
+casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 
-Si fuese necesario construir un sofisticado dispositivo robótico 
+En el marco regional, adquirir sistemas Linux embebidos para investigacion
+o desarrollo es complejo.
+Si fuese necesario construir un sofisticado dispositivo robótico
 en nuestra realidad, reutilizariamos en lo posible, la mayor cantidad de partes de otros
 trabajos previos, como así también componentes de hardware y software
 preexistentes, que puedan adaptarse cuando y donde se necesite.
 
-Para poder hacer uso de Linux en un desarrollo o investigación de sistemas
-embebidos, es necesario contar con hardware embebido que no se diseña y construye
-facilmente (referencia carlos camargo). Linux es un sistema operativo que
-necesita de, al menos, un microprocesador con arquitectura de 32bits soportada por el kernel (referencia kernel).
+Existen decenas de dispositivos embebidos en el mercado regional,
+que pueden adquirirse para su estudio y adaptación. Y,
+aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
+gran parte de estos sistemas contienen el hardware necesario
+para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivos
+capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
+y los teléfonos móviles con sisteam Android.
+
+
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
+que funciona como una terminal de escritorio remoto, soportando
+los protocolos RDP (Remote-Desktop-Protocol) y VNC. Aunque el folleto
+comercial y su documentacion proveen especificaciones mínimas,
+se publicita como un sistema con Linux embebido kernel 2.4
+No existe información adicional de la arquitectura o funcionamiento
+interno del software. Tampoco provee, Encore Electronic Inc.,
+el codigo fuente del software instalado, ni las instrucciones
+para su compilación e instalación (como es requerido por la licencia GPL de LInux - referencia).
+
+Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento,
+ya que se trata de un sistema embebido moderno, y disponible
+para su adquisición en el país. Conociendo su funcionamiento interno
+nos permite obtener mayor conocimiento del tema,
+posibilita la experimentación académica con Linux embebido, y
+así tambien, su reuso para necesidades específicas en el marco
+de los sitemas embebidos.
+
+
+
+
+
+\section{Arquitectura de un Sistema Linux Embebido}
+
+\subsection{Arquitectura de Hardware}
+
+Para entender el funcionamiento de un dispositivo Linux embebido, es necesario, en primer lugar, conocer
+la arquitectura de harwdware. En un sistema embebido moderno la arquitectura
+contiene como componente central, un microcontrolador o microprocesador (CPU).
+Mas aún, actualmente, muchos sistemas contienen un SOC (del inglés ``system on chip''),
+que contiene la CPU y gran parte de los componentes de un sistema embebido, en un
+único chip (referencia).
+
+Además, es de interés conocer que otros componentes conforman
+el sistema. Los mas importantes, luego de conocer la CPU,
+son los módulos de memoria (de
+tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
+Ya que en conjunto con el microprocesador suelen dar una visión
+global de como inicia o funciona el sistema.
+
+En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
+la placa del circuito impreso de la caja exterior. Esto posibilita
+inspeccionar visualmente y listar todos los componentes principales con los
+que está compuesto el sistema. A partir de este listado, puede
+obtenerse, en la mayoría de los casos, la documentación pública
+de cada uno de los componentes o chips listados.
+A este tipo de documentación se conoce como hoja de datos, o
+en algunos casos (como el de las memorias o cpu) manuales de programación
+del chip (referencia).
+
+En nuestro caso de estudio, al desmontar el ENTC-1000, identificamos
+un SOC Cirrus 3907A como el componente principal,
+que contiene un procesador central de arquitectura ARM, modelo ARM920T
+a una velocidad de 200Mhz.
+Ademas, la placa presenta un modulo de memoria SDRAM de 64MB (colocar marca), y un modulo
+de memoria FLASH de 16MB (colocar marca).
+
+Afortunadamente para nuestra investigación,
+la empresa Cirrus publica documentacion detallada del SOC Cirrus 3907A.
+Junto con esta documentación Cirrus tambien publica software
+para su programación, y codigo fuente de
+Linux para experimentación. Completando la búsqueda, hemos encontrado
+documentación de placas de laboratorios experimentales, que la fabrica Cirrus publica.
+Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
+ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
+
+
+Arquitectura de Software
+
+Tambien es imprescindible, para entender y modificar un sistema
+LInux embebido, conocer la arquitectura de sotware. Por al menos dos motivos :
+ 1. permite obtener los conocimientos necesarios para entender y acceder
+    al sistema del firmware original (via conexiones de software)
+ 2. permite preparar todo un ambiente de desarrollo de Linux embebido,
+específico para la plataforma en la que se quiera instalar.
+
+
+Tipicamente, la arquitectura de software consiste de tres componentes esenciales :
+
+- un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
+que generalmente es Das U-Boot (referencia). SI no se utiliza U-Boot entonces
+es posible encontrar un gestor de arranque de código cerrado.
+- un kernel Linux. O uClinux en caso de ser un sistema sin una
+unidad de manejo de memoria (MMU, del inglés ``Memory Management Unit'')
+- un sistema de archivos mínimo que provee una biblioteca de C,
+(generalmente uClibc o eglibc), y busybox (referencia: pequeño programa ejecutable
+optimizado para sistemas embebidos, el cual puede operar como lo hacen
+muchas de las utilidades UNIX básicas).
+
+Algunas veces existe un cuarto componente de software, que son las aplicaciones
+y controladores de hardware (del inglés ``drivers'') del fabricante.
+Las aplicaciones muchas veces no son de interés, pero si
+existiesen drivers del fabricante, comunmente de codigo cerrado,
+encontes las chances de contar con las mismas características en una versión preparada
+es dificultosa.
+No encontramos drivers de código cerrado en nuestra experienica aquí expuesta, por lo
+que este punto está fuera del alcance de este artículo.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 This demo file is intended to serve as a ``starter file''
