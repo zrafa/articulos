@@ -362,26 +362,24 @@
 % use a multiple column layout for up to three different
 % affiliations
 \author{
-\IEEEauthorblockN{Rafael Zurita
+\IEEEauthorblockN{Rafael Zurita}
 \IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
 Universidad Nacional del Comahue\\
 Neuquén, Argentina\\
 Email: rafael.zurita@fai.uncoma.edu.ar}
-}
 \and
-\author{
 \IEEEauthorblockN{Rodolfo Del Castillo}
 \IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
 Universidad Nacional del Comahue\\
 Neuquén, Argentina\\
-Email: rafael.zurita@fai.uncoma.edu.ar}
-}
+Email: rdc@fi.uncoma.edu.ar}
 \and
-\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
-\IEEEauthorblockA{Starfleet Academy\\
-San Francisco, California 96678-2391\\
-Telephone: (800) 555--1212\\
-Fax: (888) 555--1212}}
+\IEEEauthorblockN{Miriam Lechner}
+\IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
+Universidad Nacional del Comahue\\
+Neuquén, Argentina\\
+Email: mtl@fi.uncoma.edu.ar}
+}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -434,7 +432,7 @@ y reutilizada para otros fines de interés, en el ámbito
 de los sistemas Linux embebidos.
 
 Para la experimentación práctica se utilizó
-un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
+un dispositivo ENCORE ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 
 
@@ -514,7 +512,7 @@ los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
 comercial y su documentación proveen especificaciones mínimas,
 esto es, se publicita como un sistema con Linux embebido kernel 2.4 
 \footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
-interno del software. Tampoco provee, Encore Electronic Inc.,
+interno del software. Tampoco provee, ENCORE Electronic Inc.,
 el código fuente del software instalado, ni las instrucciones
 para su compilación e instalación (como es requerido por la licencia GPL de Linux (2)).
 
@@ -578,12 +576,12 @@ que está compuesto el sistema. A partir de este listado, puede
 obtenerse, en la mayoría de los casos, la documentación pública
 de cada uno de los componentes o chips listados.
 A este tipo de documentación se conoce como hoja de datos, o
-en algunos casos (como el de las memorias o cpu) manuales de programación
+en algunos casos (como el de las memorias o CPU) manuales de programación
 del chip.
 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
-un SOC Cirrus 3907A como el componente principal,
+un SOC Cirrus EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
@@ -593,7 +591,7 @@ de memoria FLASH embebida INTEL de 16MB.
 \begin{center}
 \includegraphics[scale=0.40]{placa-encore.png}
 % redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
-\caption{Placa del Encore ENTC-1000}
+\caption{Placa del ENCORE ENTC-1000}
 \label{fig:placa-encore}
 \end{center}
 \end{figure}
@@ -651,128 +649,116 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 
 
-
-
-
-
-
-
-
-
-
 \section{Accediendo por Software}
 
 \subsection{Interfaz Serial}
 
 Existen varias posibilidades para conectarse a un dispositivo 
-Linux embebido, pero una de las mas comunmente encontradas es
+Linux embebido, pero una de las disponibles, mas comúnmente encontrada es
 a través de una consola serial. En los sistemas Linux, la 
 consola serial permite ver los mensajes de error del kernel,
-y tambien interactuar con el gestor de arranque.
+y también interactuar con el gestor de arranque.
 
 La mayoría de los sistemas embebidos contienen un controlador 
 UART (del inglés ``Universal Asynchronous Receiver-Transmitter''),
 utilizado principalmente para depuración y desarrollo.
-Pero que tambien es utilizado por Linux como la interfaz serie
+Pero que también es utilizado por Linux como la interfaz serie
 predeterminada.
 El UART traduce la información en formato paralelo
 provenientes del bus del sistema, a datos en formato serie,
 para que puedan ser transmitidos a través de diferentes puertos.
 En los sistemas embebidos, generalmente, el controlador UART es parte de la CPU,
-por lo que, aunque no exista un conector en la placa, generalmente
+por lo que, aunque no exista un conector expuesto en la placa, generalmente
 está presente.
 
-En nuestro trabajo con el ENTC-1000, los contactos (del inglés ``pins'') del UART
+En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
 no se encontraban identificados o etiquetados, pero estaban presentes.
-Utilizando un multímetro y un osciloscopio se identificaron contactos
-de tierra (GND) y de voltage de corriente directa (VCC). Luego, utilizando
-el contacto tierra, se probaron los demas contactos expuestos en la placa,
-para identificar el contacto de transmición (TX), y recepción (RX).
+Utilizando un multímetro y un osciloscopio, se identificaron contactos
+de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
+el contacto tierra, se probaron los demás contactos expuestos en la placa,
+para identificar el contacto de transmisión (TX), y recepción (RX).
 
 Para corroborar que los contactos del UART son los correctos, se conectó
-el conversor de nivel RS-232 a estos conectores, y luego a una PC.
+el conversor de nivel RS-232 a los mismos, y luego a una PC.
 Finalmente, se utilizó el programa de comunicaciones minicom para
 obtener, al menos, información visual sin sentido, ya que
-no se conocía a que velocidad de transmición se encuentra operando
+no se conocía a que velocidad de transmisión se encuentra operando
 el firmware original.
 
 \subsection{Tomando Control}
 
 Conociendo los componentes de software, se realizaron pruebas
 de acceso al sistema original en al menos tres niveles de la arquitectura:
-- a través de conexiones TCP/IP una vez que el firmware original está en ejecución
-- a través del conexiones al gestor de arranque
-- a través de accesos al software del boot rom.
+\begin{itemize}
+\item A través de conexiones TCP/IP una vez que el firmware original está en ejecución,
+\item a través del conexiones al gestor de arranque,
+\item a través de accesos al software del boot rom.
+\end{itemize}
 
 En los primeros dos casos no se tuvieron resultados promisorios.
 La tarea en estos puntos es obtener acceso como administrador del sistema
 Linux cerrado. O en el caso del gestor de arranque, se busca
-el acceso al interprete de comandos mínimos que algunos gestores proveen.
-
+el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
 anteriores a la ejecución del gestor de arranque.
 
 Leyendo la documentación obtenida de la arquitectura y programación del hardware,
-se analizó el proceso de reset del hardware y como la CPU interna
+se analizó el proceso de reinicio del hardware y como la CPU interna
 del ENTC-1000 comienza a ejecutar instrucciones.
 
-\subsubsection{Comunicación con la CPU}
+\subsection*{Comunicación con la CPU}
 
-El SOC Cirrus ep9307 tiene una boot rom.
-En un reset, la CPU (ARM920t) comienza a ejecutar codigo en la dirección cero.
+El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
+En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.
 
-El sistema utiliza los controles de la ``configuracion del hardware'' para seleccionar
-que dispositivo aparece en la dirección ``cero''.
-Una de las opciones presente en nuestro placa ENTC-1000, a través de un interruptor,
-es la posibilidad de seleccionar el BootROM. Por lo que se estudió
-la operación del software del BootROM, ya que puede el interruptor
-modifica la ``configuración del hardware'' y mapea el software del BootROM
-a la dirección cero que la CPU accede en un reset.
+Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar
+qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, 
+se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a 
+experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y 
+por ende, lograr su ejecución. 
 
-Afortunadamente, en un reset, el Cirrus EP9307, en conjunción
-con el software de la BootROM operan en un modo llamado 
-``download en serie'', ya que nos permite enviar unos pocos
-bytes para ser ejecutados por la CPU. Internamente, en un evento de reset,
-estos componentes (CPU y BootROM) trabajan de la siguiente manera :
+Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
+con el software de la BootROM, operan en un modo llamado 
+``download en serie'', que nos permite enviar unos pocos
+bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
+estos componentes (CPU y BootROM) trabajan de la siguiente manera:
 
 \begin{enumerate}
-\item Se inicializa el UART1 a 9600 baudions, 8 bits, sin paridad, 1 bit de stop.
-\item Se envía por esa conexión serie el caracter ``<''
-\item Se leen, desde el sistema embebido, 2048 bytes provenientes
+\item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
+\item Se envía por esa conexión serie el caracter ``\textgreater''
+\item Se leen desde el sistema embebido, 2048 bytes provenientes
 de la conexión serie, y se almacenan en una buffer de inicio interno.
 \item Decisión:
 \begin{itemize}
 \item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna FLASH.
-\item Si el extremo de la conexión serie envió los 2048 bytes, se envia desde el sistema otro caracter ``\textgreater'' a través de la conexión serie, para indicar que 
+\item Si el extremo de la conexión serie envió los 2048 bytes, entonces se envía desde el sistema (SOC) otro caracter ``\textgreater'' a través de la conexión serie, para indicar que 
 se leyeron correctamente.
 \end{itemize}
 \item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
 para continuar leyendo instrucciones desde
-los 2048 bytes leidos.
+los 2048 bytes leídos.
 \end{enumerate} 
-
-
 
 En nuestras pruebas logramos obtener 
 el caracter ``\textgreater'' desde el programa de comunicación minicom,
-por lo que pudimos confirmar varias cuestiones. En principio
+por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
-Tambien a nivel de comunicación vía software.
+También a nivel de comunicación vía software.
 
 Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
 los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
 ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
-para realizar las pruebas con respecto a la informaciónn que
+para realizar las pruebas con respecto a la información que
 nos faltaba por conocer.
 
 En particular, hicimos que nuestro pequeño programa encontrara
 la dirección física de la memoria FLASH interna.
 El interés por encontrar esta dirección
-base es porque en esta memoria residen los componentes de software
-gestor de arranque, el kernel Linux, y el sistemas de archivos raiz.
+base, es porque en esta memoria residen los componentes de software: 
+gestor de arranque, el kernel Linux, y el sistemas de archivos raíz.
 
 Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
-que el sistema lee desde el arranque via ``download en serie''.
+que el sistema lee desde el arranque vía ``download en serie''.
 Nuestro programa leyó bytes
 de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
 tomamos como referencia del manual de Cirrus).
@@ -787,7 +773,7 @@ las direcciones físicas de la memoria RAM.
 
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
 
-Conociendo como ejecutar pequeños programas al momento de un reset
+Conociendo como ejecutar pequeños programas al momento de un reinicio
 del hardware, y conociendo las direcciones de la memoria RAM y FLASH,
 preparamos otro pequeño programa para enviar a la memoria RAM un gestor
 de arranque (a través de la comunicación serie). En nuestro caso, utilizamos
@@ -801,82 +787,20 @@ el sistema.
 En particular, modificamos la memoria FLASH interna, colocando nuestro
 gestor de arranque en la dirección posterior a los cuatros bytes ``CRUS''.
 También, escribimos en la memoria FLASH un kernel Linux actual, versión 3.X.,
-y que está preparado para iniciarlizar el hardware y leer, como sistema
+tal que está preparado para inicializar el hardware y leer, como sistema
 de archivos raíz, un sistema de archivos contenido en una memoria flash
-via usb (pendrive, o similar).
+vía usb (pendrive, o similar).
 
-Esto modificó el inicio del firmware interno del Encore ENTC-1000, 
+Esto modificó el inicio del firmware interno del ENCORE ENTC-1000, 
 ofreciendo al menos dos interesantes funcionalidades :
 \begin{itemize}
 \item Un gestor de arranque moderno y accesible para ser operado a través de una comunicación serie.
 \item Un kernel Linux actualizado, y preparado para iniciar diferentes
-sistemas operativos LInux, ya que lee el sistema de archivos raíz desde 
+sistemas operativos Linux, ya que lee el sistema de archivos raíz desde 
 memorias conectadas al puerto USB. 
 \end{itemize}
 
-Con estas funcionalidades minimas se pueden realizar pruebas
+Con estas funcionalidades mínimas se pueden realizar pruebas
 de programación para sistemas Linux embebidos, sin necesidad
 de acceder continuamente al gestor de arranque.
-
-\section{Conclusiones y Trabajo Futuro}
-
-
-
-Nuestras pruebas lograron
-
-- compilamos un bootloader de uboot para ese hardware, con opciones tftp y varias cosas mas.
-- modificando el codigo en assembler encontrado en cirrus, e hicimos varias pruebas para detectar
-  en que direcciones reales está la RAM y la FLASH (disco con el firmware del encore).
-- tuvimos que modificar levemente el codigo de uboot para que viera la cantidad de RAM correcta.
-- compilamos un kernel linux actual para esa board. El codigo fuente de linux ya viene con 
-%  muchos archivos de configuracion para distintas "placas". Hay un archivo de configuracion
-%  para las placas ep93XX que cirrus publica. Esas placas de cirrus son placas "modelo"
-  que otros fabricantes de hardware, que compren y utilicen el SOC de cirrus ep9307
-  puedan hacer placas embebidas similares. Toman como modelos las que el fabricante
-  del soc publica.
-  Afortunadamente (nuevamente) encore que hizo este cliente delgado con ese SOC
-  parece utilizar casi el mismo diseño que Cirrus publica, porque nuestro kernel linux
-  actual compilado para esa placa de cirrus, funciona perfectamente en el encore,
-  con todos los perifericos funcionales.
-
-% - Luego, utilizando el progama "download" de cirrus, enviamos un codigo de 2048
-  bytes (como lo quiere el boot rom del cirrus) que luego de inicializar al menos la RAM, al ejecutarse,
-  se trae por el serial otro codigo que pone en ram, y luego salta a esa direccion ram.
-  Nosotros hicimos que ese codigo de 2048 bytes, al ejecutarse, lleve a la RAM nuestro
-  uboot compilado. COmo nuestro uboot compilado usa el serial, pudimos hacer el resto
-  de las tareas. Algunas de ejemplo fueron :
-
-  - configurar la ethernet, traer el kernel linux por tftp, colocarlo en ram y hacer boot de esa direccion ram.
-  - traer por tftp nuestro uboot y colocarlo en la direccion FLASH de la que la board hace boot.
-    (supimos esa direccion cuando jugabamos con el codigo assembler, porque encontramos una secuencia de bytes que indican
-    el inicio del firmware del encore).
-  - flasheamos en otra parte de la flash nuestro kernel linux, que ya estaba compilado con soporte usb, usbstorage y ext2.
-  - Modificamos los argumentos del kernel en nuestro uboot que ya instalamos en la flash, para que 
-%    ejecute el kernel que pusimos en la flash, y ademas, para que l pase los argumentos "root=/dev/sda1 rootdelay"
-  - Eso posibilitó que en un pendrive pongamos un filesystem root de linux, y tuvimos el encore
-    como un sistema embebido linux con OpenEmbedded y con Debian funcional.
-
-
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-
-
-
-% that's all folks
-\end{document}
-
 
