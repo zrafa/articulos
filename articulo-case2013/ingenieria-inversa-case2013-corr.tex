@@ -346,6 +346,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{url}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -361,25 +362,39 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{
-\IEEEauthorblockN{Rafael Zurita}
-\IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
+\author{Rodolfo Del Castillo IEEEauthorblockA{<rdc@fi.uncoma.edu.ar>},
+Eduardo Grosclaude,
+Miriam Lechner,
+Rafael Zurita,
+
+\IEEEauthorblockA{
+Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
 Universidad Nacional del Comahue\\
-Neuquén, Argentina\\
-Email: rafael.zurita@fai.uncoma.edu.ar}
-\and
-\IEEEauthorblockN{Rodolfo Del Castillo}
-\IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
-Universidad Nacional del Comahue\\
-Neuquén, Argentina\\
-Email: rdc@fi.uncoma.edu.ar}
-\and
-\IEEEauthorblockN{Miriam Lechner}
-\IEEEauthorblockA{Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
-Universidad Nacional del Comahue\\
-Neuquén, Argentina\\
-Email: mtl@fi.uncoma.edu.ar}
+Neuquén, Argentina\\}
 }
+
+
+
+%\author{
+%\IEEEauthorblockN{Rafael Zurita}
+%\IEEEauthorblockA{ Email: rafael.zurita@fai.uncoma.edu.ar}
+%\and
+%\IEEEauthorblockN{Rodolfo Del Castillo}
+%\IEEEauthorblockA{
+%Email: rdc@fi.uncoma.edu.ar}
+%\and
+%\IEEEauthorblockN{Miriam Lechner}
+%\IEEEauthorblockA{
+%Email: mtl@fi.uncoma.edu.ar}
+%\and
+%\IEEEauthorblockN{Eduardo Grosclaude}
+%\IEEEauthorblockA{
+%Email: oso@fai.uncoma.edu.ar}
+%\IEEEauthorblockA{
+%Departamento de Ingeniería de Computadoras \\Facultad de Informática\\
+%Universidad Nacional del Comahue\\
+%Neuquén, Argentina\\}
+%}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -471,11 +486,7 @@ Tostadoras, teléfonos móviles, heladeras, aspiradoras,
 decodificadores de televisión, relojes, routers hogareños, consola de juegos, etc.
 Y la mayoría de estos sistemas, a diferencia de una PC que puede
 realizar miles de funciones diferentes, realizan una única función.
-Esta única tarea define que nos encontramos ante sistemas embebidos (1).
-
-(1)
-Embedded Systems Design
-Steve Heath - ISBN 0 75065546 1
+Esta única tarea define que nos encontramos ante sistemas embebidos \cite{steveheath}.
 
 
 Sin embargo, estos artículos del hogar ya no son tan simples como antes. Algunos
@@ -506,7 +517,7 @@ para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivo
 capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
 y los teléfonos móviles con sistema Android.
 
-El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronis Inc,
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronics Inc \cite{encore},
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
 comercial y su documentación proveen especificaciones mínimas,
@@ -514,11 +525,7 @@ esto es, se publicita como un sistema con Linux embebido kernel 2.4
 \footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
 interno del software. Tampoco provee, ENCORE Electronic Inc.,
 el código fuente del software instalado, ni las instrucciones
-para su compilación e instalación (como es requerido por la licencia GPL de Linux (2)).
-
-(2)
-http://www.gnu.org/licenses/gpl-2.0.html
-
+para su compilación e instalación (como es requerido por la licencia GPL de Linux \cite{gpl}).
 
 Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -556,11 +563,8 @@ la arquitectura de hardware. En un sistema embebido moderno la arquitectura
 contiene como componente central, un microcontrolador o microprocesador (CPU).
 Mas aún, actualmente, muchos sistemas contienen un SOC (del inglés ``system on chip''),
 que contiene la CPU y gran parte de los componentes de un sistema embebido, en un
-único chip (3).
+único chip \cite{arm}.
 
-(3)
-ARM System-on-chip Architecture
-Stephen Bo Furber - ISBN 8131708403 
 
 Además, es de interés conocer cuáles otros componentes conforman
 el sistema. Los mas importantes, luego de conocer la CPU,
@@ -597,7 +601,7 @@ de memoria FLASH embebida INTEL de 16MB.
 \end{figure}
 
 Afortunadamente para nuestra investigación,
-la empresa Cirrus publica documentación detallada del SOC Cirrus 3907A.
+la empresa Cirrus publica documentación detallada del SOC Cirrus 3907A \cite{cirrus}.
 Junto con esta documentación Cirrus también publica software
 para su programación, y código fuente de
 Linux para experimentación. Completando la búsqueda, hemos encontrado
@@ -613,7 +617,7 @@ En el lado software, la arquitectura consiste típicamente de tres componentes e
 
 \begin{itemize}
 \item Un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
-que generalmente es Das U-Boot (4). Si no se utiliza U-Boot entonces
+que generalmente es Das U-Boot \cite{uboot}. Si no se utiliza U-Boot entonces
 es posible encontrar un gestor de arranque de código cerrado.
 \item Un kernel Linux o uClinux en caso de ser un sistema sin una
 unidad de manejo de memoria, MMU (del inglés ``Memory Management Unit''). 
@@ -623,7 +627,6 @@ optimizado para sistemas embebidos, que puede realizar las operaciones
 de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \end{itemize}
 
-(4) http://www.denx.de/wiki/U-Boot/
 
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
 y controladores de hardware (del inglés ``drivers'') del fabricante.
@@ -803,4 +806,103 @@ memorias conectadas al puerto USB.
 Con estas funcionalidades mínimas se pueden realizar pruebas
 de programación para sistemas Linux embebidos, sin necesidad
 de acceder continuamente al gestor de arranque.
+
+
+
+
+\section{Conclusiones y Trabajo Futuro}
+
+Se utilizó ingeniería inversa para entender la arquitectura, funcionamiento
+y la programación de un sistema Linux embebido moderno.
+
+La experiencia y documentación del proceso
+nos permitió obtener mayor conocimiento del tema,
+posibilitó la experimentación académica con Linux embebido, y
+permitió el reuso de un sistema embebido comercial para necesidades
+específicas.
+
+Se seleccionó el hardware Encore ENTC-1000 porque cubre
+las expectativas de prestaciones, aún cuando no se conocía,
+en un primer momento, si sería posible estudiarlo y reutilizarlo.
+
+Afortunadamente, y luego de esta experiencia, no sólo
+se ha logrado entender el funcionamiento interno, sino que
+tambien, se está reutilizando de manera productiva para
+cumplir disintos roles :
+
+\begin{itemize}
+\item Como servidor de impresión para impresoras USB sin conexiones de red.
+\item Como servidor DHCP en pequeñas redes internas de la Universidad.
+\item Como cerebro de un robot experimental, que se comunica con 
+un microcontrolador y sensores.
+\item Como sistema Linux embebido para aprendizaje y experimentación.
+\item Y como un servidor DNS experimental.
+\end{itemize}
+
+Como trabajo futuro, se espera repetir la experiencia \cite{gpl}
+en futuros sistemas Linux embebidos comerciales, para estandarizar
+las tareas necesarias en una metodología, y hasta que la
+posibilidad de adquirir hardware especializado para desarrollos
+de sistemas Linux embebidos sea mucho mas accesible para
+las instituciones publicas. En cuyo caso, la experiencia
+de ingeniería inversa se puede mantener sobre productos comerciales,
+como una manera de incentivar el aprendizaje del funcionamiento
+y la arquitectura de los sistemas embebidos.
+
+
+
+
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+
+\bibitem{steveheath}
+S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Newnes, 2002. ISBN-13: 978-0750655460
+
+% (1)
+% Embedded Systems Design
+% Steve Heath - ISBN 0 75065546 1
+
+
+\bibitem{gpl}
+Free Software Foundation, \emph{GNU General Public License}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.gnu.org/licenses/gpl.html}
+
+% ARM System-on-chip Architecture
+% Stephen Bo Furber - ISBN 8131708403 
+\bibitem{arm}
+S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Addison-Wesley Professional, 2000. ISBN: 8131708403 
+
+
+\bibitem{uboot}
+Denx, \emph{U-Boot bootloader}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.denx.de/wiki/U-Boot/}
+
+
+\bibitem{encore}
+Encore Electronics, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
+
+\bibitem{cirrus}
+Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
+
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
 
