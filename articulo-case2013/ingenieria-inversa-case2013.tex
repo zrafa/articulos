@@ -346,6 +346,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{url}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -808,9 +809,9 @@ Se utilizó ingeniería inversa para entender la arquitectura, funcionamiento
 y la programación de un sistema Linux embebido moderno.
 
 La experiencia y documentación del proceso
-nos permite obtener mayor conocimiento del tema,
-posibilita la experimentación académica con Linux embebido, y
-permite el reuso de sistemas comerciales para necesidades
+nos permitió obtener mayor conocimiento del tema,
+posibilitó la experimentación académica con Linux embebido, y
+permitió el reuso de un sistema embebido comercial para necesidades
 específicas.
 
 Se seleccionó el hardware Encore ENTC-1000 porque cubre
@@ -831,7 +832,7 @@ un microcontrolador y sensores.
 \item Y como un servidor DNS experimental.
 \end{itemize}
 
-Como trabajo futuro, se espera repetir la experiencia
+Como trabajo futuro, se espera repetir la experiencia \cite{gpl}
 en futuros sistemas Linux embebidos comerciales, para estandarizar
 las tareas necesarias en una metodología, y hasta que la
 posibilidad de adquirir hardware especializado para desarrollos
@@ -842,44 +843,6 @@ como una manera de incentivar el aprendizaje del funcionamiento
 y la arquitectura de los sistemas embebidos.
 
 
-
-Además, posibilita que sean modificados y adaptados
-para su reutilización en necesidades especifícas.
-
-
-Nuestras pruebas lograron
-
-- compilamos un bootloader de uboot para ese hardware, con opciones tftp y varias cosas mas.
-- modificando el codigo en assembler encontrado en cirrus, e hicimos varias pruebas para detectar
-  en que direcciones reales está la RAM y la FLASH (disco con el firmware del encore).
-- tuvimos que modificar levemente el codigo de uboot para que viera la cantidad de RAM correcta.
-- compilamos un kernel linux actual para esa board. El codigo fuente de linux ya viene con 
-%  muchos archivos de configuracion para distintas "placas". Hay un archivo de configuracion
-%  para las placas ep93XX que cirrus publica. Esas placas de cirrus son placas "modelo"
-  que otros fabricantes de hardware, que compren y utilicen el SOC de cirrus ep9307
-  puedan hacer placas embebidas similares. Toman como modelos las que el fabricante
-  del soc publica.
-  Afortunadamente (nuevamente) encore que hizo este cliente delgado con ese SOC
-  parece utilizar casi el mismo diseño que Cirrus publica, porque nuestro kernel linux
-  actual compilado para esa placa de cirrus, funciona perfectamente en el encore,
-  con todos los perifericos funcionales.
-
-% - Luego, utilizando el progama "download" de cirrus, enviamos un codigo de 2048
-  bytes (como lo quiere el boot rom del cirrus) que luego de inicializar al menos la RAM, al ejecutarse,
-  se trae por el serial otro codigo que pone en ram, y luego salta a esa direccion ram.
-  Nosotros hicimos que ese codigo de 2048 bytes, al ejecutarse, lleve a la RAM nuestro
-  uboot compilado. COmo nuestro uboot compilado usa el serial, pudimos hacer el resto
-  de las tareas. Algunas de ejemplo fueron :
-
-  - configurar la ethernet, traer el kernel linux por tftp, colocarlo en ram y hacer boot de esa direccion ram.
-  - traer por tftp nuestro uboot y colocarlo en la direccion FLASH de la que la board hace boot.
-    (supimos esa direccion cuando jugabamos con el codigo assembler, porque encontramos una secuencia de bytes que indican
-    el inicio del firmware del encore).
-  - flasheamos en otra parte de la flash nuestro kernel linux, que ya estaba compilado con soporte usb, usbstorage y ext2.
-  - Modificamos los argumentos del kernel en nuestro uboot que ya instalamos en la flash, para que 
-%    ejecute el kernel que pusimos en la flash, y ademas, para que l pase los argumentos "root=/dev/sda1 rootdelay"
-  - Eso posibilitó que en un pendrive pongamos un filesystem root de linux, y tuvimos el encore
-    como un sistema embebido linux con OpenEmbedded y con Debian funcional.
 
 
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -894,7 +857,31 @@ Nuestras pruebas lograron
 
 \bibitem{IEEEhowto:kopka}
 H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+  0.5em minus 0.4em\relax Newnes, Harlow, England: Addison-Wesley, 1999.
+
+\bibitem{steveheath}
+S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Newnes, 2002. ISBN-13: 978-0750655460
+
+% (1)
+% Embedded Systems Design
+% Steve Heath - ISBN 0 75065546 1
+
+
+\bibitem{gpl}
+Free Software Foundation, \emph{GNU General Public License}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.gnu.org/licenses/gpl.html}
+
+% ARM System-on-chip Architecture
+% Stephen Bo Furber - ISBN 8131708403 
+\bibitem{arm}
+S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Addison-Wesley Professional, 2000. ISBN: 8131708403 
+
+
+\bibitem{uboot}
+Denx, \emph{U-Boot bootloader}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.denx.de/wiki/U-Boot/}
 
 \end{thebibliography}
 
