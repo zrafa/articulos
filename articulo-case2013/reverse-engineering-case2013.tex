@@ -1,0 +1,938 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{url}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PARA HACER CAGAR TODAS LAS NOTAS DE UNA DESCOMENTAR LA DEF VACIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\newcommand{\nota}[1]{{\color{red}[#1]}}
+%\newcommand{\nota}[1]{}
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Reverse-Engineering a Closed-Box Hardware and Software Linux Embedded System}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+% \author{Rodolfo Del Castillo \IEEEauthorblockA{Email: rdc@fi.uncoma.edu.ar}\\
+% Eduardo Grosclaude \IEEEauthorblockA{Email: oso@fai.uncoma.edu.ar}\\
+% Miriam Lechner \IEEEauthorblockA{Email: mtl@fi.uncoma.edu.ar}\\
+% Rafael Zurita \IEEEauthorblockA{Email: rafael.zurita@fai.uncoma.edu.ar}\\
+% 
+% \IEEEauthorblockA{
+% Departamento de Ingeniería de Computadoras - Facultad de Informática\\
+% Universidad Nacional del Comahue\\
+% Neuquén, Argentina\\}
+% }
+
+
+
+\author{
+\IEEEauthorblockN{Rafael Zurita}
+\IEEEauthorblockA{Email: rafael.zurita@fai.uncoma.edu.ar}
+\and
+\IEEEauthorblockN{Rodolfo Del Castillo}
+\IEEEauthorblockA{Email: rdc@fi.uncoma.edu.ar}
+\and
+\IEEEauthorblockN{Miriam Lechner}
+\IEEEauthorblockA{Email: mtl@fi.uncoma.edu.ar}
+\and
+\IEEEauthorblockN{Eduardo Grosclaude}
+\IEEEauthorblockA{Email: oso@fai.uncoma.edu.ar}
+\IEEEauthorblockA{ Departamento de Ingeniería de Computadoras - Facultad de Informática\\
+Universidad Nacional del Comahue\\
+Neuquén, Argentina\\}
+}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+
+\nota{
+Este trabajo expone el proceso, por el cual, un sistema
+Linux embebido de caja cerrada (dispositivo de hardware y
+software) ha sido estudiado,
+con el fin de determinar de que está hecho,
+qué lo hace funcionar con Linux, y cómo puede ser modificado
+o actualizado a nivel de software.
+
+El resultado final, luego de aplicar el procedimiento, es una placa electrónica
+de desarrollo Linux embebido genérica, que ha sido adaptada
+y reutilizada para otros fines de interés, en el ámbito
+de los sistemas Linux embebidos.
+
+Para la experimentación práctica se utilizó
+un dispositivo ENCORE ENTC1000, que se comercializa como cliente liviano
+de escritorios remoto.
+}
+
+Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC1000 product marketed as a thin client device for remote desktops. 
+
+
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\section{Introducción}
+% no \IEEEPARstart
+
+
+\nota{
+Existen decenas de dispositivos embebidos que utilizamos en la vida diaria.
+Tostadoras, teléfonos móviles, heladeras, aspiradoras,
+decodificadores de televisión, relojes, routers hogareños, consola de juegos, etc.
+Y la mayoría de estos sistemas, a diferencia de una PC que puede
+realizar miles de funciones diferentes, realizan una única función.
+Esta única tarea define que nos encontramos ante sistemas embebidos \cite{steveheath}.
+}
+Dozens of embedded devices such as toasters, mobile phones, refrigerators, 
+vacuum cleaners, TV decoders, clocks, home network routers, game consoles,  are used in daily life. Most of these, unlike domestic PCs, are bound to perform a single function. This single function makes them qualify as embedded systems [REF].
+
+
+\nota{
+Sin embargo, estos artículos del hogar ya no son tan simples como antes. Algunos
+años atrás, la mayor parte de estos dispositivos fueron únicamente mecánicos
+y eléctricos. En cambio, hoy en día, la mayoría incluye placas
+de circuitos electrónicos, sensores, microcontroladores, microprocesadores y
+funcionalidades sofisticadas.
+}
+However, these household items are no longer as simple as they were once. Some years ago,
+most of these devices were just mechanical and electrical artifacts. Today's appliances
+integrate electronic circuits, sensors, microcontrollers, microprocessors, 
+and are capable to perform a sophisticated array of functionalities. 
+
+\nota{
+Esta complejidad trajo la necesidad de ejecutar un sistema operativo
+dentro del dispositivo, ya
+que se necesita administrar varias funcionalidades al mismo tiempo.
+Actualmente, los fabricantes han optado por Linux en muchos
+casos, debido principalmente a su
+bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
+}
+Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customisation [REF ELECTROLUX BRAZIL ANDROID ROUTER].
+
+\nota{En el marco regional, adquirir sistemas Linux embebidos para investigación
+o desarrollo es complejo y costoso.
+Si fuese necesario, por ejemplo, construir un sofisticado dispositivo robótico
+en nuestra realidad, reutilizaríamos, dentro de lo posible, la mayor cantidad de partes de otros
+trabajos previos, como así también componentes de hardware y software
+preexistentes, que puedan adaptarse cuando y donde se necesite.
+}
+In our region, acquisition of embedded Linux systems for research or development is a complex and expensive prospect. If we were to build, say, a sophisticated robotic device, then our best strategy would be reusing as many parts as possible from other previous work, and choosing off-the-shelf, ready-made hardware and software components to be repurposed.
+
+\nota{Existen decenas de dispositivos embebidos en el mercado regional,
+que pueden adquirirse para su estudio y adaptación. Y,
+aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
+gran parte de estos sistemas contienen el hardware necesario
+para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivos
+capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
+y los teléfonos móviles con sistema Android.
+}
+Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are TP-Link home routers or Android-equipped mobile phones.
+
+\nota{
+El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronics Inc \cite{encore},
+que funciona como una terminal de escritorio remoto, soportando
+los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
+comercial y su documentación proveen especificaciones mínimas,
+esto es, se publicita como un sistema con Linux embebido kernel 2.4 
+\footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
+interno del software. Tampoco provee, ENCORE Electronic Inc.,
+el código fuente del software instalado, ni las instrucciones
+para su compilación e instalación (como es requerido por la licencia GPL de Linux \cite{gpl}).
+}
+
+The ENTC-1000 embedded system is a proprietary product of ENCORE Electronics Inc. \cite{encore},
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation to architecture or software internals. ENCORE Electronics Inc. does not provide the source code to the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
+
+\nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
+de los dispositivos ENTC-1000,
+ya que se trata de un sistema embebido moderno, y disponible
+para su adquisición en el país. Conocer su funcionamiento interno
+nos permite la experimentación académica con Linux embebido. Y,
+por último, pero no menos importante, permite su reuso para necesidades
+específicas en el marco de los sistemas embebidos.
+}
+As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  Knowing its internals will allow us an inexpensive way to experiment with embedded Linux for academic purposes. 
+
+\section{Marco Jurídico}
+
+
+Cuando reutilizamos un sistema embebido de hardware y software cerrado, necesitamos la
+documentación completa de las especificaciones del dispositivo.
+Si esa documentación no existe, o si no existe
+completamente, es necesario descubrir su funcionamiento mediante
+diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
+se denomina ingeniería inversa.
+
+Esto plantea la inquietud acerca de la legalidad 
+del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
+específico. En este caso en particular, sólo se usa ingeniería inversa para poder
+reutilizar el hardware con un propósito diferente, lo cual es acorde con las Ley
+Argentina N° 24.240 de Defensa del Consumidor (referencia :),
+http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
+siempre que el producto haya sido adquirido legalmente.  
+
+\section{Arquitectura de un Sistema Linux Embebido}
+
+\subsection{Arquitectura de Hardware}
+
+Para entender el funcionamiento de un dispositivo Linux embebido, es necesario, en primer lugar, conocer
+la arquitectura de hardware. En un sistema embebido moderno la arquitectura
+contiene como componente central, un microcontrolador o microprocesador (CPU).
+Mas aún, actualmente, muchos sistemas contienen un SOC (del inglés ``system on chip''),
+que contiene la CPU y gran parte de los componentes de un sistema embebido, en un
+único chip \cite{arm}.
+
+
+Además, es de interés conocer cuáles otros componentes conforman
+el sistema. Los mas importantes, luego de conocer la CPU,
+son los módulos de memoria (de
+tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
+Ya que, en conjunto con el microprocesador, suelen dar una visión
+global de cómo inicia o funciona el sistema.
+
+En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
+la placa del circuito impreso de la caja exterior. Esto posibilita
+inspeccionar visualmente y listar todos los componentes principales con los
+que está compuesto el sistema. A partir de este listado, puede
+obtenerse, en la mayoría de los casos, la documentación pública
+de cada uno de los componentes o chips listados.
+A este tipo de documentación se conoce como hoja de datos, o
+en algunos casos (como el de las memorias o CPU) manuales de programación
+del chip.
+
+En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
+, identificamos
+un SOC Cirrus EP3907A como el componente principal,
+que contiene un procesador central de arquitectura ARM, modelo ARM920T
+a una velocidad de 200Mhz.
+Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
+de memoria FLASH embebida INTEL de 16MB.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.40]{placa-encore.png}
+% redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
+\caption{Placa del ENCORE ENTC-1000}
+\label{fig:placa-encore}
+\end{center}
+\end{figure}
+
+Afortunadamente para nuestra investigación,
+la empresa Cirrus publica documentación detallada del SOC Cirrus 3907A \cite{cirrus}.
+Junto con esta documentación Cirrus también publica software
+para su programación, y código fuente de
+Linux para experimentación. Completando la búsqueda, hemos encontrado
+documentación de placas de laboratorios experimentales, que la fabrica Cirrus publica.
+Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
+ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
+
+
+\subsection{Arquitectura de Software}
+
+
+En el lado software, la arquitectura consiste típicamente de tres componentes esenciales :
+
+\begin{itemize}
+\item Un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
+que generalmente es Das U-Boot \cite{uboot}. Si no se utiliza U-Boot entonces
+es posible encontrar un gestor de arranque de código cerrado.
+\item Un kernel Linux o uClinux en caso de ser un sistema sin una
+unidad de manejo de memoria, MMU (del inglés ``Memory Management Unit''). 
+\item Un sistema de archivos mínimo que contiene, al menos, una biblioteca de C
+(generalmente uClibc o eglibc), y busybox, el cual es un pequeño programa ejecutable,
+optimizado para sistemas embebidos, que puede realizar las operaciones
+de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
+\end{itemize}
+
+
+Algunas veces existe un cuarto componente de software, que son las aplicaciones
+y controladores de hardware (del inglés ``drivers'') del fabricante.
+Las aplicaciones muchas veces no son de interés, pero si los controladores.
+Si existiesen controladores de código cerrado
+entonces el trabajo de preparar un Linux embebido con soporte
+para todo el hardware será difícil (debido a que no se tiene acceso
+al código fuente). En nuestra experiencia con el ENTC-1000 no encontramos drivers
+de código cerrado, por lo que este punto está fuera del alcance de este artículo. 
+
+El trabajo realizado en este punto fue la preparación
+de dos sistemas Linux embebidos completos de reemplazo: Amstrong y emDebian.
+La documentación para preparar sistemas Linux embebidos es amplia y públicamente
+disponible (referencias). Además, existen decenas de
+distribuciones Linux para embebidos,
+o entornos de desarrollo de distribuciones Linux para embebidos 
+\footnote{No confundir distribución con entorno de desarrollo}. Estas herramientas
+facilitan la preparación de un sistema para un dispositivo específico.
+Algunas de estos proyectos son Openwrt, Buildroot, u OpenEmbedded (referencias).
+
+Una vez que se tiene el conocimiento en cómo construir (compilar y configurar)
+y operar los componentes de software para la arquitectura destino, se
+debe realizar un análisis de si es posible o no modificar el firmware original.
+
+
+\section{Accediendo por Software}
+
+\subsection{Interfaz Serial}
+
+Existen varias posibilidades para conectarse a un dispositivo 
+Linux embebido, pero una de las disponibles, mas comúnmente encontrada es
+a través de una consola serial. En los sistemas Linux, la 
+consola serial permite ver los mensajes de error del kernel,
+y también interactuar con el gestor de arranque.
+
+La mayoría de los sistemas embebidos contienen un controlador 
+UART (del inglés ``Universal Asynchronous Receiver-Transmitter''),
+utilizado principalmente para depuración y desarrollo.
+Pero que también es utilizado por Linux como la interfaz serie
+predeterminada.
+El UART traduce la información en formato paralelo
+provenientes del bus del sistema, a datos en formato serie,
+para que puedan ser transmitidos a través de diferentes puertos.
+En los sistemas embebidos, generalmente, el controlador UART es parte de la CPU,
+por lo que, aunque no exista un conector expuesto en la placa, generalmente
+está presente.
+
+En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
+no se encontraban identificados o etiquetados, pero estaban presentes.
+Utilizando un multímetro y un osciloscopio, se identificaron contactos
+de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
+el contacto tierra, se probaron los demás contactos expuestos en la placa,
+para identificar el contacto de transmisión (TX), y recepción (RX).
+
+Para corroborar que los contactos del UART son los correctos, se conectó
+el conversor de nivel RS-232 a los mismos, y luego a una PC.
+Finalmente, se utilizó el programa de comunicaciones minicom para
+obtener, al menos, información visual sin sentido, ya que
+no se conocía a que velocidad de transmisión se encuentra operando
+el firmware original.
+
+\subsection{Tomando Control}
+
+Conociendo los componentes de software, se realizaron pruebas
+de acceso al sistema original en al menos tres niveles de la arquitectura:
+\begin{itemize}
+\item A través de conexiones TCP/IP una vez que el firmware original está en ejecución,
+\item a través del conexiones al gestor de arranque,
+\item a través de accesos al software del boot rom.
+\end{itemize}
+
+En los primeros dos casos no se tuvieron resultados promisorios.
+La tarea en estos puntos es obtener acceso como administrador del sistema
+Linux cerrado. O en el caso del gestor de arranque, se busca
+el acceso al interprete de comandos mínimo, que algunos gestores proveen.
+Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
+anteriores a la ejecución del gestor de arranque.
+
+Leyendo la documentación obtenida de la arquitectura y programación del hardware,
+se analizó el proceso de reinicio del hardware y como la CPU interna
+del ENTC-1000 comienza a ejecutar instrucciones.
+
+\subsection*{Comunicación con la CPU}
+
+El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
+En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.
+
+Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar
+qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, 
+se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a 
+experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y 
+por ende, lograr su ejecución. 
+
+Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
+con el software de la BootROM, operan en un modo llamado 
+``download en serie'', que nos permite enviar unos pocos
+bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
+estos componentes (CPU y BootROM) trabajan de la siguiente manera:
+
+\begin{enumerate}
+\item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
+\item Se envía por esa conexión serie el caracter ``\textgreater''
+\item Se leen desde el sistema embebido, 2048 bytes provenientes
+de la conexión serie, y se almacenan en una buffer de inicio interno.
+\item Decisión:
+\begin{itemize}
+\item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna FLASH.
+\item Si el extremo de la conexión serie envió los 2048 bytes, entonces se envía desde el sistema (SOC) otro caracter ``\textgreater'' a través de la conexión serie, para indicar que 
+se leyeron correctamente.
+\end{itemize}
+\item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
+para continuar leyendo instrucciones desde
+los 2048 bytes leídos.
+\end{enumerate} 
+
+En nuestras pruebas logramos obtener 
+el caracter ``\textgreater'' desde el programa de comunicación minicom,
+por lo que pudimos confirmar varias hipótesis. En principio
+toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
+También a nivel de comunicación vía software.
+
+Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
+los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
+ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
+para realizar las pruebas con respecto a la información que
+nos faltaba por conocer.
+
+En particular, hicimos que nuestro pequeño programa encontrara
+la dirección física de la memoria FLASH interna.
+El interés por encontrar esta dirección
+base, es porque en esta memoria residen los componentes de software: 
+gestor de arranque, el kernel Linux, y el sistemas de archivos raíz.
+
+Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
+que el sistema lee desde el arranque vía ``download en serie''.
+Nuestro programa leyó bytes
+de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
+tomamos como referencia del manual de Cirrus).
+Encontramos la dirección base de la memoria FLASH en 
+la dirección 0x60001000, ya que el programa leyó la palabra ``CRUS''
+en cuatro bytes consecutivos. Esos cuatro bytes ``CRUS'' indican el inicio
+del software de arranque, ya que está especificado en el manual
+de la programación del SOC.
+
+De una manera similar, tuvimos acceso al conocimiento de
+las direcciones físicas de la memoria RAM.
+
+\subsection{Iniciando un Sistema Linux Embebido Alternativo}
+
+Conociendo como ejecutar pequeños programas al momento de un reinicio
+del hardware, y conociendo las direcciones de la memoria RAM y FLASH,
+preparamos otro pequeño programa para enviar a la memoria RAM un gestor
+de arranque (a través de la comunicación serie). En nuestro caso, utilizamos
+u-boot configurado para este dispositivo.
+
+Una vez que nuestro gestor de arranque estuvo en ejecución, y
+que pudimos utilizarlo a través de la comunicación serie, tuvimos
+varias posibilidades, en lo que a software se refiere, para modificar
+el sistema.
+
+En particular, modificamos la memoria FLASH interna, colocando nuestro
+gestor de arranque en la dirección posterior a los cuatros bytes ``CRUS''.
+También, escribimos en la memoria FLASH un kernel Linux actual, versión 3.X.,
+tal que está preparado para inicializar el hardware y leer, como sistema
+de archivos raíz, un sistema de archivos contenido en una memoria flash
+vía usb (pendrive, o similar).
+
+Esto modificó el inicio del firmware interno del ENCORE ENTC-1000, 
+ofreciendo al menos dos interesantes funcionalidades :
+\begin{itemize}
+\item Un gestor de arranque moderno y accesible para ser operado a través de una comunicación serie.
+\item Un kernel Linux actualizado, y preparado para iniciar diferentes
+sistemas operativos Linux, ya que lee el sistema de archivos raíz desde 
+memorias conectadas al puerto USB. 
+\end{itemize}
+
+Con estas funcionalidades mínimas se pueden realizar pruebas
+de programación para sistemas Linux embebidos, sin necesidad
+de acceder continuamente al gestor de arranque.
+
+
+
+
+\section{Conclusiones y Trabajo Futuro}
+
+Se utilizó ingeniería inversa para entender la arquitectura, funcionamiento
+y la programación de un sistema Linux embebido moderno.
+
+La experiencia y documentación del proceso
+nos permitió obtener mayor conocimiento del tema,
+posibilitó la experimentación académica con Linux embebido, y
+permitió el reuso de un sistema embebido comercial para necesidades
+específicas.
+
+Se seleccionó el hardware Encore ENTC-1000 porque cubre
+las expectativas de prestaciones, aún cuando no se conocía,
+en un primer momento, si sería posible estudiarlo y reutilizarlo.
+
+Afortunadamente, y luego de esta experiencia, no sólo
+se ha logrado entender el funcionamiento interno, sino que
+tambien, se está reutilizando de manera productiva para
+cumplir disintos roles :
+
+\begin{itemize}
+\item Como servidor de impresión para impresoras USB sin conexiones de red.
+\item Como servidor DHCP en pequeñas redes internas de la Universidad.
+\item Como cerebro de un robot experimental, que se comunica con 
+un microcontrolador y sensores.
+\item Como sistema Linux embebido para aprendizaje y experimentación.
+\item Y como un servidor DNS experimental.
+\end{itemize}
+
+Como trabajo futuro, se espera repetir la experiencia \cite{gpl}
+en futuros sistemas Linux embebidos comerciales, para estandarizar
+las tareas necesarias en una metodología, y hasta que la
+posibilidad de adquirir hardware especializado para desarrollos
+de sistemas Linux embebidos sea mucho mas accesible para
+las instituciones publicas. En cuyo caso, la experiencia
+de ingeniería inversa se puede mantener sobre productos comerciales,
+como una manera de incentivar el aprendizaje del funcionamiento
+y la arquitectura de los sistemas embebidos.
+
+
+
+
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+
+
+\bibitem{steveheath}
+S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Newnes, 2002. ISBN-13: 978-0750655460
+
+% (1)
+% Embedded Systems Design
+% Steve Heath - ISBN 0 75065546 1
+
+
+\bibitem{gpl}
+Free Software Foundation, \emph{GNU General Public License}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.gnu.org/licenses/gpl.html}
+
+% ARM System-on-chip Architecture
+% Stephen Bo Furber - ISBN 8131708403 
+\bibitem{arm}
+S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Addison-Wesley Professional, 2000. ISBN: 8131708403 
+
+
+\bibitem{uboot}
+Denx, \emph{U-Boot bootloader}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.denx.de/wiki/U-Boot/}
+
+
+\bibitem{encore}
+Encore Electronics, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
+
+\bibitem{cirrus}
+Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
+
+
+\end{thebibliography}
+
+
+
+
+% that's all folks
+\end{document}
+
+
