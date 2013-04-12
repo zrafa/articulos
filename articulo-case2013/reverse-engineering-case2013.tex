@@ -566,23 +566,34 @@ específicas en el marco de los sistemas embebidos.
 }
 As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  Knowing its internals will allow us an inexpensive way to experiment with embedded Linux for academic purposes. 
 
-\section{Marco Jurídico}
+\section{Legal Background}
 
+\nota{ Marco Jurídico }
 
-Cuando reutilizamos un sistema embebido de hardware y software cerrado, necesitamos la
+\nota{Cuando reutilizamos un sistema embebido de hardware y software cerrado, necesitamos la
 documentación completa de las especificaciones del dispositivo.
 Si esa documentación no existe, o si no existe
 completamente, es necesario descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
-se denomina ingeniería inversa.
+se denomina ingeniería inversa.}
 
-Esto plantea la inquietud acerca de la legalidad 
+When reusing a closed-box hardware and software system, 
+it is needed either a written complete documentation of device specifications, or to look at how it works using
+different experiments and tools.
+This is called reverse enginerring, and that is the method used.
+
+\nota{Esto plantea la inquietud acerca de la legalidad 
 del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
 específico. En este caso en particular, sólo se usa ingeniería inversa para poder
 reutilizar el hardware con un propósito diferente, lo cual es acorde con las Ley
 Argentina N° 24.240 de Defensa del Consumidor (referencia :),
 http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
-siempre que el producto haya sido adquirido legalmente.  
+siempre que el producto haya sido adquirido legalmente.}
+
+Because this method is illegal in some countries, it is needed
+verify if it is allowed by the license restrictions of the propietary product and by the local law. In this case, reverse engineering was used for reusing the hardware for arbitrary purposes, which matches the terms of ``Ley Argentina N° 24.240 de Defensa del Consumidor'' law, provided the product has been purchased legally.
+
+
 
 \section{Arquitectura de un Sistema Linux Embebido}
 
