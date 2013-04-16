@@ -752,22 +752,28 @@ del ENTC-1000 comienza a ejecutar instrucciones.
 
 \subsection*{Comunicación con la CPU}
 
-El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
-En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.
+\nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
+En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar
+The studied documentation specifies that the  EP3907 Cirrus SOC has a Boot ROM, which supports the UART as a source for a processor's initialization program. On a system reset, the CPU begins executing code at address zero, and the SOC follows the ``Hardware Configuration'' controls to select the device that appears at address zero. 
+
+\nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar
 qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, 
 se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a 
 experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y 
-por ende, lograr su ejecución. 
+por ende, lograr su ejecución. }
 
-Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
+ 
+
+\nota{Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
 con el software de la BootROM, operan en un modo llamado 
 ``download en serie'', que nos permite enviar unos pocos
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
-estos componentes (CPU y BootROM) trabajan de la siguiente manera:
+estos componentes (CPU y BootROM) trabajan de la siguiente manera:}
 
-\begin{enumerate}
+The below sequence is the algorith about how the SOC in conjuntion with the Boot ROM work :
+
+\nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
 \item Se envía por esa conexión serie el caracter ``\textgreater''
 \item Se leen desde el sistema embebido, 2048 bytes provenientes
@@ -781,13 +787,24 @@ se leyeron correctamente.
 \item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
 para continuar leyendo instrucciones desde
 los 2048 bytes leídos.
-\end{enumerate} 
+\end{enumerate} }
 
-En nuestras pruebas logramos obtener 
+\begin{itemize}
+\item Initialize UART1 to 9600 baud, 8 bits, no parity, 1 stop bit
+\item Output a ``\textless'' character
+\item Read 2048 (decimal count) characters from UART1 and store these in the internal buffer (alias for the Ethernet Mac buffer)
+\item Output a ``\textgreater'' to signify 2048 characters have been read
+\item Turn on Green LED
+\item Jump to the start of the internal Boot Buffer
+\end{itemize}
+
+\nota{En nuestras pruebas logramos obtener 
 el caracter ``\textgreater'' desde el programa de comunicación minicom,
 por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
-También a nivel de comunicación vía software.
+También a nivel de comunicación vía software.}
+
+When the board was visually analized, a switch  labeled as ``Boot Mode Select'' was identified. Then, several tests were ran in order to map the Boot ROM to address zero, so CPU can execute the Boot ROM code. Fortunately, after several reset tests, when testing with the communication program on PC and the board, the minicom got the ``\textless'' character. That confirmed some hypothesis. First of all, all the wired connection between PC and board was functional. Also, the Boot ROM code was ran, and then it was able to download a specific program as first program to be ran by the ARM core.
 
 Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
 los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
