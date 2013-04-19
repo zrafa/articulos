@@ -577,10 +577,7 @@ completamente, es necesario descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
 se denomina ingeniería inversa.}
 
-When reusing a closed-box hardware and software system, 
-it is needed either a written complete documentation of device specifications, or to look at how it works using
-different experiments and tools.
-This is called reverse enginerring, and that is the method used.
+When repurposing a closed-box hardware and software system, the knowledge we need about its internals can be obtained either by having a complete written documentation of the target device, or by directly experimenting with it. This experimentation is called reverse engineering and can be driven by several activities and tools. This is the method we used for this case study.
 
 \nota{Esto plantea la inquietud acerca de la legalidad 
 del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
@@ -590,31 +587,35 @@ Argentina N° 24.240 de Defensa del Consumidor (referencia :),
 http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
 siempre que el producto haya sido adquirido legalmente.}
 
-Because this method is illegal in some countries, it is needed
-verify if it is allowed by the license restrictions of the propietary product and by the local law. In this case, reverse engineering was used for reusing the hardware for arbitrary purposes, which matches the terms of ``Ley Argentina N° 24.240 de Defensa del Consumidor'' law, provided the product has been purchased legally.
+As reverse engineering happens to be illegal in some countries, a question is raised about the legal status of our procedure. In our particular case, the goal in using reverse engineering is exactly to reuse the hardware for a different purpose. This goal matches the terms in the act \emph{Ley Argentina N° 24.240 de Defensa del Consumidor}, which allows this action provided the product has been purchased legally.
 
 
 
-\section{Arquitectura de un Sistema Linux Embebido}
+\section{Architecture of an Embedded Linux System}
+\subsection{Hardware Architecture}
 
-\subsection{Arquitectura de Hardware}
-
-Para entender el funcionamiento de un dispositivo Linux embebido, es necesario, en primer lugar, conocer
+\nota{Para entender el funcionamiento de un dispositivo Linux embebido, es necesario, en primer lugar, conocer
 la arquitectura de hardware. En un sistema embebido moderno la arquitectura
 contiene como componente central, un microcontrolador o microprocesador (CPU).
 Mas aún, actualmente, muchos sistemas contienen un SOC (del inglés ``system on chip''),
 que contiene la CPU y gran parte de los componentes de un sistema embebido, en un
 único chip \cite{arm}.
+}
+
+We must know first the hardware architecture in order to understand the behavior of an embedded Linux device. In a modern embedded system, the main component is a microcontroller or microprocessor (CPU). Nowadays, many systems integrate a system-on-a-chip (SOC) device containing the CPU and most of an embedded system's components, in a single chip \cite{arm}.
 
 
-Además, es de interés conocer cuáles otros componentes conforman
+\nota {Además, es de interés conocer cuáles otros componentes conforman
 el sistema. Los mas importantes, luego de conocer la CPU,
 son los módulos de memoria (de
 tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
 Ya que, en conjunto con el microprocesador, suelen dar una visión
 global de cómo inicia o funciona el sistema.
+}
 
-En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
+We also need to know about other components existing in the system. Coming after the CPU, most important components are memory modules (RAM and Flash types) and communication modules (such as serial or USB). These devices, together with the CPU, give an overview to what the boot process or operational regime of the system will be like.
+
+\nota {En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
 la placa del circuito impreso de la caja exterior. Esto posibilita
 inspeccionar visualmente y listar todos los componentes principales con los
 que está compuesto el sistema. A partir de este listado, puede
@@ -622,8 +623,12 @@ obtenerse, en la mayoría de los casos, la documentación pública
 de cada uno de los componentes o chips listados.
 A este tipo de documentación se conoce como hoja de datos, o
 en algunos casos (como el de las memorias o CPU) manuales de programación
-del chip.
+del chip.}
 
+In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach its public documentation. This documentation is known as data sheets or, sometimes, programming manuals.
+
+
+ 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
 un SOC Cirrus EP3907A como el componente principal,
