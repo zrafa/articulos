@@ -587,7 +587,10 @@ Argentina N° 24.240 de Defensa del Consumidor (referencia :),
 http://www.infoleg.gov.ar/infolegInternet/anexos/0-4999/638/texact.htm),
 siempre que el producto haya sido adquirido legalmente.}
 
-As reverse engineering happens to be illegal in some countries, a question is raised about the legal status of our procedure. In our particular case, the goal in using reverse engineering is exactly to reuse the hardware for a different purpose. This goal matches the terms in the act \emph{Ley Argentina N° 24.240 de Defensa del Consumidor}, which allows this action provided the product has been purchased legally.
+As reverse engineering happens to be illegal in some countries, a question is raised 
+about the legal status of our procedure. In our particular case, the goal in using 
+reverse engineering is exactly to reuse the hardware for a different purpose. This goal
+matches the terms in the act \emph{Ley Argentina N° 24.240 de Defensa del Consumidor}, which allows this action provided the product has been purchased legally.
 
 
 
@@ -628,7 +631,7 @@ del chip.}
 In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach its public documentation. This documentation is known as data sheets or, sometimes, programming manuals.
 
 
- 
+\nota { 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
 un SOC Cirrus EP3907A como el componente principal,
@@ -636,16 +639,20 @@ que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
 de memoria FLASH embebida INTEL de 16MB.
+}
+
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+
 
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.40]{placa-encore.png}
 % redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
-\caption{Placa del ENCORE ENTC-1000}
+\caption{ENCORE ENTC-1000 board}
 \label{fig:placa-encore}
 \end{center}
 \end{figure}
-
+\nota{
 Afortunadamente para nuestra investigación,
 la empresa Cirrus publica documentación detallada del SOC Cirrus 3907A \cite{cirrus}.
 Junto con esta documentación Cirrus también publica software
@@ -654,13 +661,19 @@ Linux para experimentación. Completando la búsqueda, hemos encontrado
 documentación de placas de laboratorios experimentales, que la fabrica Cirrus publica.
 Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
+}
 
+Fortunately for our research, Cirrus Logic has released the detailed documentation of the Cirrus 3907A SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
-\subsection{Arquitectura de Software}
+\subsection{Software architecture}
 
-
+\nota {
 En el lado software, la arquitectura consiste típicamente de tres componentes esenciales :
+}
 
+On the software side, the architecture typically consists of three essential components:
+
+\nota {
 \begin{itemize}
 \item Un gestor de arranque (del inglés ``bootloader'') para un sistema embebido,
 que generalmente es Das U-Boot \cite{uboot}. Si no se utiliza U-Boot entonces
@@ -672,8 +685,14 @@ unidad de manejo de memoria, MMU (del inglés ``Memory Management Unit'').
 optimizado para sistemas embebidos, que puede realizar las operaciones
 de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \end{itemize}
+}
 
-
+\begin{itemize}
+\item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
+\item A Linux kernel, or, when the system lacks a memory management unit (MMU), a uClinux (also called $\mu$Clinux) kernel \cite{uclinux}.
+\item a minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilites like ls, cp, etc.
+\end{itemize}
+\nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
 y controladores de hardware (del inglés ``drivers'') del fabricante.
 Las aplicaciones muchas veces no son de interés, pero si los controladores.
@@ -682,7 +701,11 @@ entonces el trabajo de preparar un Linux embebido con soporte
 para todo el hardware será difícil (debido a que no se tiene acceso
 al código fuente). En nuestra experiencia con el ENTC-1000 no encontramos drivers
 de código cerrado, por lo que este punto está fuera del alcance de este artículo. 
+}
 
+Sometimes a fourth software component set is found in the system. These are the vendor's own applications and hardware drivers. Vendors' applications are seldom of interest for our research; however, drivers are of prime importance. If closed source drivers are present in the system, then the work of preparing an embedded Linux system supporting the whole hardware will be utterly difficult, due to the lack of access to source code. In our experience with ENTC-1000 we did not find any closed source drivers, so this issue is beyond the scope of this article.
+ 
+\nota{
 El trabajo realizado en este punto fue la preparación
 de dos sistemas Linux embebidos completos de reemplazo: Amstrong y emDebian.
 La documentación para preparar sistemas Linux embebidos es amplia y públicamente
@@ -696,19 +719,26 @@ Algunas de estos proyectos son Openwrt, Buildroot, u OpenEmbedded (referencias).
 Una vez que se tiene el conocimiento en cómo construir (compilar y configurar)
 y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
+}
 
+The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available (REFERENCIAS). There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded (REFERENCIAS). 
 
-\section{Accediendo por Software}
+Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
 
-\subsection{Interfaz Serial}
+\section{Software access}
 
+\subsection{Serial interface}
+\nota {
 Existen varias posibilidades para conectarse a un dispositivo 
 Linux embebido, pero una de las disponibles, mas comúnmente encontrada es
 a través de una consola serial. En los sistemas Linux, la 
 consola serial permite ver los mensajes de error del kernel,
 y también interactuar con el gestor de arranque.
+}
 
-La mayoría de los sistemas embebidos contienen un controlador 
+There are several ways to access an embedded Linux system. The most usual way is through a serial console. In Linux systems, the serial console allows to look at the kernel error messages and to interact with the boot manager.
+
+\nota{ La mayoría de los sistemas embebidos contienen un controlador 
 UART (del inglés ``Universal Asynchronous Receiver-Transmitter''),
 utilizado principalmente para depuración y desarrollo.
 Pero que también es utilizado por Linux como la interfaz serie
@@ -719,23 +749,32 @@ para que puedan ser transmitidos a través de diferentes puertos.
 En los sistemas embebidos, generalmente, el controlador UART es parte de la CPU,
 por lo que, aunque no exista un conector expuesto en la placa, generalmente
 está presente.
+}
 
+Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a predetermined serial interface. The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is a part of the CPU, so that, even when there is no exposed connector in the board, the controller is there. 
+
+\nota{
 En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
 no se encontraban identificados o etiquetados, pero estaban presentes.
 Utilizando un multímetro y un osciloscopio, se identificaron contactos
 de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
 el contacto tierra, se probaron los demás contactos expuestos en la placa,
 para identificar el contacto de transmisión (TX), y recepción (RX).
-
-Para corroborar que los contactos del UART son los correctos, se conectó
+}
+During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified the ground (GND) and direct current (VCC) pins by means of a multimeter and an oscilloscope. Then, using the GND pin, the rest of the exposed pins in the board were tested to identify transmission (TX) and reception (RX) lines.
+   
+\nota {Para corroborar que los contactos del UART son los correctos, se conectó
 el conversor de nivel RS-232 a los mismos, y luego a una PC.
 Finalmente, se utilizó el programa de comunicaciones minicom para
 obtener, al menos, información visual sin sentido, ya que
 no se conocía a que velocidad de transmisión se encuentra operando
 el firmware original.
+}
 
-\subsection{Tomando Control}
+To establish that the UART lines we had found were the right ones, we connected an RS-232 level converter to them, and then to a PC. We finally used the minicom communications program to obtain some visual information. This information was, however, meaningless as the operating serial transmission speed for the original firmware was unknown. 
 
+\subsection{Taking control}
+\nota {
 Conociendo los componentes de software, se realizaron pruebas
 de acceso al sistema original en al menos tres niveles de la arquitectura:
 \begin{itemize}
@@ -743,19 +782,33 @@ de acceso al sistema original en al menos tres niveles de la arquitectura:
 \item a través del conexiones al gestor de arranque,
 \item a través de accesos al software del boot rom.
 \end{itemize}
+}
 
-En los primeros dos casos no se tuvieron resultados promisorios.
+Once we knew the software components, we conducted access tests to the original system, at least at three levels in the architecture :
+\begin{itemize}
+\item Through TCP/IP connections, as soon as the original firmware is operating;
+\item by connecting to the boot manager;
+\item by accessing the boot ROM software.
+\end{itemize}
+
+\nota { En los primeros dos casos no se tuvieron resultados promisorios.
 La tarea en estos puntos es obtener acceso como administrador del sistema
 Linux cerrado. O en el caso del gestor de arranque, se busca
 el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
-anteriores a la ejecución del gestor de arranque.
+anteriores a la ejecución del gestor de arranque.}
 
+The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two test cases did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
+
+\nota {
 Leyendo la documentación obtenida de la arquitectura y programación del hardware,
 se analizó el proceso de reinicio del hardware y como la CPU interna
 del ENTC-1000 comienza a ejecutar instrucciones.
+}
 
-\subsection*{Comunicación con la CPU}
+Using the documentation for the hardware architecture and programming we had obtained, we analyzed the hardware reboot process and the way the ENTC-1000 internal CPU begins executing instructions.
+
+\subsection*{Communication with the CPU}
 
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
