@@ -1,4 +1,3 @@
-
 %% bare_conf.tex
 %% V1.3
 %% 2007/01/11
@@ -69,10 +68,6 @@
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[conference]{../sty/IEEEtran}
-
-
-
-
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
@@ -344,17 +339,18 @@
 % to submit to, of course. )
 
 \usepackage[utf8x]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{tabu}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PARA HACER CAGAR TODAS LAS NOTAS DE UNA DESCOMENTAR LA DEF VACIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xcolor}
-\newcommand{\nota}[1]{{\color{red}[#1]}}
-%\newcommand{\nota}[1]{}
+%\newcommand{\nota}[1]{{\color{red}[#1]}}
+\newcommand{\nota}[1]{}
 
 
 % correct bad hyphenation here
@@ -482,9 +478,15 @@ Linux embedded systems are often found in closed-box products. The present work 
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
-
-
-\section{Introducción}
+\nota{
+\begin{tabu}{|c||c|c|}
+odd     & odd   & odd \\
+even    & even  & even\\
+odd     & odd   & odd \\
+even    & even  & even\\
+\end{tabu}
+}
+\section{Introduction}
 % no \IEEEPARstart
 
 
@@ -806,22 +808,18 @@ se analizó el proceso de reinicio del hardware y como la CPU interna
 del ENTC-1000 comienza a ejecutar instrucciones.
 }
 
-Using the documentation for the hardware architecture and programming we had obtained, we analyzed the hardware reboot process and the way the ENTC-1000 internal CPU begins executing instructions.
+Using the available hardware architecture and programming documentation, we analyzed the hardware reset process and the way the ENTC-1000 internal CPU begins executing instructions.
 
 \subsection*{Communication with the CPU}
 
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-The studied documentation specifies that the  EP3907 Cirrus SOC has a Boot ROM, which supports the UART as a source for a processor's initialization program. On a system reset, the CPU begins executing code at address zero, and the SOC follows the ``Hardware Configuration'' controls to select the device that appears at address zero. 
+As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports the initialization of the processor taking the UART as a program source. On system reset, the ARM920t CPU begins code execution at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled "boot mode select" on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
 
-\nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar
-qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, 
-se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a 
-experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y 
-por ende, lograr su ejecución. }
+\nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
- 
+
 
 \nota{Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
 con el software de la BootROM, operan en un modo llamado 
@@ -829,7 +827,7 @@ con el software de la BootROM, operan en un modo llamado
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
 estos componentes (CPU y BootROM) trabajan de la siguiente manera:}
 
-The below sequence is the algorith about how the SOC in conjuntion with the Boot ROM work :
+Upon a system reset, Cirrus Logic EP9307, will work together with the Boot ROM software in a mode called "serial download" which allows us to send some few bytes to be executed by the CPU. The sequence below shows the algorithm:
 
 \nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
@@ -845,7 +843,7 @@ se leyeron correctamente.
 \item Finalmente, la CPU ``salta'' a la dirección del buffer de boot interno,
 para continuar leyendo instrucciones desde
 los 2048 bytes leídos.
-\end{enumerate} }
+\end{enumerate} } 
 
 \begin{itemize}
 \item Initialize UART1 to 9600 baud, 8 bits, no parity, 1 stop bit
