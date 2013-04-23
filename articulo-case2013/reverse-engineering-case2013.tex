@@ -656,7 +656,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Fortunately for our research, Cirrus Logic has released the detailed documentation of the Cirrus 3907A SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although ENCORE does not public any documentation, Cirrus Logic does. Cirrus has released detailed documentation of the Cirrus 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -838,7 +838,7 @@ los 2048 bytes leídos.
 
 \begin{itemize}
 \item Initialize UART1 to 9600 baud, 8 bits, no parity, 1 stop bit
-\item Output a ``\textless'' character
+\item Output a ``\textless'' character over the serial connection
 \item Read 2048 (decimal count) characters from UART1 and store these in the internal buffer (alias for the Ethernet Mac buffer)
 \item Output a ``\textgreater'' to signify 2048 characters have been read
 \item Turn on Green LED
@@ -851,7 +851,7 @@ por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
 También a nivel de comunicación vía software.}
 
-When the board was visually analized, a switch  labeled as ``Boot Mode Select'' was identified. Then, several tests were ran in order to map the Boot ROM to address zero, so CPU can execute the Boot ROM code. Fortunately, after several reset tests, when testing with the communication program on PC and the board, the minicom got the ``\textless'' character. That confirmed some hypothesis. First of all, all the wired connection between PC and board was functional. Also, the Boot ROM code was ran, and then it was able to download a specific program as first program to be ran by the ARM core.
+When the board was visually analized, a switch  labeled as ``Boot Mode Select'' was identified. Then, several tests were ran in order to map the Boot ROM to address zero, so CPU can execute the Boot ROM code. After several reset tests, when testing with the communication program on PC and the board, the minicom got the ``\textless'' character. That confirmed some hypothesis. First of all, all the wired connection between PC and board was functional. Also, the Boot ROM code was ran, and then it was able to download a specific program as first program to be ran by the ARM core.
 
 
 \nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
@@ -1032,7 +1032,7 @@ as it met our expectations about the device cost and capabilities,
 though at first sight, we could not being fully positive about if 
 it was possible to research and reuse it. 
 
-Fortunately, and as a result of our experience, we have been able to 
+As a result of our experience, we have been able to 
 understand its internal functioning, and even more the device 
 has been reused to provide the following functionalities in a 
 productive environment: 
