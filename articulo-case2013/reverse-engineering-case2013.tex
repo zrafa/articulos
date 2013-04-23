@@ -506,7 +506,7 @@ Actualmente, los fabricantes han optado por Linux en muchos
 casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 }
-Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customisation [REF ELECTROLUX BRAZIL ANDROID ROUTER].
+Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization [REF ELECTROLUX BRAZIL ANDROID ROUTER].
 
 \nota{En el marco regional, adquirir sistemas Linux embebidos para investigación
 o desarrollo es complejo y costoso.
@@ -540,7 +540,7 @@ para su compilación e instalación (como es requerido por la licencia GPL de Li
 }
 
 The ENTC-1000 embedded system is a proprietary product of Encore Electronics Inc. \cite{encore},
-working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation to architecture or software internals. Encore Electronics Inc. does not provide the source code to the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
 
 \nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -676,7 +676,7 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \begin{itemize}
 \item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
 \item A Linux kernel, or, when the system lacks a memory management unit (MMU), a uClinux (also called $\mu$Clinux) kernel \cite{uclinux}.
-\item a minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilites like ls, cp, etc.
+\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilites like ls, cp, etc.
 \end{itemize}
 \nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
@@ -737,7 +737,7 @@ por lo que, aunque no exista un conector expuesto en la placa, generalmente
 está presente.
 }
 
-Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a predetermined serial interface. The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is a part of the CPU, so that, even when there is no exposed connector in the board, the controller is there. 
+Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a predetermined serial interface. The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is part of the SOC, so that, even when there is no exposed connector in the board, the controller is there. 
 
 \nota{
 En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
@@ -799,7 +799,7 @@ Using the available hardware architecture and programming documentation, we anal
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled "boot mode select" on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
+As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
 
 \nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
@@ -811,7 +811,7 @@ con el software de la BootROM, operan en un modo llamado
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
 estos componentes (CPU y BootROM) trabajan de la siguiente manera:}
 
-Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called "serial download" which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
+Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called ``serial download'' which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
 
 \nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
@@ -857,7 +857,7 @@ ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
 para realizar las pruebas con respecto a la información que
 nos faltaba por conocer.}
 
-We took a small sample program in ARM assembly language from Cirrus Logic as a start. Once assembled, the resulting object version for this program is smaller than 2048 bytes. By incrementally modifying the program source\footnote{While taking into account the size restrictions imposed by the serial downloader feature of the Boot ROM code.}, we were able to discover the missing information about the architecture. \revisar{, and
+We took a small sample program in ARM assembly language from Cirrus Logic as a start. Once assembled, the resulting object version for this program was smaller than 2048 bytes. By incrementally modifying the program source\footnote{While taking into account the size restrictions imposed by the serial downloader feature of the Boot ROM code.}, we were able to discover the missing information about the architecture. \revisar{, and
 it fits the size restrictions imposed by the the serial downloader feature
 of the Boot ROM code.} 
 
