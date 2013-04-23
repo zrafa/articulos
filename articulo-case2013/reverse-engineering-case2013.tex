@@ -349,7 +349,7 @@
 % PARA HACER CAGAR TODAS LAS NOTAS DE UNA DESCOMENTAR LA DEF VACIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xcolor}
-%\newcommand{\nota}[1]{{\color{red}[#1]}}
+\newcommand{\revisar}[1]{{\color{red}[#1]}}
 \newcommand{\nota}[1]{}
 
 
@@ -425,7 +425,6 @@ Universidad Nacional del Comahue\\
 
 \begin{abstract}
 %\boldmath
-
 \nota{
 Este trabajo expone el proceso, por el cual, un sistema
 Linux embebido de caja cerrada (dispositivo de hardware y
@@ -443,7 +442,6 @@ Para la experimentación práctica se utilizó
 un dispositivo ENCORE ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
-
 Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC1000 product marketed as a thin client device for remote desktops. 
 
 
@@ -604,7 +602,7 @@ We must know first the hardware architecture in order to understand the behavior
 \nota {Además, es de interés conocer cuáles otros componentes conforman
 el sistema. Los mas importantes, luego de conocer la CPU,
 son los módulos de memoria (de
-tipo RAM y de tipo FLASH), y los módulos de comunicaciones (serial, usb, etc).
+tipo RAM y de tipo Flash), y los módulos de comunicaciones (serial, usb, etc).
 Ya que, en conjunto con el microprocesador, suelen dar una visión
 global de cómo inicia o funciona el sistema.
 }
@@ -631,7 +629,7 @@ un SOC Cirrus EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
-de memoria FLASH embebida INTEL de 16MB.
+de memoria Flash embebida INTEL de 16MB.
 }
 
 As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
@@ -806,7 +804,7 @@ Using the available hardware architecture and programming documentation, we anal
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports the initialization of the processor taking the UART as a program source. On system reset, the ARM920t CPU begins code execution at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled "boot mode select" on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
+As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled "boot mode select" on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
 
 \nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
@@ -818,7 +816,7 @@ con el software de la BootROM, operan en un modo llamado
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
 estos componentes (CPU y BootROM) trabajan de la siguiente manera:}
 
-Upon a system reset, Cirrus Logic EP9307, will work together with the Boot ROM software in a mode called "serial download" which allows us to send some few bytes to be executed by the CPU. The sequence below shows the algorithm:
+Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called "serial download" which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
 
 \nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
@@ -827,7 +825,7 @@ Upon a system reset, Cirrus Logic EP9307, will work together with the Boot ROM s
 de la conexión serie, y se almacenan en una buffer de inicio interno.
 \item Decisión:
 \begin{itemize}
-\item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna FLASH.
+\item Si el otro extremo de la conexión serie (por ejemplo, nuestra PC) no envía los 2048 bytes, el sistema continúa el proceso de arranque utilizando la memoria interna Flash.
 \item Si el extremo de la conexión serie envió los 2048 bytes, entonces se envía desde el sistema (SOC) otro caracter ``\textgreater'' a través de la conexión serie, para indicar que 
 se leyeron correctamente.
 \end{itemize}
@@ -836,14 +834,18 @@ para continuar leyendo instrucciones desde
 los 2048 bytes leídos.
 \end{enumerate} } 
 
-\begin{itemize}
+\begin{enumerate}
 \item Initialize UART1 to 9600 baud, 8 bits, no parity, 1 stop bit
 \item Output a ``\textless'' character over the serial connection
-\item Read 2048 (decimal count) characters from UART1 and store these in the internal buffer (alias for the Ethernet Mac buffer)
-\item Output a ``\textgreater'' to signify 2048 characters have been read
+\item Read 2048 characters from UART1\nota{, store these in the internal Boot Buffer \nota{ (alias for the Ethernet Mac buffer)}}
+\begin{itemize}
+	\item If our serial peer does not send 2048 bytes, go on with boot process using internal Flash  memory
+	\item If serial peer sent 2048 bytes, store them in internal buffer, output ``\textgreater'' through serial link to indicate successful read
+\end{itemize}
 \item Turn on Green LED
 \item Jump to the start of the internal Boot Buffer
-\end{itemize}
+\end{enumerate}
+
 
 \nota{En nuestras pruebas logramos obtener 
 el caracter ``\textgreater'' desde el programa de comunicación minicom,
@@ -851,7 +853,7 @@ por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
 También a nivel de comunicación vía software.}
 
-When the board was visually analized, a switch  labeled as ``Boot Mode Select'' was identified. Then, several tests were ran in order to map the Boot ROM to address zero, so CPU can execute the Boot ROM code. After several reset tests, when testing with the communication program on PC and the board, the minicom got the ``\textless'' character. That confirmed some hypothesis. First of all, all the wired connection between PC and board was functional. Also, the Boot ROM code was ran, and then it was able to download a specific program as first program to be ran by the ARM core.
+After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed some hypotheses: the wired connections between PC and board were functional, and the Boot ROM code was being executed. Afer that, it was able to download a specific program as the first code to be executed by the ARM core.
 
 
 \nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
@@ -860,26 +862,24 @@ ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
 para realizar las pruebas con respecto a la información que
 nos faltaba por conocer.}
 
-Then, we modified a sample program from Cirrus, in ARM assembler language,
-which is not greater than 2048 bytes once built. Such modifications
-allowed us to discover the missing information about the architecture, and
+We took a small sample program in ARM assembly language from Cirrus Logic as a start. Once assembled, the resulting object version for this program is smaller than 2048 bytes. By incrementally modifying the program source\footnote{While taking into account the size restrictions imposed by the serial downloader feature of the Boot ROM code.}, we were able to discover the missing information about the architecture. \revisar{, and
 it fits the size restrictions imposed by the the serial downloader feature
-of the Boot ROM code.
+of the Boot ROM code.} 
 
 \nota{En particular, hicimos que nuestro pequeño programa encontrara
-la dirección física de la memoria FLASH interna.
+la dirección física de la memoria Flash interna.
 El interés por encontrar esta dirección
 base, es porque en esta memoria residen los componentes de software: 
 gestor de arranque, el kernel Linux, y el sistemas de archivos raíz.}
 
-We were mainly interested on the addresses where the software components
+We were mainly interested in the addresses where the software components
 (bootloader, Linux kernel and the root file system) could be found inside the
-FLASH memory. Hence, when executed, our program looks for the physical 
-addresses of the internal FLASH memory. To do so, the program reads consecutive
-bytes, starting from the 0x60000000 physical address, looking for the word ``CRUS''.
-We chose the 0x600000000 address based on possible values listed on SOC documentation.
-As well as, the word ``CRUS'' is defined as the key word for the CPU to identify 
-the boot address, when trying different addresses for booting code.
+Flash memory. Hence, when executed, our program looks for the physical 
+addresses of the internal Flash memory. To do so, the program reads consecutive
+memory locations, starting from the physical address  0x60000000, looking for the string ``CRUS''.
+We chose the 0x60000000 address based on possible values listed on the SOC documentation.
+The ``CRUS'' token is defined as the keyword for the CPU to identify 
+the boot address when probing different addresses for booting code.
 
 
 \nota{Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
@@ -887,33 +887,29 @@ que el sistema lee desde el arranque vía ``download en serie''.
 Nuestro programa leyó bytes
 de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
 tomamos como referencia del manual de Cirrus).
-Encontramos la dirección base de la memoria FLASH en 
+Encontramos la dirección base de la memoria Flash en 
 la dirección 0x60001000, ya que el programa leyó la palabra ``CRUS''
 en cuatro bytes consecutivos. Esos cuatro bytes ``CRUS'' indican el inicio
 del software de arranque, ya que está especificado en el manual
 de la programación del SOC.}
 
-We loaded the small program trough the serial downloader feature of 
-the Boot ROM process, and it found the word ``CRUS'' on 
-FLASH memory at the 0x60001000 address. After that we knew that, during 
-the booting process, the CPU will try execute any code written 
-after that memory location. For instance, it was a proper place 
+We loaded our small probe program through the serial download feature of 
+the Boot ROM process. The ``CRUS'' token was found on the 
+Flash memory at the address 0x60001000. As the CPU, during the boot process, will try to execute any code written 
+after that memory location, it was a proper place 
 to locate the bootloader component software.
 
 \nota{De una manera similar, tuvimos acceso al conocimiento de
 las direcciones físicas de la memoria RAM.}
 
-Our last goal during this phase was to modify the small program, in 
-the same way we did before, to find which was the last valid pyshical 
-address for RAM memory. After few trial an error tests, the program 
-found that limit, and we used it to modify the U-boot bootloader RAM 
-settings.
+Our last goal during this stage was to find the last valid physical 
+address for RAM memory. After modifying our probe program to do some few trial and error tests, the program found that limit, and we modified the U-boot bootloader RAM settings accordingly.
 
 \nota{
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
 
 Conociendo como ejecutar pequeños programas al momento de un reinicio
-del hardware, y conociendo las direcciones de la memoria RAM y FLASH,
+del hardware, y conociendo las direcciones de la memoria RAM y Flash,
 preparamos otro pequeño programa para enviar a la memoria RAM un gestor
 de arranque (a través de la comunicación serie). En nuestro caso, utilizamos
 U-boot configurado para este dispositivo.
@@ -923,11 +919,11 @@ que pudimos utilizarlo a través de la comunicación serie, tuvimos
 varias posibilidades, en lo que a software se refiere, para modificar
 el sistema.
 
-En particular, modificamos la memoria FLASH interna, colocando nuestro
+En particular, modificamos la memoria Flash interna, colocando nuestro
 gestor de arranque en la dirección posterior a los cuatros bytes ``CRUS''.
-También, escribimos en la memoria FLASH un kernel Linux actual, versión 3.X.,
+También, escribimos en la memoria Flash un kernel Linux actual, versión 3.X.,
 tal que está preparado para inicializar el hardware y leer, como sistema
-de archivos raíz, un sistema de archivos contenido en una memoria flash
+de archivos raíz, un sistema de archivos contenido en una memoria Flash
 vía usb (pendrive, o similar).
 
 Esto modificó el inicio del firmware interno del ENCORE ENTC-1000, 
@@ -945,17 +941,16 @@ de acceder continuamente al gestor de arranque.}
 
 \subsection{Booting an Alternative Linux Embedded System}
 
-Once we knew how to execute small programs after a
-hadrware reset event, and having at hand the RAM and FLASH
+Knowing how to execute a small program after a
+hardware reset event, and having the RAM and Flash
 addresses, we were ready to deploy an alternative Linux
-embedded system on the device. Our first step to accomplish
-this was to prepare a small bootloader, sent over the serial line
-to RAM. In particular, we choosed U-boot configured for this
+embedded system over the device. Our first step to accomplish
+this was to prepare a small bootloader to be sent into RAM through the serial line. Our bootloader choice was U-boot, configured for this
 particular device.
 
 After we successfully executed the bootloader, and were
 logged into its minimal, but powerful enough, command line,
-we had to decide how to re-layout software within the FLASH
+we had to decide how to re-layout software within the Flash
 memory, hence modifying the original software, to achieve our
 goal.
 
@@ -964,11 +959,11 @@ transferred a Linux kernel 3.X \footnote{Latest available at the time the articl
 Now the two main pieces of software required to boot a system
 were ready on RAM (bootloader and kernel).
 
-The next step was to copy RAM content over the FLASH.
-For this we used a copy (cp.b) command available in U-boot command line, the physical RAM addresses where U-boot and the Linux kernel were loaded, and the start address for FLASH (which we knew because of the “CRUS” word described in the previous section).
+The next step was to copy RAM content over the Flash.
+For this we used a copy (cp.b) command available in U-boot command line, the physical RAM addresses where U-boot and the Linux kernel were loaded, and the start address for Flash (which we knew because of the “CRUS” word described in the previous section).
 
-Finally, it is worthy to mention that, we modified U-boot configuration in FLASH, to load and boot automatically from the 
-address where the Linux kernel was saved on FLASH. And that 
+Finally, it is worthy to mention that, we modified U-boot configuration in Flash, to load and boot automatically from the 
+address where the Linux kernel was saved on Flash. And that 
 the Linux kernel we built, was prepared to load the root file 
 system (last major piece of software needed for a functional 
 system) from a usb storage device. 
