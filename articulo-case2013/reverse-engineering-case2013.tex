@@ -379,23 +379,14 @@
 % }
 
 
-
 \author{
-\IEEEauthorblockN{Rafael Zurita}
-\IEEEauthorblockA{Email: rafael.zurita@fai.uncoma.edu.ar}
-\and
-\IEEEauthorblockN{Rodolfo Del Castillo}
-\IEEEauthorblockA{Email: rdc@fi.uncoma.edu.ar}
-\and
-\IEEEauthorblockN{Miriam Lechner}
-\IEEEauthorblockA{Email: mtl@fi.uncoma.edu.ar}
-\and
-\IEEEauthorblockN{Eduardo Grosclaude}
-\IEEEauthorblockA{Email: oso@fai.uncoma.edu.ar}
-\IEEEauthorblockA{ Departamento de Ingeniería de Computadoras - Facultad de Informática\\
+\IEEEauthorblockN{Rafael Zurita, Rodolfo del Castillo, Miriam Lechner, Eduardo Grosclaude \\ \\
+Departamento Ingeniería de Computadoras - Facultad de Informática\\
 Universidad Nacional del Comahue\\
-Neuquén, Argentina\\}
+\{rafa,rdc,mtl,oso\}@fi.uncoma.edu.ar}
 }
+
+
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -862,19 +853,37 @@ También a nivel de comunicación vía software.}
 
 When the board was visually analized, a switch  labeled as ``Boot Mode Select'' was identified. Then, several tests were ran in order to map the Boot ROM to address zero, so CPU can execute the Boot ROM code. Fortunately, after several reset tests, when testing with the communication program on PC and the board, the minicom got the ``\textless'' character. That confirmed some hypothesis. First of all, all the wired connection between PC and board was functional. Also, the Boot ROM code was ran, and then it was able to download a specific program as first program to be ran by the ARM core.
 
-Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
+
+\nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
 los 2048 bytes, y que nos permita ejecutar instrucciones en la CPU del 
 ENTC-1000. Tomamos como base un ejemplo publicado por Cirrus, y lo modificamos
 para realizar las pruebas con respecto a la información que
-nos faltaba por conocer.
+nos faltaba por conocer.}
 
-En particular, hicimos que nuestro pequeño programa encontrara
+Then, we modified an example program from Cirrus, in ARM assembler language,
+which is not greater than 2048 bytes once built. The modifications
+lets discover the missing information about the architecture, and
+it fits the size restrictions needed by the the serial downloader feature
+of the Boot ROM code.
+
+\nota{En particular, hicimos que nuestro pequeño programa encontrara
 la dirección física de la memoria FLASH interna.
 El interés por encontrar esta dirección
 base, es porque en esta memoria residen los componentes de software: 
-gestor de arranque, el kernel Linux, y el sistemas de archivos raíz.
+gestor de arranque, el kernel Linux, y el sistemas de archivos raíz.}
 
-Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
+In particular, our program looks for the phisical addresses of the internal
+FLASH memory, because we are interested on the proper addresses where
+the software components are installed
+(bootloader, Linux kernel and the root filesystem). 
+In order to achieve that goal, the program looks for the ``CRUS'' word, reading consecutive bytes
+starting from the 0x60000000 physical address.
+We choosed the 0x600000000 address using possible values from the SOC documentation.
+The ``CRUS'' word is also defined by the documentation, as the key word
+for the CPU to identify the start boot address, when the CPU tries different addresses for booting code.
+
+
+\nota{Para lograr el cometido, enviamos nuestro programa en los 2048 bytes
 que el sistema lee desde el arranque vía ``download en serie''.
 Nuestro programa leyó bytes
 de direcciones consecutivas, comenzando en la dirección 0x60000000 (que
@@ -883,11 +892,27 @@ Encontramos la dirección base de la memoria FLASH en
 la dirección 0x60001000, ya que el programa leyó la palabra ``CRUS''
 en cuatro bytes consecutivos. Esos cuatro bytes ``CRUS'' indican el inicio
 del software de arranque, ya que está especificado en el manual
-de la programación del SOC.
+de la programación del SOC.}
 
-De una manera similar, tuvimos acceso al conocimiento de
-las direcciones físicas de la memoria RAM.
+We sent the little program using the serial downloader feature of the Boot ROM process,
+and it found the ``CRUS'' word on 
+FLASH memory at the 0x60001000 address. This address ensures us that the CPU
+will run any code we write after that, in the booting proccess.
+For example, that is a proper place to write the bootloader component software.
 
+
+
+
+
+\nota{De una manera similar, tuvimos acceso al conocimiento de
+las direcciones físicas de la memoria RAM.}
+
+We then modified the program with a similar behaviour, but the goal
+ this time was to find the ending unkown RAM physical address.
+After few trial an error tests, the program found that limit, and we used
+it for doing proper modifications to the U-boot bootloader RAM settings.
+
+\nota{
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
 
 Conociendo como ejecutar pequeños programas al momento de un reinicio
@@ -919,7 +944,55 @@ memorias conectadas al puerto USB.
 
 Con estas funcionalidades mínimas se pueden realizar pruebas
 de programación para sistemas Linux embebidos, sin necesidad
-de acceder continuamente al gestor de arranque.
+de acceder continuamente al gestor de arranque.}
+
+\subsection{Booting an alternative Linux embedded system}
+
+Once we knew how to execute small programs after a
+hadrware reset event, and having at hand the RAM and FLASH
+addresses, we were ready to deploy an alternative Linux
+embedded system on the device. Our first step to accomplish
+this was to prepare a small bootloader, sent over the serial line
+to RAM. In particular, we choosed u-boot configured for this
+particular device.
+
+After we successfully executed the bootloader, and were
+logged into its minimal, but powerful enough, command line,
+we had to decide how to re-layout software within the FLASH
+memory, hence modifying the original software, to achieve our
+goal.
+
+Using u-boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
+transferred a Linux kernel 3.X \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
+Now the two main pieces of software required to boot a system
+were ready on RAM (bootloader and kernel).
+
+The next step was to copy RAM content over the FLASH.
+For this we used a copy (cp.b) command available in u-boot command line, the physical RAM addresses where u-boot and the Linux kernel were loaded, and the start address for FLASH (which we knew because of the “CRUS” word described in the previous section).
+
+Finally, it is worthy to mention that, we modified u-boot configuration in FLASH, to load and boot automatically from the 
+address where the Linux kernel was saved on FLASH. And that 
+the Linux kernel we built, was prepared to load the root file 
+system (last major piece of software needed for a functional 
+system) from a usb storage device. 
+As a result of this process, we modified the ENCORE
+ENTC-1000 firmware, thus offering at least two new interesting features:
+
+\begin{itemize}
+\item A modern and customizable bootloader, accesible through a serie line.
+\item An updated Linux kernel, prepared to boot different
+   Linux operating systems from a USB port.
+\end{itemize}
+
+This functionalities leads us to a wide range of options to
+reuse the ENCORE ENTC-1000 device. From here we were
+ready to start our programming tests based on Linux embedded
+systems, without being required to go through the troublesome
+process described above. It is just boot and use.
+
+
+
+
 
 
 
