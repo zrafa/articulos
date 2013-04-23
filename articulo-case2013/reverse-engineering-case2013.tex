@@ -349,7 +349,9 @@
 % PARA HACER CAGAR TODAS LAS NOTAS DE UNA DESCOMENTAR LA DEF VACIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xcolor}
-\newcommand{\revisar}[1]{{\color{red}[#1]}}
+%\newcommand{\revisar}[1]{{\color{red}[#1]}}
+%\newcommand{\nota}[1]{{\color{red}[#1]}}
+\newcommand{\revisar}[1]{}
 \newcommand{\nota}[1]{}
 
 
@@ -439,7 +441,7 @@ y reutilizada para otros fines de interés, en el ámbito
 de los sistemas Linux embebidos.
 
 Para la experimentación práctica se utilizó
-un dispositivo ENCORE ENTC1000, que se comercializa como cliente liviano
+un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
 Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC1000 product marketed as a thin client device for remote desktops. 
@@ -467,14 +469,7 @@ Linux embedded systems are often found in closed-box products. The present work 
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
-\nota{
-\begin{tabu}{|c||c|c|}
-odd     & odd   & odd \\
-even    & even  & even\\
-odd     & odd   & odd \\
-even    & even  & even\\
-\end{tabu}
-}
+
 \section{Introduction}
 % no \IEEEPARstart
 
@@ -533,19 +528,19 @@ y los teléfonos móviles con sistema Android.
 Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are TP-Link home routers or Android-equipped mobile phones.
 
 \nota{
-El sistema embebido ENTC-1000 es un producto propietario de ENCORE Electronics Inc \cite{encore},
+El sistema embebido ENTC-1000 es un producto propietario de Encore Electronics Inc \cite{encore},
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
 comercial y su documentación proveen especificaciones mínimas,
 esto es, se publicita como un sistema con Linux embebido kernel 2.4 
 \footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
-interno del software. Tampoco provee, ENCORE Electronic Inc.,
+interno del software. Tampoco provee, Encore Electronic Inc.,
 el código fuente del software instalado, ni las instrucciones
 para su compilación e instalación (como es requerido por la licencia GPL de Linux \cite{gpl}).
 }
 
-The ENTC-1000 embedded system is a proprietary product of ENCORE Electronics Inc. \cite{encore},
-working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation to architecture or software internals. ENCORE Electronics Inc. does not provide the source code to the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
+The ENTC-1000 embedded system is a proprietary product of Encore Electronics Inc. \cite{encore},
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation to architecture or software internals. Encore Electronics Inc. does not provide the source code to the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
 
 \nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -637,9 +632,9 @@ As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identi
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.40]{placa-encore.png}
+\includegraphics[scale=0.40]{placa-encore-en.png}
 % redireccionamiento.gif: 502x248 pixel, 72dpi, 17.71x8.75 cm, bb=0 0 502 248
-\caption{ENCORE ENTC-1000 board}
+\caption{Encore ENTC-1000 board}
 \label{fig:placa-encore}
 \end{center}
 \end{figure}
@@ -654,7 +649,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Although ENCORE does not public any documentation, Cirrus Logic does. Cirrus has released detailed documentation of the Cirrus 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although Encore does not public any documentation, Cirrus Logic does. Cirrus has released detailed documentation of the Cirrus 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -903,7 +898,7 @@ to locate the bootloader component software.
 las direcciones físicas de la memoria RAM.}
 
 Our last goal during this stage was to find the last valid physical 
-address for RAM memory. After modifying our probe program to do some few trial and error tests, the program found that limit, and we modified the U-boot bootloader RAM settings accordingly.
+address for RAM memory. After modifying our probe program to do some few trial and error tests, the program found that limit, and we modified the U-Boot bootloader RAM settings accordingly.
 
 \nota{
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
@@ -912,7 +907,7 @@ Conociendo como ejecutar pequeños programas al momento de un reinicio
 del hardware, y conociendo las direcciones de la memoria RAM y Flash,
 preparamos otro pequeño programa para enviar a la memoria RAM un gestor
 de arranque (a través de la comunicación serie). En nuestro caso, utilizamos
-U-boot configurado para este dispositivo.
+U-Boot configurado para este dispositivo.
 
 Una vez que nuestro gestor de arranque estuvo en ejecución, y
 que pudimos utilizarlo a través de la comunicación serie, tuvimos
@@ -926,7 +921,7 @@ tal que está preparado para inicializar el hardware y leer, como sistema
 de archivos raíz, un sistema de archivos contenido en una memoria Flash
 vía usb (pendrive, o similar).
 
-Esto modificó el inicio del firmware interno del ENCORE ENTC-1000, 
+Esto modificó el inicio del firmware interno del Encore ENTC-1000, 
 ofreciendo al menos dos interesantes funcionalidades :
 \begin{itemize}
 \item Un gestor de arranque moderno y accesible para ser operado a través de una comunicación serie.
@@ -945,42 +940,41 @@ Knowing how to execute a small program after a
 hardware reset event, and having the RAM and Flash
 addresses, we were ready to deploy an alternative Linux
 embedded system over the device. Our first step to accomplish
-this was to prepare a small bootloader to be sent into RAM through the serial line. Our bootloader choice was U-boot, configured for this
+this was to prepare a small bootloader to be sent into RAM through the serial line. We chose U-Boot, configured for this
 particular device.
 
 After we successfully executed the bootloader, and were
-logged into its minimal, but powerful enough, command line,
+logged into its minimal -but powerful enough- command line,
 we had to decide how to re-layout software within the Flash
 memory, hence modifying the original software, to achieve our
 goal.
 
-Using U-boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
-transferred a Linux kernel 3.X \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
-Now the two main pieces of software required to boot a system
-were ready on RAM (bootloader and kernel).
+Using U-Boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
+transferred a Linux 3.X kernel \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
+Now the two main pieces of software (bootloader and kernel) required to boot a system
+were ready on RAM.
 
 The next step was to copy RAM content over the Flash.
-For this we used a copy (cp.b) command available in U-boot command line, the physical RAM addresses where U-boot and the Linux kernel were loaded, and the start address for Flash (which we knew because of the “CRUS” word described in the previous section).
+For this we used a copy (cp.b) command available in U-Boot command line, the physical RAM addresses where U-Boot and the Linux kernel were loaded, and the start address for Flash memory (found when probing for the “CRUS” token as described in the previous section).
 
-Finally, it is worthy to mention that, we modified U-boot configuration in Flash, to load and boot automatically from the 
-address where the Linux kernel was saved on Flash. And that 
-the Linux kernel we built, was prepared to load the root file 
-system (last major piece of software needed for a functional 
+Finally, it is worth mentioning that we modified the U-Boot configuration in Flash so as to load and boot automatically from the 
+address where the Linux kernel was saved on Flash. The Linux kernel we built was prepared to load the root file 
+system (the last remaining major piece of software needed for a functional 
 system) from a usb storage device. 
-As a result of this process, we modified the ENCORE
+As a result of this process, we modified the Encore
 ENTC-1000 firmware, thus offering at least two new interesting features:
 
 \begin{itemize}
-\item A modern and customizable bootloader, accesible through a serie line.
+\item A modern and customizable bootloader, accesible through a serial line.
 \item An updated Linux kernel, prepared to boot different
    Linux operating systems from a USB port.
 \end{itemize}
 
-This functionalities leads us to a wide range of options to
-reuse the ENCORE ENTC-1000 device. From here we were
+This functionalities lead us to a wide range of options to
+reuse the Encore ENTC-1000 device. From here we are
 ready to start our programming tests based on Linux embedded
 systems, without being required to go through the troublesome
-process described above. It is just boot and use.
+process described above. The new device is just boot-and-use.
 
 
 
@@ -1005,9 +999,9 @@ We used reverse engineering in order to understand the architecture,
 functioning and programming of a modern Linux embedded system.
 
 Our knowledge has been increased through the experience and
-documentation process itself. As well as, it allowed academic 
-experimentation based on embedded Linux, and a comercial 
-embedded system to been reused for specific needs. 
+documentation process itself. The resulting system allows for academic 
+experimentation based on embedded Linux, running on a commercial 
+embedded hardware which can be repurposed for specific needs. 
 
 \nota{
 Se seleccionó el hardware Encore ENTC-1000 porque cubre
@@ -1019,15 +1013,13 @@ se ha logrado entender el funcionamiento interno, sino que
 tambien, se está reutilizando de manera productiva para
 cumplir disintos roles :
 }
-We choosed the Encore ENTC-1000 embedded system for this experience
-as it met our expectations about the device cost and capabilities, 
-though at first sight, we could not being fully positive about if 
-it was possible to research and reuse it. 
+We chose the Encore ENTC-1000 embedded system for this experience
+as it met our expectations about device cost and capabilities. However, at first sight, our chances to be able to research and reuse the system were not clear.
 
 As a result of our experience, we have been able to 
-understand its internal functioning, and even more the device 
+understand its internal functioning, and moreover, the device 
 has been reused to provide the following functionalities in a 
-productive environment: 
+production environment: 
 
 \nota{
 \begin{itemize}
@@ -1041,9 +1033,9 @@ un microcontrolador y sensores.
 }
 
 \begin{itemize}
-\item Printing server for USB printers without networking capability. 
+\item Print server for USB printers without networking capability. 
 \item DHCP server for small internal subnets at University. 
-\item Robot's brain for research, tied to a microcontroller and a set of sensors. 
+\item Brain for research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
 \item DNS experimental server.  
 \end{itemize}
@@ -1060,15 +1052,9 @@ como una manera de incentivar el aprendizaje del funcionamiento
 y la arquitectura de los sistemas embebidos.
 }
 
-As future work, and until the acquisition of specialized
-hardware for embedded system development can be afforded by public
-institutions, we aim to build standardized guidelines required 
-for a methodology about reusing comercial Linux embedded systems, 
-extending this experience to future Linux embedded systems. Even 
-when such hardware for development is available, reverse engineering 
-experience on comercial Linux embedded systems, can be thought as 
-method to stimulate learning about architecture and embedded system
-functioning. 
+As future work, we consider the fact that there may be still some time ahead until the acquisition of specialized hardware for embedded systems can be made affordable to public educational institutions. Until that moment can be reached, we aim to build standardized guidelines required for a methodology allowing the reuse of commercial Linux embedded systems. Even when such hardware is available  for development, reverse engineering 
+experience on comercial Linux embedded systems can be thought as 
+a method to encourage learning about the architecture and functioning of embedded systems. 
 
 %fin de las conclusiones
 
