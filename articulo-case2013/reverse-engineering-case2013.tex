@@ -444,7 +444,7 @@ Para la experimentación práctica se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
-Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC1000 product marketed as a thin client device for remote desktops. 
+Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an \copyright Encore  ENTC1000 product marketed as a thin client device for remote desktops. 
 
 
 \end{abstract}
@@ -506,7 +506,7 @@ Actualmente, los fabricantes han optado por Linux en muchos
 casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 }
-Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization [REF ELECTROLUX BRAZIL ANDROID ROUTER].
+Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization \cite{electrolux, android}.
 
 \nota{En el marco regional, adquirir sistemas Linux embebidos para investigación
 o desarrollo es complejo y costoso.
@@ -522,14 +522,14 @@ que pueden adquirirse para su estudio y adaptación. Y,
 aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
 gran parte de estos sistemas contienen el hardware necesario
 para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivos
-capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
-y los teléfonos móviles con sistema Android.
+capaces de ejecutar un sistema Linux son los routers hogareños \copyright TP-Link,
+y los teléfonos móviles con sistema \copyright  Google Android \cite{android}.
 }
-Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are TP-Link home routers or Android-equipped mobile phones.
+Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are \copyright TP-Link home routers or \copyright Google Android-equipped mobile phones.
 
 Related works have investigated
 reverse engineering for repurposing appliances in the regional market.
-For example, the works using Nintendo Game Boy, Zaurus SL-5000 and Chumby devices,
+For example, the works using \copyright Nintendo Game Boy, \copyright Zaurus SL-5000 and Chumby devices,
 as described in [1], [2] [3].
 
 We chose the Encore ENTC-1000 embedded system for this experience
@@ -647,14 +647,14 @@ In practice, the architecture of an embedded system can be known by detaching th
 \nota { 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
-un SOC Cirrus Logic EP3907A como el componente principal,
+un SOC Cirrus Logic \copyright EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
 de memoria Flash embebida INTEL de 16MB.
 }
 
-As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a \copyright Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
 
 
 \begin{figure}
@@ -734,7 +734,7 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available (REFERENCIAS). There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded (REFERENCIAS). 
+The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{freeelectron, emb1, emb2 }. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded (REFERENCIAS). 
 
 Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
 
@@ -1123,11 +1123,11 @@ Denx, \emph{U-Boot bootloader}.\hskip 1em plus
 
 
 \bibitem{encore}
-Encore Electronics, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
+\copyright Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
 
 \bibitem{cirrus}
-Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
+\copyright Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
 
 \bibitem{camargo1}
@@ -1145,8 +1145,26 @@ I. ~Castillo, \emph{Automatizacion de un puente grua a escala, mediante una plat
    0.5em minus 0.4em\relax 2006.
 
 \bibitem{electrolux}
-Electrolux Brazi, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
+\copyright Electrolux Brazi, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
   0.5em minus 0.4em\url{http://group.electrolux.com/en/linux-community-touched-by-the-touchscreen-on-electrolux-fridge-8873/}
+
+\bibitem{android}
+\copyright Google, \emph{Android Devices}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.android.com/devices/}
+
+
+\bibitem{emb1}
+C. ~Hallinan, \emph{Embedded Linux Primer: A Practical Real-World Approach}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax  Prentice Hall (2010)
+
+
+\bibitem{emb2}
+J. ~Masters, \emph{Building Embedded Linux Systems}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax O'Reilly Media; (August 22, 2008) ISBN-13: 978-0596529680
+
+\bibitem{freeelectron}
+Free Electrons, \emph{Public materials for embedded Linux developers}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://free-electrons.com/docs/}
 
 
 \end{thebibliography}
