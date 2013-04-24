@@ -702,7 +702,8 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 
 \begin{itemize}
 \item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
-\item A Linux kernel, or, when the system lacks a memory management unit (MMU), a uClinux (also called $\mu$Clinux) kernel \cite{uclinux}.
+\item A Linux kernel, or, when the system lacks a memory management unit (MMU), a
+$\mu$Clinux) kernel \cite{linux, uclinux}.
 \item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilites like ls, cp, etc.
 \end{itemize}
 \nota {
@@ -734,7 +735,7 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{freeelectron, emb1, emb2 }. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded (REFERENCIAS). 
+The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{freeelectron, emb1, emb2}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{buildroot, openembedded, openwrt}.
 
 Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
 
@@ -1165,6 +1166,31 @@ J. ~Masters, \emph{Building Embedded Linux Systems}, Second Edition.\hskip 1em p
 \bibitem{freeelectron}
 Free Electrons, \emph{Public materials for embedded Linux developers}.\hskip 1em plus
   0.5em minus 0.4em\url{http://free-electrons.com/docs/}
+
+
+\bibitem{openwrt}
+OpenWrt Project, \emph{OpenWrt Linux distribution for embedded devices}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://openwrt.org}
+
+\bibitem{openembedded}
+OpenEmbedded Project, \emph{OpenEmbedded is a build framework for embedded Linux}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.openembedded.org}
+
+\bibitem{buildroot}
+Buildroot Project, \emph{Making Embedded Linux Easy}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://buildroot.uclibc.org/}
+
+\bibitem{busybox}
+Busybox Project, \emph{iThe Swiss Army Knife of Embedded Linux}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.busybox.net/}
+
+\bibitem{linux}
+Linux Kernel, \emph{Linux Kernel Archives}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.kernel.org/}
+
+\bibitem{uclinux}
+uClinux, \emph{Embedded Linux/Microcontroller}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.uclinux.org}
 
 
 \end{thebibliography}
