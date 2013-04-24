@@ -483,7 +483,7 @@ realizar miles de funciones diferentes, realizan una única función.
 Esta única tarea define que nos encontramos ante sistemas embebidos \cite{steveheath}.
 }
 Dozens of embedded devices such as toasters, mobile phones, refrigerators, 
-vacuum cleaners, TV decoders, clocks, home network routers, game consoles,  are used in daily life. Most of these, unlike domestic PCs, are bound to perform a single function. This single function makes them qualify as embedded systems [REF].
+vacuum cleaners, TV decoders, clocks, home network routers, game consoles,  are used in daily life. Most of these, unlike domestic PCs, are bound to perform a single function. This single function makes them qualify as embedded systems \cite{steveheath}.
 
 
 \nota{
@@ -527,6 +527,20 @@ y los teléfonos móviles con sistema Android.
 }
 Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are TP-Link home routers or Android-equipped mobile phones.
 
+Related works have investigated
+reverse engineering for repurposing appliances in the regional market.
+For example, the works using Nintendo Game Boy, Zaurus SL-5000 and Chumby devices,
+as described in [1], [2] [3].
+
+We chose the Encore ENTC-1000 embedded system for this experience
+as it met the capabilities and availability expectations. To our
+knowledge, this device has not been studied for adapting to
+arbitrary purposes.
+
+
+
+
+
 \nota{
 El sistema embebido ENTC-1000 es un producto propietario de Encore Electronics Inc \cite{encore},
 que funciona como una terminal de escritorio remoto, soportando
@@ -550,7 +564,20 @@ nos permite la experimentación académica con Linux embebido. Y,
 por último, pero no menos importante, permite su reuso para necesidades
 específicas en el marco de los sistemas embebidos.
 }
-As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  Knowing its internals will allow us an inexpensive way to experiment with embedded Linux for academic purposes. 
+
+As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  
+The goal of this paper is to document the process by which the Encore ENTC-1000
+has been studied and modified, and, as a result of our experience,
+the device has been reused to provide the following functionalities :
+
+\begin{itemize}
+\item Print server for USB printers without networking capability. 
+\item DHCP server for small internal subnets at University. 
+\item Brain for research robot, tied to a microcontroller and a set of sensors. 
+\item Embedded Linux system for learning and experimentation.  
+\item DNS experimental server.  
+\end{itemize}
+
 
 \section{Legal Background}
 
