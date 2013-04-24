@@ -525,12 +525,12 @@ para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivo
 capaces de ejecutar un sistema Linux son los routers hogareños \copyright TP-Link,
 y los teléfonos móviles con sistema \copyright  Google Android \cite{android}.
 }
-Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are \copyright TP-Link home routers or \copyright Google Android-equipped mobile phones.
+Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are \copyright TP-Link home routers or \copyright Google Android-equipped mobile phones \cite{android, tplink}.
 
 Related works have investigated
 reverse engineering for repurposing appliances in the regional market.
 For example, the works using \copyright Nintendo Game Boy, \copyright Zaurus SL-5000 and Chumby devices,
-as described in [1], [2] [3].
+as described in \cite{camargo1, camargo2, castillo1}.
 
 We chose the Encore ENTC-1000 embedded system for this experience
 as it met the capabilities and availability expectations. To our
@@ -554,7 +554,7 @@ para su compilación e instalación (como es requerido por la licencia GPL de Li
 }
 
 The ENTC-1000 embedded system is a proprietary product of Encore Electronics Inc. \cite{encore},
-working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under\cite{gpl}.
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under \cite{gpl}.
 
 \nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -676,7 +676,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Although Encore does not public any documentation, Cirrus Logic does. Cirrus Logic has released detailed documentation of the Cirrus Logic 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although Encore does not public any documentation, Cirrus Logic does. Detailed documentation of the Cirrus Logic 3907 SOC can be found on Cirrus Logic web site \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -694,7 +694,7 @@ es posible encontrar un gestor de arranque de código cerrado.
 \item Un kernel Linux o uClinux en caso de ser un sistema sin una
 unidad de manejo de memoria, MMU (del inglés ``Memory Management Unit''). 
 \item Un sistema de archivos mínimo que contiene, al menos, una biblioteca de C
-(generalmente uClibc o eglibc), y busybox, el cual es un pequeño programa ejecutable,
+(generalmente uClibc o eglibc), y Busybox, el cual es un pequeño programa ejecutable,
 optimizado para sistemas embebidos, que puede realizar las operaciones
 de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \end{itemize}
@@ -704,7 +704,7 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
 \item A Linux kernel, or, when the system lacks a memory management unit (MMU), a
 $\mu$Clinux) kernel \cite{linux, uclinux}.
-\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilities like ls, cp, etc.
+\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a Busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilities like ls, cp, etc.
 \end{itemize}
 \nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
@@ -735,7 +735,7 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{freeelectron, emb1, emb2}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{buildroot, openembedded, openwrt}.
+The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
 Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
 
@@ -1097,7 +1097,7 @@ a method to encourage learning about the architecture and functioning of embedde
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
-
+% 1
 \bibitem{steveheath}
 S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
   0.5em minus 0.4em\relax Newnes, 2002. ISBN-13: 978-0750655460
@@ -1106,30 +1106,17 @@ S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
 % Embedded Systems Design
 % Steve Heath - ISBN 0 75065546 1
 
+\bibitem{electrolux}
+\copyright Electrolux Brazi, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://group.electrolux.com/en/linux-community-touched-by-the-touchscreen-on-electrolux-fridge-8873/}
 
-\bibitem{gpl}
-Free Software Foundation, \emph{GNU General Public License}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.gnu.org/licenses/gpl.html}
+\bibitem{android}
+\copyright Google, \emph{Android Devices}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.android.com/devices/}
 
-% ARM System-on-chip Architecture
-% Stephen Bo Furber - ISBN 8131708403 
-\bibitem{arm}
-S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em plus
-  0.5em minus 0.4em\relax Addison-Wesley Professional, 2000. ISBN: 8131708403 
-
-
-\bibitem{uboot}
-Denx, \emph{U-Boot bootloader}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.denx.de/wiki/U-Boot/}
-
-
-\bibitem{encore}
-\copyright Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
-
-\bibitem{cirrus}
-\copyright Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
+\bibitem{tplink}
+\copyright TP-LINK, \emph{3g/4g Home Routers}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.tp-link.com/en/products/?categoryid=202}
 
 \bibitem{camargo1}
 C. I. C. ~Camargo, \emph{Metodologia Para la Transferencia Tecnologica en la Industria Electronica Basada en Software Libre y Hardware Copyleft. In Proceedings of the Congreso Argentino de Sistemas Embebidos 2012 Libro de Trabajos, pages 111-116}.\hskip 1em plus
@@ -1145,19 +1132,49 @@ C. ~Furber, \emph{Implementacion de Sistemas Digitales Complejos Utilizando Sist
 I. ~Castillo, \emph{Automatizacion de un puente grua a escala, mediante una plataforma embebida la cual soporta multiprogramacion}. \hskip 1em plus
    0.5em minus 0.4em\relax 2006.
 
-\bibitem{electrolux}
-\copyright Electrolux Brazi, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://group.electrolux.com/en/linux-community-touched-by-the-touchscreen-on-electrolux-fridge-8873/}
+\bibitem{encore}
+\copyright Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
 
-\bibitem{android}
-\copyright Google, \emph{Android Devices}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.android.com/devices/}
 
+
+\bibitem{gpl}
+Free Software Foundation, \emph{GNU General Public License}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.gnu.org/licenses/gpl.html}
+
+
+% ARM System-on-chip Architecture
+% Stephen Bo Furber - ISBN 8131708403 
+\bibitem{arm}
+S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em plus
+  0.5em minus 0.4em\relax Addison-Wesley Professional, 2000. ISBN: 8131708403 
+
+
+
+\bibitem{cirrus}
+\copyright Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
+
+\bibitem{uboot}
+Denx, \emph{U-Boot bootloader}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.denx.de/wiki/U-Boot/}
+
+
+\bibitem{linux}
+Linux Kernel, \emph{Linux Kernel Archives}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.kernel.org/}
+
+\bibitem{uclinux}
+uClinux, \emph{Embedded Linux/Microcontroller}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.uclinux.org}
+
+\bibitem{busybox}
+Busybox Project, \emph{iThe Swiss Army Knife of Embedded Linux}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.busybox.net/}
 
 \bibitem{emb1}
 C. ~Hallinan, \emph{Embedded Linux Primer: A Practical Real-World Approach}, Second Edition.\hskip 1em plus
   0.5em minus 0.4em\relax  Prentice Hall (2010)
-
 
 \bibitem{emb2}
 J. ~Masters, \emph{Building Embedded Linux Systems}, Second Edition.\hskip 1em plus
@@ -1180,17 +1197,6 @@ OpenEmbedded Project, \emph{OpenEmbedded is a build framework for embedded Linux
 Buildroot Project, \emph{Making Embedded Linux Easy}.\hskip 1em plus
   0.5em minus 0.4em\url{http://buildroot.uclibc.org/}
 
-\bibitem{busybox}
-Busybox Project, \emph{iThe Swiss Army Knife of Embedded Linux}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.busybox.net/}
-
-\bibitem{linux}
-Linux Kernel, \emph{Linux Kernel Archives}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.kernel.org/}
-
-\bibitem{uclinux}
-uClinux, \emph{Embedded Linux/Microcontroller}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.uclinux.org}
 
 
 \end{thebibliography}
