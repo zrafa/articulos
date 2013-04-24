@@ -620,14 +620,14 @@ In practice, the architecture of an embedded system can be known by detaching th
 \nota { 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
-un SOC Cirrus EP3907A como el componente principal,
+un SOC Cirrus Logic EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
 de memoria Flash embebida INTEL de 16MB.
 }
 
-As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
 
 
 \begin{figure}
@@ -649,7 +649,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Although Encore does not public any documentation, Cirrus Logic does. Cirrus has released detailed documentation of the Cirrus 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although Encore does not public any documentation, Cirrus Logic does. Cirrus Logic has released detailed documentation of the Cirrus Logic 3907 SOC \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -766,7 +766,7 @@ de acceso al sistema original en al menos tres niveles de la arquitectura:
 \begin{itemize}
 \item A través de conexiones TCP/IP una vez que el firmware original está en ejecución,
 \item a través del conexiones al gestor de arranque,
-\item a través de accesos al software del boot rom.
+\item a través de accesos al software del Boot ROM.
 \end{itemize}
 }
 
@@ -774,7 +774,7 @@ Once we knew the software components, we conducted access tests to the original 
 \begin{itemize}
 \item Through TCP/IP connections, as soon as the original firmware is operating;
 \item by connecting to the boot manager;
-\item by accessing the boot ROM software.
+\item by accessing the Boot ROM software.
 \end{itemize}
 
 \nota { En los primeros dos casos no se tuvieron resultados promisorios.
@@ -801,15 +801,15 @@ En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar 
 
 As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
 
-\nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el BootROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
+\nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el Boot ROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
 
 
 \nota{Afortunadamente, en un reinicio, el Cirrus EP9307, en conjunción
-con el software de la BootROM, operan en un modo llamado 
+con el software de la Boot ROM, operan en un modo llamado 
 ``download en serie'', que nos permite enviar unos pocos
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
-estos componentes (CPU y BootROM) trabajan de la siguiente manera:}
+estos componentes (CPU y Boot ROM) trabajan de la siguiente manera:}
 
 Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called ``serial download'' which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
 
