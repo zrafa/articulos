@@ -704,7 +704,7 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 \item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
 \item A Linux kernel, or, when the system lacks a memory management unit (MMU), a
 $\mu$Clinux) kernel \cite{linux, uclinux}.
-\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilites like ls, cp, etc.
+\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilities like ls, cp, etc.
 \end{itemize}
 \nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
@@ -775,7 +775,7 @@ de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
 el contacto tierra, se probaron los demás contactos expuestos en la placa,
 para identificar el contacto de transmisión (TX), y recepción (RX).
 }
-During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified the ground (GND) and direct current (VCC) pins by means of a multimeter and an oscilloscope. Then, using the GND pin, the rest of the exposed pins in the board were tested to identify transmission (TX) and reception (RX) lines.
+During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified the ground (GND) and voltage (VCC) pins by means of a multimeter and an oscilloscope. Then, using the GND pin, the rest of the exposed pins in the board were tested to identify transmission (TX) and reception (RX) lines.
    
 \nota {Para corroborar que los contactos del UART son los correctos, se conectó
 el conversor de nivel RS-232 a los mismos, y luego a una PC.
@@ -876,7 +876,7 @@ por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
 También a nivel de comunicación vía software.}
 
-After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed some hypotheses: the wired connections between PC and board were functional, and the Boot ROM code was being executed. Afer that, it was able to download a specific program as the first code to be executed by the ARM core.
+After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed some hypotheses: the wired connections between PC and board were functional, and the Boot ROM code was being executed. After that, it was able to download a specific program as the first code to be executed by the ARM core.
 
 
 \nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
@@ -952,7 +952,7 @@ vía usb (pendrive, o similar).
 Esto modificó el inicio del firmware interno del Encore ENTC-1000, 
 ofreciendo al menos dos interesantes funcionalidades :
 \begin{itemize}
-\item Un gestor de arranque moderno y accesible para ser operado a través de una comunicación serie.
+\item Un gestor de arranque moderno y accessible para ser operado a través de una comunicación serie.
 \item Un kernel Linux actualizado, y preparado para iniciar diferentes
 sistemas operativos Linux, ya que lee el sistema de archivos raíz desde 
 memorias conectadas al puerto USB. 
@@ -1081,7 +1081,7 @@ y la arquitectura de los sistemas embebidos.
 }
 
 As future work, we consider the fact that there may be still some time ahead until the acquisition of specialized hardware for embedded systems can be made affordable to public educational institutions. Until that moment can be reached, we aim to build standardized guidelines required for a methodology allowing the reuse of commercial Linux embedded systems. Even when such hardware is available  for development, reverse engineering 
-experience on comercial Linux embedded systems can be thought as 
+experience on commercial Linux embedded systems can be thought as 
 a method to encourage learning about the architecture and functioning of embedded systems. 
 
 %fin de las conclusiones
