@@ -576,7 +576,7 @@ we have reused the embedded Linux device to provide the following functionalitie
 \begin{itemize}
 \item Print server for USB printers without networking capability. 
 \item DHCP server for small internal subnets at the University. 
-\item Brain for research robot, tied to a microcontroller and a set of sensors. 
+\item Brain for a research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
 \item DNS experimental server.  
 \end{itemize}
@@ -593,7 +593,7 @@ completamente, es necesario descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
 se denomina ingeniería inversa.}
 
-When repurposing a closed-box hardware and software system, the knowledge we need about its internals can be obtained either by having a complete written documentation of the target device, or by directly experimenting with it. This experimentation is called reverse engineering and can be driven by several activities and tools. This is the method we used for this case study.
+When repurposing a closed-box hardware and software system, the knowledge we need about its internals can be obtained either by having complete written documentation of the target device, or by directly experimenting with it. This experimentation is called reverse engineering, and this is the method we used for this case study.
 
 \nota{Esto plantea la inquietud acerca de la legalidad 
 del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
@@ -632,7 +632,7 @@ Ya que, en conjunto con el microprocesador, suelen dar una visión
 global de cómo inicia o funciona el sistema.
 }
 
-We also need to know about other components existing in the system. Coming after the CPU, most important components are memory modules (RAM and Flash types) and communication modules (such as serial or USB). These devices, together with the CPU, give an overview to what the boot process or operational regime of the system will be like.
+We also need to know about other components existing in the system. After the CPU, the most important components are memory modules (RAM and Flash types) and communication modules (such as serial or USB). These devices, together with the CPU, give an overview to what the boot process or operational regime of the system will be like.
 
 \nota {En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
 la placa del circuito impreso de la caja exterior. Esto posibilita
@@ -644,7 +644,7 @@ A este tipo de documentación se conoce como hoja de datos, o
 en algunos casos (como el de las memorias o CPU) manuales de programación
 del chip.}
 
-In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach its public documentation. This documentation is known as data sheets or, sometimes, programming manuals.
+In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach their public documentation, i.e., data sheets, programming manuals, etc.
 
 
 \nota { 
@@ -657,7 +657,7 @@ Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada un
 de memoria Flash embebida INTEL de 16MB.
 }
 
-As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip contains an ARM920T main processor running at 200 MHz. The board also holds two 32 MB Samsung SDRAM memory modules and one 16 MB Intel Flash embedded module.
 
 
 \begin{figure}
@@ -679,7 +679,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Although Encore does not public any documentation, Cirrus Logic does. Detailed documentation of the Cirrus Logic 3907 SOC can be found on Cirrus Logic web site \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although Encore does not publish technical documentation about this board and its software, Cirrus Logic does. Detailed documentation of the Cirrus Logic 3907 SOC can be found on the Cirrus Logic web site \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for evaluation boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -704,10 +704,10 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 }
 
 \begin{itemize}
-\item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
+\item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}.
 \item A Linux kernel, or, when the system lacks a memory management unit (MMU), a
 $\mu$Clinux) kernel \cite{linux, uclinux}.
-\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a Busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilities like ls, cp, etc.
+\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a Busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic Unix utilities like ls, cp, etc.
 \end{itemize}
 \nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
@@ -720,7 +720,7 @@ al código fuente). En nuestra experiencia con el ENTC-1000 no encontramos drive
 de código cerrado, por lo que este punto está fuera del alcance de este artículo. 
 }
 
-Sometimes a fourth software component set is found in the system. These are the vendor's own applications and hardware drivers. Vendors' applications are seldom of interest for our research; however, drivers are of prime importance. If closed source drivers are present in the system, then the work of preparing an embedded Linux system supporting the whole hardware will be utterly difficult, due to the lack of access to source code. In our experience with ENTC-1000 we did not find any closed source drivers, so this issue is beyond the scope of this article.
+Usually a fourth software component set is found in the system. These are the vendor's own applications and hardware drivers. Vendors' applications are seldom of interest for our research; however, drivers are of prime importance. If closed source drivers are present in the system, then the work of preparing an embedded Linux system supporting the whole hardware will be utterly difficult, due to the lack of access to source code. In our experience with ENTC-1000 we did not find any closed source drivers, so this issue is beyond the scope of this article.
  
 \nota{
 El trabajo realizado en este punto fue la preparación
@@ -738,7 +738,7 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
+At this stage, we prepared two complete replacement embedded Linux systems: Ångström and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
 Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
 
