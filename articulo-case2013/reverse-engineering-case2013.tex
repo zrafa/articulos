@@ -444,7 +444,7 @@ Para la experimentación práctica se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
-Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an \copyright Encore ENTC-1000 product marketed as a thin client device for remote desktops. 
+Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC-1000 product marketed as a thin client device for remote desktops. 
 
 
 \end{abstract}
@@ -496,7 +496,7 @@ funcionalidades sofisticadas.
 However, these household items are no longer as simple as they were once. Some years ago,
 most of these devices were just mechanical and electrical artifacts. Today's appliances
 integrate electronic circuits, sensors, microcontrollers, microprocessors, 
-and are capable to perform a sophisticated array of functionalities. 
+and are capable to perform a sophisticated set of functions. 
 
 \nota{
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
@@ -506,7 +506,7 @@ Actualmente, los fabricantes han optado por Linux en muchos
 casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 }
-Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization \cite{electrolux, android}.
+Such complexity comes along with the need to have the device run an operating system, as several functions need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization \cite{electrolux, android}.
 
 \nota{En el marco regional, adquirir sistemas Linux embebidos para investigación
 o desarrollo es complejo y costoso.
@@ -522,14 +522,15 @@ que pueden adquirirse para su estudio y adaptación. Y,
 aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
 gran parte de estos sistemas contienen el hardware necesario
 para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivos
-capaces de ejecutar un sistema Linux son los routers hogareños \copyright TP-Link,
-y los teléfonos móviles con sistema \copyright  Google Android \cite{android}.
+capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
+y los teléfonos móviles con sistema Google Android \cite{android}.
 }
-Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are \copyright TP-Link home routers or \copyright Google Android-equipped mobile phones \cite{android, tplink}.
+Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although this is rarely indicated.
+Typical devices capable to run a Linux system are TP-Link home routers or Google Android-equipped mobile phones \cite{android, tplink}.
 
 Related works have investigated
-reverse engineering for repurposing appliances in the regional market.
-For example, the works using \copyright Nintendo Game Boy, \copyright Zaurus SL-5000 and Chumby devices,
+reverse engineering for repurposing appliances in the regional market,
+for example, the Nintendo Game Boy, Zaurus SL-5000 and Chumby devices,
 as described in \cite{camargo1, camargo2, castillo1}.
 
 We chose the Encore ENTC-1000 embedded system for this experience
@@ -554,7 +555,8 @@ para su compilación e instalación (como es requerido por la licencia GPL de Li
 }
 
 The ENTC-1000 embedded system is a proprietary product of Encore Electronics Inc. \cite{encore},
-working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under \cite{gpl}.
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and X Window System protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the
+GNU General Public License Linux is released under \cite{gpl}.
 
 \nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -565,14 +567,15 @@ por último, pero no menos importante, permite su reuso para necesidades
 específicas en el marco de los sistemas embebidos.
 }
 
-As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  
+As the ENTC-1000 device is a modern embedded system, available for purchase in
+our country (Argentina), understanding its architecture and behavior is of interest to our Department.  
 The goal of this paper is to document the process by which the Encore ENTC-1000
 has been studied and modified. As a result of our experience,
 we have reused the embedded Linux device to provide the following functionalities :
 
 \begin{itemize}
 \item Print server for USB printers without networking capability. 
-\item DHCP server for small internal subnets at University. 
+\item DHCP server for small internal subnets at the University. 
 \item Brain for research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
 \item DNS experimental server.  
@@ -647,14 +650,14 @@ In practice, the architecture of an embedded system can be known by detaching th
 \nota { 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
-un SOC Cirrus Logic \copyright EP3907A como el componente principal,
+un SOC Cirrus Logic EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
 de memoria Flash embebida INTEL de 16MB.
 }
 
-As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a \copyright Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
 
 
 \begin{figure}
@@ -1130,9 +1133,8 @@ C. ~Camargo, \emph{Implementacion de Sistemas Digitales Complejos Utilizando Sis
 \bibitem{castillo1}
 % I. ~Castillo, C. ~Camargo, and C. ~Perez, \emph{Automatización ́de un puente grúa ́a a escala, mediante una plataforma embebida la cual soporta multiprogramación}.\hskip 1em plus
 % I. ~Castillo, \emph{Automatizacion ́de un puente grua ́a a escala mediante una plataforma embebida la cual soporta multiprogramacion}. \hskip 1em plus
-I. ~Castillo, \emph{Automatizacion de un puente grua a escala, mediante una plataforma embebida la cual soporta multiprogramacion}. \hskip 1em plus
-  0.5em minus 0.4em\url{www.iberchip.net/iberchip2006/ponencias/119.pdf}.
-  \relax 2006.
+C. A. ~Pérez Quintero, \emph{Automatizacion de un puente grua a escala, mediante una plataforma embebida la cual soporta multiprogramacion. Proceedings of XII Taller IBERCHIP, 2006}. \hskip 1em plus
+  0.5em minus 0.4em\url{http://www.iberchip.net/iberchip2006/ponencias/119.pdf}
 
 \bibitem{encore}
 Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
