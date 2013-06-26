@@ -971,17 +971,30 @@ Knowing how to execute a small program after a
 hardware reset event, and having the RAM and Flash
 addresses, we were ready to deploy an alternative Linux
 embedded system over the device. Our first step to accomplish
-this was to prepare a small bootloader to be sent into RAM through the serial line. We chose U-Boot, configured for this
-particular device.
+this was to prepare a bootloader and Linux kernel to be sent into RAM through the serial line. 
 
-After we successfully executed the bootloader, and were
-logged into its minimal -but powerful enough- command line,
-we had to decide how to re-layout software within the Flash
+We chose U-Boot as bootloader, built 
+using the instructions found for the SIM1 board(referencia), but
+configured for this particular device.
+
+When looking for a suitable current kernel, we looked for existing support
+for devices using the same chip. We found the configuration for EDB9307A,
+which is a development board produced by cirrus logic.
+When we built a kernel with this configuration and ran it, it did not boot on once.
+But, after we modified the SDRAM address base configuration option, we were
+pleasantly surprised that it not only booted on the first try, but also that it supported all
+the peripherals of the ENTC-1000.
+This suggests that encore simply copied the reference design without introducing any major changes.
+
+When bootloader and kernel Linux were ready, we successfully
+transfered and executed the bootloader, and were
+logged into its minimal -but powerful enough- command line.
+However, we still had to decide how to re-layout software within the Flash
 memory, hence modifying the original software, to achieve our
 goal.
 
 Using U-Boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
-transferred a Linux 3.X kernel \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
+transferred the Linux 3.1.1 kernel built \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
 Now the two main pieces of software (bootloader and kernel) required to boot a system
 were ready on RAM.
 
