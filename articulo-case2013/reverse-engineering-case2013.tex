@@ -578,7 +578,7 @@ we have reused the embedded Linux device to provide the following functionalitie
 \item DHCP server for small internal subnets at the University. 
 \item Brain for a research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
-\item DNS experimental server.  
+\item DNS server in a lab network.  
 \end{itemize}
 
 
@@ -738,9 +738,9 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-At this stage, we prepared two complete replacement embedded Linux systems: Ångström and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
+At this stage, we prepared two complete replacement embedded Linux systems: Ångström and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
-Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
+Once we know how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine how the original firmware can be modified.
 
 \section{Software access}
 
