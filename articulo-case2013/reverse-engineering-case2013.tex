@@ -779,9 +779,8 @@ de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
 el contacto tierra, se probaron los demás contactos expuestos en la placa,
 para identificar el contacto de transmisión (TX), y recepción (RX).
 }
-During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified several ground (GND) and voltage (VCC) pins by means of a multimeter. Then, using the GND pin, the rest of the exposed pins in the board were tested to try to identify transmission (TX) and reception (RX) lines.
+During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified several ground (GND) and voltage (VCC) pins by means of a multimeter. Then, using the GND pin and multimeter, the rest of the exposed pins in the board were tested to try to identify transmission (TX) and reception (RX) candidate lines.
   
-We found several candidates pins, so then but four of them were 
 
 \nota {Para corroborar que los contactos del UART son los correctos, se conectó
 el conversor de nivel RS-232 a los mismos, y luego a una PC.
@@ -791,7 +790,7 @@ no se conocía a que velocidad de transmisión se encuentra operando
 el firmware original.
 }
 
-To establish that the UART lines we had found were the right ones, we connected an RS-232 level converter to them, and then to a PC. We finally used the minicom communications program to obtain some visual information. This information was, however, meaningless as the operating serial transmission speed for the original firmware was unknown. 
+To establish which pins we had found were the right UART lines, we connected an RS-232 level converter to them, and then to a PC. We finally used the minicom communications program to obtain some visual information. This information was, however, meaningless as the operating serial transmission speed for the original firmware was unknown. 
 
 \subsection{Taking control}
 \nota {
@@ -977,7 +976,7 @@ embedded system over the device. Our first step to accomplish
 this was to prepare a bootloader and Linux kernel to be sent into RAM through the serial line. 
 
 We chose U-Boot as bootloader, built 
-using the instructions found for the SIM1 board(referencia), but
+using the instructions found for the SIM1 board(referencia http://code.google.com/p/sim1/), but
 configured for this particular device.
 
 When looking for a suitable current kernel, we tried to find for existing support
