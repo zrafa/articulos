@@ -547,7 +547,7 @@ El sistema embebido ENTC-1000 es un producto propietario de Encore Electronics I
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
 comercial y su documentación proveen especificaciones mínimas,
-esto es, se publicita como un sistema con Linux embebido kernel 2.4 
+esto es, se publicita como un sistema con Linux embebido kernel 2.4
 \footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
 interno del software. Tampoco provee, Encore Electronic Inc.,
 el código fuente del software instalado, ni las instrucciones
@@ -728,7 +728,7 @@ de dos sistemas Linux embebidos completos de reemplazo: Amstrong y emDebian.
 La documentación para preparar sistemas Linux embebidos es amplia y públicamente
 disponible (referencias). Además, existen decenas de
 distribuciones Linux para embebidos,
-o entornos de desarrollo de distribuciones Linux para embebidos 
+o entornos de desarrollo de distribuciones Linux para embebidos
 \footnote{No confundir distribución con entorno de desarrollo}. Estas herramientas
 facilitan la preparación de un sistema para un dispositivo específico.
 Algunas de estos proyectos son Openwrt, Buildroot, u OpenEmbedded (referencias).
@@ -977,34 +977,33 @@ We chose U-Boot as bootloader, built
 using the instructions found for the SIM1 board(referencia), but
 configured for this particular device.
 
-When looking for a suitable current kernel, we looked for existing support
+When looking for a suitable current kernel, we tried to find for existing support
 for devices using the same chip. We found the configuration for EDB9307A,
-which is a development board produced by cirrus logic.
+which is a development board produced by Cirrus Logic.
 When we built a kernel with this configuration and ran it, it did not boot on once.
 But, after we modified the SDRAM address base configuration option, we were
 pleasantly surprised that it not only booted on the first try, but also that it supported all
 the peripherals of the ENTC-1000.
-This suggests that encore simply copied the reference design without introducing any major changes.
+This suggests that Encore simply copied the reference design without introducing any major changes.
 
 When bootloader and kernel Linux were ready, we successfully
 transfered and executed the bootloader, and were
 logged into its minimal -but powerful enough- command line.
-However, we still had to decide how to re-layout software within the Flash
-memory, hence modifying the original software, to achieve our
-goal.
+However, we still had to decide how to layout out software within
+the Flash, which would then replace the original firmware.
 
-Using U-Boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
-transferred the Linux 3.1.1 kernel built \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
+Using U-Boot's TFTP\footnote{Trivial File Transfer Protocol} utilities and networking capability, we
+transferred the Linux 3.1.1 kernel built\footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
 Now the two main pieces of software (bootloader and kernel) required to boot a system
-were ready on RAM.
+were ready in RAM.
 
 The next step was to copy RAM content over the Flash.
-For this we used a copy (cp.b) command available in U-Boot command line, the physical RAM addresses where U-Boot and the Linux kernel were loaded, and the start address for Flash memory (found when probing for the “CRUS” token as described in the previous section).
+For this we used a copy (cp.b) command available on the U-Boot command line, the physical RAM addresses where U-Boot and the Linux kernel were loaded, and the start address for Flash memory (found when probing for the “CRUS” token as described in the previous section).
 
 Finally, it is worth mentioning that we modified the U-Boot configuration in Flash so as to load and boot automatically from the 
 address where the Linux kernel was saved on Flash. The Linux kernel we built was prepared to load the root file 
 system (the last remaining major piece of software needed for a functional 
-system) from a usb storage device. 
+system) from a USB storage device. 
 As a result of this process, we modified the Encore
 ENTC-1000 firmware, thus offering at least two new interesting features:
 
