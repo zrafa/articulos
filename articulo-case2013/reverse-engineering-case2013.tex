@@ -570,7 +570,7 @@ específicas en el marco de los sistemas embebidos.
 As the ENTC-1000 device is a modern embedded system, available for purchase in
 our country (Argentina), understanding its architecture and behavior is of interest to our Department.  
 The goal of this paper is to document the process by which the Encore ENTC-1000
-has been studied and modified. As a result of our experience,
+has been studied and modified. As a result of our work,
 we have reused the embedded Linux device to provide the following functionalities :
 
 \begin{itemize}
@@ -738,7 +738,7 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-At this stage, we prepared two complete replacement embedded Linux systems: Ångström and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
+At this stage, we prepared two complete replacement embedded Linux systems: Ångström (using OpenEmbedded) and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}, and there are also dozens of Linux distributions or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
 Once we know how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine how the original firmware can be modified.
 
@@ -768,7 +768,8 @@ por lo que, aunque no exista un conector expuesto en la placa, generalmente
 está presente.
 }
 
-Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a predetermined serial interface. The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is part of the SOC, so that, even when there is no exposed connector in the board, the controller is there. 
+Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a default serial console.
+The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is part of the SOC, so that, even when there is no exposed connector in the board, the controller is there. 
 
 \nota{
 En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
@@ -778,8 +779,10 @@ de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
 el contacto tierra, se probaron los demás contactos expuestos en la placa,
 para identificar el contacto de transmisión (TX), y recepción (RX).
 }
-During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified the ground (GND) and voltage (VCC) pins by means of a multimeter and an oscilloscope. Then, using the GND pin, the rest of the exposed pins in the board were tested to identify transmission (TX) and reception (RX) lines.
-   
+During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified several ground (GND) and voltage (VCC) pins by means of a multimeter. Then, using the GND pin, the rest of the exposed pins in the board were tested to try to identify transmission (TX) and reception (RX) lines.
+  
+We found several candidates pins, so then but four of them were 
+
 \nota {Para corroborar que los contactos del UART son los correctos, se conectó
 el conversor de nivel RS-232 a los mismos, y luego a una PC.
 Finalmente, se utilizó el programa de comunicaciones minicom para
@@ -815,7 +818,7 @@ el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
 anteriores a la ejecución del gestor de arranque.}
 
-The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two test cases did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
+The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two tests did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
 
 \nota {
 Leyendo la documentación obtenida de la arquitectura y programación del hardware,
