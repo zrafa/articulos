@@ -381,12 +381,12 @@
 % }
 
 
-% \author{
-% \IEEEauthorblockN{\textbf{Rafael Zurita, Rodolfo del Castillo, Miriam Lechner, Eduardo Grosclaude} \\ \\
-% Departamento Ingeniería de Computadoras - Facultad de Informática\\
-% Universidad Nacional del Comahue\\
-% \texttt{\{rafa,rdc,mtl,oso\}@fi.uncoma.edu.ar} }
-% }
+\author{
+\IEEEauthorblockN{\textbf{Rafael Zurita, Rodolfo del Castillo, Miriam Lechner, Eduardo Grosclaude} \\ \\
+Departamento Ingeniería de Computadoras - Facultad de Informática\\
+Universidad Nacional del Comahue\\
+\texttt{\{rafa,rdc,mtl,oso\}@fi.uncoma.edu.ar} }
+}
 
 
 
@@ -868,9 +868,9 @@ los 2048 bytes leídos.
 \item Read 2048 characters from UART1\nota{, store these in the internal Boot Buffer \nota{ (alias for the Ethernet Mac buffer)}}
 \begin{itemize}
 	\item If our serial peer does not send 2048 bytes, go on with boot process using internal Flash  memory
-	\item If serial peer sent 2048 bytes, store them in internal buffer, output ``\textgreater'' through serial link to indicate successful read
+	\item If the serial peer sent 2048 bytes, store them in a internal buffer, output ``\textgreater'' through the serial link to indicate a successful read
 \end{itemize}
-\item Turn on Green LED
+\item Turn on green LED
 \item Jump to the start of the internal Boot Buffer
 \end{enumerate}
 
@@ -881,7 +881,7 @@ por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
 También a nivel de comunicación vía software.}
 
-After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed some hypotheses: the wired connections between PC and board were functional, and the Boot ROM code was being executed. After that, it was able to download a specific program as the first code to be executed by the ARM core.
+After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed that our understanding of the system was correct this far: the wired connections between PC and board were functional, and the Boot ROM code was being executed. After that, we were able to download a specific program as the first code to be executed by the ARM core.
 
 
 \nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
@@ -922,16 +922,17 @@ del software de arranque, ya que está especificado en el manual
 de la programación del SOC.}
 
 We loaded our small probe program through the serial download feature of 
-the Boot ROM process. The ``CRUS'' token was found on the 
-Flash memory at the address 0x60001000. As the CPU, during the boot process, will try to execute any code written 
-after that memory location, it was a proper place 
+the Boot ROM process. The ``CRUS'' token was found in the 
+Flash memory at the address 0x60001000. As the CPU, during the boot process, will try to
+execute any code written 
+after that memory location, it was a good place 
 to locate the bootloader component software.
 
 \nota{De una manera similar, tuvimos acceso al conocimiento de
 las direcciones físicas de la memoria RAM.}
 
 Our last goal during this stage was to find the last valid physical 
-address for RAM memory. After modifying our probe program to do some few trial and error tests, the program found that limit, and we modified the U-Boot bootloader RAM settings accordingly.
+address for RAM memory. After modifying our probe program to do some a few trial and error tests, the program found that limit, and we modified the U-Boot bootloader RAM settings accordingly.
 
 \nota{
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
