@@ -444,7 +444,8 @@ Para la experimentación práctica se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
-Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore ENTC-1000 product marketed as a thin client device for remote desktops. 
+Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore\footnote{All brands and product names may be trademarks of their 
+                respective holders.} ENTC-1000 product marketed as a thin client device for remote desktops. 
 
 
 \end{abstract}
@@ -1005,7 +1006,7 @@ When looking for a suitable current kernel, we tried to find for existing suppor
 for devices using the same chip. We found the configuration for EDB9307A,
 which is a development board produced by Cirrus Logic.
 When we built a kernel with this configuration and ran it, it did not boot on once.
-But, after we modified the SDRAM address base configuration option, we were
+But, after we modified the SDRAM base address configuration option, we were
 pleasantly surprised that it not only booted on the first try, but also that it supported all
 the peripherals of the ENTC-1000.
 This suggests that Encore simply copied the reference design without introducing any major changes.
