@@ -740,7 +740,10 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-At this stage, we prepared two complete replacement embedded Linux systems: Ångström (using OpenEmbedded) and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}, and there are also dozens of Linux distributions or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
+At this stage, we prepared two complete replacement embedded Linux systems: Ångström (using OpenEmbedded) and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}, and there are also dozens of Linux distributions or development environments for embedded systems. 
+Even when the process of preparing a embedded Linux system targeted to a specific device is not 
+straightforward, these development tools help on reducing complexity of the task.
+Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
 Once we know how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine how the original firmware can be modified.
 
@@ -795,8 +798,8 @@ el firmware original.
 To establish which pins we had found were the right UART lines, we
 connected an RS-232 level converter to them, and then to a PC.
 We finally used the minicom communications program to obtain some
-visual information and confirm, using the "Cirrus EP9307 Boot process", the correct UART lines. 
-This process is further explained in section X.
+visual information and confirm, using the Cirrus EP9307 Boot process, the correct UART lines. 
+This process is further explained in section ``Communication with the CPU''.
 
 
 
@@ -825,7 +828,7 @@ el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
 anteriores a la ejecución del gestor de arranque.}
 
-We first tried to get root access though TCP/IP but we unable
+We first tried to get root access though TCP/IP but we were unable
 to find a service we could exploit to that end.
 For the boot manager, we seek to access the minimal command
 interpreter offered by some boot managers.
