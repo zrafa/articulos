@@ -794,7 +794,7 @@ el firmware original.
 To establish which pins we had found were the right UART lines, we
 connected an RS-232 level converter to them, and then to a PC.
 We finally used the minicom communications program to obtain some
-visual information and confirm, using the "serial download process", the correct UART lines. 
+visual information and confirm, using the "Cirrus EP9307 Boot process", the correct UART lines. 
 This process is further explained in section X.
 
 
@@ -824,7 +824,16 @@ el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
 anteriores a la ejecución del gestor de arranque.}
 
-The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two tests did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
+We first tried to get root access though TCP/IP but we unable
+to find a service we could exploit to that end.
+For the boot manager, we seek to access the minimal command
+interpreter offered by some boot managers.
+This was also unsuccessful because the boot manager does not accept 
+input over the serial line.
+We therefore went on deeper in the architecture, trying to reach for operating
+stages earlier to the execution of the boot manager.
+
+% The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two tests did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
 
 \nota {
 Leyendo la documentación obtenida de la arquitectura y programación del hardware,
@@ -832,14 +841,17 @@ se analizó el proceso de reinicio del hardware y como la CPU interna
 del ENTC-1000 comienza a ejecutar instrucciones.
 }
 
-Using the available hardware architecture and programming documentation, we analyzed the hardware reset process and the way the ENTC-1000 internal CPU begins executing instructions.
+Using the available hardware architecture and programming documentation,
+we analyzed the hardware reset process and the way the ENTC-1000
+internal CPU begins executing instructions.
 
 \subsection*{Communication with the CPU}
 
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
+As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. The boot process is as follows: the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM.
+% , thus mapping it to address 0 to be executed.
 
 \nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el Boot ROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
@@ -851,7 +863,9 @@ con el software de la Boot ROM, operan en un modo llamado
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
 estos componentes (CPU y Boot ROM) trabajan de la siguiente manera:}
 
-Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called ``serial download'' which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
+Once started, the code in the Boot ROM enters a mode called 
+``serial download'' which allows us to send some code bytes to be executed by the CPU. 
+The serial download performs the following steps:
 
 \nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
