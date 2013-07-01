@@ -1002,8 +1002,8 @@ embedded system over the device. Our first step to accomplish
 this was to prepare a bootloader and Linux kernel to be sent into RAM through the serial line. 
 
 We chose U-Boot as bootloader, built 
-using the instructions found for the SIM1 board(referencia http://code.google.com/p/sim1/), but
-configured for this particular device.
+using the instructions found for the Sim.One board \cite{sim1},
+but configured for this particular device.
 
 When looking for a suitable current kernel, we tried to find for existing support
 for devices using the same chip. We found the configuration for EDB9307A,
@@ -1127,6 +1127,10 @@ As future work, we consider the fact that there may be still some time ahead unt
 experience on commercial Linux embedded systems can be thought as 
 a method to encourage learning about the architecture and functioning of embedded systems. 
 
+The source code links and the
+documentation for the software upgrade process explained can be obtained
+at \texttt{http://labti.fi.uncoma.edu.ar/trac/wiki/HackingEncore}.
+
 %fin de las conclusiones
 
 
@@ -1240,6 +1244,10 @@ OpenEmbedded Project, \emph{OpenEmbedded is a build framework for embedded Linux
 \bibitem{buildroot}
 Buildroot Project, \emph{Making Embedded Linux Easy}.\hskip 1em plus
   0.5em minus 0.4em\url{http://buildroot.uclibc.org/}
+
+\bibitem{sim1}
+Sim.One, \emph{The Simplemachines Sim.One Single-Board Computer}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://code.google.com/p/sim1/}
 
 
 
