@@ -82,3 +82,19 @@ hardware; reducing costs as much as possible.
 
 
  
+Que hicimos
+
+Consultamos con los alumnos del curso de administracion de sistemas si tienen
+simm rams disponibles.
+El 25% del alumno contesta afirmativamente y provee simm rams.
+Se toma uno de los simms y se sueldan N patitas.
+Se lo conecta como muestra el proyecto en github, a un microcontrolador (atmega328)
+Se programa dos versiones de software (una en C y la otra en assembler)
+para controlar la simm y proveer
+una API para utilizar la RAM extra disponible, con un simple read/write a
+nivel de bytes.
+Se realizan tests de ambas versiones.
+Se verifica que las simms pueden ser reaprovechadas con muy poco consumo
+de recursos del microcontrolador que las controla en los tests (medir cuanta
+ram y cpu del micro se utilizan)
+
