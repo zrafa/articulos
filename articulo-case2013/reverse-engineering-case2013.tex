@@ -444,7 +444,8 @@ Para la experimentación práctica se utilizó
 un dispositivo Encore ENTC1000, que se comercializa como cliente liviano
 de escritorios remoto.
 }
-Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an \copyright Encore  ENTC1000 product marketed as a thin client device for remote desktops. 
+Linux embedded systems are often found in closed-box products. The present work documents the process by which such a closed-box, off-the-shelf product, has been analysed to study how it is built, how it is powered by Linux, and how its software can be updated or modified to adapt the device to other usages. The final result, after the described procedure is applied, is a generic, embedded Linux development board, suitable for arbitrary purposes. Our practical experiments targeted an Encore\footnote{All brands and product names may be trademarks of their 
+                respective holders.} ENTC-1000 product marketed as a thin client device for remote desktops. 
 
 
 \end{abstract}
@@ -496,7 +497,7 @@ funcionalidades sofisticadas.
 However, these household items are no longer as simple as they were once. Some years ago,
 most of these devices were just mechanical and electrical artifacts. Today's appliances
 integrate electronic circuits, sensors, microcontrollers, microprocessors, 
-and are capable to perform a sophisticated array of functionalities. 
+and are capable to perform a sophisticated set of functions. 
 
 \nota{
 Esta complejidad trajo la necesidad de ejecutar un sistema operativo
@@ -506,7 +507,7 @@ Actualmente, los fabricantes han optado por Linux en muchos
 casos, debido principalmente a su
 bajo costo y su gran adaptabilidad (referencia electrolux brasil, celular android, router linux)
 }
-Such complexity comes along with the need to have the device run an operating system, as several functionalities need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization \cite{electrolux, android}.
+Such complexity comes along with the need to have the device run an operating system, as several functions need to be concurrently managed. Vendors opt for Linux in many cases due to low cost and easy customization \cite{electrolux, android}.
 
 \nota{En el marco regional, adquirir sistemas Linux embebidos para investigación
 o desarrollo es complejo y costoso.
@@ -522,14 +523,15 @@ que pueden adquirirse para su estudio y adaptación. Y,
 aunque muchas veces no se encuentren visiblemente etiquetados o documentados,
 gran parte de estos sistemas contienen el hardware necesario
 para ejecutar un sistema operativo Linux embebido. Ejemplos de estos dispositivos
-capaces de ejecutar un sistema Linux son los routers hogareños \copyright TP-Link,
-y los teléfonos móviles con sistema \copyright  Google Android \cite{android}.
+capaces de ejecutar un sistema Linux son los routers hogareños TP-Link,
+y los teléfonos móviles con sistema Google Android \cite{android}.
 }
-Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although they not always make this claim. Typical devices capable to run a Linux system are \copyright TP-Link home routers or \copyright Google Android-equipped mobile phones \cite{android, tplink}.
+Many embedded devices are available in our regional market for study or customization. Most of them come with the required hardware to run an embedded Linux system, although this is rarely indicated.
+Typical devices capable to run a Linux system are TP-Link home routers or Google Android-equipped mobile phones \cite{android, tplink}.
 
 Related works have investigated
-reverse engineering for repurposing appliances in the regional market.
-For example, the works using \copyright Nintendo Game Boy, \copyright Zaurus SL-5000 and Chumby devices,
+reverse engineering for repurposing appliances in the regional market,
+for example, the Nintendo Game Boy, Zaurus SL-5000 and Chumby devices,
 as described in \cite{camargo1, camargo2, castillo1}.
 
 We chose the Encore ENTC-1000 embedded system for this experience
@@ -546,7 +548,7 @@ El sistema embebido ENTC-1000 es un producto propietario de Encore Electronics I
 que funciona como una terminal de escritorio remoto, soportando
 los protocolos RDP (Remote-Desktop-Protocol) y Xwindow. Si bien el folleto
 comercial y su documentación proveen especificaciones mínimas,
-esto es, se publicita como un sistema con Linux embebido kernel 2.4 
+esto es, se publicita como un sistema con Linux embebido kernel 2.4
 \footnote{Año 2001}, no existe información adicional de la arquitectura o funcionamiento
 interno del software. Tampoco provee, Encore Electronic Inc.,
 el código fuente del software instalado, ni las instrucciones
@@ -554,7 +556,8 @@ para su compilación e instalación (como es requerido por la licencia GPL de Li
 }
 
 The ENTC-1000 embedded system is a proprietary product of Encore Electronics Inc. \cite{encore},
-working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and XWindow protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the GPL licence Linux is released under \cite{gpl}.
+working as a remote desktop terminal supporting RDP (Remote Desktop Protocol) and X Window System protocols. Commercial brochures and product documentation provide minimal specs, i.e. the device is marketed as a Linux 2.4 embedded system\footnote{This kernel version was released in 2001.}. However, there is no additional documentation about architecture or software internals. Encore Electronics Inc. does not provide the source code for the installed software, nor any compiling and installing instructions as required by the
+GNU General Public License Linux is released under \cite{gpl}.
 
 \nota{Es de interés para nuestra facultad el entendimiento de la arquitectura y funcionamiento
 de los dispositivos ENTC-1000,
@@ -565,17 +568,18 @@ por último, pero no menos importante, permite su reuso para necesidades
 específicas en el marco de los sistemas embebidos.
 }
 
-As the ENTC-1000 device is a modern embedded system, available for purchase in our country, understanding its architecture and behavior is of interest to our Department.  
+As the ENTC-1000 device is a modern embedded system, available for purchase in
+our country (Argentina), understanding its architecture and behavior is of interest to our Department.  
 The goal of this paper is to document the process by which the Encore ENTC-1000
-has been studied and modified. As a result of our experience,
+has been studied and modified. As a result of our work,
 we have reused the embedded Linux device to provide the following functionalities :
 
 \begin{itemize}
 \item Print server for USB printers without networking capability. 
-\item DHCP server for small internal subnets at University. 
-\item Brain for research robot, tied to a microcontroller and a set of sensors. 
+\item DHCP server for small internal subnets at the University. 
+\item Brain for a research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
-\item DNS experimental server.  
+\item DNS server in a lab network.  
 \end{itemize}
 
 
@@ -590,7 +594,7 @@ completamente, es necesario descubrir su funcionamiento mediante
 diferentes pruebas. Este último método es el elegido en este artículo, y es lo que 
 se denomina ingeniería inversa.}
 
-When repurposing a closed-box hardware and software system, the knowledge we need about its internals can be obtained either by having a complete written documentation of the target device, or by directly experimenting with it. This experimentation is called reverse engineering and can be driven by several activities and tools. This is the method we used for this case study.
+When repurposing a closed-box hardware and software system, the knowledge we need about its internals can be obtained either by having complete written documentation of the target device, or by directly experimenting with it. This experimentation is called reverse engineering, and this is the method we used for this case study.
 
 \nota{Esto plantea la inquietud acerca de la legalidad 
 del proceso, debido a las posibles restricciones en las licencias de uso de cada producto
@@ -603,7 +607,8 @@ siempre que el producto haya sido adquirido legalmente.}
 As reverse engineering happens to be illegal in some countries, a question is raised 
 about the legal status of our procedure. In our particular case, the goal in using 
 reverse engineering is exactly to reuse the hardware for a different purpose. This goal
-matches the terms in the act \emph{Ley Argentina N° 24.240 de Defensa del Consumidor}, which allows this action provided the product has been purchased legally.
+matches the terms in the act \emph{Ley Argentina N° 24.240 de Defensa del Consumidor}, which 
+does not resctrict this action provided the product has been purchased legally.
 
 
 
@@ -629,7 +634,7 @@ Ya que, en conjunto con el microprocesador, suelen dar una visión
 global de cómo inicia o funciona el sistema.
 }
 
-We also need to know about other components existing in the system. Coming after the CPU, most important components are memory modules (RAM and Flash types) and communication modules (such as serial or USB). These devices, together with the CPU, give an overview to what the boot process or operational regime of the system will be like.
+We also need to know about other components existing in the system. After the CPU, the most important components are memory modules (RAM and Flash types) and communication modules (such as serial or USB). These devices, together with the CPU, give an overview to what the boot process or operational regime of the system will be like.
 
 \nota {En la práctica, la arquitectura de un sistema embebido particular puede conocerse desmontando
 la placa del circuito impreso de la caja exterior. Esto posibilita
@@ -641,20 +646,20 @@ A este tipo de documentación se conoce como hoja de datos, o
 en algunos casos (como el de las memorias o CPU) manuales de programación
 del chip.}
 
-In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach its public documentation. This documentation is known as data sheets or, sometimes, programming manuals.
+In practice, the architecture of an embedded system can be known by detaching the circuit board from the enclosing case. This enables us to visually inspect and list the main system components. Most of the time, from this listing we can get the needed ID of components or chips so as to reach their public documentation, i.e., data sheets, programming manuals, etc.
 
 
 \nota { 
 En nuestro caso de estudio, al desmontar el ENTC-1000 (ver la Figura ~\ref{fig:placa-encore} )
 , identificamos
-un SOC Cirrus Logic \copyright EP3907A como el componente principal,
+un SOC Cirrus Logic EP3907A como el componente principal,
 que contiene un procesador central de arquitectura ARM, modelo ARM920T
 a una velocidad de 200Mhz.
 Además, la placa presenta dos módulos de memoria SDRAM Samsung de 32MB cada uno, y un modulo
 de memoria Flash embebida INTEL de 16MB.
 }
 
-As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a \copyright Cirrus Logic EP3907A SOC as the main component. This chip encloses an ARM920T main processor running at 200MHz. The board also holds two 32MB Samsung SDRAM memory modules and one 16MB Intel Flash embedded module.
+As we disassembled the ENTC-1000 (see Figure ~\ref{fig:placa-encore}), we identified a Cirrus Logic EP3907A SOC as the main component. This chip contains an ARM920T main processor running at 200 MHz. The board also holds two 32 MB Samsung SDRAM memory modules and one 16 MB Intel Flash embedded module.
 
 
 \begin{figure}
@@ -676,7 +681,7 @@ Estos diseños son muy útiles a las empresas que utilizan el SOC de Cirrus,
 ya que lo pueden tomar como diseño de referencia para sus circuitos particulares.
 }
 
-Although Encore does not public any documentation, Cirrus Logic does. Detailed documentation of the Cirrus Logic 3907 SOC can be found on Cirrus Logic web site \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for experimental lab boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
+Although Encore does not publish technical documentation about this board and its software, Cirrus Logic does. Detailed documentation of the Cirrus Logic 3907 SOC can be found on the Cirrus Logic web site \cite{cirrus}. Cirrus Logic also distributes programming software and Linux source code for experimentation. Our search was completed by finding documentation for evaluation boards published by Cirrus Logic. These design papers are very useful to firms employing Cirrus Logic's SOC, as they can take them as a reference design for their own developments.
 
 \subsection{Software architecture}
 
@@ -701,10 +706,10 @@ de muchas de las utilidades  básicas de UNIX (ls, cp, etc.).
 }
 
 \begin{itemize}
-\item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}. Other bootloaders are closed source boot managers.
+\item A bootloader for an embedded system, usually Das U-Boot \cite{uboot}.
 \item A Linux kernel, or, when the system lacks a memory management unit (MMU), a
 $\mu$Clinux) kernel \cite{linux, uclinux}.
-\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a Busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic UNIX utilities like ls, cp, etc.
+\item A minimalistic filesystem containing, at the very least, a C library (usually uClibc or eglibc) and a Busybox shell \cite{busybox}. Busybox is a small executable program optimized for embedded systems. Busybox is capable of performing roughly the same work as many basic Unix utilities like ls, cp, etc.
 \end{itemize}
 \nota {
 Algunas veces existe un cuarto componente de software, que son las aplicaciones
@@ -717,7 +722,7 @@ al código fuente). En nuestra experiencia con el ENTC-1000 no encontramos drive
 de código cerrado, por lo que este punto está fuera del alcance de este artículo. 
 }
 
-Sometimes a fourth software component set is found in the system. These are the vendor's own applications and hardware drivers. Vendors' applications are seldom of interest for our research; however, drivers are of prime importance. If closed source drivers are present in the system, then the work of preparing an embedded Linux system supporting the whole hardware will be utterly difficult, due to the lack of access to source code. In our experience with ENTC-1000 we did not find any closed source drivers, so this issue is beyond the scope of this article.
+Usually a fourth software component set is found in the system. These are the vendor's own applications and hardware drivers. Vendors' applications are seldom of interest for our research; however, drivers are of prime importance. If closed source drivers are present in the system, then the work of preparing an embedded Linux system supporting the whole hardware will be utterly difficult, due to the lack of access to source code. In our experience with ENTC-1000 we did not find any closed source drivers, so this issue is beyond the scope of this article.
  
 \nota{
 El trabajo realizado en este punto fue la preparación
@@ -725,7 +730,7 @@ de dos sistemas Linux embebidos completos de reemplazo: Amstrong y emDebian.
 La documentación para preparar sistemas Linux embebidos es amplia y públicamente
 disponible (referencias). Además, existen decenas de
 distribuciones Linux para embebidos,
-o entornos de desarrollo de distribuciones Linux para embebidos 
+o entornos de desarrollo de distribuciones Linux para embebidos
 \footnote{No confundir distribución con entorno de desarrollo}. Estas herramientas
 facilitan la preparación de un sistema para un dispositivo específico.
 Algunas de estos proyectos son Openwrt, Buildroot, u OpenEmbedded (referencias).
@@ -735,9 +740,12 @@ y operar los componentes de software para la arquitectura destino, se
 debe realizar un análisis de si es posible o no modificar el firmware original.
 }
 
-The work done at this stage was preparing two complete replacement embedded Linux systems: Amstrong and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}. There are dozens of Linux distributions for embedded systems, or development environments for embedded systems. With these tools, preparing a system targeted to a specific device is an easier task. Some of these projects are Openwrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
+At this stage, we prepared two complete replacement embedded Linux systems: Ångström (using OpenEmbedded) and emDebian. The documentation for preparing embedded Linux systems is broadly and publicly available \cite{emb1, emb2, freeelectron}, and there are also dozens of Linux distributions or development environments for embedded systems. 
+Even when the process of preparing a embedded Linux system targeted to a specific device is not 
+straightforward, these development tools help on reducing complexity of the task.
+Some of these projects are OpenWrt, Buildroot or OpenEmbedded \cite{openwrt, openembedded, buildroot}.
 
-Once we have the knowledge of how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine whether the original firmware can be modified.
+Once we know how to build (i.e. compile, configure) and operate the software components for the target architecture, we must determine how the original firmware can be modified.
 
 \section{Software access}
 
@@ -765,7 +773,8 @@ por lo que, aunque no exista un conector expuesto en la placa, generalmente
 está presente.
 }
 
-Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a predetermined serial interface. The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is part of the SOC, so that, even when there is no exposed connector in the board, the controller is there. 
+Most embedded systems have a UART (Universal Asynchronous Receiver-Transmitter) controller, which is used mainly for debugging and development, but is also used by Linux as a default serial console.
+The UART translates information in parallel form, coming from the system bus, to data in serial form, so as to be transmitted through different ports. In embedded systems, usually the UART controller is part of the SOC, so that, even when there is no exposed connector in the board, the controller is there. 
 
 \nota{
 En nuestro trabajo con el ENTC-1000, los contactos (en inglés ``pins'') del UART
@@ -775,8 +784,9 @@ de tierra (GND) y de voltaje de corriente directa (VCC). Luego, utilizando
 el contacto tierra, se probaron los demás contactos expuestos en la placa,
 para identificar el contacto de transmisión (TX), y recepción (RX).
 }
-During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified the ground (GND) and voltage (VCC) pins by means of a multimeter and an oscilloscope. Then, using the GND pin, the rest of the exposed pins in the board were tested to identify transmission (TX) and reception (RX) lines.
-   
+During our work with ENTC-1000, the pins of the UART were not identified or labeled, but present. We identified several ground (GND) and voltage (VCC) pins by means of a multimeter. Then, using the GND pin and multimeter, the rest of the exposed pins in the board were tested to try to identify transmission (TX) and reception (RX) candidate lines.
+  
+
 \nota {Para corroborar que los contactos del UART son los correctos, se conectó
 el conversor de nivel RS-232 a los mismos, y luego a una PC.
 Finalmente, se utilizó el programa de comunicaciones minicom para
@@ -785,7 +795,13 @@ no se conocía a que velocidad de transmisión se encuentra operando
 el firmware original.
 }
 
-To establish that the UART lines we had found were the right ones, we connected an RS-232 level converter to them, and then to a PC. We finally used the minicom communications program to obtain some visual information. This information was, however, meaningless as the operating serial transmission speed for the original firmware was unknown. 
+To establish which pins we had found were the right UART lines, we
+connected an RS-232 level converter to them, and then to a PC.
+We finally used the minicom communications program to obtain some
+visual information and confirm, using the Cirrus EP9307 Boot process, the correct UART lines. 
+This process is further explained in section ``Communication with the CPU''.
+
+
 
 \subsection{Taking control}
 \nota {
@@ -812,7 +828,16 @@ el acceso al interprete de comandos mínimo, que algunos gestores proveen.
 Por lo que se continuó a mas bajo nivel, para obtener acceso a niveles
 anteriores a la ejecución del gestor de arranque.}
 
-The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two test cases did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
+We first tried to get root access though TCP/IP but we were unable
+to find a service we could exploit to that end.
+For the boot manager, we seek to access the minimal command
+interpreter offered by some boot managers.
+This was also unsuccessful because the boot manager does not accept 
+input over the serial line.
+We therefore went on deeper in the architecture, trying to reach for operating
+stages earlier to the execution of the boot manager.
+
+% The goal at the first two stages is to get root access to the closed Linux system. For the boot manager, we seek to access the minimal command interpreter offered by some boot managers. The first two tests did not yield useful results. We went on deeper in the architecture, trying to reach for operating stages earlier to the execution of the boot manager.
 
 \nota {
 Leyendo la documentación obtenida de la arquitectura y programación del hardware,
@@ -820,14 +845,17 @@ se analizó el proceso de reinicio del hardware y como la CPU interna
 del ENTC-1000 comienza a ejecutar instrucciones.
 }
 
-Using the available hardware architecture and programming documentation, we analyzed the hardware reset process and the way the ENTC-1000 internal CPU begins executing instructions.
+Using the available hardware architecture and programming documentation,
+we analyzed the hardware reset process and the way the ENTC-1000
+internal CPU begins executing instructions.
 
 \subsection*{Communication with the CPU}
 
 \nota{El SOC Cirrus EP9307 tiene una ROM de arranque\footnote{boot ROM}.
 En un reinicio (en inglés reset) del SOC, la CPU (ARM920t) comienza a ejecutar código en la dirección cero.}
 
-As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. On system reset, the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM, thus mapping it to address 0 to be executed.
+As stated in the documentation at hand, Cirrus Logic EP9307 SOC has a Boot ROM memory which supports taking the UART as a program source to initialize the processor. The boot process is as follows: the ARM920t CPU begins the execution of code at address 0. The SOC honors the ``Hardware Configuration'' controls to select the device that appears at address 0. We found a switch labeled ``boot mode select'' on the ENTC-1000 board, with which we experimented to select Boot ROM.
+% , thus mapping it to address 0 to be executed.
 
 \nota{Por otro lado, el manual del SOC indica que éste utiliza los controles de la ``configuración del hardware'' para seleccionar qué dispositivo aparece en la dirección ``cero''. Al observar la placa ENTC-1000, se identificó un interruptor etiquetado como ``boot mode select''. Por lo que se procedió a experimentar con el mismo, con el objetivo de seleccionar el Boot ROM y así mapearlo a la dirección cero, y por ende, lograr su ejecución. }
 
@@ -839,7 +867,9 @@ con el software de la Boot ROM, operan en un modo llamado
 bytes para ser ejecutados por la CPU. Internamente, en un evento de reinicio,
 estos componentes (CPU y Boot ROM) trabajan de la siguiente manera:}
 
-Upon a system reset, Cirrus Logic EP9307 will work together with the Boot ROM software in a mode called ``serial download'' which allows us to send some code bytes to be executed by the CPU. The sequence of steps is as follows:
+Once started, the code in the Boot ROM enters a mode called 
+``serial download'' which allows us to send some code bytes to be executed by the CPU. 
+The serial download performs the following steps:
 
 \nota{\begin{enumerate}
 \item Se inicializa el UART1 a 9600 baudios, 8 bits, sin paridad, 1 bit de stop.
@@ -863,9 +893,9 @@ los 2048 bytes leídos.
 \item Read 2048 characters from UART1\nota{, store these in the internal Boot Buffer \nota{ (alias for the Ethernet Mac buffer)}}
 \begin{itemize}
 	\item If our serial peer does not send 2048 bytes, go on with boot process using internal Flash  memory
-	\item If serial peer sent 2048 bytes, store them in internal buffer, output ``\textgreater'' through serial link to indicate successful read
+	\item If the serial peer sent 2048 bytes, store them in a internal buffer, output ``\textgreater'' through the serial link to indicate a successful read
 \end{itemize}
-\item Turn on Green LED
+\item Turn on green LED
 \item Jump to the start of the internal Boot Buffer
 \end{enumerate}
 
@@ -876,7 +906,7 @@ por lo que pudimos confirmar varias hipótesis. En principio
 toda la conexión física entre la placa ENTC-1000 y nuestra PC era funcional.
 También a nivel de comunicación vía software.}
 
-After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed some hypotheses: the wired connections between PC and board were functional, and the Boot ROM code was being executed. After that, it was able to download a specific program as the first code to be executed by the ARM core.
+After several reset tests, the minicom communication program on the PC got the ``\textless'' character. This confirmed that our understanding of the system was correct this far: the wired connections between PC and board were functional, and the Boot ROM code was being executed. After that, we were able to download a specific program as the first code to be executed by the ARM core.
 
 
 \nota{Posteriormente, preparamos un pequeño programa en lenguaje ensamblador que no supere
@@ -917,16 +947,17 @@ del software de arranque, ya que está especificado en el manual
 de la programación del SOC.}
 
 We loaded our small probe program through the serial download feature of 
-the Boot ROM process. The ``CRUS'' token was found on the 
-Flash memory at the address 0x60001000. As the CPU, during the boot process, will try to execute any code written 
-after that memory location, it was a proper place 
+the Boot ROM process. The ``CRUS'' token was found in the 
+Flash memory at the address 0x60001000. As the CPU, during the boot process, will try to
+execute any code written 
+after that memory location, it was a good place 
 to locate the bootloader component software.
 
 \nota{De una manera similar, tuvimos acceso al conocimiento de
 las direcciones físicas de la memoria RAM.}
 
 Our last goal during this stage was to find the last valid physical 
-address for RAM memory. After modifying our probe program to do some few trial and error tests, the program found that limit, and we modified the U-Boot bootloader RAM settings accordingly.
+address for RAM memory. After modifying our probe program to do some a few trial and error tests, the program found that limit, and we modified the U-Boot bootloader RAM settings accordingly.
 
 \nota{
 \subsection{Iniciando un Sistema Linux Embebido Alternativo}
@@ -968,27 +999,39 @@ Knowing how to execute a small program after a
 hardware reset event, and having the RAM and Flash
 addresses, we were ready to deploy an alternative Linux
 embedded system over the device. Our first step to accomplish
-this was to prepare a small bootloader to be sent into RAM through the serial line. We chose U-Boot, configured for this
-particular device.
+this was to prepare a bootloader and Linux kernel to be sent into RAM through the serial line. 
 
-After we successfully executed the bootloader, and were
-logged into its minimal -but powerful enough- command line,
-we had to decide how to re-layout software within the Flash
-memory, hence modifying the original software, to achieve our
-goal.
+We chose U-Boot as bootloader, built 
+using the instructions found for the Sim.One board \cite{sim1},
+but configured for this particular device.
 
-Using U-Boot TFTP \footnote{Trivial File Transfer Protocol} utilities and networking capability, we
-transferred a Linux 3.X kernel \footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
+When looking for a suitable current kernel, we tried to find for existing support
+for devices using the same chip. We found the configuration for EDB9307A,
+which is a development board produced by Cirrus Logic.
+When we built a kernel with this configuration and ran it, it did not boot on once.
+But, after we modified the SDRAM base address configuration option, we were
+pleasantly surprised that it not only booted on the first try, but also that it supported all
+the peripherals of the ENTC-1000.
+This suggests that Encore simply copied the reference design without introducing any major changes.
+
+When bootloader and kernel Linux were ready, we successfully
+transfered and executed the bootloader, and were
+logged into its minimal -but powerful enough- command line.
+However, we still had to decide how to layout out software within
+the Flash, which would then replace the original firmware.
+
+Using U-Boot's TFTP\footnote{Trivial File Transfer Protocol} utilities and networking capability, we
+transferred the Linux 3.1.1 kernel built\footnote{Latest available at the time the article was written is 3.8.8, original was 2.4} to a particular address in RAM.
 Now the two main pieces of software (bootloader and kernel) required to boot a system
-were ready on RAM.
+were ready in RAM.
 
 The next step was to copy RAM content over the Flash.
-For this we used a copy (cp.b) command available in U-Boot command line, the physical RAM addresses where U-Boot and the Linux kernel were loaded, and the start address for Flash memory (found when probing for the “CRUS” token as described in the previous section).
+For this we used a copy (cp.b) command available on the U-Boot command line, the physical RAM addresses where U-Boot and the Linux kernel were loaded, and the start address for Flash memory (found when probing for the “CRUS” token as described in the previous section).
 
 Finally, it is worth mentioning that we modified the U-Boot configuration in Flash so as to load and boot automatically from the 
 address where the Linux kernel was saved on Flash. The Linux kernel we built was prepared to load the root file 
 system (the last remaining major piece of software needed for a functional 
-system) from a usb storage device. 
+system) from a USB storage device. 
 As a result of this process, we modified the Encore
 ENTC-1000 firmware, thus offering at least two new interesting features:
 
@@ -998,7 +1041,7 @@ ENTC-1000 firmware, thus offering at least two new interesting features:
    Linux operating systems from a USB port.
 \end{itemize}
 
-This functionalities lead us to a wide range of options to
+These functions lead us to a wide range of options to
 reuse the Encore ENTC-1000 device. From here we are
 ready to start our programming tests based on Linux embedded
 systems, without being required to go through the troublesome
@@ -1062,10 +1105,10 @@ un microcontrolador y sensores.
 
 \begin{itemize}
 \item Print server for USB printers without networking capability. 
-\item DHCP server for small internal subnets at University. 
-\item Brain for research robot, tied to a microcontroller and a set of sensors. 
+\item DHCP server for small internal subnets at the University. 
+\item Brain for a research robot, tied to a microcontroller and a set of sensors. 
 \item Embedded Linux system for learning and experimentation.  
-\item DNS experimental server.  
+\item DNS server in a lab network.  
 \end{itemize}
 
 \nota{
@@ -1083,6 +1126,10 @@ y la arquitectura de los sistemas embebidos.
 As future work, we consider the fact that there may be still some time ahead until the acquisition of specialized hardware for embedded systems can be made affordable to public educational institutions. Until that moment can be reached, we aim to build standardized guidelines required for a methodology allowing the reuse of commercial Linux embedded systems. Even when such hardware is available  for development, reverse engineering 
 experience on commercial Linux embedded systems can be thought as 
 a method to encourage learning about the architecture and functioning of embedded systems. 
+
+The source code links and the
+documentation for the software upgrade process explained can be obtained
+at {\footnotesize \texttt{http://labti.fi.uncoma.edu.ar/trac/wiki/HackingEncore}}.
 
 %fin de las conclusiones
 
@@ -1107,33 +1154,34 @@ S.~Heath, \emph{Embedded Systems Design}, Second Edition.\hskip 1em plus
 % Steve Heath - ISBN 0 75065546 1
 
 \bibitem{electrolux}
-\copyright Electrolux Brazi, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
+Electrolux Brazil, \emph{The Electrolux Infinity I-Kitchen refrigerator}.\hskip 1em plus
   0.5em minus 0.4em\url{http://group.electrolux.com/en/linux-community-touched-by-the-touchscreen-on-electrolux-fridge-8873/}
 
 \bibitem{android}
-\copyright Google, \emph{Android Devices}.\hskip 1em plus
+Google, \emph{Android Devices}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.android.com/devices/}
 
 \bibitem{tplink}
-\copyright TP-LINK, \emph{3g/4g Home Routers}.\hskip 1em plus
+TP-LINK, \emph{3g/4g Home Routers}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.tp-link.com/en/products/?categoryid=202}
 
 \bibitem{camargo1}
-C. I. C. ~Camargo, \emph{Metodologia Para la Transferencia Tecnologica en la Industria Electronica Basada en Software Libre y Hardware Copyleft. In Proceedings of the Congreso Argentino de Sistemas Embebidos 2012 Libro de Trabajos, pages 111-116}.\hskip 1em plus
+C. I. C. ~Camargo, \emph{Metodologia Para la Transferencia Tecnologica en la Industria Electronica Basada en Software Libre y Hardware Copyleft. Proceedings of the Congreso Argentino de Sistemas Embebidos 2012 Libro de Trabajos, pages 111-116}.\hskip 1em plus
   0.5em minus 0.4em\relax 2012. ISBN: 978-987-9375-82-5 
 
 \bibitem{camargo2}
-C. ~Furber, \emph{Implementacion de Sistemas Digitales Complejos Utilizando Sistemas Embebidos. In Proceedings of XI Workshop de Iberchip}.\hskip 1em plus
+C. ~Camargo, \emph{Implementacion de Sistemas Digitales Complejos Utilizando Sistemas Embebidos. Proceedings of XI Workshop de Iberchip}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.iberchip.net/iberchip2005/articles/62/62--ccamargo-iberchip_05.pdf}.
   0.5em minus 0.4em\relax 2005. ISBN 959-261-105-X
 
 \bibitem{castillo1}
 % I. ~Castillo, C. ~Camargo, and C. ~Perez, \emph{Automatización ́de un puente grúa ́a a escala, mediante una plataforma embebida la cual soporta multiprogramación}.\hskip 1em plus
 % I. ~Castillo, \emph{Automatizacion ́de un puente grua ́a a escala mediante una plataforma embebida la cual soporta multiprogramacion}. \hskip 1em plus
-I. ~Castillo, \emph{Automatizacion de un puente grua a escala, mediante una plataforma embebida la cual soporta multiprogramacion}. \hskip 1em plus
-   0.5em minus 0.4em\relax 2006.
+C. A. ~Pérez Quintero, \emph{Automatizacion de un puente grua a escala, mediante una plataforma embebida la cual soporta multiprogramacion. Proceedings of XII Taller IBERCHIP, 2006}. \hskip 1em plus
+  0.5em minus 0.4em\url{http://www.iberchip.net/iberchip2006/ponencias/119.pdf}
 
 \bibitem{encore}
-\copyright Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
+Encore Electronics Inc, \emph{Encore Thin Client ENTC-1000}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.encore-usa.com/ar/cat/Thin-Client/Encore-Thin-Client}
 
 
@@ -1152,8 +1200,8 @@ S.B.~Furber, \emph{ARM System-on-chip Architecture}, Second Edition.\hskip 1em p
 
 
 \bibitem{cirrus}
-\copyright Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
-  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx\_Users\_Guide\_UM1.pdf}
+Cirrus Logic, \emph{EP93xx User's Guide}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://www.cirrus.com/en/pubs/manual/EP93xx_Users_Guide_UM1.pdf}
 
 \bibitem{uboot}
 Denx, \emph{U-Boot bootloader}.\hskip 1em plus
@@ -1169,7 +1217,7 @@ uClinux, \emph{Embedded Linux/Microcontroller}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.uclinux.org}
 
 \bibitem{busybox}
-Busybox Project, \emph{iThe Swiss Army Knife of Embedded Linux}.\hskip 1em plus
+Busybox Project, \emph{The Swiss Army Knife of Embedded Linux}.\hskip 1em plus
   0.5em minus 0.4em\url{http://www.busybox.net/}
 
 \bibitem{emb1}
@@ -1196,6 +1244,10 @@ OpenEmbedded Project, \emph{OpenEmbedded is a build framework for embedded Linux
 \bibitem{buildroot}
 Buildroot Project, \emph{Making Embedded Linux Easy}.\hskip 1em plus
   0.5em minus 0.4em\url{http://buildroot.uclibc.org/}
+
+\bibitem{sim1}
+Sim.One, \emph{The Simplemachines Sim.One Single-Board Computer}.\hskip 1em plus
+  0.5em minus 0.4em\url{http://code.google.com/p/sim1/}
 
 
 

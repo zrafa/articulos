@@ -1,0 +1,100 @@
+target: gente de software libre / ciencias de la computación. 
+
+¿Se pueden re-utilizar los chips de la simm? Habiendo una disponibilidad vigente 
+de simms en la región.
+
+sim: maximo 16M de ram / 36 contactos  - 8 x 2M c/u 
+\---> sencillos de des-soldar/soldar los chips individuales no la simm completa
+
+free rtos (free real time operating system) --> software libre? 
+so mas pequeño utilizado en la industria para sistemas que manejen 
+mas de un proceso. Tiempo real, muy chiquito, manejo de interrupciones. 
+
+con 2M de RAM sobra para free rtos
+linux embebidos con 4m arranca. Con dos chips ya podemos correr un so 
+mas potente, uclinux que no mmu. 
+
+por ejemplo una solución que necesite usb, no se si con free rtos podria 
+utilizarce. 
+
+Seria recomendable para soluciones que necesiten más ram de lo que trae
+el microcontrolador
+
+simm controlada con microcontrolador  (arduino?)
+uso real:
+
+Re uso de hardware obsoleto (reciclado) para el desarrollo de open hard actual. 
+
+Background 
+Cuál es la situación actual de los desarrolladores de hard embebido en la region
+
+Why
+	consumo de energía (green computer)
+		\----> 	qué hacen con los componenetes viejos y el uso de 
+			energía otros países.
+	reciclado de electronica 
+	disponibilidad de componenetes en el mercado / costo 
+	open hardware 
+
+estre trabajo aims
+
+
+method used 
+
+results 
+	comparamos con otro trabajo 
+	medimos performance del micro usando la ram 
+	(por ejemplo que el 2% de uso de micro es para referenciar ram)
+
+conclusiones
+	cuál es el impacto de controlar la memoria (gráfico)
+
+averiguar maximo y mínimo del cacic
+
+
+
+Introduction
+
+
+Green Computing, green IT. 
+http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119970059.html#instructor
+
+Embedded systems: 
+New and powerful microcontrollers, good enough fou many custom applications 
+like robotics. Which requires less than the functionality provided by a processor (which complexity may be even not a desired feature), but more than basic combinational circuits. 
+
+FreeRTOS 
+Take adventage of general purpose operating systems like GNU/Linux, which is highly portable and widely spread (reducing the learning curve to use them). uCos and uclinux.  
+
+http://archive.linuxgizmos.com/ecos-vs-uclinux-which-is-best-for-your-embedded-target-a/
+
+
+Measurement of environmental impact of each human activity has become part of 
+every agenda. Computer science field is not absent in this regard; the terms 
+"green computing", or "green IT" has been around since few years ago, gaining
+ more and more importance everyday. [San Murugesan]
+
+We came accross re-thinking the recycling processes, not only because of the 
+environmental impact, but to address our current (_local_) problematic about
+designing new and powerful solutions with the available hardware; that is 
+coming from the local market (which is not quite open) and/or using existing 
+hardware; reducing costs as much as possible. 
+
+
+ 
+Que hicimos
+
+Consultamos con los alumnos del curso de administracion de sistemas si tienen
+simm rams disponibles.
+El 25% del alumno contesta afirmativamente y provee simm rams.
+Se toma uno de los simms y se sueldan N patitas.
+Se lo conecta como muestra el proyecto en github, a un microcontrolador (atmega328)
+Se programa dos versiones de software (una en C y la otra en assembler)
+para controlar la simm y proveer
+una API para utilizar la RAM extra disponible, con un simple read/write a
+nivel de bytes.
+Se realizan tests de ambas versiones.
+Se verifica que las simms pueden ser reaprovechadas con muy poco consumo
+de recursos del microcontrolador que las controla en los tests (medir cuanta
+ram y cpu del micro se utilizan)
+
