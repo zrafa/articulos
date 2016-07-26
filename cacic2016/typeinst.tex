@@ -1,0 +1,628 @@
+
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+
+\usepackage[utf8x]{inputenc}							
+\usepackage[spanish]{babel}							
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{fix-cm}
+
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\usepackage{url}
+\urldef{\mailsa}\path|{rafa, mtl, rdc, frank.holzwarth,|
+\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@fi.uncoma.edu.ar| 
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Arquitectura e Implementación de Equipamiento Prototipo de Bajo Costo para la Medición del Diámetro de Fibras de Cabra en Campo}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Rafael Zurita
+% \thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+\and Miriam Lechner\and Rodolfo del Castilo\and Eduardo Aisen}
+%\and Miriam Lechner\and Rodolfo del Castilo\and Eduardo Aisen\and\\
+%Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
+%Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
+%
+\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{Facultad de Informática y Facultad de Agronomía,\\ Universidad Nacional del Comahue\\
+Buenos Aires 1400, Neuquén, Argentina\\
+\mailsa\\
+\mailsb\\
+\mailsc\\
+\url{http://faiweb.uncoma.edul.ar}}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+
+\toctitle{Lecture Notes in Computer Science}
+\tocauthor{Authors' Instructions}
+\maketitle
+
+
+\begin{abstract}
+The abstract should summarize the contents of the paper and should
+contain at least 70 and at most 150 words. It should be written using the
+\emph{abstract} environment.
+\keywords{We would like to encourage you to list your keywords within
+the abstract section}
+\end{abstract}
+
+
+\section{Introducción}
+
+Los pequeños productores en el sistema agroecológico del norte de la Provincia de Neuquén son los crianceros. A nivel local la palabra criancero denomina a un amplio conjunto de productores familiares en el que predominan productores campesinos o con rasgos campesinos y que se dedican fundamentalmente a la cría de caprinos y ovinos (Bendini y col., 2002). Viven de la producción de fibras textiles de origen animal (principalmente caprino) en el norte neuquino, y no disponen de los medios técnicos y el asesoramiento profesional requerido para: i) orientar la selección animal a la producción de vellones mas pesados y calidades de fibra de valor superior; ii) establecer objetivamente los parámetros de la calidad de la fibra, de manera de poder clasificarla para optimizar la comercialización; iii) negociar con el comprador el precio de mercado que la calidad de la fibra amerita; y iv) orientar la producción ganadera hacia aquellos biotipos mejor adaptados a la naturaleza de la región, para así poder frenar y eventualmente revertir el proceso de desertificación que las afecta.
+
+Actualmente la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
+
+La incorporación de una selección y clasificación objetiva en origen (tanto sobre el animal como en planta de acopio) de los vellones en bruto (por finura, largo, rinde y otros), requiere del diseño, elaboración y puesta en marcha de nuevos dispositivos para estos fines. Actualmente se dispone de algunos equipos para la determinación de finura (desarrollados para lana y de alto costo) como el OFDA 2000, el WoolView 20/20, el LaserScan, air flow, lanámetro, entre otros. Éstos no proveen fácilmente datos de finura de down (fibras finas) y guard hair (fibras gruesas), ni de rinde al descerdado confiables. Si bien algunos se han diseñado para trabajo a campo, la preparación de las muestra requiere de un tiempo y adiestramiento considerables. Es importante aclarar que la estima del rinde al descerdado que suministra el dispositivo OFDA es solo aproximada y está sujeta a la calidad de presentación del material; en el caso de estar afieltrado en parte, el error de estima es importante (McGregor \& Butler, 2008).
+
+La selección objetiva de animales de alta producción de fibra (especialmente cashmere), permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales.. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir  el grave problema de la desertificación.
+
+
+\section{Arquitectura}
+
+\subsection{Arquitectura de Hardware}
+
+La arquitectura del sistema consiste de dos componentes principales :
+El dispositivo portatil, el cual contiene un microscopio digital con led de contraste, y un dispositivo de gatillo que realiza prensa sobre las fibras y envía una señal de disparo.
+El hardware embebido que realiza el procesamiento de la imagen digital y reporta los resultados.
+
+La interfaz entre el dispositivo portatil y el hardware embebido es USB 2.0. El dispositivo portatil cuenta con un microscopio de 400 ampliaciones, modificado y calibrado insitu. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{prototipo}
+\caption{Equipamiento prototipo UNCOMA
+italics, in parentheses, as shown in this sample caption.}
+\label{fig:prototipo}
+\end{figure}
+
+El mecanismo de gatillo en el dispositivo portatil realiza varias tareas en un unico paso. Al gatillar, el operador prensa el acrilico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
+En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imágen digital es obtenida desde el dispositivo portatil a través del  la interfaz USB 2.0.
+Un diagrama de bloques del hardware embebido es mostrado en la Figura 1.2
+
+
+
+Block Diagram
+Features
+CPU ARM Cortex™-A8 1.5GHz I
+Memory 512MB de 32-bit DDR3 RAM
+4GB NAND FLASH
+WiFi 802.11b/g/n network card. 
+4 SDIO interfaces (SD 3.0, UHI class)
+USB 2.0
+GPIO
+
+FOTO DEL MICROSCOPIO Y EL HARDWARE EMBEBIDO
+
+La facilidad de manejo y peso del dispositivo portatil de mano posibilita que las muestras de fibras a ser procesadas no deban ser preparadas de antemano. El operador puede tomar capturas directamentes sobre el animal en campo.
+
+
+\subsection{Arquitectura de Software}
+
+
+La arquitectura de software puede observarse en la Figura 2.
+A bajo nivel, el hardware embebido está controlado por el sistema operativo Debian. Particularmente, los principales drivers que se utilizan del kernel Linux son el universal video class (UVC) y la interfaz de E/S de puertos generales (GPIO) del núcleo.
+A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portatil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imágen de fibras.
+Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portatil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
+El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo line segment detector.
+La resolución de la imagen es de 640x480 pixels, en donde 1 pixel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
+A continuación se ejecuta un filtro de médula para quitar parcialmente las médulas que pudieran existir en las fibras capturadas por la imagen. El filtro de medula se realiza calculando la transformada de distancia para pixeles que se encuentren debajo del umbral de grises que representan médulas. Si se detecta una medula con este análisis se reemplaza la zona por pixels que contengan un color por debajo del umbral de fibra.
+Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [REFERENCIA] para obtener un conjunto de segmentos de linea que representan a la imagen original. El algoritmo de obtención de diámetros de fibras principal utiliza esta representación como entrada, y su descripción es como sigue:
+
+Por cada segmento de linea en el conjunto :
+     		Se calcula la ubicación de 3 puntos (x,y) en el segmento: principio medio y final. 
+     		Por cada punto :
+Se calcula la función de la recta perpendicular al segmento original que cruza el punto. Se recorre todos los segmentos restantes y se encuentran aquellos que sean paralelos al segmento original y que la perpendicular los intersecta.
+Si el segmento perpendicular desde el punto origen hasta la intersección contiene puntos que no pertenecen a fibras se descarta.
+Si no se descarta entonces el segmento de linea paralelo encontrado es opuesto al original en la fibra a la cual pertenecen, y se procede a realizar el calculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
+		SI al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
+	Al final del procesamiento de segmentos de linea se realiza el cálculo de media de diametro general, la desviación estandar y la varianza.
+	Los resultados son emitidos por la salida estandar, y de acuerdo a los valores, se activan diferentes señales digitales GPIO en el hardware embebido, para informar al usuario el resultado a través de 5 LEDs brillantes. Los LEDs se encienden de acuerdo al siguiente rango de valores :
+Si el resultado es < 17um se enciende el LED 1
+Si el resultado se encuentra entre 17um y 22um se enciende el LED 2
+Si el resultado se encuentra entre 22um y 30um se enciende el LED 3
+Si el resultado se encuentra entre 30um y 40um se enciende el LED 4
+Si el resultado es > 40um se enciende el LED 5
+Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las ubicaciones de las mediciones realizada por el software sean correctas). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura}.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{captura}
+\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtendia desde el microscopio. A la derecha una represantación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta represantación visual es muy util para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
+}
+\label{fig:captura}
+\end{figure}
+
+
+
+En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
+El trabajo propuesto en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
+La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran que este análisis no se distorsiona con el entrecruzamiento, y no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
+
+
+	
+
+\subsubsection{Algoritmo e implementación para la medición del diámetro de fibra a través de análisis digital de imágenes}
+
+Acá explicamos lo que hace nuestro prototipo :
+Toma una foto a traves del driver linux uvc
+La convierte a pgm
+La analiza con lsd modificado:
+1. Quitamos la medula
+2. Lsd
+3. Calculamos los diametros :
+a. Como el paper del chino Shien Li
+
+3. Implementación?
+Podemos dar detalles de que está escrito en ANSI C y es portable. Etc? O colocamos lo de implementac               x xión en Resultados?
+
+\section{Resultados}
+
+Para determinar la validez del prototipo se han realizado mediciones de tiempo y precisión.
+El orden del tiempo de ejecución del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que demore demasiado en obtener los resultados puede no ser indicado para un campo con mucho ganado. En caso de que el equipamiento demore demasiado en cada medición se requeriría un mayor numero de operarios y dispositivos, para realizar mediciones en paralelo; lo cual sería mas costoso.
+La precisión del resultado del análisis es la valuación mas importante, ya que un dispositivo que realiza mediciones incorrectas o muy poco precisas no es confiable.
+
+
+\subsection{Orden del Tiempo de Ejecución}
+En el gráfico X se observa el costo en tiempo de ejecución al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo ha sido observado mediante la herramienta GNU time, el cual ejecuta cada etapa y evalua los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante, aunque no así el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg].
+Durante el análisis de la imagen el mayor costo en tiempo de ejecución es el del algoritmo LSD, el cual es de orden de tiempo lineal [REFERENCIA]. Debido a que las fotos son siempre de la misma resolución y el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados) el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
+
+\subsection{Precisión del proceso de análisis}
+
+Para la obtención de resultados de precisión se analizan dos clases de mediciones realizadas: 
+\begin{itemize}
+\item mediciones con imagenes de fibras artificiales que contienen medidas conocidas a priori, y
+\item mediciones con 96 imágenes de muestras de fibras de un mismo mechón, utilizando el prototipo propuesto en este trabajo y el producto comercial WoolView 20/20. Las muestras se obtuvieron en ambos equipamientos independientemente.
+\end{itemize}
+
+\subsubsection{Medición de imágenes artificiales}
+
+Se han confeccionado mediante el software de manipulación de imágenes GIMP 74 imágenes de fibras artificiales. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada linea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixels de grosor y los 40 pixels. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
+En la figura X2 se observa lal medición realizada automaticamente para todas las imágenes por el prototipo, y tambien la media calculada manualmente. 
+
+\subsubsection{Resultados del método de medición de diámetro de fibra} 
+
+Para el análisis del software propuesto se realizó una comparativa de medición entre el prototipo UNCOMA y el equipamiento Woolview 20/20. 
+Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana con precision menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
+
+Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadísitica de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
+
+La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las mediciones acumuladas cada 10 mediciones. 
+
+En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
+El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones. El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones.
+
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{prototipovswv}
+\caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at
+$x_i$ and $x_j$ (\textit{left and right}) lead to the same summed estimate
+at $x_s$. This shows a figure consisting of different types of
+lines. Elements of the figure described in the caption should be set in
+italics, in parentheses, as shown in this sample caption.}
+\label{fig:prototipovswv}
+\end{figure}
+
+Utilizar el paper de diameterj para ver como escriben la parte de validar contra magenes virtuales. Podemos hacer imagenes “virtuales” de pelos con gimp, utilizando un pincel uniforme de diferentes diametros. De estas imágenes se sabe de antemano cual es el diametro. Luego las procesamos con nuestro prototipo para validar que las mediciones son correctas.
+
+
+Ver el ulti paper que mandó rodo, ,en donde comparar productos diferentes. Comparamos nuestro prototipo con woolview. Ver en otros papers (dos, no más) como comparan dos implementaciones diferentes.
+Nosotros tenemos 100 fotos tomadas de un mechon, tanto con el woolview como con nuestro prototipo. Decir cual es la diferencia de las mediciones entre los dos (que es menor a un micron, variancia, desvio estandar, etc)
+Comparamos tambien nuestro prototipo contra diameterJ. Acá hay que tunear algunas fotos. Porque diameterj “mide” tambien el diametro de las manchas y mugre, y afecta al valor final.
+
+Mostramos los tiempos de ejecución en el hardware real.
+
+\section{Conclusiones y discusión}
+Siendo la preparación de las fibras sobre el animal o en laboratorio un proceso que se encuentra en el orden de los minutos (, el tiempo observado en el análisis mediante el prototipo no es de un costo significativo, y ha sido aceptado  en las mediciones de prueba realizadas 
+
+\section{Trabajo Futuro}
+
+Referencias
+
+
+
+You are strongly encouraged to use \LaTeXe{} for the
+preparation of your camera-ready manuscript together with the
+corresponding Springer class file \verb+llncs.cls+. Only if you use
+\LaTeXe{} can hyperlinks be generated in the online version
+of your manuscript.
+
+The \LaTeX{} source of this instruction file for \LaTeX{} users may be
+used as a template. This is
+located in the ``authors'' subdirectory in
+\url{ftp://ftp.springer.de/pub/tex/latex/llncs/latex2e/instruct/} and
+entitled \texttt{typeinst.tex}. There is a separate package for Word 
+users. Kindly send the final and checked source
+and PDF files of your paper to the Contact Volume Editor. This is
+usually one of the organizers of the conference. You should make sure
+that the \LaTeX{} and the PDF files are identical and correct and that
+only one version of your paper is sent. It is not possible to update
+files at a later stage. Please note that we do not need the printed
+paper.
+
+We would like to draw your attention to the fact that it is not possible
+to modify a paper in any way, once it has been published. This applies
+to both the printed book and the online version of the publication.
+Every detail, including the order of the names of the authors, should
+be checked before the paper is sent to the Volume Editors.
+
+\subsection{Checking the PDF File}
+
+Kindly assure that the Contact Volume Editor is given the name and email
+address of the contact author for your paper. The Contact Volume Editor
+uses these details to compile a list for our production department at
+SPS in India. Once the files have been worked upon, SPS sends a copy of
+the final pdf of each paper to its contact author. The contact author is
+asked to check through the final pdf to make sure that no errors have
+crept in during the transfer or preparation of the files. This should
+not be seen as an opportunity to update or copyedit the papers, which is
+not possible due to time constraints. Only errors introduced during the
+preparation of the files will be corrected.
+
+This round of checking takes place about two weeks after the files have
+been sent to the Editorial by the Contact Volume Editor, i.e., roughly
+seven weeks before the start of the conference for conference
+proceedings, or seven weeks before the volume leaves the printer's, for
+post-proceedings. If SPS does not receive a reply from a particular
+contact author, within the timeframe given, then it is presumed that the
+author has found no errors in the paper. The tight publication schedule
+of LNCS does not allow SPS to send reminders or search for alternative
+email addresses on the Internet.
+
+In some cases, it is the Contact Volume Editor that checks all the final
+pdfs. In such cases, the authors are not involved in the checking phase.
+
+\subsection{Additional Information Required by the Volume Editor}
+
+If you have more than one surname, please make sure that the Volume Editor
+knows how you are to be listed in the author index.
+
+\subsection{Copyright Forms}
+
+The copyright form may be downloaded from the ``For Authors"
+(Information for LNCS Authors) section of the LNCS Website:
+\texttt{www.springer.com/lncs}. Please send your signed copyright form
+to the Contact Volume Editor, either as a scanned pdf or by fax or by
+courier. One author may sign on behalf of all of the other authors of a
+particular paper. Digital signatures are acceptable.
+
+\section{Paper Preparation}
+
+Springer provides you with a complete integrated \LaTeX{} document class
+(\texttt{llncs.cls}) for multi-author books such as those in the LNCS
+series. Papers not complying with the LNCS style will be reformatted.
+This can lead to an increase in the overall number of pages. We would
+therefore urge you not to squash your paper.
+
+Please always cancel any superfluous definitions that are
+not actually used in your text. If you do not, these may conflict with
+the definitions of the macro package, causing changes in the structure
+of the text and leading to numerous mistakes in the proofs.
+
+If you wonder what \LaTeX{} is and where it can be obtained, see the
+``\textit{LaTeX project site}'' (\url{http://www.latex-project.org})
+and especially the webpage ``\textit{How to get it}''
+(\url{http://www.latex-project.org/ftp.html}) respectively.
+
+When you use \LaTeX\ together with our document class file,
+\texttt{llncs.cls},
+your text is typeset automatically in Computer Modern Roman (CM) fonts.
+Please do
+\emph{not} change the preset fonts. If you have to use fonts other
+than the preset fonts, kindly submit these with your files.
+
+Please use the commands \verb+\label+ and \verb+\ref+ for
+cross-references and the commands \verb+\bibitem+ and \verb+\cite+ for
+references to the bibliography, to enable us to create hyperlinks at
+these places.
+
+For preparing your figures electronically and integrating them into
+your source file we recommend using the standard \LaTeX{} \verb+graphics+ or
+\verb+graphicx+ package. These provide the \verb+\includegraphics+ command.
+In general, please refrain from using the \verb+\special+ command.
+
+Remember to submit any further style files and
+fonts you have used together with your source files.
+
+\subsubsection{Headings.}
+
+Headings should be capitalized
+(i.e., nouns, verbs, and all other words
+except articles, prepositions, and conjunctions should be set with an
+initial capital) and should,
+with the exception of the title, be aligned to the left.
+Words joined by a hyphen are subject to a special rule. If the first
+word can stand alone, the second word should be capitalized.
+
+Here are some examples of headings: ``Criteria to Disprove
+Context-Freeness of Collage Language", ``On Correcting the Intrusion of
+Tracing Non-deterministic Programs by Software", ``A User-Friendly and
+Extendable Data Distribution System", ``Multi-flip Networks:
+Parallelizing GenSAT", ``Self-determinations of Man".
+
+\subsubsection{Lemmas, Propositions, and Theorems.}
+
+The numbers accorded to lemmas, propositions, and theorems, etc. should
+appear in consecutive order, starting with Lemma 1, and not, for
+example, with Lemma 11.
+
+\subsection{Figures}
+
+For \LaTeX\ users, we recommend using the \emph{graphics} or \emph{graphicx}
+package and the \verb+\includegraphics+ command.
+
+Please check that the lines in line drawings are not
+interrupted and are of a constant width. Grids and details within the
+figures must be clearly legible and may not be written one on top of
+the other. Line drawings should have a resolution of at least 800 dpi
+(preferably 1200 dpi). The lettering in figures should have a height of
+2~mm (10-point type). Figures should be numbered and should have a
+caption which should always be positioned \emph{under} the figures, in
+contrast to the caption belonging to a table, which should always appear
+\emph{above} the table; this is simply achieved as matter of sequence in
+your source.
+
+Please center the figures or your tabular material by using the \verb+\centering+
+declaration. Short captions are centered by default between the margins
+and typeset in 9-point type (Fig.~\ref{fig:example} shows an example).
+The distance between text and figure is preset to be about 8~mm, the
+distance between figure and caption about 6~mm.
+
+To ensure that the reproduction of your illustrations is of a reasonable
+quality, we advise against the use of shading. The contrast should be as
+pronounced as possible.
+
+If screenshots are necessary, please make sure that you are happy with
+the print quality before you send the files.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{eijkel2}
+\caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at
+$x_i$ and $x_j$ (\textit{left and right}) lead to the same summed estimate
+at $x_s$. This shows a figure consisting of different types of
+lines. Elements of the figure described in the caption should be set in
+italics, in parentheses, as shown in this sample caption.}
+\label{fig:example}
+\end{figure}
+
+Please define figures (and tables) as floating objects. Please avoid
+using optional location parameters like ``\verb+[h]+" for ``here".
+
+\paragraph{Remark 1.}
+
+In the printed volumes, illustrations are generally black and white
+(halftones), and only in exceptional cases, and if the author is
+prepared to cover the extra cost for color reproduction, are colored
+pictures accepted. Colored pictures are welcome in the electronic
+version free of charge. If you send colored figures that are to be
+printed in black and white, please make sure that they really are
+legible in black and white. Some colors as well as the contrast of
+converted colors show up very poorly when printed in black and white.
+
+\subsection{Formulas}
+
+Displayed equations or formulas are centered and set on a separate
+line (with an extra line or halfline space above and below). Displayed
+expressions should be numbered for reference. The numbers should be
+consecutive within each section or within the contribution,
+with numbers enclosed in parentheses and set on the right margin --
+which is the default if you use the \emph{equation} environment, e.g.,
+\begin{equation}
+  \psi (u) = \int_{o}^{T} \left[\frac{1}{2}
+  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .
+\end{equation}
+
+Equations should be punctuated in the same way as ordinary
+text but with a small space before the end punctuation mark.
+
+\subsection{Footnotes}
+
+The superscript numeral used to refer to a footnote appears in the text
+either directly after the word to be discussed or -- in relation to a
+phrase or a sentence -- following the punctuation sign (comma,
+semicolon, or period). Footnotes should appear at the bottom of
+the
+normal text area, with a line of about 2~cm set
+immediately above them.\footnote{The footnote numeral is set flush left
+and the text follows with the usual word spacing.}
+
+\subsection{Program Code}
+
+Program listings or program commands in the text are normally set in
+typewriter font, e.g., CMTT10 or Courier.
+
+\medskip
+
+\noindent
+{\it Example of a Computer Program}
+\begin{verbatim}
+program Inflation (Output)
+  {Assuming annual inflation rates of 7%, 8%, and 10%,...
+   years};
+   const
+     MaxYears = 10;
+   var
+     Year: 0..MaxYears;
+     Factor1, Factor2, Factor3: Real;
+   begin
+     Year := 0;
+     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
+     WriteLn('Year  7% 8% 10%'); WriteLn;
+     repeat
+       Year := Year + 1;
+       Factor1 := Factor1 * 1.07;
+       Factor2 := Factor2 * 1.08;
+       Factor3 := Factor3 * 1.10;
+       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
+     until Year = MaxYears
+end.
+\end{verbatim}
+%
+\noindent
+{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
+report. Springer, New York)}
+
+\subsection{Citations}
+
+For citations in the text please use
+square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
+\cite{proceeding1} -- provided automatically
+by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
+
+\subsection{Page Numbering and Running Heads}
+
+There is no need to include page numbers. If your paper title is too
+long to serve as a running head, it will be shortened. Your suggestion
+as to how to shorten it would be most welcome.
+
+\section{LNCS Online}
+
+The online version of the volume will be available in LNCS Online.
+Members of institutes subscribing to the Lecture Notes in Computer
+Science series have access to all the pdfs of all the online
+publications. Non-subscribers can only read as far as the abstracts. If
+they try to go beyond this point, they are automatically asked, whether
+they would like to order the pdf, and are given instructions as to how
+to do so.
+
+Please note that, if your email address is given in your paper,
+it will also be included in the meta data of the online version.
+
+\section{BibTeX Entries}
+
+The correct BibTeX entries for the Lecture Notes in Computer Science
+volumes can be found at the following Website shortly after the
+publication of the book:
+\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
+
+\subsubsection*{Acknowledgments.} The heading should be treated as a
+subsubsection heading and should not be assigned a number.
+
+\section{The References Section}\label{references}
+
+In order to permit cross referencing within LNCS-Online, and eventually
+between different publishers and their online databases, LNCS will,
+from now on, be standardizing the format of the references. This new
+feature will increase the visibility of publications and facilitate
+academic research considerably. Please base your references on the
+examples below. References that don't adhere to this style will be
+reformatted by Springer. You should therefore check your references
+thoroughly when you receive the final pdf of your paper.
+The reference section must be complete. You may not omit references.
+Instructions as to where to find a fuller version of the references are
+not permissible.
+
+We only accept references written using the latin alphabet. If the title
+of the book you are referring to is in Russian or Chinese, then please write
+(in Russian) or (in Chinese) at the end of the transcript or translation
+of the title.
+
+The following section shows a sample reference list with entries for
+journal articles \cite{jour}, an LNCS chapter \cite{lncschap}, a book
+\cite{book}, proceedings without editors \cite{proceeding1} and
+\cite{proceeding2}, as well as a URL \cite{url}.
+Please note that proceedings published in LNCS are not cited with their
+full titles, but with their acronyms!
+
+\begin{thebibliography}{4}
+
+\bibitem{jour} Smith, T.F., Waterman, M.S.: Identification of Common Molecular
+Subsequences. J. Mol. Biol. 147, 195--197 (1981)
+
+\bibitem{lncschap} May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
+Composing a Complex Biological Workflow through Web Services. In: Nagel,
+W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
+pp. 1148--1158. Springer, Heidelberg (2006)
+
+\bibitem{book} Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
+Infrastructure. Morgan Kaufmann, San Francisco (1999)
+
+\bibitem{proceeding1} Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
+Information Services for Distributed Resource Sharing. In: 10th IEEE
+International Symposium on High Performance Distributed Computing, pp.
+181--184. IEEE Press, New York (2001)
+
+\bibitem{proceeding2} Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
+Grid: an Open Grid Services Architecture for Distributed Systems
+Integration. Technical report, Global Grid Forum (2002)
+
+\bibitem{url} National Center for Biotechnology Information, \url{http://www.ncbi.nlm.nih.gov}
+
+\end{thebibliography}
+
+
+\section*{Appendix: Springer-Author Discount}
+
+LNCS authors are entitled to a 33.3\% discount off all Springer
+publications. Before placing an order, the author should send an email, 
+giving full details of his or her Springer publication,
+to \url{orders-HD-individuals@springer.com} to obtain a so-called token. This token is a
+number, which must be entered when placing an order via the Internet, in
+order to obtain the discount.
+
+\section{Checklist of Items to be Sent to Volume Editors}
+Here is a checklist of everything the volume editor requires from you:
+
+
+\begin{itemize}
+\settowidth{\leftmargin}{{\Large$\square$}}\advance\leftmargin\labelsep
+\itemsep8pt\relax
+\renewcommand\labelitemi{{\lower1.5pt\hbox{\Large$\square$}}}
+
+\item The final \LaTeX{} source files
+\item A final PDF file
+\item A copyright form, signed by one author on behalf of all of the
+authors of the paper.
+\item A readme giving the name and email address of the
+corresponding author.
+\end{itemize}
+\end{document}
