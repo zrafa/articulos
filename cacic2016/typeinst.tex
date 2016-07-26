@@ -117,7 +117,15 @@ La arquitectura del sistema consiste de dos componentes principales :
 El dispositivo portatil, el cual contiene un microscopio digital con led de contraste, y un dispositivo de gatillo que realiza prensa sobre las fibras y envía una señal de disparo.
 El hardware embebido que realiza el procesamiento de la imagen digital y reporta los resultados.
 
-La interfaz entre el dispositivo portatil y el hardware embebido es USB 2.0. El dispositivo portatil cuenta con un microscopio de 400 ampliaciones, modificado y calibrado insitu. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en la figura 1.
+La interfaz entre el dispositivo portatil y el hardware embebido es USB 2.0. El dispositivo portatil cuenta con un microscopio de 400 ampliaciones, modificado y calibrado insitu. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{prototipo}
+\caption{Equipamiento prototipo UNCOMA
+italics, in parentheses, as shown in this sample caption.}
+\label{fig:prototipo}
+\end{figure}
+
 El mecanismo de gatillo en el dispositivo portatil realiza varias tareas en un unico paso. Al gatillar, el operador prensa el acrilico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
 En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imágen digital es obtenida desde el dispositivo portatil a través del  la interfaz USB 2.0.
 Un diagrama de bloques del hardware embebido es mostrado en la Figura 1.2
@@ -165,12 +173,20 @@ Si el resultado se encuentra entre 17um y 22um se enciende el LED 2
 Si el resultado se encuentra entre 22um y 30um se enciende el LED 3
 Si el resultado se encuentra entre 30um y 40um se enciende el LED 4
 Si el resultado es > 40um se enciende el LED 5
-Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las ubicaciones de las mediciones realizada por el software sean correctas). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura 5.
+Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las ubicaciones de las mediciones realizada por el software sean correctas). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura}.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{captura}
+\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtendia desde el microscopio. A la derecha una represantación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta represantación visual es muy util para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
+}
+\label{fig:captura}
+\end{figure}
+
 
 
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
-El trabajo propuesto (e implementado en el sistema prototipo) en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
-La representación (a través de un conjunto de segmento de lineas) y el proceso de localización de paralelas opuestas en cada fibra utilizados en este trabajo no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes junto a las verificaciones realizadas en campo muestran que el  análisis no se distorsiona con el entrecruzamiento, y no se necesita ninguna preparación previa particular para las fibras (pueden estar en cualquier posición y entrecruzadas).
+El trabajo propuesto en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
+La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran que este análisis no se distorsiona con el entrecruzamiento, y no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
 
 
 	
