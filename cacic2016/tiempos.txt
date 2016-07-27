@@ -1,0 +1,9556 @@
+
+
+ Archivo fotos-reales/oveja-2/22554.pgm:
+Medidas malas 
+d = 23.882578
+d = 23.535482
+Medidas buenas 
+Medidas malas 
+d = 32.074135
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.288425
+Medidas malas 
+d = 23.878569
+Medidas malas 
+Medidas malas 
+d = 19.663525
+d = 19.555913
+d = 19.448301
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.404108
+d = 14.075618
+d = 14.747129
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 23.209754
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.147422
+Medidas malas 
+d = 33.016837
+d = 32.390252
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.402128
+d = 25.975149
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.352602
+d = 26.457941
+d = 27.563280
+Medidas buenas 
+Medidas malas 
+d = 24.926504
+d = 23.835995
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.224099
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.162096
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.306809
+d = 23.781977
+d = 23.257145
+Medidas buenas 
+d = 14.034488
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.423142
+Medidas malas 
+d = 14.048726
+d = 14.971410
+d = 15.894094
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 23 	Media = 21.608696
+	Varianza : 30.872903
+	Desviacion estandar : 5.556339
+	Medidas dentro de la desviacion estandar : 14 (60%)
+
+Grosor del PELO en pixels : 21.608696
+
+real	0m1.545s
+user	0m0.740s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/11125.pgm:
+d = 22.850281
+d = 22.636764
+Medidas buenas 
+Medidas malas 
+d = 24.999161
+d = 24.569073
+Medidas buenas 
+Medidas malas 
+d = 22.236674
+Medidas malas 
+d = 22.784268
+Medidas malas 
+d = 20.638332
+d = 21.205695
+d = 21.773059
+Medidas buenas 
+d = 21.340497
+d = 23.160440
+Medidas buenas 
+d = 21.153137
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.668634
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.708778
+Medidas malas 
+Medidas malas 
+d = 22.283264
+Medidas malas 
+Medidas malas 
+d = 18.915541
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.928178
+Medidas malas 
+d = 18.455066
+d = 16.942174
+Medidas buenas 
+d = 19.912059
+d = 21.502348
+Medidas buenas 
+Medidas malas 
+d = 20.117770
+d = 19.687141
+Medidas buenas 
+d = 19.704259
+Medidas malas 
+d = 21.526580
+Medidas malas 
+d = 19.359950
+d = 18.138242
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.424061
+d = 18.336391
+Medidas buenas 
+d = 17.584448
+d = 16.835365
+Medidas buenas 
+Medidas malas 
+d = 20.831161
+d = 21.467471
+d = 22.103782
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.483963
+d = 17.674434
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 26 	Media = 19.692308
+	Varianza : 5.853459
+	Desviacion estandar : 2.419392
+	Medidas dentro de la desviacion estandar : 18 (69%)
+
+Grosor del PELO en pixels : 19.692308
+
+real	0m1.781s
+user	0m0.860s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/27045.pgm:
+Medidas malas 
+d = 12.463159
+Medidas malas 
+d = 12.437862
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 10.540729
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.310920
+d = 30.173464
+d = 31.036009
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 10.589809
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 30.106121
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.013518
+d = 26.162539
+d = 27.311560
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 6 	Media = 28.000000
+	Varianza : 4.738182
+	Desviacion estandar : 2.176737
+	Medidas dentro de la desviacion estandar : 4 (66%)
+
+Grosor del PELO en pixels : 28.000000
+
+real	0m1.299s
+user	0m0.636s
+sys	0m0.004s
+
+
+ Archivo fotos-reales/oveja-2/31449.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.946263
+d = 34.052832
+d = 32.797242
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 32.228666
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 32.801576
+d = 33.673465
+d = 34.545354
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.772896
+Medidas malas 
+d = 18.260515
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 6 	Media = 32.666667
+	Varianza : 1.169799
+	Desviacion estandar : 1.081572
+	Medidas dentro de la desviacion estandar : 4 (66%)
+
+Grosor del PELO en pixels : 32.666667
+
+real	0m1.935s
+user	0m0.936s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/16645.pgm:
+Medidas malas 
+d = 16.401010
+d = 16.331747
+Medidas buenas 
+d = 18.202739
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.273377
+d = 17.712022
+d = 19.749812
+Medidas buenas 
+d = 15.542640
+d = 15.193033
+Medidas buenas 
+d = 19.467859
+d = 19.567396
+Medidas buenas 
+d = 19.603121
+d = 18.733783
+Medidas buenas 
+d = 17.802628
+d = 17.676628
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.813387
+d = 16.900998
+Medidas buenas 
+Medidas malas 
+d = 19.146229
+d = 18.717756
+Medidas buenas 
+Medidas malas 
+d = 16.881387
+d = 16.752533
+Medidas buenas 
+Medidas malas 
+d = 18.947962
+Medidas malas 
+Medidas malas 
+d = 20.270445
+d = 22.633943
+Medidas buenas 
+d = 22.052074
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.241352
+d = 20.495268
+Medidas buenas 
+Medidas malas 
+d = 18.796265
+d = 17.316023
+Medidas buenas 
+d = 17.649985
+d = 17.733135
+Medidas buenas 
+d = 22.518334
+Medidas malas 
+d = 16.344291
+d = 16.421314
+Medidas buenas 
+Medidas malas 
+d = 17.231460
+d = 17.950216
+d = 18.668972
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.093419
+d = 20.038692
+d = 21.505048
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.577676
+d = 17.813605
+Medidas buenas 
+d = 18.082065
+d = 17.372243
+Medidas buenas 
+d = 20.705067
+d = 19.175238
+Medidas buenas 
+d = 15.194919
+d = 15.695770
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 17.627907
+	Varianza : 3.115076
+	Desviacion estandar : 1.764958
+	Medidas dentro de la desviacion estandar : 28 (65%)
+
+Grosor del PELO en pixels : 17.627907
+
+real	0m1.773s
+user	0m0.848s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/27040.pgm:
+Medidas malas 
+Medidas malas 
+d = 30.387149
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 30.603372
+Medidas malas 
+d = 30.826197
+Medidas malas 
+Medidas malas 
+d = 30.858742
+Medidas malas 
+Medidas malas 
+d = 30.003130
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 1 	Media = 0.000000
+	Varianza : 900.187820
+	Desviacion estandar : 30.003130
+	Medidas dentro de la desviacion estandar : 1 (100%)
+
+Grosor del PELO en pixels : 0.000000
+
+real	0m1.571s
+user	0m0.744s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja-2/28257.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.264707
+d = 19.171270
+d = 19.077834
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.446838
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.389214
+d = 19.347038
+d = 19.304861
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.776594
+d = 18.615109
+d = 19.453625
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.210996
+d = 16.551482
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.252220
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.340556
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.734510
+d = 18.162490
+d = 17.590470
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 14 	Media = 18.000000
+	Varianza : 1.623703
+	Desviacion estandar : 1.274246
+	Medidas dentro de la desviacion estandar : 8 (57%)
+
+Grosor del PELO en pixels : 18.000000
+
+real	0m1.600s
+user	0m0.772s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/5385.pgm:
+d = 22.565051
+Medidas malas 
+d = 25.433409
+Medidas malas 
+d = 22.349837
+Medidas malas 
+Medidas malas 
+d = 21.159222
+Medidas malas 
+d = 25.946196
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.156208
+d = 21.158363
+d = 21.160517
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 3 	Media = 21.000000
+	Varianza : 0.025082
+	Desviacion estandar : 0.158373
+	Medidas dentro de la desviacion estandar : 2 (66%)
+
+Grosor del PELO en pixels : 21.000000
+
+real	0m2.250s
+user	0m1.084s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/4715.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.588469
+d = 20.390100
+d = 20.191732
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.444798
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.068381
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.204818
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.881249
+d = 14.400886
+d = 13.920523
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 6 	Media = 16.833333
+	Varianza : 9.373729
+	Desviacion estandar : 3.061655
+	Medidas dentro de la desviacion estandar : 3 (50%)
+
+Grosor del PELO en pixels : 16.833333
+
+real	0m2.035s
+user	0m0.992s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/31861.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.241064
+d = 22.930445
+Medidas buenas 
+d = 19.917001
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 39.466084
+d = 38.936148
+d = 38.406213
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.811772
+d = 18.476744
+Medidas buenas 
+d = 36.638239
+d = 37.515583
+Medidas buenas 
+d = 23.028445
+d = 21.871975
+Medidas buenas 
+d = 39.220653
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 37.581942
+Medidas malas 
+d = 23.544114
+d = 23.128361
+Medidas buenas 
+Medidas malas 
+d = 24.670332
+d = 23.785650
+Medidas buenas 
+Medidas malas 
+d = 23.680612
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.173225
+d = 22.994596
+d = 23.267627
+Medidas buenas 
+Medidas malas 
+d = 23.486611
+d = 23.855748
+Medidas buenas 
+Medidas malas 
+d = 26.252530
+d = 26.615285
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.690909
+Medidas malas 
+d = 22.451279
+d = 23.378703
+Medidas buenas 
+Medidas malas 
+d = 24.370187
+d = 25.413554
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.549501
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.622086
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 26 	Media = 25.538462
+	Varianza : 38.767555
+	Desviacion estandar : 6.226360
+	Medidas dentro de la desviacion estandar : 19 (73%)
+
+Grosor del PELO en pixels : 25.538462
+
+real	0m1.348s
+user	0m0.652s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/14811.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.836103
+d = 17.401146
+Medidas buenas 
+Medidas malas 
+d = 16.940423
+d = 17.858893
+Medidas buenas 
+d = 16.153366
+d = 16.405017
+d = 16.656669
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.466123
+Medidas malas 
+d = 17.485523
+Medidas malas 
+d = 16.755400
+d = 16.566208
+Medidas buenas 
+d = 17.314564
+d = 16.260714
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.969410
+d = 20.736439
+Medidas buenas 
+d = 16.412694
+d = 16.662366
+Medidas buenas 
+Medidas malas 
+d = 19.911841
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.189740
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.163936
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 15 	Media = 16.733333
+	Varianza : 2.041092
+	Desviacion estandar : 1.428668
+	Medidas dentro de la desviacion estandar : 13 (86%)
+
+Grosor del PELO en pixels : 16.733333
+
+real	0m2.305s
+user	0m1.124s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/14365.pgm:
+d = 16.562007
+Medidas malas 
+d = 15.077577
+Medidas malas 
+d = 16.613026
+d = 15.890626
+d = 15.168227
+Medidas buenas 
+d = 14.012006
+d = 17.024347
+d = 19.503549
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 15.294620
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.034098
+Medidas malas 
+Medidas malas 
+d = 16.114072
+d = 14.907898
+Medidas buenas 
+d = 15.818685
+Medidas malas 
+Medidas malas 
+d = 22.289222
+Medidas malas 
+Medidas malas 
+d = 14.664091
+d = 16.157607
+d = 17.651122
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.819075
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.562668
+d = 15.604041
+Medidas buenas 
+d = 15.545667
+d = 13.164394
+Medidas buenas 
+Medidas malas 
+d = 17.661036
+d = 16.920737
+d = 16.180438
+Medidas buenas 
+d = 29.540450
+d = 30.715806
+d = 31.267550
+Medidas buenas 
+d = 28.646455
+d = 29.504698
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 31.140750
+d = 30.666263
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.064653
+d = 15.688684
+Medidas buenas 
+Medidas malas 
+d = 14.899036
+d = 13.477735
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.676415
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.687490
+d = 29.486590
+Medidas buenas 
+Medidas malas 
+d = 20.259576
+d = 20.335099
+d = 20.410622
+Medidas buenas 
+Medidas malas 
+d = 21.268331
+d = 22.066658
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 36 	Media = 19.666667
+	Varianza : 37.754540
+	Desviacion estandar : 6.144472
+	Medidas dentro de la desviacion estandar : 25 (69%)
+
+Grosor del PELO en pixels : 19.666667
+
+real	0m1.182s
+user	0m0.568s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/11018.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 10.971857
+Medidas malas 
+d = 21.163104
+d = 15.861941
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.629330
+d = 15.359976
+d = 15.073820
+Medidas buenas 
+d = 15.611619
+d = 17.066486
+d = 14.951015
+Medidas buenas 
+d = 30.700340
+d = 31.112087
+d = 31.523834
+Medidas buenas 
+Medidas malas 
+d = 17.555006
+d = 13.280683
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.195333
+d = 14.843036
+Medidas buenas 
+d = 16.606044
+d = 14.724068
+Medidas buenas 
+d = 29.740563
+Medidas malas 
+d = 37.199787
+d = 21.224408
+Medidas buenas 
+d = 17.277458
+d = 16.180432
+d = 15.083406
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.710741
+d = 16.572146
+Medidas buenas 
+d = 16.196698
+d = 17.427800
+d = 18.658903
+Medidas buenas 
+d = 30.123201
+Medidas malas 
+Medidas malas 
+d = 26.062718
+Medidas malas 
+d = 22.648711
+Medidas malas 
+Medidas malas 
+d = 17.205725
+d = 18.095903
+Medidas buenas 
+Medidas malas 
+d = 15.775122
+d = 14.292290
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 20.321813
+d = 18.352996
+Medidas buenas 
+d = 14.787829
+d = 15.491351
+d = 18.283884
+Medidas buenas 
+d = 18.551971
+d = 17.248096
+d = 16.104656
+Medidas buenas 
+Medidas malas 
+d = 15.490482
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.099130
+d = 14.361857
+d = 14.624584
+Medidas buenas 
+d = 17.766396
+d = 16.199097
+Medidas buenas 
+d = 18.310473
+d = 18.861617
+Medidas buenas 
+d = 12.263358
+d = 13.543083
+d = 14.822808
+Medidas buenas 
+Medidas malas 
+d = 18.443193
+d = 18.165386
+Medidas buenas 
+d = 19.108079
+d = 20.542643
+Medidas buenas 
+Medidas malas 
+d = 24.028467
+Medidas malas 
+Medidas malas 
+d = 19.109445
+d = 18.195163
+d = 18.693201
+Medidas buenas 
+d = 19.009004
+d = 20.295826
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.994925
+d = 29.495587
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.483929
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.509455
+d = 19.005310
+Medidas buenas 
+d = 18.329084
+Medidas malas 
+d = 13.916426
+d = 15.348096
+Medidas buenas 
+d = 12.752279
+Medidas malas 
+d = 18.087822
+d = 19.415041
+d = 17.126858
+Medidas buenas 
+d = 14.183403
+d = 17.482374
+Medidas buenas 
+d = 19.485952
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.362821
+d = 12.838052
+d = 12.313284
+Medidas buenas 
+Medidas malas 
+d = 14.226328
+d = 14.809724
+Medidas buenas 
+d = 13.869401
+d = 13.901635
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 76 	Media = 17.315789
+	Varianza : 20.749063
+	Desviacion estandar : 4.555114
+	Medidas dentro de la desviacion estandar : 68 (89%)
+
+Grosor del PELO en pixels : 17.315789
+
+real	0m1.395s
+user	0m0.672s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/20954.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.780527
+d = 21.890659
+Medidas buenas 
+d = 20.641157
+d = 21.196450
+d = 21.751743
+Medidas buenas 
+d = 21.930705
+d = 21.074875
+Medidas buenas 
+d = 21.944975
+d = 21.790725
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 21.377246
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.953311
+d = 18.843662
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.476648
+Medidas malas 
+Medidas malas 
+d = 15.346325
+d = 15.421504
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 13 	Media = 19.538462
+	Varianza : 5.670697
+	Desviacion estandar : 2.381323
+	Medidas dentro de la desviacion estandar : 9 (69%)
+
+Grosor del PELO en pixels : 19.538462
+
+real	0m2.143s
+user	0m1.028s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja-2/572.pgm:
+Medidas malas 
+d = 27.531049
+d = 26.240558
+d = 24.950068
+Medidas buenas 
+Medidas malas 
+d = 23.594541
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.709887
+Medidas malas 
+d = 26.500348
+Medidas malas 
+d = 24.519215
+Medidas malas 
+d = 24.536290
+d = 24.729255
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.293029
+d = 23.957654
+d = 23.622278
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 8 	Media = 24.375000
+	Varianza : 1.833831
+	Desviacion estandar : 1.354190
+	Medidas dentro de la desviacion estandar : 6 (75%)
+
+Grosor del PELO en pixels : 24.375000
+
+real	0m1.877s
+user	0m0.900s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja-2/31264.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.840549
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.349250
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.625630
+d = 19.373216
+d = 18.120802
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.458705
+d = 13.894456
+Medidas buenas 
+Medidas malas 
+d = 19.020502
+Medidas malas 
+d = 18.082680
+d = 14.708720
+d = 14.111555
+Medidas buenas 
+Medidas malas 
+d = 13.408213
+Medidas malas 
+Medidas malas 
+d = 22.334733
+Medidas malas 
+d = 13.378537
+d = 13.923976
+d = 14.469414
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.255321
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.893898
+Medidas malas 
+d = 17.993931
+d = 19.025913
+Medidas buenas 
+d = 14.204375
+d = 15.143149
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.828043
+d = 20.943875
+d = 20.059707
+Medidas buenas 
+d = 21.970151
+d = 22.830241
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 20 	Media = 16.950000
+	Varianza : 10.206130
+	Desviacion estandar : 3.194703
+	Medidas dentro de la desviacion estandar : 14 (70%)
+
+Grosor del PELO en pixels : 16.950000
+
+real	0m1.242s
+user	0m0.596s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/12307.pgm:
+Medidas malas 
+d = 23.473532
+Medidas malas 
+d = 23.632475
+d = 23.879898
+d = 23.803465
+Medidas buenas 
+d = 24.038065
+d = 23.750332
+Medidas buenas 
+Medidas malas 
+d = 15.000601
+Medidas malas 
+d = 25.426303
+d = 26.440227
+d = 27.454151
+Medidas buenas 
+Medidas malas 
+d = 24.901496
+d = 25.372185
+Medidas buenas 
+d = 25.638233
+d = 25.176143
+Medidas buenas 
+d = 25.439832
+Medidas malas 
+Medidas malas 
+d = 26.287190
+d = 25.096201
+Medidas buenas 
+d = 25.310270
+Medidas malas 
+Medidas malas 
+d = 25.061770
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.636166
+d = 24.110883
+Medidas buenas 
+Medidas malas 
+d = 15.623519
+d = 14.999789
+d = 14.376060
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.505384
+d = 23.962756
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 21 	Media = 22.904762
+	Varianza : 13.176494
+	Desviacion estandar : 3.629944
+	Medidas dentro de la desviacion estandar : 17 (80%)
+
+Grosor del PELO en pixels : 22.904762
+
+real	0m1.951s
+user	0m0.940s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja-2/6609.pgm:
+Medidas malas 
+d = 26.061267
+d = 24.979741
+Medidas buenas 
+Medidas malas 
+d = 24.746043
+d = 25.882353
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.360438
+d = 24.626886
+Medidas buenas 
+d = 24.915099
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.687327
+d = 23.903769
+Medidas buenas 
+d = 23.785769
+Medidas malas 
+Medidas malas 
+d = 26.134812
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 8 	Media = 24.000000
+	Varianza : 1.608922
+	Desviacion estandar : 1.268433
+	Medidas dentro de la desviacion estandar : 5 (62%)
+
+Grosor del PELO en pixels : 24.000000
+
+real	0m1.626s
+user	0m0.776s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/22458.pgm:
+d = 19.916406
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.014551
+d = 20.698259
+d = 19.381966
+Medidas buenas 
+d = 21.445406
+d = 19.500882
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.682336
+d = 17.534976
+Medidas buenas 
+d = 52.113760
+d = 16.975574
+d = 16.528820
+Medidas buenas 
+Medidas malas 
+d = 17.763484
+d = 16.024655
+Medidas buenas 
+d = 18.491529
+d = 42.616414
+d = 17.552515
+Medidas buenas 
+d = 17.853394
+d = 17.084915
+d = 16.522668
+Medidas buenas 
+d = 20.400300
+d = 21.148800
+Medidas buenas 
+d = 18.563318
+d = 19.892460
+Medidas buenas 
+d = 23.979148
+d = 23.974076
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.347267
+d = 18.150766
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.719087
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.330263
+d = 17.367972
+Medidas buenas 
+d = 15.927419
+d = 17.598424
+d = 17.783541
+Medidas buenas 
+d = 19.434593
+Medidas malas 
+Medidas malas 
+d = 19.297910
+Medidas malas 
+d = 17.158059
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.340160
+d = 20.259829
+Medidas buenas 
+d = 16.047674
+d = 16.678093
+d = 16.852386
+Medidas buenas 
+d = 20.298650
+d = 19.626361
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.975831
+d = 23.981416
+Medidas buenas 
+Medidas malas 
+d = 19.791052
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.444489
+d = 20.609099
+Medidas buenas 
+d = 17.699980
+d = 17.150073
+Medidas buenas 
+d = 16.658659
+d = 17.094181
+d = 16.656273
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.674107
+d = 16.787525
+d = 16.900944
+Medidas buenas 
+d = 21.554229
+d = 22.799122
+Medidas buenas 
+Medidas malas 
+d = 14.865774
+Medidas malas 
+Medidas malas 
+d = 21.210616
+Medidas malas 
+d = 14.939197
+d = 14.768829
+d = 14.598460
+Medidas buenas 
+d = 22.960761
+d = 20.734933
+Medidas buenas 
+d = 16.402101
+Medidas malas 
+d = 16.867532
+d = 16.114991
+d = 16.114635
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 60 	Media = 19.016667
+	Varianza : 33.677372
+	Desviacion estandar : 5.803221
+	Medidas dentro de la desviacion estandar : 58 (96%)
+
+Grosor del PELO en pixels : 19.016667
+
+real	0m1.953s
+user	0m0.948s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/3350.pgm:
+Medidas malas 
+d = 17.630818
+Medidas malas 
+Medidas malas 
+d = 19.355951
+Medidas malas 
+Medidas malas 
+d = 21.462568
+d = 23.194457
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.324115
+d = 18.200852
+Medidas buenas 
+d = 18.633698
+d = 18.402322
+d = 18.170947
+Medidas buenas 
+d = 21.882129
+d = 19.922965
+Medidas buenas 
+d = 20.796286
+Medidas malas 
+Medidas malas 
+d = 20.508327
+d = 19.047443
+d = 21.357901
+Medidas buenas 
+d = 19.917457
+d = 20.225087
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.792169
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.055666
+d = 20.259123
+d = 18.937094
+Medidas buenas 
+Medidas malas 
+d = 20.802204
+d = 19.320650
+d = 19.881298
+Medidas buenas 
+d = 21.026257
+d = 21.403593
+Medidas buenas 
+d = 21.744643
+d = 18.814274
+Medidas buenas 
+Medidas malas 
+d = 17.993312
+d = 17.842906
+Medidas buenas 
+d = 23.792756
+d = 22.646531
+d = 21.500305
+Medidas buenas 
+Medidas malas 
+d = 18.631587
+d = 20.351913
+d = 19.737467
+Medidas buenas 
+d = 19.069908
+d = 21.267739
+Medidas buenas 
+d = 19.417457
+d = 19.370107
+Medidas buenas 
+Medidas malas 
+d = 18.431134
+d = 19.548248
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.528241
+d = 20.862360
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.417270
+d = 18.494803
+Medidas buenas 
+d = 18.858226
+Medidas malas 
+d = 18.486873
+d = 19.428284
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 44 	Media = 19.386364
+	Varianza : 2.612651
+	Desviacion estandar : 1.616370
+	Medidas dentro de la desviacion estandar : 30 (68%)
+
+Grosor del PELO en pixels : 19.386364
+
+real	0m1.491s
+user	0m0.728s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/14036.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.694887
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.307113
+d = 17.669865
+d = 18.032618
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.897826
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.472087
+Medidas malas 
+d = 19.259892
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.506546
+Medidas malas 
+d = 14.877772
+d = 15.401890
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 5 	Media = 16.200000
+	Varianza : 1.825991
+	Desviacion estandar : 1.351292
+	Medidas dentro de la desviacion estandar : 3 (60%)
+
+Grosor del PELO en pixels : 16.200000
+
+real	0m2.026s
+user	0m0.992s
+sys	0m0.004s
+
+
+ Archivo fotos-reales/oveja-2/879.pgm:
+d = 26.242764
+d = 26.382435
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.306432
+d = 26.218543
+Medidas buenas 
+d = 18.997193
+d = 19.030871
+Medidas buenas 
+Medidas malas 
+d = 23.683789
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.054533
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.759635
+d = 23.553998
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 8 	Media = 23.250000
+	Varianza : 9.142887
+	Desviacion estandar : 3.023721
+	Medidas dentro de la desviacion estandar : 4 (50%)
+
+Grosor del PELO en pixels : 23.250000
+
+real	0m2.047s
+user	0m0.996s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/19774.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.535472
+d = 23.305704
+d = 23.075935
+Medidas buenas 
+d = 21.909189
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.812127
+Medidas malas 
+Medidas malas 
+d = 22.058444
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.525665
+d = 21.142020
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 5 	Media = 22.200000
+	Varianza : 1.069476
+	Desviacion estandar : 1.034155
+	Medidas dentro de la desviacion estandar : 2 (40%)
+
+Grosor del PELO en pixels : 22.200000
+
+real	0m2.143s
+user	0m1.032s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja-2/18581.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.084476
+d = 25.074396
+d = 24.862060
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.472124
+d = 27.769454
+Medidas buenas 
+d = 26.919176
+d = 24.656983
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.080373
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.970349
+d = 24.729517
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.958345
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.139313
+d = 26.045381
+d = 25.951448
+Medidas buenas 
+Medidas malas 
+d = 24.273583
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 12 	Media = 25.083333
+	Varianza : 1.408607
+	Desviacion estandar : 1.186848
+	Medidas dentro de la desviacion estandar : 9 (75%)
+
+Grosor del PELO en pixels : 25.083333
+
+real	0m1.585s
+user	0m0.772s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/4445.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.840549
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.349250
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.625630
+d = 19.373216
+d = 18.120802
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.458705
+d = 13.894456
+Medidas buenas 
+Medidas malas 
+d = 19.020502
+Medidas malas 
+d = 18.082680
+d = 14.708720
+d = 14.111555
+Medidas buenas 
+Medidas malas 
+d = 13.408213
+Medidas malas 
+Medidas malas 
+d = 22.334733
+Medidas malas 
+d = 13.378537
+d = 13.923976
+d = 14.469414
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.255321
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.893898
+Medidas malas 
+d = 17.993931
+d = 19.025913
+Medidas buenas 
+d = 14.204375
+d = 15.143149
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.828043
+d = 20.943875
+d = 20.059707
+Medidas buenas 
+d = 21.970151
+d = 22.830241
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 20 	Media = 16.950000
+	Varianza : 10.206130
+	Desviacion estandar : 3.194703
+	Medidas dentro de la desviacion estandar : 14 (70%)
+
+Grosor del PELO en pixels : 16.950000
+
+real	0m1.250s
+user	0m0.600s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/19360.pgm:
+Medidas malas 
+d = 20.582908
+Medidas malas 
+d = 20.734545
+d = 24.939993
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.458597
+d = 23.019458
+Medidas buenas 
+d = 24.056247
+d = 23.108398
+d = 22.160549
+Medidas buenas 
+d = 24.779303
+d = 25.328787
+d = 25.878271
+Medidas buenas 
+d = 20.114557
+d = 20.472090
+Medidas buenas 
+d = 28.608569
+d = 27.981205
+Medidas buenas 
+d = 27.922623
+d = 27.865288
+Medidas buenas 
+d = 27.185272
+Medidas malas 
+Medidas malas 
+d = 18.435634
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.126145
+d = 27.669110
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.591005
+d = 20.408024
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.013573
+Medidas malas 
+d = 22.535785
+Medidas malas 
+Medidas malas 
+d = 23.630106
+d = 21.950026
+Medidas buenas 
+d = 19.965258
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.411836
+d = 25.434404
+Medidas buenas 
+Medidas malas 
+d = 27.524782
+Medidas malas 
+Medidas malas 
+d = 22.677430
+d = 23.874713
+Medidas buenas 
+d = 27.127675
+d = 28.437911
+d = 29.748147
+Medidas buenas 
+d = 22.392644
+d = 21.972159
+d = 21.551674
+Medidas buenas 
+d = 27.849613
+Medidas malas 
+d = 17.017538
+d = 18.565768
+d = 20.113997
+Medidas buenas 
+d = 27.484082
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.266955
+d = 15.649116
+Medidas buenas 
+d = 23.827950
+Medidas malas 
+d = 23.881952
+d = 21.214889
+Medidas buenas 
+d = 16.160235
+d = 17.447749
+Medidas buenas 
+d = 27.752065
+Medidas malas 
+d = 23.742358
+d = 24.974157
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 27.469224
+d = 27.646813
+d = 27.824401
+Medidas buenas 
+d = 27.545659
+Medidas malas 
+Medidas malas 
+d = 22.955113
+Medidas malas 
+d = 23.363848
+Medidas malas 
+d = 25.425750
+Medidas malas 
+d = 26.851672
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 46 	Media = 22.891304
+	Varianza : 13.856331
+	Desviacion estandar : 3.722409
+	Medidas dentro de la desviacion estandar : 27 (58%)
+
+Grosor del PELO en pixels : 22.891304
+
+real	0m1.142s
+user	0m0.528s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja-2/9528.pgm:
+Medidas malas 
+Medidas malas 
+d = 25.634700
+d = 26.522307
+Medidas buenas 
+Medidas malas 
+d = 30.058605
+Medidas malas 
+d = 25.634535
+d = 24.819420
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.943659
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.372639
+d = 30.002223
+Medidas buenas 
+d = 25.579716
+Medidas malas 
+Medidas malas 
+d = 25.160919
+d = 26.350424
+d = 25.146906
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 33.213463
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.408945
+Medidas malas 
+Medidas malas 
+d = 32.788191
+d = 33.147614
+d = 33.507037
+Medidas buenas 
+Medidas malas 
+d = 19.341279
+d = 18.508885
+Medidas buenas 
+d = 16.823410
+d = 17.459971
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 16 	Media = 25.312500
+	Varianza : 28.866104
+	Desviacion estandar : 5.372718
+	Medidas dentro de la desviacion estandar : 8 (50%)
+
+Grosor del PELO en pixels : 25.312500
+
+real	0m1.518s
+user	0m0.740s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/3942.pgm:
+Medidas malas 
+d = 23.244957
+d = 23.326402
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.108004
+d = 15.272597
+d = 15.879664
+Medidas buenas 
+Medidas malas 
+d = 17.655121
+d = 17.860648
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.002689
+d = 22.300874
+Medidas buenas 
+d = 16.991018
+d = 20.476526
+Medidas buenas 
+d = 18.035292
+d = 17.829627
+d = 19.443718
+Medidas buenas 
+d = 16.883037
+d = 19.711742
+Medidas buenas 
+d = 15.900848
+d = 16.413574
+Medidas buenas 
+d = 26.416081
+d = 26.695023
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.708798
+d = 17.021542
+Medidas buenas 
+d = 19.108805
+d = 19.432597
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.390214
+d = 16.248656
+Medidas buenas 
+d = 17.867045
+d = 19.290224
+d = 20.713402
+Medidas buenas 
+d = 16.535849
+Medidas malas 
+Medidas malas 
+d = 28.205840
+Medidas malas 
+d = 20.133599
+d = 18.366908
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.519872
+d = 22.585709
+d = 22.651547
+Medidas buenas 
+Medidas malas 
+d = 22.129330
+d = 21.829593
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.157558
+d = 18.823286
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.722664
+d = 26.503644
+Medidas buenas 
+Medidas malas 
+d = 14.065734
+d = 16.472985
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.668423
+d = 16.060696
+d = 17.186036
+Medidas buenas 
+d = 15.408827
+d = 14.513012
+Medidas buenas 
+d = 17.514384
+d = 15.580682
+Medidas buenas 
+d = 16.161517
+d = 16.116901
+d = 15.295026
+Medidas buenas 
+d = 13.789725
+d = 13.380338
+Medidas buenas 
+d = 17.125012
+d = 14.753784
+d = 13.977713
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.143424
+d = 12.308489
+d = 11.473555
+Medidas buenas 
+d = 22.910905
+d = 23.336328
+d = 23.761751
+Medidas buenas 
+Medidas malas 
+d = 15.608467
+d = 16.045078
+Medidas buenas 
+d = 23.719725
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 65 	Media = 17.846154
+	Varianza : 14.243959
+	Desviacion estandar : 3.774117
+	Medidas dentro de la desviacion estandar : 41 (63%)
+
+Grosor del PELO en pixels : 17.846154
+
+real	0m1.083s
+user	0m0.496s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja-2/23286.pgm:
+d = 18.595117
+d = 19.520333
+d = 20.133954
+Medidas buenas 
+d = 21.283951
+Medidas malas 
+d = 21.779977
+d = 22.535218
+Medidas buenas 
+d = 11.713341
+Medidas malas 
+Medidas malas 
+d = 29.374638
+d = 28.907775
+d = 28.440912
+Medidas buenas 
+d = 19.429550
+d = 19.395279
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.767140
+d = 19.093796
+d = 18.765445
+Medidas buenas 
+Medidas malas 
+d = 19.190889
+d = 18.900109
+d = 19.373642
+Medidas buenas 
+d = 20.445917
+d = 21.598635
+Medidas buenas 
+Medidas malas 
+d = 19.810870
+d = 18.974469
+Medidas buenas 
+Medidas malas 
+d = 21.931173
+d = 21.494844
+Medidas buenas 
+Medidas malas 
+d = 19.825797
+d = 20.834245
+Medidas buenas 
+d = 28.922341
+Medidas malas 
+d = 18.554763
+Medidas malas 
+d = 19.379488
+d = 19.408040
+Medidas buenas 
+d = 19.764622
+Medidas malas 
+Medidas malas 
+d = 21.282396
+d = 20.090936
+Medidas buenas 
+d = 20.787123
+d = 19.357630
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.513540
+Medidas malas 
+Medidas malas 
+d = 11.802869
+d = 11.210247
+d = 10.617626
+Medidas buenas 
+d = 20.787182
+d = 19.210709
+Medidas buenas 
+d = 19.467058
+d = 21.493340
+Medidas buenas 
+d = 19.343352
+d = 21.531652
+Medidas buenas 
+Medidas malas 
+d = 22.190166
+d = 22.937880
+Medidas buenas 
+Medidas malas 
+d = 18.920022
+d = 18.519503
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.057970
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 19.581395
+	Varianza : 12.534179
+	Desviacion estandar : 3.540364
+	Medidas dentro de la desviacion estandar : 37 (86%)
+
+Grosor del PELO en pixels : 19.581395
+
+real	0m1.749s
+user	0m0.840s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/19.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.713989
+d = 20.735812
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.974745
+Medidas malas 
+d = 13.722181
+d = 13.221812
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.821784
+d = 20.090687
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.167742
+d = 16.043092
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.754223
+d = 20.733063
+Medidas buenas 
+d = 16.890489
+Medidas malas 
+Medidas malas 
+d = 18.886696
+Medidas malas 
+d = 16.602934
+d = 15.314413
+Medidas buenas 
+d = 20.960082
+d = 21.535986
+d = 22.111890
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.255893
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.689036
+Medidas malas 
+Medidas malas 
+d = 20.036372
+d = 19.881781
+d = 19.727190
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.316567
+d = 19.049250
+d = 19.781933
+Medidas buenas 
+d = 16.432395
+d = 19.906831
+d = 16.818752
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.213701
+d = 14.973390
+d = 15.733080
+Medidas buenas 
+Medidas malas 
+d = 14.052319
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 27 	Media = 17.629630
+	Varianza : 7.139366
+	Desviacion estandar : 2.671959
+	Medidas dentro de la desviacion estandar : 17 (62%)
+
+Grosor del PELO en pixels : 17.629630
+
+real	0m1.505s
+user	0m0.720s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/23162.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.881109
+d = 22.933693
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.050274
+d = 20.642021
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.385196
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.767850
+d = 22.659821
+Medidas buenas 
+d = 22.856090
+d = 22.640375
+Medidas buenas 
+d = 24.123654
+d = 24.113870
+d = 24.104085
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.884782
+d = 20.469652
+d = 20.054521
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.041024
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.477363
+d = 23.588920
+Medidas buenas 
+d = 13.710426
+Medidas malas 
+d = 18.070601
+Medidas malas 
+d = 22.842746
+d = 22.584337
+Medidas buenas 
+d = 23.638058
+d = 23.526470
+Medidas buenas 
+d = 13.665672
+d = 13.709284
+d = 13.752896
+Medidas buenas 
+Medidas malas 
+d = 22.742932
+d = 24.109420
+Medidas buenas 
+d = 16.922540
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.766392
+d = 18.024892
+d = 18.283393
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.809307
+d = 16.918208
+d = 17.027109
+Medidas buenas 
+Medidas malas 
+d = 19.558395
+d = 20.206348
+Medidas buenas 
+d = 17.288362
+Medidas malas 
+d = 17.327355
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.424166
+d = 20.926668
+d = 21.429170
+Medidas buenas 
+d = 22.642463
+d = 22.625895
+Medidas buenas 
+Medidas malas 
+d = 23.596462
+Medidas malas 
+d = 20.047940
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 38 	Media = 20.263158
+	Varianza : 9.245842
+	Desviacion estandar : 3.040698
+	Medidas dentro de la desviacion estandar : 23 (60%)
+
+Grosor del PELO en pixels : 20.263158
+
+real	0m1.622s
+user	0m0.768s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/26043.pgm:
+d = 31.363177
+d = 27.396269
+Medidas buenas 
+d = 29.538342
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.149550
+d = 30.066879
+d = 31.984208
+Medidas buenas 
+Medidas malas 
+d = 26.613291
+d = 26.143786
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 29.879543
+d = 27.454662
+Medidas buenas 
+d = 25.984684
+d = 26.467316
+Medidas buenas 
+Medidas malas 
+d = 21.343345
+d = 21.658849
+Medidas buenas 
+Medidas malas 
+d = 43.645352
+d = 45.872794
+Medidas buenas 
+d = 30.515045
+d = 32.992837
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 34.609746
+d = 32.481403
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.371326
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 19 	Media = 29.684211
+	Varianza : 36.922998
+	Desviacion estandar : 6.076430
+	Medidas dentro de la desviacion estandar : 15 (78%)
+
+Grosor del PELO en pixels : 29.684211
+
+real	0m2.032s
+user	0m0.980s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/25105.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.443442
+d = 18.153587
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.261476
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.071016
+d = 18.281312
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.906061
+d = 17.811194
+Medidas buenas 
+d = 31.210945
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.195227
+Medidas malas 
+Medidas malas 
+d = 21.233269
+d = 20.855803
+Medidas buenas 
+Medidas malas 
+d = 15.052072
+d = 15.197825
+d = 15.343579
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.694480
+d = 18.712623
+d = 18.730765
+Medidas buenas 
+d = 20.977768
+d = 21.386305
+Medidas buenas 
+Medidas malas 
+d = 18.710468
+Medidas malas 
+d = 17.853273
+d = 17.967809
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 18 	Media = 17.833333
+	Varianza : 3.731250
+	Desviacion estandar : 1.931644
+	Medidas dentro de la desviacion estandar : 11 (61%)
+
+Grosor del PELO en pixels : 17.833333
+
+real	0m1.351s
+user	0m0.640s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja-2/29547.pgm:
+d = 16.443180
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.940976
+Medidas malas 
+d = 23.558940
+d = 21.647667
+Medidas buenas 
+d = 18.662298
+d = 18.799102
+d = 18.935907
+Medidas buenas 
+d = 23.544816
+d = 23.082860
+d = 22.620905
+Medidas buenas 
+d = 20.013161
+d = 19.309291
+d = 18.605421
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.255161
+d = 18.692253
+Medidas buenas 
+Medidas malas 
+d = 21.857945
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.554905
+d = 21.925066
+Medidas buenas 
+Medidas malas 
+d = 18.806947
+d = 18.461807
+Medidas buenas 
+d = 19.617514
+d = 19.299385
+Medidas buenas 
+Medidas malas 
+d = 14.323539
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.449695
+d = 21.269606
+d = 21.089518
+Medidas buenas 
+Medidas malas 
+d = 19.298370
+d = 19.814036
+Medidas buenas 
+d = 20.571902
+d = 19.949324
+Medidas buenas 
+d = 17.260921
+Medidas malas 
+Medidas malas 
+d = 20.848335
+Medidas malas 
+Medidas malas 
+d = 15.186987
+d = 16.684618
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.622302
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.166942
+d = 19.327334
+d = 18.487726
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.942804
+d = 14.603413
+Medidas buenas 
+d = 20.831005
+Medidas malas 
+Medidas malas 
+d = 12.699472
+d = 13.690031
+Medidas buenas 
+Medidas malas 
+d = 20.690905
+Medidas malas 
+Medidas malas 
+d = 18.171958
+d = 18.655477
+Medidas buenas 
+d = 18.855905
+Medidas malas 
+d = 21.910668
+d = 23.035916
+Medidas buenas 
+d = 18.724412
+d = 19.090560
+Medidas buenas 
+d = 21.677119
+Medidas malas 
+d = 21.439871
+d = 20.983734
+d = 20.527598
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.246342
+Medidas malas 
+d = 20.291567
+d = 20.823560
+Medidas buenas 
+d = 19.036398
+Medidas malas 
+d = 14.011511
+d = 14.489083
+Medidas buenas 
+Medidas malas 
+d = 14.282842
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 48 	Media = 18.770833
+	Varianza : 7.137580
+	Desviacion estandar : 2.671625
+	Medidas dentro de la desviacion estandar : 32 (66%)
+
+Grosor del PELO en pixels : 18.770833
+
+real	0m1.443s
+user	0m0.692s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/26956.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.964837
+Medidas malas 
+Medidas malas 
+d = 22.995341
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.611980
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.791191
+Medidas malas 
+Medidas malas 
+d = 21.383854
+d = 21.592537
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.232532
+d = 32.199482
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 32.058487
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.945160
+d = 29.366823
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.921824
+d = 23.727891
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.841114
+Medidas malas 
+d = 30.069213
+d = 29.747793
+d = 29.426372
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.641648
+d = 19.057837
+Medidas buenas 
+Medidas malas 
+d = 22.914109
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.042923
+d = 13.679833
+d = 13.316744
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.627120
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 16 	Media = 23.500000
+	Varianza : 43.201114
+	Desviacion estandar : 6.572755
+	Medidas dentro de la desviacion estandar : 10 (62%)
+
+Grosor del PELO en pixels : 23.500000
+
+real	0m1.171s
+user	0m0.560s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/4194.pgm:
+d = 22.786565
+d = 24.229145
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.661323
+d = 21.498062
+Medidas buenas 
+Medidas malas 
+d = 18.734091
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.593116
+Medidas malas 
+Medidas malas 
+d = 21.045495
+d = 20.211874
+Medidas buenas 
+Medidas malas 
+d = 25.299669
+Medidas malas 
+d = 25.185148
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.911189
+d = 18.625902
+d = 19.340616
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 9 	Media = 20.222222
+	Varianza : 3.755121
+	Desviacion estandar : 1.937813
+	Medidas dentro de la desviacion estandar : 6 (66%)
+
+Grosor del PELO en pixels : 20.222222
+
+real	0m1.905s
+user	0m0.920s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/16587.pgm:
+Medidas malas 
+d = 22.039367
+d = 22.801682
+d = 23.563997
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.612919
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.999375
+d = 22.700678
+d = 24.401981
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.819513
+d = 27.250941
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.385766
+d = 18.938468
+Medidas buenas 
+Medidas malas 
+d = 19.150875
+d = 19.778073
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.842678
+Medidas malas 
+Medidas malas 
+d = 21.640135
+d = 20.558931
+Medidas buenas 
+Medidas malas 
+d = 21.371063
+d = 21.326747
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 16 	Media = 21.500000
+	Varianza : 6.137275
+	Desviacion estandar : 2.477352
+	Medidas dentro de la desviacion estandar : 12 (75%)
+
+Grosor del PELO en pixels : 21.500000
+
+real	0m1.150s
+user	0m0.552s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/4861.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.475971
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.706042
+d = 27.456172
+d = 27.206302
+Medidas buenas 
+Medidas malas 
+d = 25.790384
+Medidas malas 
+Medidas malas 
+d = 25.721532
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 3 	Media = 27.000000
+	Varianza : 0.249716
+	Desviacion estandar : 0.499716
+	Medidas dentro de la desviacion estandar : 2 (66%)
+
+Grosor del PELO en pixels : 27.000000
+
+real	0m1.913s
+user	0m0.928s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/20656.pgm:
+Medidas malas 
+d = 23.072899
+Medidas malas 
+d = 23.062043
+d = 23.083241
+d = 23.104439
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.248821
+d = 19.915156
+d = 20.581491
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.271798
+d = 19.475591
+Medidas buenas 
+d = 17.634068
+d = 17.010570
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.170927
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.997686
+Medidas malas 
+d = 13.011466
+d = 13.449260
+d = 13.887054
+Medidas buenas 
+Medidas malas 
+d = 17.273144
+d = 17.831136
+Medidas buenas 
+d = 19.339348
+d = 19.164432
+Medidas buenas 
+Medidas malas 
+d = 23.556653
+Medidas malas 
+Medidas malas 
+d = 13.405456
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 17 	Media = 18.235294
+	Varianza : 9.212328
+	Desviacion estandar : 3.035182
+	Medidas dentro de la desviacion estandar : 11 (64%)
+
+Grosor del PELO en pixels : 18.235294
+
+real	0m1.296s
+user	0m0.608s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja-2/1612.pgm:
+Medidas malas 
+Medidas malas 
+d = 36.305090
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 31.193273
+d = 29.333520
+Medidas buenas 
+Medidas malas 
+d = 20.569255
+d = 19.070367
+Medidas buenas 
+d = 35.535265
+d = 36.834046
+d = 38.132827
+Medidas buenas 
+d = 19.227479
+d = 19.839905
+d = 21.958209
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.149717
+d = 22.081404
+Medidas buenas 
+d = 18.812819
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 35.121624
+d = 33.650768
+d = 32.179913
+Medidas buenas 
+d = 19.946843
+d = 19.702834
+d = 19.458825
+Medidas buenas 
+d = 18.114741
+Medidas malas 
+d = 34.536553
+Medidas malas 
+d = 29.237728
+d = 30.664089
+d = 32.657270
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 30.104962
+d = 30.712522
+Medidas buenas 
+d = 19.035379
+d = 19.724696
+Medidas buenas 
+Medidas malas 
+d = 31.604527
+d = 30.390652
+d = 29.176777
+Medidas buenas 
+d = 31.199192
+d = 32.763855
+d = 34.328517
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 15.999702
+d = 16.211020
+d = 16.422339
+Medidas buenas 
+Medidas malas 
+d = 27.988221
+d = 30.227343
+Medidas buenas 
+d = 31.817142
+d = 29.603790
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.184840
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.851672
+d = 18.833056
+d = 18.541730
+Medidas buenas 
+d = 21.330563
+d = 20.355739
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 25.604651
+	Varianza : 44.384331
+	Desviacion estandar : 6.662157
+	Medidas dentro de la desviacion estandar : 29 (67%)
+
+Grosor del PELO en pixels : 25.604651
+
+real	0m1.283s
+user	0m0.616s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/10713.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.618296
+Medidas malas 
+d = 16.732807
+d = 16.625570
+d = 16.518333
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.896090
+d = 18.522267
+Medidas buenas 
+Medidas malas 
+d = 17.252831
+d = 15.891718
+d = 15.069515
+Medidas buenas 
+Medidas malas 
+d = 27.339152
+d = 21.561366
+d = 21.182071
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.565354
+d = 14.198062
+d = 14.830771
+Medidas buenas 
+d = 20.306389
+Medidas malas 
+Medidas malas 
+d = 15.851870
+Medidas malas 
+d = 15.711468
+d = 14.306143
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.154783
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 48.110420
+Medidas malas 
+d = 21.317980
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.198039
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.772665
+d = 16.146290
+Medidas buenas 
+Medidas malas 
+d = 14.822563
+d = 15.108707
+d = 15.323355
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.616745
+d = 18.207410
+Medidas buenas 
+d = 21.502532
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 23 	Media = 16.521739
+	Varianza : 9.127682
+	Desviacion estandar : 3.021205
+	Medidas dentro de la desviacion estandar : 20 (86%)
+
+Grosor del PELO en pixels : 16.521739
+
+real	0m1.196s
+user	0m0.572s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/9434.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.269959
+d = 18.833771
+d = 18.380945
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.274040
+Medidas malas 
+d = 20.612461
+Medidas malas 
+d = 19.924499
+Medidas malas 
+d = 16.213239
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.596698
+d = 20.548834
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.156528
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.184010
+d = 23.386297
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.520857
+d = 25.242676
+d = 24.964496
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.955021
+d = 18.391245
+d = 18.879216
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 23.574398
+d = 23.303450
+Medidas buenas 
+Medidas malas 
+d = 22.743846
+d = 21.692657
+Medidas buenas 
+Medidas malas 
+d = 22.228112
+Medidas malas 
+d = 29.911730
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.711729
+Medidas malas 
+d = 25.408066
+Medidas malas 
+d = 18.418959
+d = 18.413499
+Medidas buenas 
+Medidas malas 
+d = 17.253435
+d = 17.607026
+d = 17.960617
+Medidas buenas 
+d = 16.735821
+d = 18.988663
+d = 21.972334
+Medidas buenas 
+Medidas malas 
+d = 18.662841
+d = 17.650002
+Medidas buenas 
+d = 28.399013
+d = 28.205973
+Medidas buenas 
+d = 16.307728
+d = 17.942154
+d = 17.517678
+Medidas buenas 
+d = 20.329678
+d = 17.831807
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 28.161199
+Medidas malas 
+Medidas malas 
+d = 17.527085
+d = 18.458231
+Medidas buenas 
+d = 29.441919
+Medidas malas 
+Medidas malas 
+d = 28.121659
+d = 28.130089
+Medidas buenas 
+Medidas malas 
+d = 29.431773
+d = 29.933157
+Medidas buenas 
+d = 28.413251
+d = 28.125700
+d = 28.121007
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 21.209302
+	Varianza : 17.967305
+	Desviacion estandar : 4.238786
+	Medidas dentro de la desviacion estandar : 31 (72%)
+
+Grosor del PELO en pixels : 21.209302
+
+real	0m1.593s
+user	0m0.772s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja-2/30451.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.557074
+Medidas malas 
+Medidas malas 
+d = 23.189477
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.278475
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 1 	Media = 0.000000
+	Varianza : 541.887419
+	Desviacion estandar : 23.278475
+	Medidas dentro de la desviacion estandar : 1 (100%)
+
+Grosor del PELO en pixels : 0.000000
+
+real	0m1.778s
+user	0m0.860s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/20620.pgm:
+Medidas malas 
+d = 20.426718
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.638862
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.521962
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.907597
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.037224
+d = 24.738436
+Medidas buenas 
+d = 23.099776
+d = 21.975870
+d = 20.851963
+Medidas buenas 
+Medidas malas 
+d = 21.118489
+d = 21.130450
+Medidas buenas 
+d = 21.142392
+d = 21.129237
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 21.752223
+d = 23.132454
+Medidas buenas 
+Medidas malas 
+d = 22.868898
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.809435
+d = 26.165849
+d = 25.522264
+Medidas buenas 
+d = 25.774406
+Medidas malas 
+Medidas malas 
+d = 25.796343
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 14 	Media = 22.785714
+	Varianza : 4.723997
+	Desviacion estandar : 2.173476
+	Medidas dentro de la desviacion estandar : 10 (71%)
+
+Grosor del PELO en pixels : 22.785714
+
+real	0m1.755s
+user	0m0.852s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/28763.pgm:
+d = 21.663834
+Medidas malas 
+d = 21.595922
+d = 21.380070
+d = 22.942701
+Medidas buenas 
+d = 32.235059
+Medidas malas 
+d = 31.991853
+Medidas malas 
+Medidas malas 
+d = 22.800534
+Medidas malas 
+d = 19.077503
+Medidas malas 
+d = 33.153038
+d = 31.661504
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.044108
+Medidas malas 
+Medidas malas 
+d = 19.427159
+d = 18.816595
+d = 18.206032
+Medidas buenas 
+d = 23.024415
+Medidas malas 
+d = 17.458543
+d = 17.024306
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 37.075485
+Medidas malas 
+d = 21.772135
+d = 22.897592
+Medidas buenas 
+d = 21.312752
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.957573
+Medidas malas 
+d = 32.943650
+d = 32.465848
+d = 33.466968
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.913407
+Medidas malas 
+d = 27.664661
+d = 22.957765
+Medidas buenas 
+Medidas malas 
+d = 16.754009
+d = 17.128477
+Medidas buenas 
+d = 21.952617
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.549802
+Medidas malas 
+d = 16.532796
+d = 16.554581
+d = 16.576366
+Medidas buenas 
+d = 21.425957
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 22 	Media = 22.136364
+	Varianza : 37.580848
+	Desviacion estandar : 6.130322
+	Medidas dentro de la desviacion estandar : 17 (77%)
+
+Grosor del PELO en pixels : 22.136364
+
+real	0m1.804s
+user	0m0.872s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/20837.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 35.500897
+d = 35.965521
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.251412
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 36.378739
+d = 35.914515
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 4 	Media = 35.250000
+	Varianza : 0.572637
+	Desviacion estandar : 0.756728
+	Medidas dentro de la desviacion estandar : 3 (75%)
+
+Grosor del PELO en pixels : 35.250000
+
+real	0m1.539s
+user	0m0.740s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja-2/13473.pgm:
+Medidas malas 
+Medidas malas 
+d = 18.509453
+d = 18.102837
+Medidas buenas 
+Medidas malas 
+d = 19.471309
+Medidas malas 
+Medidas malas 
+d = 18.167467
+d = 19.547368
+Medidas buenas 
+Medidas malas 
+d = 18.683388
+d = 18.777478
+Medidas buenas 
+d = 20.299495
+d = 18.931454
+d = 18.552465
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.104262
+d = 18.428216
+d = 18.752170
+Medidas buenas 
+d = 16.468598
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.851899
+Medidas malas 
+d = 18.732152
+d = 18.660630
+Medidas buenas 
+Medidas malas 
+d = 15.818871
+d = 17.309471
+Medidas buenas 
+d = 20.173738
+d = 20.477579
+d = 20.255378
+Medidas buenas 
+d = 17.753007
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.624003
+d = 20.366453
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.709064
+Medidas malas 
+d = 27.218703
+d = 26.976455
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.323557
+Medidas malas 
+d = 25.260501
+d = 25.400386
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 25 	Media = 19.600000
+	Varianza : 8.634061
+	Desviacion estandar : 2.938377
+	Medidas dentro de la desviacion estandar : 20 (80%)
+
+Grosor del PELO en pixels : 19.600000
+
+real	0m2.330s
+user	0m1.044s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja-2/2387.pgm:
+Medidas malas 
+d = 25.839705
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.005407
+d = 14.926287
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.960018
+d = 26.432649
+d = 25.283440
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.229938
+d = 18.477698
+Medidas buenas 
+Medidas malas 
+d = 17.848494
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.676010
+d = 26.155648
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.849090
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.892180
+d = 23.714289
+Medidas buenas 
+Medidas malas 
+d = 25.916277
+Medidas malas 
+Medidas malas 
+d = 17.716149
+d = 17.009214
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.921417
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.717583
+d = 23.998907
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 15 	Media = 21.266667
+	Varianza : 18.100318
+	Desviacion estandar : 4.254447
+	Medidas dentro de la desviacion estandar : 8 (53%)
+
+Grosor del PELO en pixels : 21.266667
+
+real	0m1.897s
+user	0m0.916s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja-2/17675.pgm:
+Medidas malas 
+d = 30.495048
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.348220
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.873988
+d = 25.743562
+Medidas buenas 
+Medidas malas 
+d = 25.934077
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.711008
+Medidas malas 
+d = 26.564470
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.460769
+d = 25.383712
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 21.413674
+d = 22.197699
+Medidas buenas 
+d = 25.348233
+d = 25.447479
+Medidas buenas 
+Medidas malas 
+d = 39.443261
+d = 38.904572
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 28.798319
+d = 25.091557
+d = 24.197564
+Medidas buenas 
+Medidas malas 
+d = 31.083405
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.527998
+Medidas malas 
+Medidas malas 
+d = 31.985849
+d = 31.306114
+Medidas buenas 
+Medidas malas 
+d = 31.361370
+Medidas malas 
+d = 38.881733
+d = 39.378149
+Medidas buenas 
+d = 30.213421
+d = 28.920600
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 19 	Media = 28.578947
+	Varianza : 34.456050
+	Desviacion estandar : 5.869928
+	Medidas dentro de la desviacion estandar : 13 (68%)
+
+Grosor del PELO en pixels : 28.578947
+
+real	0m0.942s
+user	0m0.448s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja-2/12203.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.818209
+d = 26.974002
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.862051
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.136783
+d = 19.303885
+Medidas buenas 
+d = 19.413474
+d = 19.230545
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 6 	Media = 21.333333
+	Varianza : 13.158680
+	Desviacion estandar : 3.627489
+	Medidas dentro de la desviacion estandar : 4 (66%)
+
+Grosor del PELO en pixels : 21.333333
+
+real	0m1.658s
+user	0m0.800s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/13803.pgm:
+Medidas malas 
+d = 23.187440
+d = 21.330149
+d = 21.695488
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.607351
+Medidas malas 
+d = 23.121037
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.270002
+d = 17.378412
+Medidas buenas 
+Medidas malas 
+d = 23.370391
+Medidas malas 
+d = 17.555233
+d = 19.780886
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.634508
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.955231
+d = 19.516470
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.556812
+d = 21.078103
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 21.692513
+Medidas malas 
+Medidas malas 
+d = 16.922585
+Medidas malas 
+d = 24.083092
+d = 22.568965
+Medidas buenas 
+Medidas malas 
+d = 18.662518
+Medidas malas 
+Medidas malas 
+d = 17.299160
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.550127
+d = 18.747303
+Medidas buenas 
+Medidas malas 
+d = 19.754117
+d = 19.037300
+d = 18.320483
+Medidas buenas 
+d = 18.785965
+d = 21.239042
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.106259
+Medidas malas 
+d = 39.582413
+d = 40.132843
+Medidas buenas 
+d = 21.502030
+d = 21.711450
+Medidas buenas 
+Medidas malas 
+d = 20.357345
+d = 19.228830
+d = 18.100314
+Medidas buenas 
+d = 21.208513
+Medidas malas 
+d = 17.296383
+d = 17.177250
+Medidas buenas 
+Medidas malas 
+d = 20.544027
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 29 	Media = 20.862069
+	Varianza : 29.109457
+	Desviacion estandar : 5.395318
+	Medidas dentro de la desviacion estandar : 27 (93%)
+
+Grosor del PELO en pixels : 20.862069
+
+real	0m1.514s
+user	0m0.728s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/21849.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.594162
+Medidas malas 
+d = 37.859677
+d = 35.128351
+Medidas buenas 
+Medidas malas 
+d = 37.860077
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 34.384091
+d = 35.561705
+d = 37.082786
+Medidas buenas 
+d = 34.705828
+Medidas malas 
+d = 25.268467
+d = 26.315938
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 7 	Media = 32.714286
+	Varianza : 22.665952
+	Desviacion estandar : 4.760877
+	Medidas dentro de la desviacion estandar : 4 (57%)
+
+Grosor del PELO en pixels : 32.714286
+
+real	0m1.186s
+user	0m0.564s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/31599.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.400945
+d = 21.934945
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 23.431641
+Medidas malas 
+d = 23.021598
+d = 24.440767
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.697512
+d = 15.301224
+Medidas buenas 
+d = 42.593291
+d = 42.518605
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.701605
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.451844
+d = 20.363192
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.046715
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.399859
+Medidas malas 
+d = 13.733844
+d = 13.926965
+d = 14.120086
+Medidas buenas 
+d = 15.642515
+d = 13.896091
+Medidas buenas 
+d = 19.811247
+d = 19.538806
+d = 19.266365
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 18 	Media = 20.500000
+	Varianza : 69.795528
+	Desviacion estandar : 8.354372
+	Medidas dentro de la desviacion estandar : 16 (88%)
+
+Grosor del PELO en pixels : 20.500000
+
+real	0m1.377s
+user	0m0.652s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/13953.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.807412
+d = 25.599884
+d = 25.607763
+Medidas buenas 
+d = 25.348622
+Medidas malas 
+d = 24.892848
+Medidas malas 
+Medidas malas 
+d = 18.727872
+d = 19.498671
+Medidas buenas 
+Medidas malas 
+d = 18.733383
+d = 20.048897
+Medidas buenas 
+d = 19.944425
+d = 21.386429
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 30.678006
+d = 30.632682
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.895138
+d = 21.777265
+d = 18.364691
+Medidas buenas 
+d = 18.678331
+Medidas malas 
+Medidas malas 
+d = 23.324773
+d = 21.846869
+d = 20.368965
+Medidas buenas 
+d = 15.372693
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.297388
+Medidas malas 
+d = 15.402420
+d = 15.363189
+d = 15.323959
+Medidas buenas 
+Medidas malas 
+d = 47.390928
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.523379
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.424644
+Medidas malas 
+d = 21.251478
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.628625
+Medidas malas 
+Medidas malas 
+d = 27.601966
+d = 27.888721
+Medidas buenas 
+Medidas malas 
+d = 30.625230
+Medidas malas 
+d = 23.898623
+d = 24.900204
+Medidas buenas 
+d = 19.322621
+Medidas malas 
+Medidas malas 
+d = 27.831964
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.223266
+d = 18.485846
+Medidas buenas 
+Medidas malas 
+d = 23.965163
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.829402
+d = 17.096756
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 28 	Media = 20.928571
+	Varianza : 18.958052
+	Desviacion estandar : 4.354084
+	Medidas dentro de la desviacion estandar : 19 (67%)
+
+Grosor del PELO en pixels : 20.928571
+
+real	0m1.339s
+user	0m0.636s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/5133.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.387043
+Medidas malas 
+d = 25.653474
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.103231
+Medidas malas 
+d = 18.625904
+d = 19.371943
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.649208
+d = 20.228730
+d = 20.808252
+Medidas buenas 
+d = 20.671041
+Medidas malas 
+d = 20.431171
+d = 20.392022
+d = 20.352874
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.354360
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.221758
+Medidas malas 
+d = 19.037211
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 30.066677
+d = 31.162763
+Medidas buenas 
+Medidas malas 
+d = 30.237112
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 10 	Media = 21.700000
+	Varianza : 18.671617
+	Desviacion estandar : 4.321067
+	Medidas dentro de la desviacion estandar : 8 (80%)
+
+Grosor del PELO en pixels : 21.700000
+
+real	0m1.283s
+user	0m0.604s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/26586.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.844671
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.348358
+d = 27.154168
+d = 26.959977
+Medidas buenas 
+d = 19.345457
+d = 18.853240
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.502329
+d = 17.611832
+Medidas buenas 
+Medidas malas 
+d = 15.728933
+d = 14.856640
+d = 13.984347
+Medidas buenas 
+d = 16.616694
+Medidas malas 
+d = 27.344136
+Medidas malas 
+Medidas malas 
+d = 19.132634
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.571215
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 10 	Media = 19.400000
+	Varianza : 24.821019
+	Desviacion estandar : 4.982070
+	Medidas dentro de la desviacion estandar : 6 (60%)
+
+Grosor del PELO en pixels : 19.400000
+
+real	0m1.759s
+user	0m0.856s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja/21883.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.515811
+d = 19.294639
+Medidas buenas 
+d = 19.480630
+Medidas malas 
+d = 21.614254
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.363231
+d = 21.981310
+Medidas buenas 
+d = 18.883439
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.535572
+Medidas malas 
+Medidas malas 
+d = 22.228178
+d = 21.417720
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 23.043752
+d = 22.632356
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.873804
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 8 	Media = 21.000000
+	Varianza : 1.841300
+	Desviacion estandar : 1.356945
+	Medidas dentro de la desviacion estandar : 4 (50%)
+
+Grosor del PELO en pixels : 21.000000
+
+real	0m1.337s
+user	0m0.624s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja/16392.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.589307
+d = 26.202016
+d = 26.814724
+Medidas buenas 
+d = 15.206255
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.388017
+d = 16.069211
+d = 17.273479
+Medidas buenas 
+d = 19.772409
+d = 19.568945
+Medidas buenas 
+d = 14.828747
+d = 15.700579
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.205613
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.867304
+d = 15.001043
+Medidas buenas 
+d = 15.173100
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.388602
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.116908
+Medidas malas 
+d = 15.886552
+d = 15.880048
+d = 15.873543
+Medidas buenas 
+Medidas malas 
+d = 25.953523
+d = 26.707113
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.752675
+Medidas malas 
+Medidas malas 
+d = 14.312831
+d = 14.920146
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.657954
+d = 15.520548
+Medidas buenas 
+d = 26.067863
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.045202
+d = 17.074986
+Medidas buenas 
+d = 26.312861
+Medidas malas 
+Medidas malas 
+d = 15.167854
+d = 15.439178
+d = 14.507862
+Medidas buenas 
+d = 15.048318
+d = 15.110043
+d = 15.171768
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 29 	Media = 17.241379
+	Varianza : 16.970386
+	Desviacion estandar : 4.119513
+	Medidas dentro de la desviacion estandar : 24 (82%)
+
+Grosor del PELO en pixels : 17.241379
+
+real	0m1.299s
+user	0m0.612s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/20035.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.680805
+d = 18.635816
+d = 18.590828
+Medidas buenas 
+Medidas malas 
+d = 21.424571
+d = 21.568634
+d = 20.327698
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.442247
+d = 16.661874
+d = 17.881501
+Medidas buenas 
+d = 18.619974
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.173557
+d = 26.181024
+Medidas buenas 
+Medidas malas 
+d = 18.567328
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.314738
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.746901
+d = 18.341174
+Medidas buenas 
+d = 20.376329
+Medidas malas 
+d = 15.838279
+d = 17.328149
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.240012
+Medidas malas 
+Medidas malas 
+d = 23.243902
+d = 21.962963
+Medidas buenas 
+d = 18.773620
+d = 18.579633
+d = 18.385647
+Medidas buenas 
+Medidas malas 
+d = 17.604696
+d = 16.158502
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.172773
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.958815
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.510949
+Medidas malas 
+Medidas malas 
+d = 15.866924
+d = 16.252734
+Medidas buenas 
+d = 16.116154
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 24 	Media = 18.500000
+	Varianza : 9.032386
+	Desviacion estandar : 3.005393
+	Medidas dentro de la desviacion estandar : 18 (75%)
+
+Grosor del PELO en pixels : 18.500000
+
+real	0m1.960s
+user	0m0.944s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/28894.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.656169
+d = 25.430560
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.312031
+d = 23.741965
+Medidas buenas 
+Medidas malas 
+d = 23.758201
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.985995
+d = 27.098699
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.208447
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.141944
+d = 23.970720
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.065777
+d = 24.234014
+Medidas buenas 
+Medidas malas 
+d = 21.739383
+d = 21.742857
+d = 21.746331
+Medidas buenas 
+d = 18.555902
+d = 18.228458
+d = 17.901015
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 16 	Media = 22.500000
+	Varianza : 8.022120
+	Desviacion estandar : 2.832335
+	Medidas dentro de la desviacion estandar : 9 (56%)
+
+Grosor del PELO en pixels : 22.500000
+
+real	0m1.215s
+user	0m0.512s
+sys	0m0.000s
+
+
+ Archivo fotos-reales/oveja/20132.pgm:
+Medidas malas 
+d = 15.138068
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.496860
+d = 16.243832
+Medidas buenas 
+d = 14.747026
+d = 12.710160
+Medidas buenas 
+d = 17.793457
+Medidas malas 
+Medidas malas 
+d = 15.266603
+d = 15.943217
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.890538
+d = 13.465639
+Medidas buenas 
+Medidas malas 
+d = 16.086887
+d = 14.788434
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.252372
+d = 20.367794
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.236100
+d = 25.346786
+d = 25.457472
+Medidas buenas 
+Medidas malas 
+d = 13.408750
+d = 13.808512
+Medidas buenas 
+Medidas malas 
+d = 25.366532
+Medidas malas 
+d = 13.386535
+d = 12.990058
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.428550
+d = 17.545569
+Medidas buenas 
+d = 16.103246
+d = 17.223137
+Medidas buenas 
+Medidas malas 
+d = 15.279691
+Medidas malas 
+Medidas malas 
+d = 16.586037
+d = 15.875472
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.866974
+d = 13.257676
+d = 14.833933
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.874012
+d = 18.475645
+Medidas buenas 
+Medidas malas 
+d = 15.352389
+d = 15.123067
+d = 14.893744
+Medidas buenas 
+d = 18.835600
+d = 20.845866
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.255105
+d = 22.579084
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.284279
+d = 19.154604
+Medidas buenas 
+Medidas malas 
+d = 22.932235
+Medidas malas 
+d = 22.439812
+d = 22.943573
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.062404
+d = 15.094993
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 16.744186
+	Varianza : 13.279824
+	Desviacion estandar : 3.644149
+	Medidas dentro de la desviacion estandar : 33 (76%)
+
+Grosor del PELO en pixels : 16.744186
+
+real	0m1.166s
+user	0m0.556s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/30705.pgm:
+d = 11.218136
+d = 11.143822
+Medidas buenas 
+d = 25.665698
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.278814
+d = 21.339974
+Medidas buenas 
+d = 25.258137
+d = 25.981993
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.751841
+d = 19.291092
+d = 18.687301
+Medidas buenas 
+Medidas malas 
+d = 24.587559
+d = 25.656411
+Medidas buenas 
+Medidas malas 
+d = 25.960767
+d = 25.033253
+Medidas buenas 
+d = 21.312493
+d = 21.238561
+Medidas buenas 
+Medidas malas 
+d = 19.203048
+d = 20.082829
+Medidas buenas 
+Medidas malas 
+d = 19.089084
+d = 19.476320
+Medidas buenas 
+d = 21.988514
+d = 22.297578
+Medidas buenas 
+Medidas malas 
+d = 22.558524
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.401045
+d = 22.140952
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 23 	Media = 20.695652
+	Varianza : 14.989529
+	Desviacion estandar : 3.871631
+	Medidas dentro de la desviacion estandar : 15 (65%)
+
+Grosor del PELO en pixels : 20.695652
+
+real	0m2.039s
+user	0m0.984s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/19432.pgm:
+Medidas malas 
+d = 27.994585
+d = 28.766025
+d = 29.537466
+Medidas buenas 
+Medidas malas 
+d = 30.345273
+Medidas malas 
+d = 28.330631
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.798933
+d = 31.385959
+Medidas buenas 
+Medidas malas 
+d = 30.380338
+d = 30.349775
+d = 27.675124
+Medidas buenas 
+d = 10.631409
+Medidas malas 
+Medidas malas 
+d = 28.794155
+d = 28.945016
+Medidas buenas 
+d = 29.762191
+d = 29.011708
+d = 28.261226
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.086802
+d = 27.342169
+Medidas buenas 
+Medidas malas 
+d = 10.699152
+Medidas malas 
+d = 29.056026
+d = 29.129861
+d = 29.203696
+Medidas buenas 
+d = 28.708915
+Medidas malas 
+d = 27.557431
+Medidas malas 
+Medidas malas 
+d = 27.098784
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 18 	Media = 28.666667
+	Varianza : 1.156212
+	Desviacion estandar : 1.075273
+	Medidas dentro de la desviacion estandar : 12 (66%)
+
+Grosor del PELO en pixels : 28.666667
+
+real	0m1.692s
+user	0m0.820s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/5848.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.484208
+Medidas malas 
+d = 17.580263
+Medidas malas 
+Medidas malas 
+d = 18.083010
+Medidas malas 
+Medidas malas 
+d = 19.283438
+Medidas malas 
+Medidas malas 
+d = 19.035825
+d = 17.665880
+d = 18.973219
+Medidas buenas 
+d = 18.397915
+d = 17.538832
+Medidas buenas 
+d = 19.117333
+Medidas malas 
+d = 19.175900
+d = 19.481193
+d = 19.786487
+Medidas buenas 
+d = 17.947968
+d = 18.622404
+d = 19.221537
+Medidas buenas 
+Medidas malas 
+d = 19.260951
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.204142
+d = 17.721217
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 13 	Media = 18.153846
+	Varianza : 0.791487
+	Desviacion estandar : 0.889655
+	Medidas dentro de la desviacion estandar : 8 (61%)
+
+Grosor del PELO en pixels : 18.153846
+
+real	0m1.366s
+user	0m0.640s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/24462.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.814690
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.567034
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.028942
+d = 23.609566
+Medidas buenas 
+d = 17.870768
+d = 17.592464
+d = 17.314161
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.367983
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.121000
+d = 16.499543
+Medidas buenas 
+d = 17.060374
+d = 15.644624
+d = 14.228873
+Medidas buenas 
+Medidas malas 
+d = 23.859854
+d = 23.313121
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.307335
+d = 13.892370
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 14 	Media = 17.714286
+	Varianza : 12.867668
+	Desviacion estandar : 3.587153
+	Medidas dentro de la desviacion estandar : 8 (57%)
+
+Grosor del PELO en pixels : 17.714286
+
+real	0m0.978s
+user	0m0.460s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/29747.pgm:
+d = 10.077737
+Medidas malas 
+d = 10.200002
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.869114
+d = 19.145009
+Medidas buenas 
+d = 22.061017
+d = 21.521479
+d = 20.981941
+Medidas buenas 
+d = 21.155500
+Medidas malas 
+d = 20.253911
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 36.332256
+Medidas malas 
+d = 35.436379
+Medidas malas 
+d = 21.371815
+d = 21.077254
+Medidas buenas 
+d = 21.765053
+d = 21.684836
+d = 21.604619
+Medidas buenas 
+Medidas malas 
+d = 19.127410
+Medidas malas 
+Medidas malas 
+d = 22.046427
+Medidas malas 
+d = 20.062277
+Medidas malas 
+d = 21.073763
+d = 21.913299
+Medidas buenas 
+d = 21.275253
+d = 21.729752
+Medidas buenas 
+Medidas malas 
+d = 17.194209
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.079271
+d = 21.507402
+Medidas buenas 
+d = 21.267935
+d = 20.155945
+Medidas buenas 
+Medidas malas 
+d = 20.526463
+Medidas malas 
+d = 21.653093
+Medidas malas 
+Medidas malas 
+d = 20.842291
+Medidas malas 
+d = 15.901525
+d = 17.322063
+d = 18.742602
+Medidas buenas 
+d = 20.441307
+d = 20.224721
+d = 20.008135
+Medidas buenas 
+Medidas malas 
+d = 19.615416
+d = 20.741076
+Medidas buenas 
+d = 21.717465
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 26 	Media = 20.038462
+	Varianza : 2.351292
+	Desviacion estandar : 1.533392
+	Medidas dentro de la desviacion estandar : 18 (69%)
+
+Grosor del PELO en pixels : 20.038462
+
+real	0m1.633s
+user	0m0.772s
+sys	0m0.032s
+
+
+ Archivo fotos-reales/oveja/5156.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.611207
+d = 17.003800
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.212748
+Medidas malas 
+d = 19.073907
+d = 17.737021
+Medidas buenas 
+d = 16.763333
+d = 15.686233
+Medidas buenas 
+d = 21.500164
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.338149
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.427268
+d = 21.494448
+Medidas buenas 
+d = 20.013450
+d = 19.200266
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.571434
+d = 16.822117
+d = 16.207188
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.159542
+d = 19.438033
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.006986
+d = 14.100364
+d = 14.193742
+Medidas buenas 
+Medidas malas 
+d = 16.382978
+d = 17.294311
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.593203
+d = 16.896351
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.514410
+d = 19.452239
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.890498
+Medidas malas 
+d = 14.094294
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.602300
+d = 21.668858
+Medidas buenas 
+d = 15.067053
+d = 16.347510
+Medidas buenas 
+d = 29.274362
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.946532
+d = 20.027722
+Medidas buenas 
+Medidas malas 
+d = 15.634462
+Medidas malas 
+d = 12.995708
+d = 12.897788
+Medidas buenas 
+d = 15.536998
+d = 16.473125
+d = 17.409253
+Medidas buenas 
+d = 19.900839
+Medidas malas 
+d = 21.804745
+d = 21.548103
+d = 21.291460
+Medidas buenas 
+d = 16.836950
+d = 17.823709
+d = 18.810469
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 41 	Media = 17.365854
+	Varianza : 6.250567
+	Desviacion estandar : 2.500113
+	Medidas dentro de la desviacion estandar : 27 (65%)
+
+Grosor del PELO en pixels : 17.365854
+
+real	0m1.104s
+user	0m0.524s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/28083.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 1 	Media = 0.000000
+	Varianza : 0.000000
+	Desviacion estandar : 0.000000
+	Medidas dentro de la desviacion estandar : 1 (100%)
+
+Grosor del PELO en pixels : 0.000000
+
+real	0m1.681s
+user	0m0.808s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/17213.pgm:
+d = 17.837301
+d = 17.442038
+Medidas buenas 
+d = 14.754343
+d = 15.761007
+d = 16.767672
+Medidas buenas 
+d = 17.501112
+d = 17.015914
+Medidas buenas 
+Medidas malas 
+d = 18.748165
+Medidas malas 
+d = 17.021664
+Medidas malas 
+d = 16.760892
+d = 16.165007
+Medidas buenas 
+d = 15.123661
+Medidas malas 
+d = 19.769769
+d = 20.502816
+Medidas buenas 
+Medidas malas 
+d = 18.706380
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.888583
+d = 17.302178
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.283794
+d = 18.340234
+Medidas buenas 
+d = 13.891054
+d = 14.768492
+Medidas buenas 
+d = 16.801226
+d = 17.291097
+Medidas buenas 
+d = 17.295584
+d = 17.658966
+Medidas buenas 
+d = 20.563264
+d = 19.864159
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 23 	Media = 16.826087
+	Varianza : 3.169436
+	Desviacion estandar : 1.780291
+	Medidas dentro de la desviacion estandar : 16 (69%)
+
+Grosor del PELO en pixels : 16.826087
+
+real	0m1.800s
+user	0m0.864s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/23808.pgm:
+Medidas malas 
+Medidas malas 
+d = 27.054806
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.715894
+d = 25.428787
+Medidas buenas 
+d = 18.704217
+Medidas malas 
+d = 19.464033
+Medidas malas 
+Medidas malas 
+d = 18.938040
+d = 19.525864
+d = 20.113688
+Medidas buenas 
+d = 17.985755
+d = 22.166653
+Medidas buenas 
+d = 22.772198
+d = 23.143577
+d = 23.514955
+Medidas buenas 
+d = 18.608042
+d = 18.944161
+Medidas buenas 
+d = 19.470561
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.453184
+Medidas malas 
+Medidas malas 
+d = 23.062537
+Medidas malas 
+d = 19.029270
+d = 15.617640
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.356912
+d = 19.113770
+Medidas buenas 
+d = 18.549488
+Medidas malas 
+d = 18.380214
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 16 	Media = 20.187500
+	Varianza : 8.466224
+	Desviacion estandar : 2.909678
+	Medidas dentro de la desviacion estandar : 11 (68%)
+
+Grosor del PELO en pixels : 20.187500
+
+real	0m1.310s
+user	0m0.616s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/17013.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.975752
+d = 23.848793
+d = 20.840417
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.103831
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.073921
+Medidas malas 
+Medidas malas 
+d = 23.691259
+d = 24.604790
+d = 25.064974
+Medidas buenas 
+Medidas malas 
+d = 26.092316
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.198267
+d = 22.823175
+Medidas buenas 
+d = 21.920204
+d = 23.741860
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 10 	Media = 22.700000
+	Varianza : 2.212120
+	Desviacion estandar : 1.487320
+	Medidas dentro de la desviacion estandar : 6 (60%)
+
+Grosor del PELO en pixels : 22.700000
+
+real	0m1.534s
+user	0m0.716s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/1218.pgm:
+Medidas malas 
+Medidas malas 
+d = 18.686498
+d = 19.122380
+d = 19.558261
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.554057
+d = 14.208974
+Medidas buenas 
+d = 27.807443
+Medidas malas 
+d = 26.061800
+d = 26.652215
+Medidas buenas 
+d = 15.944739
+d = 16.528092
+Medidas buenas 
+d = 19.823583
+d = 19.150286
+d = 18.476989
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.679500
+Medidas malas 
+d = 20.702845
+d = 20.485452
+d = 20.268059
+Medidas buenas 
+d = 17.630631
+d = 17.078113
+d = 16.525594
+Medidas buenas 
+d = 23.508870
+d = 24.235314
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.034110
+d = 18.070502
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.125092
+d = 14.334105
+Medidas buenas 
+d = 19.300551
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.648188
+d = 14.314171
+d = 13.980154
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.492818
+Medidas malas 
+d = 14.433271
+d = 14.692522
+Medidas buenas 
+d = 18.101219
+d = 18.059509
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.953854
+d = 16.231718
+d = 15.540426
+Medidas buenas 
+d = 19.770005
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.352464
+d = 22.602824
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.563295
+d = 23.647740
+Medidas buenas 
+d = 21.960899
+d = 22.732470
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.496437
+Medidas malas 
+d = 20.413407
+d = 22.155797
+d = 23.898186
+Medidas buenas 
+Medidas malas 
+d = 19.117772
+d = 19.106261
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 27.202232
+Medidas malas 
+d = 28.409238
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 45 	Media = 18.555556
+	Varianza : 12.355797
+	Desviacion estandar : 3.515081
+	Medidas dentro de la desviacion estandar : 26 (57%)
+
+Grosor del PELO en pixels : 18.555556
+
+real	0m1.098s
+user	0m0.516s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/5598.pgm:
+Medidas malas 
+d = 22.798765
+d = 17.510604
+d = 16.413685
+Medidas buenas 
+d = 12.697705
+Medidas malas 
+d = 17.331251
+Medidas malas 
+d = 17.311560
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.570034
+Medidas malas 
+d = 18.946426
+d = 16.676949
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.270264
+Medidas malas 
+d = 14.461773
+d = 16.481555
+d = 17.746047
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.629129
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.823951
+d = 20.802955
+Medidas buenas 
+d = 22.218384
+Medidas malas 
+Medidas malas 
+d = 27.038101
+d = 26.119859
+Medidas buenas 
+d = 21.618290
+Medidas malas 
+d = 21.214615
+d = 20.545827
+Medidas buenas 
+Medidas malas 
+d = 27.139845
+d = 28.757671
+d = 30.375496
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.448124
+Medidas malas 
+d = 19.049261
+d = 18.337659
+Medidas buenas 
+d = 21.683183
+Medidas malas 
+Medidas malas 
+d = 20.814125
+d = 21.730946
+d = 22.647768
+Medidas buenas 
+d = 19.081822
+d = 18.589290
+d = 18.096759
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.580493
+d = 21.646191
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 27 	Media = 20.481481
+	Varianza : 15.631245
+	Desviacion estandar : 3.953637
+	Medidas dentro de la desviacion estandar : 19 (70%)
+
+Grosor del PELO en pixels : 20.481481
+
+real	0m1.464s
+user	0m0.696s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/11146.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.397658
+d = 20.645849
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.441224
+d = 28.869038
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.526430
+d = 17.241893
+Medidas buenas 
+d = 28.073699
+d = 27.208769
+Medidas buenas 
+d = 44.953762
+d = 44.913703
+Medidas buenas 
+Medidas malas 
+d = 19.174162
+Medidas malas 
+Medidas malas 
+d = 18.901726
+d = 18.284365
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.176579
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.059369
+d = 18.129285
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 14 	Media = 24.571429
+	Varianza : 83.103918
+	Desviacion estandar : 9.116135
+	Medidas dentro de la desviacion estandar : 12 (85%)
+
+Grosor del PELO en pixels : 24.571429
+
+real	0m0.906s
+user	0m0.428s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/19825.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.490867
+d = 23.927251
+Medidas buenas 
+d = 22.173794
+d = 21.950120
+d = 21.726445
+Medidas buenas 
+d = 20.893455
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.861849
+d = 22.305879
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.142764
+d = 23.883147
+d = 23.623530
+Medidas buenas 
+d = 22.744644
+d = 22.281240
+Medidas buenas 
+Medidas malas 
+d = 21.962664
+Medidas malas 
+d = 21.083305
+d = 20.832773
+Medidas buenas 
+d = 26.007518
+d = 25.380644
+d = 24.753771
+Medidas buenas 
+Medidas malas 
+d = 23.750071
+Medidas malas 
+Medidas malas 
+d = 25.458424
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.942705
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 53.806138
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 17 	Media = 22.588235
+	Varianza : 2.479465
+	Desviacion estandar : 1.574632
+	Medidas dentro de la desviacion estandar : 12 (70%)
+
+Grosor del PELO en pixels : 22.588235
+
+real	0m1.856s
+user	0m0.868s
+sys	0m0.048s
+
+
+ Archivo fotos-reales/oveja/30156.pgm:
+d = 15.239530
+d = 16.899685
+d = 14.207728
+Medidas buenas 
+Medidas malas 
+d = 16.389291
+Medidas malas 
+Medidas malas 
+d = 14.561666
+Medidas malas 
+Medidas malas 
+d = 15.076032
+d = 14.770336
+d = 14.464639
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.342404
+Medidas malas 
+d = 17.242709
+d = 16.892115
+Medidas buenas 
+d = 16.743947
+d = 16.484950
+d = 16.225953
+Medidas buenas 
+Medidas malas 
+d = 25.843172
+Medidas malas 
+d = 24.179037
+Medidas malas 
+d = 22.217122
+d = 23.511430
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.932663
+d = 23.114742
+Medidas buenas 
+Medidas malas 
+d = 20.797533
+Medidas malas 
+Medidas malas 
+d = 21.927797
+d = 20.810644
+Medidas buenas 
+d = 15.061068
+d = 15.230363
+d = 15.399659
+Medidas buenas 
+Medidas malas 
+d = 20.801239
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.489407
+d = 21.149753
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.832055
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.143468
+d = 22.137071
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.392695
+d = 23.529729
+d = 23.666762
+Medidas buenas 
+d = 22.881412
+d = 23.736831
+d = 24.592251
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.496203
+Medidas malas 
+Medidas malas 
+d = 26.314200
+d = 25.701171
+Medidas buenas 
+Medidas malas 
+d = 17.135448
+Medidas malas 
+Medidas malas 
+d = 16.181016
+Medidas malas 
+d = 16.948296
+d = 16.415827
+d = 15.883357
+Medidas buenas 
+d = 15.099926
+d = 16.181117
+Medidas buenas 
+d = 23.279393
+d = 22.258172
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.368118
+d = 14.711412
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 41 	Media = 18.829268
+	Varianza : 15.224270
+	Desviacion estandar : 3.901829
+	Medidas dentro de la desviacion estandar : 23 (56%)
+
+Grosor del PELO en pixels : 18.829268
+
+real	0m1.099s
+user	0m0.520s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/1481.pgm:
+Medidas malas 
+d = 21.384447
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.286000
+d = 21.269832
+d = 22.253665
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.888711
+d = 16.563581
+Medidas buenas 
+Medidas malas 
+d = 18.056744
+d = 16.534319
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.487890
+d = 14.625857
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.648286
+d = 14.371714
+d = 15.095143
+Medidas buenas 
+d = 18.792460
+d = 19.009136
+Medidas buenas 
+d = 14.851334
+d = 14.518210
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.118226
+d = 15.602498
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.210181
+d = 19.040912
+Medidas buenas 
+Medidas malas 
+d = 15.491657
+d = 15.108634
+d = 14.725612
+Medidas buenas 
+d = 15.070184
+d = 14.565313
+Medidas buenas 
+d = 18.734795
+d = 18.024679
+Medidas buenas 
+d = 16.174576
+d = 17.147189
+Medidas buenas 
+d = 15.165298
+Medidas malas 
+d = 17.324700
+Medidas malas 
+d = 15.227132
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.696647
+d = 19.234536
+Medidas buenas 
+Medidas malas 
+d = 19.057419
+d = 19.241946
+d = 19.426473
+Medidas buenas 
+Medidas malas 
+d = 18.147668
+d = 17.560166
+d = 16.972664
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 37 	Media = 16.756757
+	Varianza : 4.726158
+	Desviacion estandar : 2.173973
+	Medidas dentro de la desviacion estandar : 23 (62%)
+
+Grosor del PELO en pixels : 16.756757
+
+real	0m1.299s
+user	0m0.624s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/13487.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.893997
+d = 14.489656
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.153008
+d = 14.892516
+Medidas buenas 
+Medidas malas 
+d = 14.124034
+Medidas malas 
+Medidas malas 
+d = 17.500967
+d = 18.391756
+Medidas buenas 
+Medidas malas 
+d = 15.541845
+d = 16.659687
+Medidas buenas 
+d = 15.445046
+Medidas malas 
+d = 17.229351
+d = 17.353995
+Medidas buenas 
+Medidas malas 
+d = 16.362958
+d = 16.469299
+d = 16.575640
+Medidas buenas 
+d = 15.690760
+d = 15.099403
+d = 14.508046
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.681948
+d = 16.534540
+Medidas buenas 
+d = 16.730687
+d = 15.233914
+Medidas buenas 
+d = 25.174090
+d = 24.827934
+d = 24.481779
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.921740
+d = 15.844509
+Medidas buenas 
+Medidas malas 
+d = 14.502632
+d = 14.730829
+Medidas buenas 
+d = 15.604503
+Medidas malas 
+d = 16.964026
+Medidas malas 
+Medidas malas 
+d = 14.009098
+d = 13.953990
+d = 13.848740
+Medidas buenas 
+Medidas malas 
+d = 14.835469
+d = 16.223979
+Medidas buenas 
+Medidas malas 
+d = 16.189153
+d = 15.264244
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.074923
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.523425
+d = 14.945045
+d = 15.336538
+Medidas buenas 
+Medidas malas 
+d = 19.012114
+d = 17.812611
+Medidas buenas 
+Medidas malas 
+d = 16.102841
+d = 15.088514
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.299946
+d = 13.903761
+d = 13.982990
+Medidas buenas 
+d = 15.756855
+d = 15.595937
+d = 15.435020
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 13.207039
+d = 13.990379
+d = 14.773718
+Medidas buenas 
+d = 16.509023
+d = 15.934704
+Medidas buenas 
+Medidas malas 
+d = 15.208979
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.334216
+d = 16.612935
+d = 16.891653
+Medidas buenas 
+d = 16.795367
+d = 16.811340
+Medidas buenas 
+d = 17.404386
+d = 17.288550
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 59 	Media = 15.627119
+	Varianza : 5.895273
+	Desviacion estandar : 2.428018
+	Medidas dentro de la desviacion estandar : 53 (89%)
+
+Grosor del PELO en pixels : 15.627119
+
+real	0m1.342s
+user	0m0.628s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/23143.pgm:
+Medidas malas 
+d = 13.635663
+Medidas malas 
+d = 26.305546
+d = 25.935806
+d = 25.566065
+Medidas buenas 
+d = 22.644038
+Medidas malas 
+d = 16.725631
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.895308
+d = 13.440673
+Medidas buenas 
+Medidas malas 
+d = 23.538223
+d = 24.651076
+d = 25.763930
+Medidas buenas 
+d = 25.950156
+Medidas malas 
+d = 22.371858
+d = 22.591875
+d = 22.811892
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 15.482234
+d = 16.167323
+Medidas buenas 
+d = 23.145001
+d = 23.218817
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 14.680255
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 15 	Media = 21.066667
+	Varianza : 20.570866
+	Desviacion estandar : 4.535512
+	Medidas dentro de la desviacion estandar : 8 (53%)
+
+Grosor del PELO en pixels : 21.066667
+
+real	0m1.323s
+user	0m0.628s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/25047.pgm:
+Medidas malas 
+Medidas malas 
+d = 31.572316
+Medidas malas 
+d = 19.762311
+d = 18.045359
+d = 20.373505
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.498352
+d = 20.254814
+Medidas buenas 
+Medidas malas 
+d = 22.300842
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.787287
+d = 26.841400
+Medidas buenas 
+Medidas malas 
+d = 21.876890
+d = 22.194030
+d = 22.511170
+Medidas buenas 
+Medidas malas 
+d = 19.422692
+d = 18.444590
+Medidas buenas 
+Medidas malas 
+d = 19.289855
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.138283
+d = 17.211270
+Medidas buenas 
+d = 31.519868
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.664589
+Medidas malas 
+d = 23.157505
+Medidas malas 
+d = 22.776976
+d = 23.496613
+d = 24.216250
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.909849
+Medidas malas 
+d = 22.046416
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.092789
+d = 19.331351
+d = 19.569913
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.383640
+d = 23.028920
+Medidas buenas 
+d = 16.472179
+d = 16.450155
+Medidas buenas 
+Medidas malas 
+d = 16.470180
+Medidas malas 
+d = 23.891249
+d = 23.588740
+d = 23.286232
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.715758
+d = 19.888617
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 29 	Media = 20.586207
+	Varianza : 7.065551
+	Desviacion estandar : 2.658110
+	Medidas dentro de la desviacion estandar : 19 (65%)
+
+Grosor del PELO en pixels : 20.586207
+
+real	0m1.327s
+user	0m0.620s
+sys	0m0.036s
+
+
+ Archivo fotos-reales/oveja/28628.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.277097
+d = 23.170551
+d = 23.064005
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 35.792325
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.113482
+d = 24.353980
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.338080
+d = 23.303865
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 39.117056
+Medidas malas 
+d = 36.607062
+d = 36.063948
+d = 35.520835
+Medidas buenas 
+Medidas malas 
+d = 25.382086
+d = 24.859237
+d = 24.336388
+Medidas buenas 
+d = 38.951575
+d = 39.082508
+d = 39.213442
+Medidas buenas 
+d = 23.639651
+d = 25.175730
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.295604
+d = 24.029934
+d = 25.601270
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 21 	Media = 27.714286
+	Varianza : 37.802140
+	Desviacion estandar : 6.148344
+	Medidas dentro de la desviacion estandar : 15 (71%)
+
+Grosor del PELO en pixels : 27.714286
+
+real	0m1.065s
+user	0m0.496s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/17316.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.637876
+d = 20.584202
+d = 21.530528
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 42.607183
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.691309
+d = 17.986391
+d = 18.351973
+Medidas buenas 
+d = 16.419765
+d = 16.673206
+d = 16.926647
+Medidas buenas 
+d = 18.439463
+d = 17.986737
+Medidas buenas 
+d = 17.356798
+d = 17.105700
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 42.621083
+d = 42.644952
+Medidas buenas 
+d = 20.000506
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.957086
+d = 24.408211
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 24.148773
+d = 23.754882
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.391649
+d = 18.064003
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.389836
+d = 16.871262
+Medidas buenas 
+d = 17.928336
+Medidas malas 
+d = 18.300497
+d = 17.832054
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 25 	Media = 20.400000
+	Varianza : 47.299754
+	Desviacion estandar : 6.877482
+	Medidas dentro de la desviacion estandar : 23 (92%)
+
+Grosor del PELO en pixels : 20.400000
+
+real	0m1.456s
+user	0m0.696s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/22738.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.542513
+d = 21.674296
+Medidas buenas 
+Medidas malas 
+d = 25.476849
+Medidas malas 
+d = 19.032330
+d = 17.121346
+d = 15.210361
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.403078
+Medidas malas 
+d = 16.597950
+Medidas malas 
+d = 18.275024
+d = 18.934343
+d = 19.593663
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.716650
+d = 17.845695
+Medidas buenas 
+d = 19.953637
+d = 19.412762
+d = 18.871888
+Medidas buenas 
+d = 21.409731
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.110755
+d = 21.081958
+Medidas buenas 
+Medidas malas 
+d = 23.338981
+Medidas malas 
+d = 23.906860
+d = 22.716602
+Medidas buenas 
+d = 24.517811
+d = 25.121271
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.176207
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.182042
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.721579
+d = 25.226157
+d = 24.730735
+Medidas buenas 
+d = 20.113672
+d = 21.706373
+Medidas buenas 
+Medidas malas 
+d = 21.733262
+d = 23.217474
+d = 23.975446
+Medidas buenas 
+Medidas malas 
+d = 23.985201
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 27 	Media = 20.629630
+	Varianza : 7.929778
+	Desviacion estandar : 2.815986
+	Medidas dentro de la desviacion estandar : 17 (62%)
+
+Grosor del PELO en pixels : 20.629630
+
+real	0m1.359s
+user	0m0.644s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/17207.pgm:
+d = 23.543164
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.578728
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.381298
+d = 16.529791
+Medidas buenas 
+d = 21.309700
+d = 21.219473
+d = 21.129246
+Medidas buenas 
+Medidas malas 
+d = 21.615912
+Medidas malas 
+d = 18.318229
+d = 16.812813
+d = 15.307396
+Medidas buenas 
+Medidas malas 
+d = 16.561365
+Medidas malas 
+d = 19.633762
+d = 19.091132
+d = 18.548501
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.816208
+d = 23.184609
+Medidas buenas 
+d = 16.421464
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.354749
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.870869
+d = 15.665442
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 21.266883
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.908198
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.497124
+d = 16.246636
+d = 15.996147
+Medidas buenas 
+Medidas malas 
+d = 16.866030
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.103651
+d = 20.808815
+Medidas buenas 
+d = 23.719556
+d = 23.506716
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.196113
+Medidas malas 
+Medidas malas 
+d = 22.631569
+d = 22.060736
+d = 21.489903
+Medidas buenas 
+d = 14.349920
+d = 14.198305
+d = 14.046690
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 28 	Media = 18.428571
+	Varianza : 9.823084
+	Desviacion estandar : 3.134180
+	Medidas dentro de la desviacion estandar : 18 (64%)
+
+Grosor del PELO en pixels : 18.428571
+
+real	0m1.489s
+user	0m0.520s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/15704.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 59.627205
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 35.722552
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 12.516130
+d = 13.399835
+d = 14.283539
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 17.334397
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.704443
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.547161
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 35.710109
+d = 35.724569
+d = 35.739029
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 59.398238
+Medidas malas 
+Medidas malas 
+d = 18.386514
+d = 18.282036
+d = 18.177558
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.274126
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.119693
+d = 17.405147
+d = 17.690602
+Medidas buenas 
+Medidas malas 
+d = 24.720279
+d = 24.515561
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.982217
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.046994
+Medidas malas 
+Medidas malas 
+d = 15.721540
+d = 13.362592
+Medidas buenas 
+Medidas malas 
+d = 24.821156
+Medidas malas 
+Medidas malas 
+d = 15.363079
+d = 15.740019
+d = 16.116960
+Medidas buenas 
+Medidas malas 
+d = 18.276462
+d = 17.405650
+d = 16.534838
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 22 	Media = 19.181818
+	Varianza : 49.395033
+	Desviacion estandar : 7.028160
+	Medidas dentro de la desviacion estandar : 19 (86%)
+
+Grosor del PELO en pixels : 19.181818
+
+real	0m1.890s
+user	0m0.908s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/24932.pgm:
+Medidas malas 
+Medidas malas 
+d = 18.641876
+Medidas malas 
+d = 18.640582
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.534267
+d = 15.713883
+d = 15.893499
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 34.050196
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 3 	Media = 15.000000
+	Varianza : 0.531137
+	Desviacion estandar : 0.728792
+	Medidas dentro de la desviacion estandar : 2 (66%)
+
+Grosor del PELO en pixels : 15.000000
+
+real	0m1.369s
+user	0m0.656s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/5088.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.400945
+d = 21.934945
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 23.431641
+Medidas malas 
+d = 23.021598
+d = 24.440767
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.697512
+d = 15.301224
+Medidas buenas 
+d = 42.593291
+d = 42.518605
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 24.701605
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.451844
+d = 20.363192
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.046715
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.399859
+Medidas malas 
+d = 13.733844
+d = 13.926965
+d = 14.120086
+Medidas buenas 
+d = 15.642515
+d = 13.896091
+Medidas buenas 
+d = 19.811247
+d = 19.538806
+d = 19.266365
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 18 	Media = 20.500000
+	Varianza : 69.795528
+	Desviacion estandar : 8.354372
+	Medidas dentro de la desviacion estandar : 16 (88%)
+
+Grosor del PELO en pixels : 20.500000
+
+real	0m1.380s
+user	0m0.668s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja/21031.pgm:
+d = 19.971610
+d = 21.264542
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.635408
+d = 16.850515
+Medidas buenas 
+Medidas malas 
+d = 15.323579
+d = 15.633036
+Medidas buenas 
+Medidas malas 
+d = 22.224749
+d = 21.115682
+d = 20.006615
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.833082
+d = 16.791854
+Medidas buenas 
+d = 30.716094
+d = 30.127910
+Medidas buenas 
+Medidas malas 
+d = 20.486306
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.782865
+d = 17.663255
+d = 17.543645
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.156336
+d = 20.409984
+Medidas buenas 
+d = 30.892490
+Medidas malas 
+d = 21.661020
+d = 22.179120
+d = 22.697220
+Medidas buenas 
+Medidas malas 
+d = 21.586955
+Medidas malas 
+Medidas malas 
+d = 15.755129
+d = 15.467023
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 23 	Media = 19.304348
+	Varianza : 16.401204
+	Desviacion estandar : 4.049840
+	Medidas dentro de la desviacion estandar : 21 (91%)
+
+Grosor del PELO en pixels : 19.304348
+
+real	0m1.327s
+user	0m0.632s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/574.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 19.018663
+d = 18.968333
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.971432
+d = 19.020408
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.406988
+d = 28.802345
+Medidas buenas 
+Medidas malas 
+d = 28.615999
+d = 28.150639
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 8 	Media = 23.250000
+	Varianza : 22.833218
+	Desviacion estandar : 4.778412
+	Medidas dentro de la desviacion estandar : 4 (50%)
+
+Grosor del PELO en pixels : 23.250000
+
+real	0m1.847s
+user	0m0.884s
+sys	0m0.024s
+
+
+ Archivo fotos-reales/oveja/21400.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.932443
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 32.360169
+d = 31.302882
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 19.753378
+Medidas malas 
+d = 14.870689
+d = 14.445339
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 25.596720
+Medidas malas 
+d = 15.986827
+d = 16.232047
+Medidas buenas 
+d = 15.719022
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.686712
+d = 15.066901
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 30.282771
+d = 28.952396
+d = 25.401707
+Medidas buenas 
+Medidas malas 
+d = 28.698574
+Medidas malas 
+d = 28.855728
+d = 31.671313
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 10.328496
+Medidas malas 
+d = 16.559779
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 26.848869
+d = 26.390771
+Medidas buenas 
+Medidas malas 
+d = 10.430298
+d = 10.584742
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 26.464690
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.439970
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.003929
+d = 15.656911
+d = 15.309892
+Medidas buenas 
+d = 28.094284
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.082882
+Medidas malas 
+d = 16.087925
+d = 15.791182
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 22 	Media = 20.090909
+	Varianza : 54.812056
+	Desviacion estandar : 7.403516
+	Medidas dentro de la desviacion estandar : 14 (63%)
+
+Grosor del PELO en pixels : 20.090909
+
+real	0m1.223s
+user	0m0.580s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/13543.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.765084
+Medidas malas 
+Medidas malas 
+d = 19.898451
+d = 20.195311
+Medidas buenas 
+Medidas malas 
+d = 14.759105
+d = 17.764267
+Medidas buenas 
+Medidas malas 
+d = 18.403241
+d = 19.029950
+d = 19.656659
+Medidas buenas 
+d = 18.660584
+d = 17.843140
+d = 17.025696
+Medidas buenas 
+d = 16.949960
+d = 18.105170
+Medidas buenas 
+d = 16.864100
+d = 15.462693
+d = 16.709816
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 18.947506
+d = 19.016815
+d = 17.205559
+Medidas buenas 
+Medidas malas 
+d = 17.112170
+d = 16.950688
+d = 16.789205
+Medidas buenas 
+d = 16.139615
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.088296
+Medidas malas 
+d = 17.641504
+d = 16.941086
+Medidas buenas 
+d = 19.193134
+d = 18.961962
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.955259
+d = 17.990450
+Medidas buenas 
+d = 19.985862
+d = 20.191669
+Medidas buenas 
+d = 17.980932
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 20.031288
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 29 	Media = 17.413793
+	Varianza : 2.184345
+	Desviacion estandar : 1.477953
+	Medidas dentro de la desviacion estandar : 17 (58%)
+
+Grosor del PELO en pixels : 17.413793
+
+real	0m1.351s
+user	0m0.648s
+sys	0m0.012s
+
+
+ Archivo fotos-reales/oveja/12017.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 18.557767
+Medidas malas 
+d = 16.898417
+d = 18.225143
+d = 19.217174
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.692157
+d = 17.222577
+Medidas buenas 
+d = 13.433663
+d = 13.681636
+d = 13.929610
+Medidas buenas 
+Medidas malas 
+d = 14.734747
+d = 16.200423
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.145110
+d = 16.248406
+d = 15.936253
+Medidas buenas 
+Medidas malas 
+d = 16.560128
+d = 17.456794
+d = 17.304431
+Medidas buenas 
+d = 16.321030
+d = 15.080457
+Medidas buenas 
+d = 19.109672
+d = 18.216838
+d = 17.324004
+Medidas buenas 
+d = 15.965007
+d = 16.422555
+d = 16.880104
+Medidas buenas 
+d = 38.035237
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.824729
+d = 26.584324
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 15.091571
+Medidas malas 
+d = 16.467036
+d = 16.125177
+d = 16.505051
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 14.471954
+d = 16.123893
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 39.150117
+d = 39.659963
+Medidas buenas 
+Medidas malas 
+d = 24.794307
+d = 22.263814
+Medidas buenas 
+d = 16.087313
+d = 15.259882
+d = 14.432451
+Medidas buenas 
+Medidas malas 
+d = 15.863770
+d = 16.441164
+Medidas buenas 
+d = 25.319502
+d = 24.777100
+Medidas buenas 
+d = 24.580724
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.432113
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 16.404448
+d = 18.506299
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 30.368781
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 13.644582
+Medidas malas 
+d = 40.131353
+d = 39.531678
+d = 38.408204
+Medidas buenas 
+Medidas malas 
+d = 17.319222
+Medidas malas 
+d = 34.243662
+d = 33.881925
+d = 33.520189
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 50 	Media = 20.220000
+	Varianza : 62.692316
+	Desviacion estandar : 7.917848
+	Medidas dentro de la desviacion estandar : 42 (84%)
+
+Grosor del PELO en pixels : 20.220000
+
+real	0m1.198s
+user	0m0.572s
+sys	0m0.016s
+
+
+ Archivo fotos-reales/oveja/7698.pgm:
+d = 22.782317
+d = 21.958298
+Medidas buenas 
+Medidas malas 
+d = 27.900892
+d = 27.736819
+d = 27.572746
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 23.382585
+Medidas malas 
+d = 22.525311
+d = 22.115306
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.812854
+Medidas malas 
+d = 22.376392
+d = 22.189455
+d = 22.002519
+Medidas buenas 
+d = 25.289630
+d = 23.489835
+d = 21.690040
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.310432
+d = 22.826461
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.511676
+d = 23.230313
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.158652
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 25.431230
+d = 22.451568
+d = 20.007057
+Medidas buenas 
+d = 24.150749
+d = 23.785961
+Medidas buenas 
+Medidas malas 
+d = 23.128357
+d = 22.197626
+Medidas buenas 
+d = 25.599354
+Medidas malas 
+d = 22.904001
+Medidas malas 
+d = 23.252340
+d = 23.711536
+Medidas buenas 
+d = 22.364188
+d = 24.715655
+Medidas buenas 
+d = 23.794271
+d = 23.477685
+d = 23.161099
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 31 	Media = 22.967742
+	Varianza : 3.322490
+	Desviacion estandar : 1.822770
+	Medidas dentro de la desviacion estandar : 25 (80%)
+
+Grosor del PELO en pixels : 22.967742
+
+real	0m1.282s
+user	0m0.620s
+sys	0m0.008s
+
+
+ Archivo fotos-reales/oveja/6173.pgm:
+d = 27.580522
+d = 28.065731
+Medidas buenas 
+Medidas malas 
+d = 17.383350
+d = 16.370248
+Medidas buenas 
+Medidas malas 
+d = 23.634522
+d = 27.374705
+Medidas buenas 
+d = 26.796757
+d = 26.937390
+d = 27.078023
+Medidas buenas 
+Medidas malas 
+d = 17.923105
+d = 15.467591
+Medidas buenas 
+d = 26.541352
+Medidas malas 
+d = 26.193986
+d = 26.481995
+d = 26.770004
+Medidas buenas 
+Medidas malas 
+d = 33.738965
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.051380
+Medidas malas 
+d = 16.546746
+d = 15.708969
+d = 14.871192
+Medidas buenas 
+d = 24.957606
+Medidas malas 
+d = 16.477023
+d = 17.740948
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 31.107376
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 22.209606
+d = 22.573110
+Medidas buenas 
+d = 33.299379
+d = 33.841058
+Medidas buenas 
+d = 33.684301
+d = 33.827863
+d = 33.057039
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 29.572941
+Medidas malas 
+Medidas malas 
+d = 24.488019
+d = 25.068773
+d = 25.649527
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 22.617024
+Medidas malas 
+d = 36.678021
+d = 35.746078
+d = 34.814134
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.929388
+Medidas malas 
+Medidas malas 
+d = 31.024228
+d = 31.103015
+d = 31.896255
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 29.511306
+d = 29.127678
+Medidas buenas 
+Medidas malas 
+d = 26.935988
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 28.199565
+d = 28.746621
+d = 29.293678
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 27.161645
+d = 26.915880
+d = 26.670115
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 43 	Media = 25.767442
+	Varianza : 36.787352
+	Desviacion estandar : 6.065258
+	Medidas dentro de la desviacion estandar : 25 (58%)
+
+Grosor del PELO en pixels : 25.767442
+
+real	0m1.054s
+user	0m0.496s
+sys	0m0.020s
+
+
+ Archivo fotos-reales/oveja/102.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 1 	Media = 0.000000
+	Varianza : 0.000000
+	Desviacion estandar : 0.000000
+	Medidas dentro de la desviacion estandar : 1 (100%)
+
+Grosor del PELO en pixels : 0.000000
+
+real	0m1.266s
+user	0m0.584s
+sys	0m0.028s
+
+
+ Archivo fotos-reales/oveja/13230.pgm:
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 17.023073
+d = 16.791117
+d = 16.559161
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.329716
+d = 14.066741
+Medidas buenas 
+d = 15.560099
+d = 16.567611
+d = 17.575122
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 15.188465
+d = 16.601912
+Medidas buenas 
+Medidas malas 
+d = 15.891030
+d = 15.466837
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+d = 16.126263
+d = 15.783617
+Medidas buenas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 33.616545
+Medidas malas 
+Medidas malas 
+d = 22.436538
+Medidas malas 
+Medidas malas 
+d = 14.673380
+d = 17.178345
+Medidas buenas 
+d = 33.373737
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+d = 32.881492
+d = 33.665319
+Medidas buenas 
+Medidas malas 
+d = 15.927289
+Medidas malas 
+d = 33.413560
+Medidas malas 
+Medidas malas 
+d = 33.535930
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+Medidas malas 
+
+	Nro de Mediciones = 18 	Media = 17.500000
+	Varianza : 30.173150
+	Desviacion estandar : 5.493009
+	Medidas dentro de la desviacion estandar : 16 (88%)
+
+Grosor del PELO en pixels : 17.500000
+
+real	0m1.293s
+user	0m0.584s
+sys	0m0.020s

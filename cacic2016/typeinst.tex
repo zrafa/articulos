@@ -20,22 +20,24 @@
 
 
 \usepackage[utf8x]{inputenc}							
-\usepackage[spanish]{babel}							
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fix-cm}
 
+\usepackage{multirow}
 
+\usepackage[spanish,es-tabla]{babel}							
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
 
 \usepackage{url}
-\urldef{\mailsa}\path|{rafa, mtl, rdc, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@fi.uncoma.edu.ar| 
+\urldef{\mailsa}\path|{rafa, mtl, rdc}@fi.uncoma.edu.ar| 
+%\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+%\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@fi.uncoma.edu.ar| 
+
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
@@ -73,8 +75,8 @@
 \institute{Facultad de Informática y Facultad de Agronomía,\\ Universidad Nacional del Comahue\\
 Buenos Aires 1400, Neuquén, Argentina\\
 \mailsa\\
-\mailsb\\
-\mailsc\\
+%\mailsb\\
+%\mailsc\\
 \url{http://faiweb.uncoma.edul.ar}}
 
 %
@@ -192,7 +194,8 @@ Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visu
 
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
 El trabajo propuesto en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
-La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran que este análisis no se distorsiona con el entrecruzamiento, y no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
+La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran tambien que no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
+
 
 
 	
@@ -232,7 +235,7 @@ Para la obtención de resultados de precisión se analizan dos clases de medicio
 
 \subsubsection{Medición de imágenes artificiales}
 
-Se han confeccionado mediante el software de manipulación de imágenes GIMP 74 imágenes de fibras artificiales. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada linea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixels de grosor y los 40 pixels. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
+Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada linea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixels de grosor y los 40 pixels. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
 En la figura X2 se observa lal medición realizada automaticamente para todas las imágenes por el prototipo, y tambien la media calculada manualmente. 
 
 \subsubsection{Resultados del método de medición de diámetro de fibra} 
@@ -242,10 +245,10 @@ Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana c
 
 Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadísitica de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
 
-La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las mediciones acumuladas cada 10 mediciones. 
+La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 99 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las mediciones acumuladas cada 10 mediciones. 
 
 En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
-El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones. El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones.
+El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En el cuadro 4 se observan las estadisticas finales de ambos equipamientos.
 
 \begin{figure}
 \centering
@@ -254,6 +257,34 @@ El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micro
 La diferencia de la media de diámetro entre ambos equipos es menor a 0.5 micrones a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras.}
 \label{fig:prototipovswv}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{histograma}
+\caption{Histograma normalizado de las 96 mediciones realizadas con el prototipo UNCOMA.}
+\label{fig:histograma}
+\end{figure}
+
+Por ejemplo, la tabla (\ref{tabla:sencilla}):
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+& prototipo UNCOMA & WoolView 20/20 \\
+\hline \hline \hline
+Nro. de imágenes analizadas & 96 & 99 \\ \hline
+Diámetro Medio & 20,6263 & 20,9 \\ \hline
+Coeficiente de confort & 91,6\% & 91\% \\ \hline
+Desvío estándar & 4,03um & 5,5um \\ \hline
+Coeficiente de variación & 19,5\% & 27\% \\ \hline
+Muestras dentro del DE & 82\% & No reportado \\ \hline
+\end{tabular}
+\caption{Tabla muy sencilla.}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
 
 Utilizar el paper de diameterj para ver como escriben la parte de validar contra magenes virtuales. Podemos hacer imagenes “virtuales” de pelos con gimp, utilizando un pincel uniforme de diferentes diametros. De estas imágenes se sabe de antemano cual es el diametro. Luego las procesamos con nuestro prototipo para validar que las mediciones son correctas.
 
