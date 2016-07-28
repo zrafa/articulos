@@ -33,6 +33,11 @@
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
 
+\usepackage{fancyvrb}
+\newcommand\userinput[1]{\textbf{#1}}
+
+
+
 \usepackage{url}
 \urldef{\mailsa}\path|{rafa, mtl, rdc}@fi.uncoma.edu.ar| 
 %\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
@@ -115,7 +120,7 @@ La selección objetiva de animales de alta producción de fibra (especialmente c
 
 \subsection{Arquitectura de Hardware}
 
-La arquitectura del sistema está compuesta de dos elementos principales :
+La arquitectura del hardware presenta dos componentes principales :
 \begin{itemize}
 \item El dispositivo de mano portatil;
 \item El hardware de procesamiento embebido
@@ -160,28 +165,81 @@ La facilidad de manejo y peso del dispositivo portatil de mano posibilita que la
 
 La arquitectura de software puede observarse en la Figura 2.
 A bajo nivel, el hardware embebido está controlado por el sistema operativo Debian. Particularmente, los principales drivers que se utilizan del kernel Linux son el universal video class (UVC) y la interfaz de E/S de puertos generales (GPIO) del núcleo.
-A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portatil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imágen de fibras.
+A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portatil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imágen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
+\begin{figure}
+\centering
+\includegraphics[height=0.9cm]{proceso}
+\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imágen digital de fibras.
+}
+\label{fig:proceso}
+\end{figure}
+
+
 Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portatil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
 El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo line segment detector.
 La resolución de la imagen es de 640x480 pixels, en donde 1 pixel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
 A continuación se ejecuta un filtro de médula para quitar parcialmente las médulas que pudieran existir en las fibras capturadas por la imagen. El filtro de medula se realiza calculando la transformada de distancia para pixeles que se encuentren debajo del umbral de grises que representan médulas. Si se detecta una medula con este análisis se reemplaza la zona por pixels que contengan un color por debajo del umbral de fibra.
-Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [REFERENCIA] para obtener un conjunto de segmentos de linea que representan a la imagen original. El algoritmo de obtención de diámetros de fibras principal utiliza esta representación como entrada, y su descripción es como sigue:
+Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [REFERENCIA] para obtener un conjunto de segmentos de linea que representan a la imagen original. Entonces, para la medición de diámetros de fibras, se utiliza esta representación como entrada, y su descripción es como sigue:
 
-Por cada segmento de linea en el conjunto :
-     		Se calcula la ubicación de 3 puntos (x,y) en el segmento: principio medio y final. 
-     		Por cada punto :
-Se calcula la función de la recta perpendicular al segmento original que cruza el punto. Se recorre todos los segmentos restantes y se encuentran aquellos que sean paralelos al segmento original y que la perpendicular los intersecta.
+\begin{Verbatim}[commandchars=\\\{\}]
+    #
+    # Pseudocódigo del algoritmo de cálculo de diámetro medio de fibras
+    # ENTRADA: Conjunto de segmentos de línea (lsd_set)
+    # SALIDA: Mediciones y diámetro medio (mediciones_set, diametro)
+    #
+    mediciones = 0;
+    diametro = 0;
+[1] FOR each segmento IN lsd_set DO
+
+      diametro_tentativo = 0;
+      mediciones_t = 0;
+[2]   FOR each punto (x,y) IN inicio_medio_final(segmento) DO
+
+        f() = perpendicular(segmento, punto);
+[3]     FOR each seg2 IN lsd_set DO
+
+          IF paralelos(segmento, seg2) AND 
+             ( f() == perpendicular(seg2) ) AND
+             ( f(DESDE segmento HASTA seg2) == pixels_de_fibra() ) THEN
+
+[4]             diametro_tentativo = distancia( f(DESDE segmento HASTA seg2) );
+                mediciones_t++;
+          END IF
+        END FOR
+      END FOR
+
+[5]   IF (mediciones_t >= 2) THEN 
+        diametro = diametro + diametro_tentativo;
+        mediciones++;
+        mediciones_set = add(diametro_tentativo);
+      END FI
+    END FOR
+
+    diametro = diametro / mediciones;
+
+    RETURN mediciones_set, diametro
+\end{Verbatim}
+
+\begin{enumerate}
+\item Por cada segmento de linea en el conjunto se calcula la ubicación de 3 puntos (x,y):
+principio medio y final. 
+\item Por cada punto se calcula la función de la recta perpendicular al segmento original que cruza el punto. 
+\item Se recorren todos los segmentos restantes y se encuentran aquellos que sean paralelos al segmento original y que la perpendicular los intersecta.
 Si el segmento perpendicular desde el punto origen hasta la intersección contiene puntos que no pertenecen a fibras se descarta.
-Si no se descarta entonces el segmento de linea paralelo encontrado es opuesto al original en la fibra a la cual pertenecen, y se procede a realizar el calculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
-		SI al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
+\item Si no se descarta entonces el segmento de linea paralelo encontrado es opuesto al original en la fibra a la cual pertenecen, y se procede a realizar el calculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
+\item Si al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
+\end{enumerate}
+
 	Al final del procesamiento de segmentos de linea se realiza el cálculo de media de diametro general, la desviación estandar y la varianza.
-	Los resultados son emitidos por la salida estandar, y de acuerdo a los valores, se activan diferentes señales digitales GPIO en el hardware embebido, para informar al usuario el resultado a través de 5 LEDs brillantes. Los LEDs se encienden de acuerdo al siguiente rango de valores :
-Si el resultado es < 17um se enciende el LED 1
-Si el resultado se encuentra entre 17um y 22um se enciende el LED 2
-Si el resultado se encuentra entre 22um y 30um se enciende el LED 3
-Si el resultado se encuentra entre 30um y 40um se enciende el LED 4
-Si el resultado es > 40um se enciende el LED 5
-Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las ubicaciones de las mediciones realizada por el software sean correctas). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura}.
+	Los resultados son emitidos por la salida estandar, y de acuerdo a los valores, se muestra en el display LCD, del hardware embebido, la siguiente información :
+\begin{Verbatim}
+[1] diámetro medio;
+[2] porcentaje de medidas menores a 17um;
+[3] porcentaje de medidas entre 17um y 30um;
+[4] porcentaje de medidas mayores a 30um;
+\end{Verbatim}
+
+Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura}.
 \begin{figure}
 \centering
 \includegraphics[height=6.2cm]{captura}
@@ -190,6 +248,38 @@ Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visu
 \label{fig:captura}
 \end{figure}
 
+
+
+\medskip
+
+\noindent
+{\it Example of a Computer Program}
+\begin{verbatim}
+program Inflation (Output)
+  {Assuming annual inflation rates of 7%, 8%, and 10%,...
+   years};
+   const
+     MaxYears = 10;
+   var
+     Year: 0..MaxYears;
+     Factor1, Factor2, Factor3: Real;
+   begin
+     Year := 0;
+     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
+     WriteLn('Year  7% 8% 10%'); WriteLn;
+     repeat
+       Year := Year + 1;
+       Factor1 := Factor1 * 1.07;
+       Factor2 := Factor2 * 1.08;
+       Factor3 := Factor3 * 1.10;
+       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
+     until Year = MaxYears
+end.
+\end{verbatim}
+%
+\noindent
+{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
+report. Springer, New York)}
 
 
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
@@ -318,9 +408,26 @@ Referencias
 Program listings or program commands in the text are normally set in
 typewriter font, e.g., CMTT10 or Courier.
 
-\medskip
 
-\noindent
+\subsection{Citations}
+
+For citations in the text please use
+square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
+\cite{proceeding1} -- provided automatically
+by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
+
+\section{BibTeX Entries}
+
+The correct BibTeX entries for the Lecture Notes in Computer Science
+volumes can be found at the following Website shortly after the
+publication of the book:
+\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
+
+\subsubsection*{Acknowledgments.} The heading should be treated as a
+subsubsection heading and should not be assigned a number.
+
+\section{The References Section}\label{references}
+
 {\it Example of a Computer Program}
 \begin{verbatim}
 program Inflation (Output)
@@ -349,24 +456,6 @@ end.
 {\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
 report. Springer, New York)}
 
-\subsection{Citations}
-
-For citations in the text please use
-square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
-\cite{proceeding1} -- provided automatically
-by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
-
-\section{BibTeX Entries}
-
-The correct BibTeX entries for the Lecture Notes in Computer Science
-volumes can be found at the following Website shortly after the
-publication of the book:
-\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
-
-\subsubsection*{Acknowledgments.} The heading should be treated as a
-subsubsection heading and should not be assigned a number.
-
-\section{The References Section}\label{references}
 
 In order to permit cross referencing within LNCS-Online, and eventually
 between different publishers and their online databases, LNCS will,
