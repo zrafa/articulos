@@ -55,7 +55,7 @@
 \title{Arquitectura e Implementación de Equipamiento Prototipo de Bajo Costo para la Medición del Diámetro de Fibras de Cabra en Campo}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{Lecture Notes in Computer Science: Authors' Instructions}
+\titlerunning{Arquitectura de Prototipo para la Medición del Diámetro de Fibras} 
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -67,7 +67,7 @@
 % \thanks{Please note that the LNCS Editorial assumes that all authors have used
 %the western naming convention, with given names preceding surnames. This determines
 %the structure of the names in the running heads and the author index.}%
-\and Miriam Lechner\and Rodolfo del Castilo\and Eduardo Aisen}
+\and Miriam Lechner\and Rodolfo del Castillo\and Eduardo Aisen}
 %\and Miriam Lechner\and Rodolfo del Castilo\and Eduardo Aisen\and\\
 %Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
 %Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
@@ -111,9 +111,9 @@ Los pequeños productores en el sistema agroecológico del norte de la Provincia
 
 Actualmente la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
 
-La incorporación de una selección y clasificación objetiva en origen (tanto sobre el animal como en planta de acopio) de los vellones en bruto (por finura, largo, rinde y otros), requiere del diseño, elaboración y puesta en marcha de nuevos dispositivos para estos fines. Actualmente se dispone de algunos equipos para la determinación de finura (desarrollados para lana y de alto costo) como el OFDA 2000, el WoolView 20/20, el LaserScan, air flow, lanámetro, entre otros. Éstos no proveen fácilmente datos de finura de down (fibras finas) y guard hair (fibras gruesas), ni de rinde al descerdado confiables. Si bien algunos se han diseñado para trabajo a campo, la preparación de las muestra requiere de un tiempo y adiestramiento considerables. Es importante aclarar que la estima del rinde al descerdado que suministra el dispositivo OFDA es solo aproximada y está sujeta a la calidad de presentación del material; en el caso de estar afieltrado en parte, el error de estima es importante (McGregor \& Butler, 2008).
-
-La selección objetiva de animales de alta producción de fibra (especialmente cashmere), permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales.. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir  el grave problema de la desertificación.
+Actualmente se dispone de algunos equipos para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. La mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. Woolview 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
+En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo de bajo costo, para la medición de diámetro de fibra sobre el animal en campo, sin entrenamiento previo del operario, y de rápida respuesta.
+La selección objetiva de animales de alta producción de fibra en origen (especialmente cashmere), permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales del productor campesino. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir  el grave problema de la desertificación.
 
 
 \section{Arquitectura}
@@ -127,20 +127,19 @@ La arquitectura del hardware presenta dos componentes principales :
 \end{itemize}
 
 El dispositivo de mano portatil contiene un microscopio digital, un led de contraste, una prensa, y un mecanismo de gatillo.
-El microscopio es de 400 ampliaciones, modificado y calibrado insitu. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
+El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
 \begin{figure}
 \centering
 \includegraphics[height=6.2cm]{prototipo}
-\caption{Equipamiento prototipo UNCOMA
-italics, in parentheses, as shown in this sample caption.}
+\caption{Equipamiento prototipo UNCOMA}
 \label{fig:prototipo}
 \end{figure}
 
-El mecanismo de gatillo en realiza varias tareas en un unico paso. Al gatillar, el operador prensa el acrilico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
+El mecanismo de gatillo realiza varias tareas en un único paso. Al gatillar, el operador prensa el acrilico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
 En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imágen digital es obtenida desde el dispositivo portatil a través de una interfaz USB 2.0, la cual interconecta ambos componetes (el dispositivo de mano y el hardware embebido).
 
-El hardware embebido es el sistema que
-que analiza de la imagen digital y reporta los resultados.
+El hardware embebido es el sistema 
+que analiza la imagen digital y reporta los resultados.
 Un diagrama de bloques del hardware embebido es mostrado en la Figura 1.2
 
 
@@ -176,10 +175,15 @@ A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal 
 
 
 Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portatil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
-El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo line segment detector.
-La resolución de la imagen es de 640x480 pixels, en donde 1 pixel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
-A continuación se ejecuta un filtro de médula para quitar parcialmente las médulas que pudieran existir en las fibras capturadas por la imagen. El filtro de medula se realiza calculando la transformada de distancia para pixeles que se encuentren debajo del umbral de grises que representan médulas. Si se detecta una medula con este análisis se reemplaza la zona por pixels que contengan un color por debajo del umbral de fibra.
-Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [REFERENCIA] para obtener un conjunto de segmentos de linea que representan a la imagen original. Entonces, para la medición de diámetros de fibras, se utiliza esta representación como entrada, y su descripción es como sigue:
+El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo {\it line segment detector (LSD) [REF]}.
+La resolución de la imagen es de 640x480 pixeles, en donde 1 pixel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
+
+Cada fibra contiene una médula, eventualmente la imágen capturada puede hacerla visible lo cual afecta a 
+las mediciones. Por tal motivo se ejecuta un filtro de médula para quitarlas parcialmente. El filtro se realiza calculando la transformada de distancia para pixeles que se encuentren dentro de un rango de grises. 
+Dicho rango fue previamente establecido y representa los valores esparables para la médula. Si la detección es positiva, se reemplaza la zona medular por pixeles que contengan un color dentro del rango de grises  
+coincidente con fibra, que también fue previamente establecido.
+
+Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [REFERENCIA] para obtener un conjunto de segmentos de línea que representan a la imagen original. Entonces, para la medición de diámetros de fibras, se utiliza esta representación como entrada, y su descripción es como sigue:
 
 \begin{Verbatim}[commandchars=\\\{\}]
     #
@@ -221,16 +225,16 @@ Posteriormente, la aplicacion utiliza el algoritmo line segment detector (LSD) [
 \end{Verbatim}
 
 \begin{enumerate}
-\item Por cada segmento de linea en el conjunto se calcula la ubicación de 3 puntos (x,y):
+\item Por cada segmento de línea en el conjunto se calcula la ubicación de 3 puntos (x,y):
 principio medio y final. 
 \item Por cada punto se calcula la función de la recta perpendicular al segmento original que cruza el punto. 
 \item Se recorren todos los segmentos restantes y se encuentran aquellos que sean paralelos al segmento original y que la perpendicular los intersecta.
 Si el segmento perpendicular desde el punto origen hasta la intersección contiene puntos que no pertenecen a fibras se descarta.
-\item Si no se descarta entonces el segmento de linea paralelo encontrado es opuesto al original en la fibra a la cual pertenecen, y se procede a realizar el calculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
+\item Si no se descarta entonces el segmento de línea paralelo encontrado es opuesto al original en la fibra a la cual pertenecen, y se procede a realizar el calculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
 \item Si al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
 \end{enumerate}
 
-	Al final del procesamiento de segmentos de linea se realiza el cálculo de media de diametro general, la desviación estandar y la varianza.
+	Al final del procesamiento de segmentos de línea se realiza el cálculo de media de diametro general, la desviación estandar y la varianza.
 	Los resultados son emitidos por la salida estandar, y de acuerdo a los valores, se muestra en el display LCD, del hardware embebido, la siguiente información :
 \begin{Verbatim}
 [1] diámetro medio;
@@ -296,7 +300,7 @@ Acá explicamos lo que hace nuestro prototipo :
 Toma una foto a traves del driver linux uvc
 La convierte a pgm
 La analiza con lsd modificado:
-1. Quitamos la medula
+1. Quitamos la médula
 2. Lsd
 3. Calculamos los diametros :
 a. Como el paper del chino Shien Li
@@ -325,7 +329,7 @@ Para la obtención de resultados de precisión se analizan dos clases de medicio
 
 \subsubsection{Medición de imágenes artificiales}
 
-Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada linea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixels de grosor y los 40 pixels. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
+Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixeles de grosor y los 40 pixeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
 En la figura X2 se observa lal medición realizada automaticamente para todas las imágenes por el prototipo, y tambien la media calculada manualmente. 
 
 \subsubsection{Resultados del método de medición de diámetro de fibra} 
