@@ -109,12 +109,17 @@ the abstract section}
 
 Los pequeños productores en el sistema agroecológico del norte de la Provincia de Neuquén son los crianceros. A nivel local la palabra criancero denomina a un amplio conjunto de productores familiares en el que predominan productores campesinos o con rasgos campesinos y que se dedican fundamentalmente a la cría de caprinos y ovinos (Bendini y col., 2002). Viven de la producción de fibras textiles de origen animal (principalmente caprino) en el norte neuquino, y no disponen de los medios técnicos y el asesoramiento profesional requerido para: i) orientar la selección animal a la producción de vellones mas pesados y calidades de fibra de valor superior; ii) establecer objetivamente los parámetros de la calidad de la fibra, de manera de poder clasificarla para optimizar la comercialización; iii) negociar con el comprador el precio de mercado que la calidad de la fibra amerita; y iv) orientar la producción ganadera hacia aquellos biotipos mejor adaptados a la naturaleza de la región, para así poder frenar y eventualmente revertir el proceso de desertificación que las afecta.
 
-La cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
+Sin los medios técnicos la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
 
-Actualmente existen varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. Woolview 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
+Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. Woolview 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
 En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo desarrollado en la Universidad Nacional del Comahue (por lo que se lo ha denominado "prototipo UNCOMA") para la medición de diámetro de fibra sobre el animal en campo, sin necesidad de entrenamiento del operario o preparación previa de las muestras.
 Los resultados muestran que el costo, performance y precisión del equipamiento prototipo propuesto es adecuado para la selección objetiva en origen de animales de alta producción de fibra (especialmente cashmere), lo que permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales del productor campesino. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir  el grave problema de la desertificación.
 
+El resto de este trabajo se estructura de la siguiente manera. En la sección 2 se describen
+las arquitecturas de software y hardware del equipamiento propuesto, con un énfasis en
+el método de medición por análisis de imagen digital. En la sección 3 se presentan varios
+resultados experimentales para validar el proceso llevado a cabo por el prototipo.
+Por último, en la sección 4 se presentan las conclusiones y líneas de trabajo a futuro.
 
 \section{Arquitectura}
 
@@ -263,37 +268,6 @@ Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visu
 
 
 
-\medskip
-
-\noindent
-{\it Example of a Computer Program}
-\begin{verbatim}
-program Inflation (Output)
-  {Assuming annual inflation rates of 7%, 8%, and 10%,...
-   years};
-   const
-     MaxYears = 10;
-   var
-     Year: 0..MaxYears;
-     Factor1, Factor2, Factor3: Real;
-   begin
-     Year := 0;
-     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
-     WriteLn('Year  7% 8% 10%'); WriteLn;
-     repeat
-       Year := Year + 1;
-       Factor1 := Factor1 * 1.07;
-       Factor2 := Factor2 * 1.08;
-       Factor3 := Factor3 * 1.10;
-       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
-     until Year = MaxYears
-end.
-\end{verbatim}
-%
-\noindent
-{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
-report. Springer, New York)}
-
 
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
 El trabajo propuesto en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
@@ -348,7 +322,7 @@ Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana c
 
 Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadísitica de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
 
-La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 99 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las mediciones acumuladas cada 10 mediciones. 
+La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 99 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
 
 En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
 El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En el cuadro 4 se observan las estadisticas finales de ambos equipamientos.
@@ -357,7 +331,7 @@ El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micro
 \centering
 \includegraphics[height=6.2cm]{prototipovswv}
 \caption{Comparativa acumulativa de 96 mediciones utilizando dos equipamientos : prototipo UNCOMA y WoolView 20/20.
-La diferencia de la media de diámetro entre ambos equipos es menor a 0.5 micrones a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras.}
+La diferencia de la media de diámetro entre ambos equipos va disminuyendo a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras. Luego de unas 50 muestras la diferencia entre ambos es menor a 0.5 micrones.}
 \label{fig:prototipovswv}
 \end{figure}
 
