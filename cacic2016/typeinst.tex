@@ -72,7 +72,8 @@
 %Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
 %Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
 %
-\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+%\authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
+\authorrunning{Arquitectura de Prototipo para la Medición del Diámetro de Fibras} 
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -112,14 +113,18 @@ Los pequeños productores en el sistema agroecológico del norte de la Provincia
 Sin los medios técnicos la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
 
 Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. Woolview 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
-En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo desarrollado en la Universidad Nacional del Comahue (por lo que se lo ha denominado "prototipo UNCOMA") para la medición de diámetro de fibra sobre el animal en campo, sin necesidad de entrenamiento del operario o preparación previa de las muestras.
-Los resultados muestran que el costo, performance y precisión del equipamiento prototipo propuesto es adecuado para la selección objetiva en origen de animales de alta producción de fibra (especialmente cashmere), lo que permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales del productor campesino. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir  el grave problema de la desertificación.
+En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo desarrollado en la Universidad Nacional del Comahue (por lo que se lo ha denominado ``prototipo UNCOMA'') para la medición de diámetro de fibra sobre el animal en campo. Considerando al criancero como destinatario del 
+producto final, y no un entorno de laboratorio. En tal sentido, se persiguen al menos dos objetivos que 
+resulten en la factibilidad de uso: entrenamiento previo mínimo y, preparación sencilla de la muestra a 
+analizar.  
+ 
+Los resultados muestran que el costo, performance y precisión del prototipo UNCOMA propuesto, es adecuado para la selección objetiva en origen de animales de alta producción de fibra (especialmente cashmere), lo que permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales del productor campesino. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir el grave problema de la desertificación.
 
 El resto de este trabajo se estructura de la siguiente manera. En la sección 2 se describen
 las arquitecturas de software y hardware del equipamiento propuesto, con un énfasis en
 el método de medición por análisis de imagen digital. En la sección 3 se presentan varios
-resultados experimentales para validar el proceso llevado a cabo por el prototipo.
-Por último, en la sección 4 se presentan las conclusiones y líneas de trabajo a futuro.
+resultados experimentales, para validar el proceso llevado a cabo por el prototipo.
+Por último, en la sección 4, se presentan las conclusiones y líneas de trabajo a futuro.
 
 \section{Arquitectura}
 
@@ -257,13 +262,13 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 [4] porcentaje de medidas mayores a 30um;
 \end{Verbatim}
 
-Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura}.
+Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
 \begin{figure}
 \centering
-\includegraphics[height=6.2cm]{captura}
+\includegraphics[height=7cm]{captura2}
 \caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtendia desde el microscopio. A la derecha una represantación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta represantación visual es muy util para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
 }
-\label{fig:captura}
+\label{fig:captura2}
 \end{figure}
 
 
@@ -322,10 +327,10 @@ Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana c
 
 Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadísitica de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
 
-La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 99 mediciones con woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
+La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con Woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
 
 En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
-El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En el cuadro 4 se observan las estadisticas finales de ambos equipamientos.
+El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En la tabla (\ref{tabla:sencilla}) se observan las estadisticas finales de ambos equipamientos.
 
 \begin{figure}
 \centering
@@ -342,35 +347,24 @@ La diferencia de la media de diámetro entre ambos equipos va disminuyendo a med
 \label{fig:histograma}
 \end{figure}
 
-Por ejemplo, la tabla (\ref{tabla:sencilla}):
-
 \begin{table}[htbp]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
 & prototipo UNCOMA & WoolView 20/20 \\
 \hline \hline \hline
-Nro. de imágenes analizadas & 96 & 99 \\ \hline
+Nro. de imágenes analizadas & 96 & 96 \\ \hline
 Diámetro Medio & 20,6263 & 20,9 \\ \hline
 Coeficiente de confort & 91,6\% & 91\% \\ \hline
 Desvío estándar & 4,03um & 5,5um \\ \hline
 Coeficiente de variación & 19,5\% & 27\% \\ \hline
 Muestras dentro del DE & 82\% & No reportado \\ \hline
 \end{tabular}
-\caption{Tabla muy sencilla.}
+\caption{Estadística global de ambos equipamientos luego de finalizar las mediciones.}
 \label{tabla:sencilla}
 \end{center}
 \end{table}
 
-
-Utilizar el paper de diameterj para ver como escriben la parte de validar contra magenes virtuales. Podemos hacer imagenes “virtuales” de pelos con gimp, utilizando un pincel uniforme de diferentes diametros. De estas imágenes se sabe de antemano cual es el diametro. Luego las procesamos con nuestro prototipo para validar que las mediciones son correctas.
-
-
-Ver el ulti paper que mandó rodo, ,en donde comparar productos diferentes. Comparamos nuestro prototipo con woolview. Ver en otros papers (dos, no más) como comparan dos implementaciones diferentes.
-Nosotros tenemos 100 fotos tomadas de un mechon, tanto con el woolview como con nuestro prototipo. Decir cual es la diferencia de las mediciones entre los dos (que es menor a un micron, variancia, desvio estandar, etc)
-Comparamos tambien nuestro prototipo contra diameterJ. Acá hay que tunear algunas fotos. Porque diameterj “mide” tambien el diametro de las manchas y mugre, y afecta al valor final.
-
-Mostramos los tiempos de ejecución en el hardware real.
 
 \section{Conclusiones y discusión}
 Siendo la preparación de las fibras sobre el animal o en laboratorio un proceso que se encuentra en el orden de los minutos (, el tiempo observado en el análisis mediante el prototipo no es de un costo significativo, y ha sido aceptado  en las mediciones de prueba realizadas 
