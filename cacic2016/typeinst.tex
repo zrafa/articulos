@@ -172,14 +172,20 @@ La facilidad de manejo y peso del dispositivo portátil de mano posibilita que l
 \subsection{Arquitectura de Software}
 
 
-La arquitectura de software puede observarse en la Figura 2.
+La arquitectura de software puede observarse en la Figura~\ref{fig:arqsoft}.
+\begin{figure}
+\centering
+\includegraphics[height=6cm]{arqsoft}
+\caption{Componentes de la arquitectura del software.}
+\label{fig:arqsoft}
+\end{figure}
+
 A bajo nivel, el hardware embebido está controlado por el sistema operativo Debian. Particularmente, los principales drivers que se utilizan del kernel Linux son el universal video class (UVC) y la interfaz de E/S de puertos generales (GPIO) del núcleo.
 A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portátil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imagen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
 \begin{figure}
 \centering
 \includegraphics[height=0.9cm]{proceso}
-\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imagen digital de fibras.
-}
+\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imagen digital de fibras.}
 \label{fig:proceso}
 \end{figure}
 
@@ -266,8 +272,7 @@ Toda la estadística es almacenada en el dispositivo, y puede ser extraída y vi
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{captura2}
-\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
-}
+\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).}
 \label{fig:captura2}
 \end{figure}
 
