@@ -132,12 +132,12 @@ Por último, en la sección 4, se presentan las conclusiones y líneas de trabaj
 
 La arquitectura del hardware presenta dos componentes principales :
 \begin{itemize}
-\item El dispositivo de mano portatil;
+\item El dispositivo de mano portátil;
 \item El hardware de procesamiento embebido
 \end{itemize}
 
-El dispositivo de mano portatil contiene un microscopio digital, un led de contraste, una prensa, y un mecanismo de gatillo.
-El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una tensión de 5 voltios, y mecanicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
+El dispositivo de mano portátil contiene un microscopio digital, un led de contraste, una prensa, y un mecanismo de gatillo.
+El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una tensión de 5 voltios, y mecánicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo}.
 \begin{figure}
 \centering
 \includegraphics[height=6.2cm]{prototipo}
@@ -145,8 +145,8 @@ El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una 
 \label{fig:prototipo}
 \end{figure}
 
-El mecanismo de gatillo realiza varias tareas en un único paso. Al gatillar, el operador prensa el acrilico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
-En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imágen digital es obtenida desde el dispositivo portatil a través de una interfaz USB 2.0, la cual interconecta ambos componetes (el dispositivo de mano y el hardware embebido).
+El mecanismo de gatillo realiza varias tareas en un único paso. Al gatillar, el operador prensa el acrílico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
+En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imagen digital es obtenida desde el dispositivo portátil a través de una interfaz USB 2.0, la cual interconecta ambos componentes (el dispositivo de mano y el hardware embebido).
 
 El hardware embebido es el sistema 
 que analiza la imagen digital y reporta los resultados.
@@ -166,7 +166,7 @@ GPIO
 
 FOTO DEL MICROSCOPIO Y EL HARDWARE EMBEBIDO
 
-La facilidad de manejo y peso del dispositivo portatil de mano posibilita que las muestras de fibras a ser procesadas no deban ser preparadas de antemano. El operador puede tomar capturas directamentes sobre el animal en campo.
+La facilidad de manejo y peso del dispositivo portátil de mano posibilita que las muestras de fibras a ser procesadas no deban ser preparadas de antemano. El operador puede tomar capturas directamente sobre el animal en campo.
 
 
 \subsection{Arquitectura de Software}
@@ -174,23 +174,23 @@ La facilidad de manejo y peso del dispositivo portatil de mano posibilita que la
 
 La arquitectura de software puede observarse en la Figura 2.
 A bajo nivel, el hardware embebido está controlado por el sistema operativo Debian. Particularmente, los principales drivers que se utilizan del kernel Linux son el universal video class (UVC) y la interfaz de E/S de puertos generales (GPIO) del núcleo.
-A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portatil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imágen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
+A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portátil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imagen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
 \begin{figure}
 \centering
 \includegraphics[height=0.9cm]{proceso}
-\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imágen digital de fibras.
+\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imagen digital de fibras.
 }
 \label{fig:proceso}
 \end{figure}
 
 
-Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portatil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
+Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portátil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
 El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo {\it line segment detector (LSD) [REF]}.
-La resolución de la imagen es de 640x480 pixeles, en donde 1 pixel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
+La resolución de la imagen es de 640x480 píxeles, en donde 1 píxel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
 
-Cada fibra contiene una médula, eventualmente la imágen capturada puede hacerla visible lo cual afecta a 
-las mediciones. Por tal motivo se ejecuta un filtro de médula para quitarlas parcialmente. El filtro se realiza calculando la transformada de distancia para pixeles que se encuentren dentro de un rango de grises. 
-Dicho rango fue previamente establecido y representa los valores esparables para la médula. Si la detección es positiva, se reemplaza la zona medular por pixeles que contengan un color dentro del rango de grises  
+Cada fibra contiene una médula, eventualmente la imagen capturada puede hacerla visible lo cual afecta a 
+las mediciones. Por tal motivo se ejecuta un filtro de médula para quitarlas parcialmente. El filtro se realiza calculando la transformada de distancia para píxeles que se encuentren dentro de un rango de grises. 
+Dicho rango fue previamente establecido y representa los valores esperables para la médula. Si la detección es positiva, se reemplaza la zona medular por píxeles que contengan un color dentro del rango de grises  
 coincidente con fibra, que también fue previamente establecido.
 
 Posteriormente, la aplicación utiliza el algoritmo {\it line segment detector (LSD) [REFERENCIA]} para obtener un conjunto de segmentos de línea que representan a la imagen original. A partir de este conjunto se 
@@ -237,7 +237,7 @@ realiza la medición de diámetros de fibras según el algoritmo a continuación
 
  
 De manera general, el algoritmo busca segmentos paralelos intersectados por dos a tres perpendiculares.
-Interpretando esto como un segmento de fibra. Si los pixeles contenidos entre los segmentos, a lo largo de
+Interpretando esto como un segmento de fibra. Si los píxeles contenidos entre los segmentos, a lo largo de
  las  perpendiculares, coinciden con el rango de color esperable para fibra, entonces se consideran dichas
 distancias como diámetros tentativos. Calculando por último el promedio de los valores obtenidos para 
 cada segmento. Específicamente:   
@@ -247,14 +247,14 @@ cada segmento. Específicamente:
 \item Por cada segmento de línea en el conjunto se calcula la ubicación de 3 puntos (x,y):
 principio medio y final. 
 \item Por cada punto se calcula la función de la recta perpendicular al segmento original.
-\item Se recorren todos los segmentos restantes en búsqueda de aquellos que sean paralelos al segmento original, e interesactos a su vez por la perpendicular calculada en el paso anterior.
+\item Se recorren todos los segmentos restantes en búsqueda de aquellos que sean paralelos al segmento original, e intersectados a su vez por la perpendicular calculada en el paso anterior.
 Si el segmento perpendicular desde el punto origen hasta la intersección contiene puntos que no pertenecen al rango de color esperable para fibras, se descarta.
 \item Si no se descarta,  el segmento de línea paralelo encontrado es el borde opuesto al original de la fibra, y se procede a realizar el cálculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
 \item Si al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
 \end{enumerate}
 
-	Al final del procesamiento de segmentos de línea se realiza el cálculo de media de diametro general, la desviación estandar y la varianza.
-	Los resultados son emitidos por la salida estandar, y de acuerdo a los valores, se muestra en el display LCD, del hardware embebido, la siguiente información :
+	Al final del procesamiento de segmentos de línea se realiza el cálculo de media de diámetro general, la desviación estándar y la varianza.
+	Los resultados son emitidos por la salida estándar, y de acuerdo a los valores, se muestra en el display LCD, del hardware embebido, la siguiente información :
 \begin{Verbatim}
 [1] diámetro medio;
 [2] porcentaje de medidas menores a 17um;
@@ -262,11 +262,11 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 [4] porcentaje de medidas mayores a 30um;
 \end{Verbatim}
 
-Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visualizada a traves de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite tambien utilizar el dispositivo portatil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
+Toda la estadística es almacenada en el dispositivo, y puede ser extraída y visualizada a través de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite también utilizar el dispositivo portátil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{captura2}
-\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtendia desde el microscopio. A la derecha una represantación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta represantación visual es muy util para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
+\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
 }
 \label{fig:captura2}
 \end{figure}
@@ -275,8 +275,8 @@ Toda la estadistica es almacenada en el dispositivo, y puede ser extraida y visu
 
 
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
-El trabajo propuesto en este artículo no sufre de la distorción de los resultados por el entrecruzamiento de fibras. 
-La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran tambien que no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
+El trabajo propuesto en este artículo no sufre de la distorsión de los resultados por el entrecruzamiento de fibras. 
+La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran también que no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
 
 
 
@@ -285,12 +285,12 @@ La representación a través de un conjunto de segmento de lineas y el proceso d
 \subsubsection{Algoritmo e implementación para la medición del diámetro de fibra a través de análisis digital de imágenes}
 
 Acá explicamos lo que hace nuestro prototipo :
-Toma una foto a traves del driver linux uvc
-La convierte a pgm
-La analiza con lsd modificado:
+Toma una foto a través del driver Linux UVC
+La convierte a PGM
+La analiza con LSD modificado:
 1. Quitamos la médula
-2. Lsd
-3. Calculamos los diametros :
+2. LSD
+3. Calculamos los diámetros :
 a. Como el paper del chino Shien Li
 
 3. Implementación?
@@ -304,33 +304,33 @@ La precisión del resultado del análisis es la valuación mas importante, ya qu
 
 
 \subsection{Orden del Tiempo de Ejecución}
-En el gráfico X se observa el costo en tiempo de ejecución al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo ha sido observado mediante la herramienta GNU time, el cual ejecuta cada etapa y evalua los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante, aunque no así el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg].
+En el gráfico X se observa el costo en tiempo de ejecución al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo ha sido observado mediante la herramienta GNU time, el cual ejecuta cada etapa y evalúa los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante, aunque no así el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg].
 Durante el análisis de la imagen el mayor costo en tiempo de ejecución es el del algoritmo LSD, el cual es de orden de tiempo lineal [REFERENCIA]. Debido a que las fotos son siempre de la misma resolución y el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados) el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
 
 \subsection{Precisión del proceso de análisis}
 
 Para la obtención de resultados de precisión se analizan dos clases de mediciones realizadas: 
 \begin{itemize}
-\item mediciones con imagenes de fibras artificiales que contienen medidas conocidas a priori, y
+\item mediciones con imágenes de fibras artificiales que contienen medidas conocidas a priori, y
 \item mediciones con 96 imágenes de muestras de fibras de un mismo mechón, utilizando el prototipo propuesto en este trabajo y el producto comercial WoolView 20/20. Las muestras se obtuvieron en ambos equipamientos independientemente.
 \end{itemize}
 
 \subsubsection{Medición de imágenes artificiales}
 
-Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 pixeles de grosor y los 40 pixeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
-En la figura X2 se observa lal medición realizada automaticamente para todas las imágenes por el prototipo, y tambien la media calculada manualmente. 
+Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 píxeles de grosor y los 40 píxeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
+En la figura X2 se observa la medición realizada automáticamente para todas las imágenes por el prototipo, y también la media calculada manualmente. 
 
 \subsubsection{Resultados del método de medición de diámetro de fibra} 
 
 Para el análisis del software propuesto se realizó una comparativa de medición entre el prototipo UNCOMA y el equipamiento Woolview 20/20. 
-Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana con precision menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
+Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana con precisión menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
 
-Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadísitica de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
+Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadística de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
 
 La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con Woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
 
 En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
-El diámetro medio final obtenido por el protitopo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En la tabla (\ref{tabla:sencilla}) se observan las estadisticas finales de ambos equipamientos.
+El diámetro medio final obtenido por el prototipo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En la tabla (\ref{tabla:sencilla}) se observan las estadísticas finales de ambos equipamientos.
 
 \begin{figure}
 \centering
