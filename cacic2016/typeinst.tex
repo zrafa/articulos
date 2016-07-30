@@ -172,12 +172,10 @@ A bajo nivel, el hardware embebido está controlado por el sistema operativo Deb
 A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portátil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imagen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
 \begin{figure}
 \centering
-\includegraphics[height=0.9cm]{proceso}
-\caption{Etapas del proceso llevada a cabo por el prototipo UNCOMA para la captura y análisis de la imagen digital de fibras.}
+\includegraphics[height=1cm]{proceso}
+\caption{Etapas de todo el proceso, llevadas a cabo por el prototipo UNCOMA.}
 \label{fig:proceso}
 \end{figure}
-
-
 Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portátil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
 El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo {\it line segment detector (LSD) [REF]}.
 La resolución de la imagen es de 640x480 píxeles, en donde 1 píxel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
@@ -191,7 +189,6 @@ Posteriormente, la aplicación utiliza el algoritmo {\it line segment detector (
 realiza la medición de diámetros de fibras según el algoritmo a continuación:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-    #
     # Pseudocódigo del algoritmo de cálculo de diámetro medio de fibras
     # ENTRADA: Conjunto de segmentos de línea (lsd_set)
     # SALIDA: Mediciones y diámetro medio (mediciones_set, diametro)
@@ -257,11 +254,11 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 \end{Verbatim}
 
 Toda la estadística es almacenada en el dispositivo, y puede ser extraída y visualizada a través de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite también utilizar el dispositivo portátil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
+A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es útil para corroborar si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{captura2}
-\caption{resultado}
-%\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).}
+\caption{Resultado de la medición de diámetro presentado por la interfaz gráfica.}
 \label{fig:captura2}
 \end{figure}
 
@@ -271,21 +268,6 @@ Toda la estadística es almacenada en el dispositivo, y puede ser extraída y vi
 En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
 El trabajo propuesto en este artículo no sufre de la distorsión de los resultados por el entrecruzamiento de fibras. 
 La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran también que no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
-
-
-
-	
-
-\subsubsection{Algoritmo e implementación para la medición del diámetro de fibra a través de análisis digital de imágenes}
-
-Acá explicamos lo que hace nuestro prototipo :
-Toma una foto a través del driver Linux UVC
-La convierte a PGM
-La analiza con LSD modificado:
-1. Quitamos la médula
-2. LSD
-3. Calculamos los diámetros :
-a. Como el paper del chino Shien Li
 
 3. Implementación?
 Podemos dar detalles de que está escrito en ANSI C y es portable. Etc? O colocamos lo de implementac               x xión en Resultados?
@@ -311,8 +293,16 @@ Para la obtención de resultados de precisión se analizan dos clases de medicio
 
 \subsubsection{Medición de imágenes artificiales}
 
-Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la figura X se observa una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 píxeles de grosor y los 40 píxeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
-En la figura X2 se observa la medición realizada automáticamente para todas las imágenes por el prototipo, y también la media calculada manualmente. 
+Figura~\ref{fig:comparativa-artificial3}
+Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la Figura~\ref{fig:comparativa-artificial3} se observa, a la izquierda, una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 píxeles de grosor y los 40 píxeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen / la cantidad de líneas.
+En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los resultados de 35 de las 74 mediciones realizadas por el prototipo a las imágenes preparadas. Junto a cada barra de la media calculada por el software se muestra la media calculada a priori, en base a las medidas de las líneas dibujadas con el programa GIMP.
+\begin{figure}
+\centering
+\includegraphics[height=5cm]{comparativa-artificial3}
+\caption{Izq: Una imágen artificial. Der: Mediciones realizadas a las imágenes.}
+\label{fig:comparativa-artificial3}
+\end{figure}
+
 
 \subsubsection{Resultados del método de medición de diámetro de fibra} 
 
