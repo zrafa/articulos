@@ -112,7 +112,7 @@ Los pequeños productores en el sistema agroecológico del norte de la Provincia
 
 Sin los medios técnicos la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
 
-Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. Woolview 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
+Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. WoolView 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
 En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo desarrollado en la Universidad Nacional del Comahue (por lo que se lo ha denominado ``prototipo UNCOMA'') para la medición de diámetro de fibra sobre el animal en campo. Considerando al criancero como destinatario del 
 producto final, y no un entorno de laboratorio. En tal sentido, se persiguen al menos dos objetivos que 
 resulten en la factibilidad de uso: entrenamiento previo mínimo y, preparación sencilla de la muestra a 
@@ -149,12 +149,12 @@ El mecanismo de gatillo realiza varias tareas en un único paso. Al gatillar, el
 En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imagen digital es obtenida desde el dispositivo portátil a través de una interfaz USB 2.0, la cual interconecta ambos componentes (el dispositivo de mano y el hardware embebido).
 
 El hardware embebido es el sistema en donde se ejecuta el software
-que analiza la imagen digital y reporta los resultados. Contiene un SOC principal Allwinner A10, con una CPU ARM de 700Mhz. La memoria principal (RAM) es de 512MB, y tambien cuenta con una interfaz de memoria SD en donde se ha incorporado una tarjeta microSD de 2GB. El bootloader del SOC carga, al momento de reset, el sistema
+que analiza la imagen digital y reporta los resultados. Contiene un SOC principal Allwinner A10, con una CPU ARM de 700Mhz. La memoria principal (RAM) es de 512MB, y también cuenta con una interfaz de memoria SD en donde se ha incorporado una tarjeta microSD de 2GB. El bootloader del SOC carga, al momento de reset, el sistema
 operativo desde la memoria microSD, y luego el sistema operativo ejecuta
 la aplicación prototipo final.
-EL SOC Allwinner tambien cuenta, internamente, con dispositivos de E/S (GPIO), un puerto USB 2.0, y una interfaz Wireless WiFi 802.11b/g/n.
+EL SOC Allwinner también cuenta, internamente, con dispositivos de E/S (GPIO), un puerto USB 2.0, y una interfaz Wireless WiFi 802.11b/g/n.
 
-El tamaño del hardware embebido es de 10cmx4cmx3cm y el del dispositivo portatil es de 20cmx20cmx5cm. El peso total de todo el equipamiento es de 900gr. Estas caracterísitcas posibilitan que el operador pueda utilizar el equipamiento a mano alzada, tomando capturas de las muestras de fibra directamente sobre el animal en campo.
+El tamaño del hardware embebido es de 10cmx4cmx3cm y el del dispositivo portátil es de 20cmx20cmx5cm. El peso total de todo el equipamiento es de 900gr. Estas características posibilitan que el operador pueda utilizar el equipamiento a mano alzada, tomando capturas de las muestras de fibra directamente sobre el animal en campo.
 
 
 \subsection{Arquitectura de Software}
@@ -244,7 +244,7 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 \item Si al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
 \end{enumerate}
 
-	Al final del procesamiento de segmentos de línea se realiza el cálculo de media de diámetro general, la desviación estándar y la varianza.
+	Finalmente, luego del procesamiento de segmentos de línea, se realiza el cálculo de media de diámetro general, la desviación estándar y la varianza.
 	Los resultados son emitidos por la salida estándar, y de acuerdo a los valores, se muestra en el display LCD, del hardware embebido, la siguiente información :
 \begin{Verbatim}
 [1] diámetro medio;
@@ -253,8 +253,10 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 [4] porcentaje de medidas mayores a 30um;
 \end{Verbatim}
 
-Toda la estadística es almacenada en el dispositivo, y puede ser extraída y visualizada a través de su conexión wireless. Se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite también utilizar el dispositivo portátil (su microscopio) desde una notebook o PC. Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
-A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es útil para corroborar si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
+Toda la estadística es almacenada en el dispositivo embebido, y puede ser extraída y visualizada, a través de su conexión wireless. Adicionalmente, se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite también utilizar el dispositivo portátil (su microscopio) desde una notebook o PC. 
+
+Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
+A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación gráfica del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es útil para corroborar si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{captura2}
@@ -264,19 +266,12 @@ A la izquierda se observa la imagen original obtenida desde el microscopio. A la
 
 
 
-
-En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultados, por lo que se han propuesto diferentes algoritmos para la detección de los mismos.
-El trabajo propuesto en este artículo no sufre de la distorsión de los resultados por el entrecruzamiento de fibras. 
-La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra no necesita de una detección suplementaria de entrecruzamiento. Los resultados expuestos en las secciones siguientes, junto a las verificaciones realizadas en campo, muestran también que no se necesita preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas).
-
 3. Implementación?
 Podemos dar detalles de que está escrito en ANSI C y es portable. Etc? O colocamos lo de implementac               x xión en Resultados?
 
 \section{Resultados}
-
-Para determinar la validez del prototipo se han realizado mediciones de tiempo y precisión.
-El orden del tiempo de ejecución del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que demore demasiado en obtener los resultados puede no ser indicado para un campo con mucho ganado. En caso de que el equipamiento demore demasiado en cada medición se requeriría un mayor numero de operarios y dispositivos, para realizar mediciones en paralelo; lo cual sería mas costoso.
-La precisión del resultado del análisis es la valuación mas importante, ya que un dispositivo que realiza mediciones incorrectas o muy poco precisas no es confiable.
+El orden del tiempo de ejecución del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que tome un tiempo considerable en medir la finura de fibra puede no ser indicado para un campo con mucho ganado. En caso de que el equipamiento demore demasiado en cada medición se requeriría un mayor numero de operarios y dispositivos, para realizar mediciones en paralelo; lo cual sería mas costoso.
+La precisión del resultado del análisis es la valuación más importante, ya que un dispositivo que realiza mediciones incorrectas o poco precisas no es confiable.
 
 
 \subsection{Orden del Tiempo de Ejecución}
@@ -299,22 +294,22 @@ En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los re
 \begin{figure}
 \centering
 \includegraphics[height=5cm]{comparativa-artificial3}
-\caption{Izq: Una imágen artificial. Der: Mediciones realizadas a las imágenes.}
+\caption{Izq: Una imagen artificial. Der: Mediciones realizadas a las imágenes.}
 \label{fig:comparativa-artificial3}
 \end{figure}
 
 
 \subsubsection{Resultados del método de medición de diámetro de fibra} 
 
-Para el análisis del software propuesto se realizó una comparativa de medición entre el prototipo UNCOMA y el equipamiento Woolview 20/20. 
-Woolview 20/20 es un dispositivo comercial para la medición de fibras de lana con precisión menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
+Para el análisis del software propuesto se realizó una comparativa de medición entre el prototipo UNCOMA y el equipamiento WoolView 20/20. 
+WoolView 20/20 es un dispositivo comercial para la medición de fibras de lana con precisión menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
 
 Con el prototipo UNCOMA se analizaron 96 muestras obtenidas de un mismo mechón de animal. Estas muestras fueron almacenadas para ser publicadas en conjunto con este trabajo. Se desarrolló un script por lotes que secuencialmente analiza cada una de estas muestras almacenadas, utilizando el software prototipo. La estadística de cada foto digital analizada es almacenada en un archivo separado. Tanto las muestras originales como el resultado de cada medición de diámetro a través del software del prototipo puede obtenerse de [3].
 
-La medición utilizando el equipamiento Woolview 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con Woolview 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
+La medición utilizando el equipamiento WoolView 20/20 fue realizada por un operario diferente al que realizó la medición con el prototipo UNCOMA. Utilizando el mismo mechón de animal se realizaron 96 mediciones con WoolView 20/20. Este equipamiento acumula la estadística, por lo que se obtuvieron los detalles de las estadísticas intermedias cada 10 mediciones. 
 
 En la Figura~\ref{fig:prototipovswv} se observan los resultados de las mediciones intermedias de ambos equipamientos.
-El diámetro medio final obtenido por el prototipo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento Woolview 20/20 es de 20,9 micrones. En la tabla (\ref{tabla:sencilla}) se observan las estadísticas finales de ambos equipamientos.
+El diámetro medio final obtenido por el prototipo propuesto es de 20,6263 micrones (en la Figura~\ref{fig:histograma} se observa el histograma normalizado de todas las mediciones). El diámetro medio obtenido con el equipamiento WoolView 20/20 es de 20,9 micrones. En la tabla (\ref{tabla:sencilla}) se observan las estadísticas finales de ambos equipamientos.
 
 \begin{figure}
 \centering
@@ -352,6 +347,14 @@ Muestras dentro del DE & 82\% & No reportado \\ \hline
 
 \section{Conclusiones y discusión}
 Siendo la preparación de las fibras sobre el animal o en laboratorio un proceso que se encuentra en el orden de los minutos (, el tiempo observado en el análisis mediante el prototipo no es de un costo significativo, y ha sido aceptado  en las mediciones de prueba realizadas 
+
+Adicionalmente a partir de los resultados obtenidos, junto a las verificaciones realizadas en campo, se concluye que no es necesaria la preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas). Factor que afecta a la usabilidad del prototipo. 
+En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultado[REFERENCIA], por lo que se han propuesto diferentes algoritmos para su detección.
+El método aquí expuesto no sufre de dicho problema. 
+La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra, no necesita de una detección suplementaria de entrecruzamiento. 
+
+
+Para determinar la validez del prototipo se realizaron mediciones de tiempo y precisión.
 
 \section{Trabajo Futuro}
 
