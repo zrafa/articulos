@@ -148,25 +148,13 @@ El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una 
 El mecanismo de gatillo realiza varias tareas en un único paso. Al gatillar, el operador prensa el acrílico opuesto a la óptica del microscopio, lo que produce que las fibras sean enfocadas correctamente y queden firmes. Además, al final del accionar del gatillo, se activa un interruptor digital. Este interruptor envía una señal al hardware embebido, a través de un puerto de E/S digital que dispara un evento en el sistema y activa el software de obtención de imágenes.
 En ese momento, el software en el hardware embebido solicita una captura de imagen digital de las fibras que el microscopio tiene enfocadas y estancadas, para luego ser procesada. La imagen digital es obtenida desde el dispositivo portátil a través de una interfaz USB 2.0, la cual interconecta ambos componentes (el dispositivo de mano y el hardware embebido).
 
-El hardware embebido es el sistema 
-que analiza la imagen digital y reporta los resultados.
-Un diagrama de bloques del hardware embebido es mostrado en la Figura 1.2
+El hardware embebido es el sistema en donde se ejecuta el software
+que analiza la imagen digital y reporta los resultados. Contiene un SOC principal Allwinner A10, con una CPU ARM de 700Mhz. La memoria principal (RAM) es de 512MB, y tambien cuenta con una interfaz de memoria SD en donde se ha incorporado una tarjeta microSD de 2GB. El bootloader del SOC carga, al momento de reset, el sistema
+operativo desde la memoria microSD, y luego el sistema operativo ejecuta
+la aplicación prototipo final.
+EL SOC Allwinner tambien cuenta, internamente, con dispositivos de E/S (GPIO), un puerto USB 2.0, y una interfaz Wireless WiFi 802.11b/g/n.
 
-
-
-Block Diagram
-Features
-CPU ARM Cortex™-A8 1.5GHz I
-Memory 512MB de 32-bit DDR3 RAM
-4GB NAND FLASH
-WiFi 802.11b/g/n network card. 
-4 SDIO interfaces (SD 3.0, UHI class)
-USB 2.0
-GPIO
-
-FOTO DEL MICROSCOPIO Y EL HARDWARE EMBEBIDO
-
-La facilidad de manejo y peso del dispositivo portátil de mano posibilita que las muestras de fibras a ser procesadas no deban ser preparadas de antemano. El operador puede tomar capturas directamente sobre el animal en campo.
+El tamaño del hardware embebido es de 10cmx4cmx3cm y el del dispositivo portatil es de 20cmx20cmx5cm. El peso total de todo el equipamiento es de 900gr. Estas caracterísitcas posibilitan que el operador pueda utilizar el equipamiento a mano alzada, tomando capturas de las muestras de fibra directamente sobre el animal en campo.
 
 
 \subsection{Arquitectura de Software}
@@ -175,7 +163,7 @@ La facilidad de manejo y peso del dispositivo portátil de mano posibilita que l
 La arquitectura de software puede observarse en la Figura~\ref{fig:arqsoft}.
 \begin{figure}
 \centering
-\includegraphics[height=6cm]{arqsoft}
+\includegraphics[height=5cm]{arqsoft}
 \caption{Componentes de la arquitectura del software.}
 \label{fig:arqsoft}
 \end{figure}
@@ -272,7 +260,8 @@ Toda la estadística es almacenada en el dispositivo, y puede ser extraída y vi
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{captura2}
-\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).}
+\caption{resultado}
+%\caption{Resultado visual de medición de diámetro presentado por la interfaz software. A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es muy útil para corroborar manualmente si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).}
 \label{fig:captura2}
 \end{figure}
 
