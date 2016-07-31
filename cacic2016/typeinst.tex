@@ -157,7 +157,7 @@ Los resultados muestran que el costo, performance y precisión del prototipo UNC
 El resto de este trabajo se estructura de la siguiente manera. En la sección \ref{sec:arq} se describen
 las arquitecturas de software y hardware del equipamiento propuesto, con un énfasis en
 el método de medición por análisis de imagen digital. En la sección \ref{sec:res} presentan varios
-resultados experimentales, para validar el proceso de determinación de finura llevado a cabo por el prototipo.
+resultados experimentales, para validar el proceso de determinación de finura llevado a cabo por el prototipo UNCOMA.
 Por último, en la sección \ref{sec:conc} se presentan las conclusiones y líneas de trabajo a futuro.
 
 \section{Arquitectura}\label{sec:arq}
@@ -192,7 +192,7 @@ El tamaño del hardware embebido es de 10x4x3cm, y el del dispositivo portátil 
 En cuanto al costo del equipamiento es necesario enumerar los componentes
 críticos de mayor precio:
 \begin{enumerate}
-\item microscopio de 400x incorporado en el dispositivo portatil : USD 60.
+\item microscopio de 400x incorporado en el dispositivo portátil : USD 60.
 \item placa electrónica embebida, que contenga un core CPU ARM de 700Mhz+, y 256MB de RAM: USD 30.
 \item piezas mecánicas elaboradas a medida: USD 20.
 \end{enumerate}
@@ -283,7 +283,7 @@ principio medio y final.
 \item Se recorren todos los segmentos restantes en búsqueda de aquellos que sean paralelos al segmento original, e intersectados a su vez por la perpendicular calculada en el paso anterior.
 Si el segmento perpendicular desde el punto origen hasta la intersección contiene puntos que no pertenecen al rango de color esperable para fibras, se descarta.
 \item Si no se descarta,  el segmento de línea paralelo encontrado es el borde opuesto al original de la fibra, y se procede a realizar el cálculo de distancia entre el punto original y la intersección. Esta medida es catalogada como diámetro tentativo.
-\item Si al menos dos puntos obtuvieron un diámetro tentativo se re-cataloga a la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
+\item Si al menos dos puntos obtuvieron un diámetro tentativo se establece la medición tentativa como válida, y pasa a formar parte del cálculo estadístico de media de diámetro general. Sino, el diámetro tentativo es catalogado como ruido y se descarta.
 \end{enumerate}
 
 	Finalmente, luego del procesamiento de segmentos de línea, se realiza el cálculo de media de diámetro general, la desviación estándar y la varianza.
@@ -309,29 +309,30 @@ A la izquierda se observa la imagen original obtenida desde el microscopio. A la
 
 \section{Resultados}\label{sec:res}
 
-Para determinar la validez del prototipo se realizaron mediciones de tiempo y precisión.
+Para determinar la validez del prototipo UNCOMA se realizaron mediciones de tiempo y precisión.
 
-El tiempo de ejecución total del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que tome un tiempo considerable en medir la finura de fibra, puede no ser indicado para un campo con mucho ganado, ya que se requeriría un mayor número de operarios y dispositivos, para realizar mediciones en paralelo. Lo cual sería costoso o incluso impracticable.
+El tiempo de ejecución total del prototipo es importante porque nos permite evaluar si el hardware y software son adecuados para uso cotidiano. Un dispositivo que tome un tiempo considerable en medir la finura de fibra, puede no ser indicado para un campo con mucho ganado, ya que se requeriría un mayor número de operarios y dispositivos, para realizar mediciones en paralelo. Lo cual sería costoso o incluso impracticable.
 
 La precisión del resultado del análisis es la valuación más importante, ya que un dispositivo que realiza mediciones incorrectas o poco precisas no es confiable. Y por ende carente de valor frente al ojo experto del criancero. 
 
 
 \subsection{Orden del Tiempo de Ejecución}
-En el gráfico X se observa el costo en tiempo de ejecución al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo ha sido observado mediante la herramienta GNU time, el cual ejecuta cada etapa y evalúa los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante, aunque no así el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg].
-Durante el análisis de la imagen el mayor costo en tiempo de ejecución es el del algoritmo LSD, el cual es de orden de tiempo lineal [REFERENCIA]. Debido a que las fotos son siempre de la misma resolución y el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados) el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
+El costo en tiempo de ejecución se ha observado al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo fue medido mediante la herramienta GNU time, el cual ejecuta cada etapa y evalúa los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante. No siendo así para el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg]. 
+Durante dicho análisis, el mayor costo en tiempo de ejecución es el del algoritmo LSD, que es de orden de tiempo lineal [REFERENCIA]. En base a esto, y al hecho de que las fotos poseen la misma resolución y, que el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados), el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
 
 \subsection{Precisión del proceso de análisis}
 
 Para la obtención de resultados de precisión se analizan dos clases de mediciones realizadas: 
 \begin{itemize}
 \item mediciones con imágenes de fibras artificiales que contienen medidas conocidas a priori, y
-\item mediciones con 96 imágenes de muestras de fibras de un mismo mechón, utilizando el prototipo propuesto en este trabajo y el producto comercial WoolView 20/20. Las muestras se obtuvieron en ambos equipamientos independientemente.
+\item mediciones con 96 imágenes de muestras de fibras reales, de un mismo mechón, utilizando el prototipo UNCOMA y el producto comercial WoolView 20/20. Las muestras se obtuvieron en ambos equipamientos independientemente.
 \end{itemize}
 
-\subsubsection{Medición de imágenes artificiales}
+\subsubsection{Medición de imágenes fibra artificiales}
+
 
 Se han confeccionado 74 imágenes de fibras artificiales mediante el software de manipulación de imágenes GIMP. Las imágenes contienen entre 1 y 7 lineas negras (fibras artificiales) de orientación  y sentidos aleatorios. Cada línea tiene un grosor conocido a priori y documentado en toda su extensión. Por ejemplo, en la Figura~\ref{fig:comparativa-artificial3} se observa, a la izquierda, una imagen con 5 fibras artificiales, cada una de un grosor definido en toda su extensión. Los diámetros seleccionados para las líneas se encuentran entre los 10 píxeles de grosor y los 40 píxeles. La media observada manualmente para cada imagen es calculada como la sumatoria de las medidas de cada línea en la imagen sobre la cantidad de líneas.
-En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los resultados de 35 de las 74 mediciones realizadas por el prototipo a las imágenes preparadas. Junto a cada barra de la media calculada por el software se muestra la media calculada a priori, en base a las medidas de las líneas dibujadas con el programa GIMP.
+En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los resultados de 35 de las 74 mediciones realizadas por el prototipo UNCOMA a las imágenes preparadas. Junto a cada barra de la media calculada por el software se muestra la media calculada a priori, en base a las medidas de las líneas dibujadas con el programa GIMP.
 \begin{figure}
 \centering
 \includegraphics[height=5cm]{comparativa-artificial3}
@@ -340,7 +341,7 @@ En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los re
 \end{figure}
 
 
-\subsubsection{Resultados del método de medición de diámetro de fibra} 
+\subsubsection{Medición de imágenes de fibra reales} 
 
 Para el análisis del software propuesto se realizó una comparativa de medición entre el prototipo UNCOMA y el equipamiento WoolView 20/20. 
 WoolView 20/20 es un dispositivo comercial para la medición de fibras de lana con precisión menor a un micrón, el cual puede analizar las muestras sin quitar las fibras del animal. 
@@ -356,7 +357,7 @@ El diámetro medio final obtenido por el prototipo propuesto es de 20,6263 micro
 \centering
 \includegraphics[height=5.2cm]{prototipovswv}
 \caption{\small Comparativa acumulativa de 96 mediciones utilizando dos equipamientos : prototipo UNCOMA y WoolView 20/20.
-La diferencia de la media de diámetro entre ambos equipos va disminuyendo a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras. Luego de 20 mediciones la diferencia es menor a un micron. Luego de 50 mediciones la diferencia es menor a 0.5 micrones.}
+La diferencia de la media de diámetro entre ambos equipos va disminuyendo a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras. Luego de 20 mediciones la diferencia es menor a un micrón. Luego de 50 mediciones la diferencia es menor a 0.5 micrones.}
 \label{fig:prototipovswv}
 \end{figure}
 
