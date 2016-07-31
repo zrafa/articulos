@@ -270,8 +270,12 @@ A la izquierda se observa la imagen original obtenida desde el microscopio. A la
 Podemos dar detalles de que está escrito en ANSI C y es portable. Etc? O colocamos lo de implementac               x xión en Resultados?
 
 \section{Resultados}
-El orden del tiempo de ejecución del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que tome un tiempo considerable en medir la finura de fibra puede no ser indicado para un campo con mucho ganado. En caso de que el equipamiento demore demasiado en cada medición se requeriría un mayor numero de operarios y dispositivos, para realizar mediciones en paralelo; lo cual sería mas costoso.
-La precisión del resultado del análisis es la valuación más importante, ya que un dispositivo que realiza mediciones incorrectas o poco precisas no es confiable.
+
+Para determinar la validez del prototipo se realizaron mediciones de tiempo y precisión.
+
+El tiempo de ejecución total del prototipo es importante porque nos permite evaluar si el hardware y software es adecuado para uso cotidiano. Un dispositivo que tome un tiempo considerable en medir la finura de fibra, puede no ser indicado para un campo con mucho ganado, ya que se requeriría un mayor número de operarios y dispositivos, para realizar mediciones en paralelo. Lo cual sería costoso o incluso impracticable.
+
+La precisión del resultado del análisis es la valuación más importante, ya que un dispositivo que realiza mediciones incorrectas o poco precisas no es confiable. Y por ende carente de valor frente al ojo experto del criancero. 
 
 
 \subsection{Orden del Tiempo de Ejecución}
@@ -345,7 +349,14 @@ Muestras dentro del DE & 82\% & No reportado \\ \hline
 \end{table}
 
 
-\section{Conclusiones y discusión}
+\section{Conclusiones y Trabajo Futuro}
+En este trabajo se presenta la arquitectura de un sistema prototipo funcional
+de bajo costo, para la determinación de finura de fibra de cabra, en
+base a la captura y análisis de imágenes digitales de las muestras.
+Para validar la precisión del equipamiento se ha realizado la medición
+del diámetro de imágenes artificiales, y tambien de 
+muestras reales, comparando los resultados con los provistos por
+otro equipamiento profesional de similares características.
 Siendo la preparación de las fibras sobre el animal o en laboratorio un proceso que se encuentra en el orden de los minutos (, el tiempo observado en el análisis mediante el prototipo no es de un costo significativo, y ha sido aceptado  en las mediciones de prueba realizadas 
 
 Adicionalmente a partir de los resultados obtenidos, junto a las verificaciones realizadas en campo, se concluye que no es necesaria la preparación previa de las fibras (las mismas pueden estar en cualquier posición y entrecruzadas). Factor que afecta a la usabilidad del prototipo. 
@@ -354,7 +365,6 @@ El método aquí expuesto no sufre de dicho problema.
 La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra, no necesita de una detección suplementaria de entrecruzamiento. 
 
 
-Para determinar la validez del prototipo se realizaron mediciones de tiempo y precisión.
 
 \section{Trabajo Futuro}
 
