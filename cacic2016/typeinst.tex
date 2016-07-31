@@ -99,15 +99,60 @@ Buenos Aires 1400, Neuquén, Argentina\\
 
 
 \begin{abstract}
-The abstract should summarize the contents of the paper and should
-contain at least 70 and at most 150 words. It should be written using the
-\emph{abstract} environment.
-\keywords{We would like to encourage you to list your keywords within
-the abstract section}
+
+La cría de cabras es una actividad económica habitual en el norte de la provincia de Neuquén. 
+La falta de tecnología adecuada reduce las ganancias que el criancero puede obtener de la misma. 
+
+Este artículo tiene como propósito, describir la arquitectura de hardware y 
+software de un prototipo real, diseñado y desarrollado para la clasificación 
+de fibras textiles; para ser utilizado por el criancero directamente en el campo. 
+Presentando además los resultados de los experimentos realizados
+con el prototipo.  
+Presentando además la validación de los resultados obtenidos por el 
+prototipo.  
+
+Desde la perspectiva del hardware, se evidencia la necesidad de un sistema
+embebido. Lo cual apunta a bajos costos de producción, robustez y movilidad. 
+Por otro lado, desde el software, se utiliza un algoritmo con orden de
+tiempo de ejecución lineal, como piedra angular del procesamiento de imágenes. 
+
+Se han comparado las mediciones de diámetro de fibra realizadas con el
+prototipo
+contra los obtenidos por una herramienta comercial, y se ha observado
+una correlación alta entre los resultados producidos.
+Basado en esta experiencia, y 
+el análisis de costo/beneficio, es posible la producción de una solución final 
+para el criancero. 
+
+Los resultado obtenidos por el prototipo; fueron comparados contra los 
+obtenidos por una herramienta comercial, utilizada por especialistas.  
+y se ha observado una correlación alta entre ambos resultados obtenidos.
+
+El proceso de validación demuestra una correlación alta entre los resultados
+obtenidos  por el prototipo y la herramienta comercial. Así como también, con 
+los resultados obtenidos de imágenes sintéticas. 
+Basado en esta experiencia, y 
+el análisis de costo/beneficio, es posible la producción de una solución final 
+para el criancero. 
 \end{abstract}
 
 
 \section{Introducción}
+El prototipo descripto en este artículo fue diseñado para ser
+utilizado por los productores de lana caprina del norte Neuquino, directamente 
+en su lugar de trabajo. Las siguientes características son consideradas 
+claves para el uso efectivo del mismo: bajo costo; facilidad de uso; robustez y 
+movilidad. Dos aspectos claves de la solución para lograrlo son: uso de un 
+sistema embebido y, un algoritmo de procesamiento de imágenes veloz y preciso.
+
+El uso de un sistema embebido, en lugar de un dispositivo de propósito general,
+como un teléfono celular, aborda la necesidad de bajo costo. Sin embargo, aún
+cuando los sistemas embebidos modernos son potentes, poseen ciertas limitaciones. 
+Por este motivo, se eligió el algoritmo LSD (Line Segment Detection), 
+calificado como el más rápido disponible en IPOL. El mismo constituye la piedra
+fundamental del software de procesamiento de imágenes utilizado por el 
+prototipo. Como LSD es software libre, se ha procedido a modificarlo y agregar
+algunos filtros requeridos para esta solución particular. 
 
 Los pequeños productores en el sistema agroecológico del norte de la Provincia de Neuquén son los crianceros. A nivel local la palabra criancero denomina a un amplio conjunto de productores familiares en el que predominan productores campesinos o con rasgos campesinos y que se dedican fundamentalmente a la cría de caprinos y ovinos (Bendini y col., 2002). Viven de la producción de fibras textiles de origen animal (principalmente caprino) en el norte neuquino, y no disponen de los medios técnicos y el asesoramiento profesional requerido para: i) orientar la selección animal a la producción de vellones mas pesados y calidades de fibra de valor superior; ii) establecer objetivamente los parámetros de la calidad de la fibra, de manera de poder clasificarla para optimizar la comercialización; iii) negociar con el comprador el precio de mercado que la calidad de la fibra amerita; y iv) orientar la producción ganadera hacia aquellos biotipos mejor adaptados a la naturaleza de la región, para así poder frenar y eventualmente revertir el proceso de desertificación que las afecta.
 
@@ -264,13 +309,13 @@ Si el segmento perpendicular desde el punto origen hasta la intersección contie
 
 Toda la estadística es almacenada en el dispositivo embebido, y puede ser extraída y visualizada, a través de su conexión wireless. Adicionalmente, se ha desarrollado una interfaz gráfica (GUI) para visualizar el proceso de análisis en una PC, y corroborar fehacientemente (visualmente) que el análisis automático es correcto (que las mediciones realizada por el software se encuentren dentro de las fibras, y sean perpendiculares a sus extremos). Esta interfaz gráfica permite también utilizar el dispositivo portátil (su microscopio) desde una notebook o PC. 
 
-Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura2}.
+Un ejemplo de análisis utilizando la interfaz gráfica se muestra en la Figura~\ref{fig:captura3}.
 A la izquierda se observa la imagen original obtenida desde el microscopio. A la derecha una representación gráfica del resultado del algoritmo de medición. Los segmentos en color rojo son mediciones finales obtenidas por el algoritmo. Esta representación visual es útil para corroborar si hubieron mediciones erróneas del software (por ejemplo, fuera de las fibras).
 \begin{figure}
 \centering
-\includegraphics[height=7cm]{captura2}
+\includegraphics[height=6cm]{captura3}
 \caption{Resultado de la medición de diámetro presentado por la interfaz gráfica.}
-\label{fig:captura2}
+\label{fig:captura3}
 \end{figure}
 
 
