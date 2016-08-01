@@ -121,22 +121,23 @@ obtenidos, así como también con
 los valores obtenidos al procesar imágenes de fibras artificiales. 
 Basado en esta experiencia, y 
 el análisis de costo/beneficio, se muestra que es posible la producción de una solución final para el criancero. 
+
+{\bf Palabras clave}: sistema embebido, procesamiento de imágenes, fibra textil.
+
 \end{abstract}
 
 
 \section{Introducción}
 
-Los pequeños productores en el sistema agroecológico del norte de la Provincia de Neuquén son los crianceros. A nivel local la palabra criancero denomina a un amplio conjunto de productores familiares en el que predominan productores campesinos o con rasgos campesinos y que se dedican fundamentalmente a la cría de caprinos y ovinos (Bendini y col., 2002). Viven de la producción de fibras textiles de origen animal (principalmente caprino) en el norte neuquino, y no disponen de los medios técnicos y el asesoramiento profesional requerido para: i) orientar la selección animal a la producción de vellones mas pesados y calidades de fibra de valor superior; ii) establecer objetivamente los parámetros de la calidad de la fibra, de manera de poder clasificarla para optimizar la comercialización; iii) negociar con el comprador el precio de mercado que la calidad de la fibra amerita; y iv) orientar la producción ganadera hacia aquellos biotipos mejor adaptados a la naturaleza de la región, para así poder frenar y eventualmente revertir el proceso de desertificación que las afecta.
+Los pequeños productores en el sistema agroecológico del norte de la Provincia de Neuquén son los crianceros. A nivel local la palabra criancero denomina a un amplio conjunto de productores familiares en el que predominan productores campesinos o con rasgos campesinos y que se dedican fundamentalmente a la cría de caprinos y ovinos \cite{bendini2}. Viven de la producción de fibras textiles de origen animal (principalmente caprino), y no disponen de los medios técnicos y el asesoramiento profesional requerido para: i) orientar la selección animal a la producción de vellones mas pesados y calidades de fibra de valor superior; ii) establecer objetivamente los parámetros de la calidad de la fibra, de manera de poder clasificarla para optimizar la comercialización; iii) negociar con el comprador el precio de mercado que la calidad de la fibra amerita; y iv) orientar la producción ganadera hacia aquellos biotipos mejor adaptados a la naturaleza de la región, para así poder frenar y eventualmente revertir el proceso de desertificación que las afecta \cite{bendini1}
 
-Sin los medios técnicos la cosecha de pelo de cabra criolla mediante esquila se realiza con una selección visual subjetiva del tipo de animal, llegando a descartar aquellos ejemplares con fuerte componente de vellón tipo lustre (angorizado), y separando los lotes en blanco y color. Este producto que ingresa a destino (planta textil) requiere de una nueva separación y clasificación antes de entrar al proceso de descerdado (que en muchos casos resulta impracticable dado que los vellones no pueden identificarse y sólo se obtienen “parches” sin relación entre sí).
-
-Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal. WoolView 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado.
+Por otro lado, existen en el mercado varios equipos profesionales para la determinación de finura (desarrollados principalmente para lana) como el OFDA 2000, WoolView 20/20, LaserScan, air flow, y lanámetro, entre otros \cite{ofda, laserscan}. De cualquier manera, la mayoría de estos equipamientos son costosos y destinados a ambientes de laboratorio, por lo que no son indicados para utilización sobre el animal \cite{baxter}. WoolView 20/20 fue diseñado para trabajo en campo, pero el producto está discontinuado \cite{wv}.
 En este artículo se presenta la arquitectura de hardware y software de un equipamiento prototipo desarrollado en la Universidad Nacional del Comahue (por lo que se lo ha denominado ``prototipo UNCOMA'') para la medición de diámetro de fibra sobre el animal en campo. Considerando al criancero como destinatario del 
 producto final, y no un entorno de laboratorio. En tal sentido, se persiguen al menos dos objetivos que 
 resulten en la factibilidad de uso: entrenamiento previo mínimo y, preparación sencilla de la muestra a 
 analizar.  
  
-Los resultados muestran que el costo, performance y precisión del prototipo UNCOMA propuesto, es adecuado para la selección objetiva en origen de animales de alta producción de fibra (especialmente cashmere), lo que permitirá aumentar la producción por cabeza e incrementar significativamente los ingresos anuales del productor campesino. De este modo se podrán efectivizar las propuestas de manejo de la carga animal, contribuyendo así a revertir el grave problema de la desertificación.
+Los resultados muestran que el costo, performance y precisión del prototipo UNCOMA propuesto, es adecuado para la selección objetiva en origen de animales de alta producción de fibra (especialmente cashmere), lo que permitiría aumentar la producción por cabeza e incrementar los ingresos anuales del productor campesino. De este modo se podrán hacer efectivas las propuestas de manejo de la carga animal, contribuyendo así a revertir el grave problema de la desertificación.
 
 %El prototipo descripto en este artículo fue diseñado para ser
 %utilizado por los productores de fibra textile caprina del norte Neuquino, 
@@ -174,7 +175,7 @@ El dispositivo de mano portátil contiene un microscopio digital, un led de cont
 El microscopio es de 400 ampliaciones, modificado y calibrado. Funciona con una tensión de 5 voltios, y mecánicamente se encuentra empotrado en el dispositivo, como se observa en Figura~\ref{fig:prototipo5}.
 \begin{figure}
 \centering
-\includegraphics[height=6cm]{prototipo5}
+\includegraphics[height=4cm]{prototipo5}
 \caption{Equipamiento prototipo UNCOMA}
 \label{fig:prototipo5}
 \end{figure}
@@ -192,23 +193,22 @@ El tamaño del hardware embebido es de 10x4x3cm, y el del dispositivo portátil 
 En cuanto al costo del equipamiento es necesario enumerar los componentes
 críticos de mayor precio:
 \begin{enumerate}
-\item microscopio de 400x incorporado en el dispositivo portátil : USD 60.
-\item placa electrónica embebida, que contenga un core CPU ARM de 700Mhz+, y 256MB de RAM: USD 30.
-\item piezas mecánicas elaboradas a medida: USD 20.
+\item Microscopio de 400x incorporado en el dispositivo portátil : USD 60.
+\item Placa electrónica embebida, que contenga un core CPU ARM de 700Mhz+, y 256MB de RAM: USD 30.
+\item Piezas mecánicas elaboradas a medida: USD 20.
 \end{enumerate}
 
 
 \subsection{Arquitectura de Software}
 
-
-La arquitectura de software puede observarse en la Figura~\ref{fig:arqsoft}.
-\begin{figure}
-\centering
-\includegraphics[height=5cm]{arqsoft}
-\caption{Componentes de la arquitectura del software.}
-\label{fig:arqsoft}
-\end{figure}
-
+%La arquitectura de software puede observarse en la Figura~\ref{fig:arqsoft2}.
+%\begin{figure}
+%\centering
+%\includegraphics[height=3cm]{arqsoft2}
+%\caption{Componentes de la arquitectura del software.}
+%\label{fig:arqsoft2}
+%\end{figure}
+%
 A bajo nivel, el hardware embebido está controlado por el sistema operativo Debian. Particularmente, los principales drivers que se utilizan del kernel Linux son el universal video class (UVC) y la interfaz de E/S de puertos generales (GPIO) del núcleo.
 A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal digital disparada por el dispositivo portátil. En este punto, la aplicación en espacio de usuario recibe una notificación del evento y realiza el proceso de captura y análisis digital de una imagen de fibras. El proceso general puede ser observado en la Figura~\ref{fig:proceso}.
 \begin{figure}
@@ -219,7 +219,7 @@ A través de uno de los puertos de entrada digitales (GPIO) se recibe la señal 
 \end{figure}
 
 Para la captura de la imagen, la aplicación embebida utiliza las facilidades que el kernel Linux exporta al espacio de usuario a través del driver UVC. El driver UVC que controla la captura del microscopio incorporado en el dispositivo portátil obtiene una imagen completa de las fibras en la prensa, y se la presenta a la aplicación en espacio de usuario.
-El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo {\it line segment detector (LSD) [REF]}.
+El formato de la imagen digital recibida es JPEG, por lo que se procede, en primera instancia, a un proceso de conversión al formato de mapa de grises portable (PGM). Esto es llevado a cabo por el conjunto de herramientas de software netpbm, y es necesario debido a que la aplicación embebida requiere este formato como entrada del algoritmo {\it Line Segment Detector (LSD)}.
 La resolución de la imagen es de 640x480 píxeles, en donde 1 píxel corresponde a 0.9743 micrones de acuerdo a la óptica y microscopio seleccionados para el prototipo.
 
 Cada fibra contiene una médula, eventualmente la imagen capturada puede hacerla visible lo cual afecta a 
@@ -227,35 +227,29 @@ las mediciones. Por tal motivo se ejecuta un filtro de médula para quitarlas pa
 Dicho rango fue previamente establecido y representa los valores esperables para la médula. Si la detección es positiva, se reemplaza la zona medular por píxeles que contengan un color dentro del rango de grises  
 coincidente con fibra, que también fue previamente establecido.
 
-Posteriormente, la aplicación utiliza el algoritmo {\it line segment detector (LSD) [REFERENCIA]} para obtener un conjunto de segmentos de línea que representan a la imagen original. A partir de este conjunto se 
+Posteriormente, la aplicación utiliza el algoritmo {\it Line Segment Detector (LSD)} para obtener un conjunto de segmentos de línea que representan a la imagen original \cite{lsd}. A partir de este conjunto se 
 realiza la medición de diámetros de fibras según el algoritmo a continuación:
 
 \begin{Verbatim}[commandchars=\\\{\}]
     # Pseudocódigo del algoritmo de cálculo de diámetro medio de fibras
     # ENTRADA: Conjunto de segmentos de línea (lsd_set)
     # SALIDA: Mediciones y diámetro medio (mediciones_set, diametro)
-    #
     mediciones = 0;
     diametro = 0;
 [1] FOR each segmento IN lsd_set DO
-
       diametro_tentativo = 0;
       mediciones_t = 0;
 [2]   FOR each punto (x,y) IN inicio_medio_final(segmento) DO
-
         f() = perpendicular(segmento, punto);
 [3]     FOR each seg2 IN lsd_set DO
-
           IF paralelos(segmento, seg2) AND 
              ( f() == perpendicular(seg2) ) AND
              ( f(DESDE segmento HASTA seg2) == pixels_de_fibra() ) THEN
-
 [4]             diametro_tentativo = distancia( f(DESDE segmento HASTA seg2) );
                 mediciones_t++;
           END IF
         END FOR
       END FOR
-
 [5]   IF (mediciones_t >= 2) THEN 
         diametro = diametro + diametro_tentativo;
         mediciones++;
@@ -264,7 +258,6 @@ realiza la medición de diámetros de fibras según el algoritmo a continuación
     END FOR
 
     diametro = diametro / mediciones;
-
     RETURN mediciones_set, diametro
 \end{Verbatim}
 
@@ -306,7 +299,6 @@ A la izquierda se observa la imagen original obtenida desde el microscopio. A la
 \label{fig:captura3}
 \end{figure}
 
-
 \section{Resultados}\label{sec:res}
 
 Para determinar la validez del prototipo UNCOMA se realizaron mediciones de tiempo y precisión.
@@ -318,7 +310,7 @@ La precisión del resultado del análisis es la valuación más importante, ya q
 
 \subsection{Orden del Tiempo de Ejecución}
 El costo en tiempo de ejecución se ha observado al analizar 96 muestras de fibras reales (sin contar el tiempo del operario en preparar las fibras a medir sobre el animal). El tiempo fue medido mediante la herramienta GNU time, el cual ejecuta cada etapa y evalúa los recursos utilizados. Se observa que tanto el proceso de obtención de la imagen, como la conversión de la misma es constante. No siendo así para el análisis de la imagen mediante el software propuesto, el cual varía en el rango de (0seg..3seg]. 
-Durante dicho análisis, el mayor costo en tiempo de ejecución es el del algoritmo LSD, que es de orden de tiempo lineal [REFERENCIA]. En base a esto, y al hecho de que las fotos poseen la misma resolución y, que el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados), el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
+Durante dicho análisis, el mayor costo en tiempo de ejecución es el del algoritmo LSD, que es de orden de tiempo lineal \cite{lsd}. En base a esto, y al hecho de que las fotos poseen la misma resolución y, que el número de de fibras analizadas en cada medición es menor a 15 (un mayor numero de fibras distorsionaría los resultados), el tiempo de ejecución de cada medición ha sido determinado, luego de analizar 96 muestras, en un rango (0seg..3seg].
 
 \subsection{Precisión del proceso de análisis}
 
@@ -335,7 +327,7 @@ Se han confeccionado 74 imágenes de fibras artificiales mediante el software de
 En la Figura~\ref{fig:comparativa-artificial3} se observan, a la derecha, los resultados de 35 de las 74 mediciones realizadas por el prototipo UNCOMA a las imágenes preparadas. Junto a cada barra de la media calculada por el software se muestra la media calculada a priori, en base a las medidas de las líneas dibujadas con el programa GIMP.
 \begin{figure}
 \centering
-\includegraphics[height=5cm]{comparativa-artificial3}
+\includegraphics[height=4cm]{comparativa-artificial3}
 \caption{Izq: Una imagen artificial. Der: Mediciones realizadas a las imágenes.}
 \label{fig:comparativa-artificial3}
 \end{figure}
@@ -355,7 +347,7 @@ El diámetro medio final obtenido por el prototipo propuesto es de 20,6263 micro
 
 \begin{figure}
 \centering
-\includegraphics[height=5.2cm]{prototipovswv}
+\includegraphics[height=4cm]{prototipovswv}
 \caption{\small Comparativa acumulativa de 96 mediciones utilizando dos equipamientos : prototipo UNCOMA y WoolView 20/20.
 La diferencia de la media de diámetro entre ambos equipos va disminuyendo a medida que se realizan mayor cantidad de mediciones sobre el mismo mechón de fibras. Luego de 20 mediciones la diferencia es menor a un micrón. Luego de 50 mediciones la diferencia es menor a 0.5 micrones.}
 \label{fig:prototipovswv}
@@ -363,7 +355,7 @@ La diferencia de la media de diámetro entre ambos equipos va disminuyendo a med
 
 \begin{figure}
 \centering
-\includegraphics[height=5.2cm]{histograma}
+\includegraphics[height=4cm]{histograma}
 \caption{Histograma normalizado de las 96 mediciones realizadas con el prototipo UNCOMA.}
 \label{fig:histograma}
 \end{figure}
@@ -390,56 +382,49 @@ Muestras dentro del DE & 82\% & No reportado \\ \hline
 \section{Conclusiones y Trabajo Futuro} \label{sec:conc}
 En este trabajo se presenta la arquitectura de un sistema prototipo funcional
 de bajo costo, para la determinación de finura de la fibra de cabra.
-Para validar la precisión del equipamiento se ha realizado la medición
-del diámetro de líneas en imágenes artificiales, y también de 
-muestras reales, comparando la medición de diámetro con los provistos por
-otro equipamiento profesional de similares características. Los resultados
+Se ha validado la precisión del instrumento a partir de  la medición
+del diámetro de imágenes de fibras artificiales; y también de 
+muestras de fibras reales. Comparando las últimas  con las mediciones 
+obtenidas por otro equipamiento profesional de similares características. Los resultados
 muestran que la diferencia entre ambos equipamientos es menor a un micrón cuando se realizan, al menos, diez mediciones.
 El peso y tamaño del equipamiento permiten al operador 
 utilizar el equipamiento a mano alzada, tomando capturas de las muestras 
-de fibra directamente sobre el animal en campo.
-El precio actual de los componentes utilizados para su elaboración representa
-una solución de bajo costo para continuar su desarrollo, con el objetivo de
-contar con varios equipos en campo de apoyo al productor, y para experimentación futura.
-La preparación de las fibras sobre el animal o en laboratorio es un proceso que se encuentra en el orden de los minutos, por lo que el tiempo observado para la medición de diámetro (en el orden de los segundos) no es de un costo significativo, y ha sido aceptado en las mediciones de prueba realizadas.
-En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultado[REFERENCIA], por lo que se han propuesto diferentes algoritmos para su detección.
-El método aquí expuesto no sufre de dicho problema. 
-La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra, no necesita de una detección suplementaria de entrecruzamiento. 
+de fibra directamente sobre el animal, en el campo.
+La preparación de las fibras sobre el animal o en laboratorio es un proceso que se encuentra en el orden de 
+los minutos, por lo que el tiempo observado para la medición de diámetro 
+(en el orden de los segundos) no es significativo.
+%En estudios anteriores se ha establecido que el entrecruzamiento de fibras distorsiona los resultado[REFERENCIA], por lo que se han propuesto diferentes algoritmos para su detección.
+%El método aquí expuesto no sufre de dicho problema. 
+%La representación a través de un conjunto de segmento de lineas y el proceso de localización de paralelas opuestas en cada fibra, no necesita de una detección suplementaria de entrecruzamiento. 
 
-Todo el software está escrito en lenguaje ANSI C, lo que permitió que
-sea sencillo de portar a una arquitectura diferente a X86 (en este caso ARM).
-Si se desea cambiar, en trabajos futuros, la arquitectura, el software no
-
-\begin{equation}
-  \psi (u) = \int_{o}^{T} \left[\frac{1}{2}
-  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .
-\end{equation}
-
-
+En adelante se pretende realizar la validación del prototipo UNCOMA, con 
+respecto a resultados obtenidos por instrumentos de laboratorio como OFDA 2000.
+Por otra parte se investigan nuevas técnicas de procesamiento y filtrado 
+de las imágenes, que reduzcan la cantidad de muestras descartadas 
+debido a la falta de foco.
 
 \begin{thebibliography}{4}
+\bibitem{bendini2} Bendini, M.: Chapter 8. Transhumant Communities and Agroecosystems in Patagonia. Interactions Between Agroecosystems and Rural Communities.
+Cornelia Flora (2001). ISBN: 978-0-8493-0917-5
 
-\bibitem{jour} Smith, T.F., Waterman, M.S.: Identification of Common Molecular
-Subsequences. J. Mol. Biol. 147, 195--197 (1981)
+\bibitem{bendini1} Bendini, M., Tsakoumagkos, P., Nogues, C.: Los crianceros trashumantes en Neuquén. Grupo de Estudios Sociales Agrarios (GESA),
+ Universidad Nacional del Comahue (2005)
+\url{http://investigadores.uncoma.edu.ar/cehepyc/publicaciones/Los_trashumantes_en_Neuquen.pdf}
 
-\bibitem{lncschap} May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
-Composing a Complex Biological Workflow through Web Services. In: Nagel,
-W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
-pp. 1148--1158. Springer, Heidelberg (2006)
 
-\bibitem{book} Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
-Infrastructure. Morgan Kaufmann, San Francisco (1999)
+\bibitem{ofda} OFDA 4000 instrument, \url{http://www.ofda.com/Natural_fibres/Ofda4000.html}
 
-\bibitem{proceeding1} Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
-Information Services for Distributed Resource Sharing. In: 10th IEEE
-International Symposium on High Performance Distributed Computing, pp.
-181--184. IEEE Press, New York (2001)
 
-\bibitem{proceeding2} Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
-Grid: an Open Grid Services Architecture for Distributed Systems
-Integration. Technical report, Global Grid Forum (2002)
+\bibitem{laserscan} Sirolan Laserscan instrument, \url{http://www.itecinnovation.com/productDetails.php?id=52}
 
-\bibitem{url} National Center for Biotechnology Information, \url{http://www.ncbi.nlm.nih.gov}
+\bibitem{baxter} Baxter, P.: Comparisons between OFDA, Airflow and Laserscan on raw merino wool. Technology And Standars Committee. International Wool Textile Organization. 2002.
+
+\bibitem{wv} WoolView 20/20 portable device, \url{https://web.archive.org/web/20041102185907/http://www.woolview.com/Product1_2.htm}
+
+\bibitem{lsd} Grompone, R., Jakubowicz, J., Morel, J., Randall, G.: LSD: a Line Segment Detector, Image Processing On Line, 2 (2012), pp. 35–55.
+\url{http://dx.doi.org/10.5201/ipol.2012.gjmr-lsd}
+
+
 
 \end{thebibliography}
 
